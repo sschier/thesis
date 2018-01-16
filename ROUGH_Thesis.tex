@@ -1,0 +1,894 @@
+\newcommand*{\ATLASLATEXPATH}{/Users/sheenaschier/Library/TexShop/texmf/tex/latex/atlaslatex-01-07-01/latex/}
+\documentclass[11pt, oneside]{article}   	% use "amsart" instead of "article" for AMSLaTeX format
+\usepackage{geometry}                		% See geometry.pdf to learn the layout options. There are lots.
+\geometry{letterpaper}                   		% ... or a4paper or a5paper or ... 
+%\geometry{landscape}                		% Activate for rotated page geometry
+%\usepackage[parfill]{parskip}    		% Activate to begin paragraphs with an empty line rather than an indent
+\usepackage{\ATLASLATEXPATH atlasphysics}
+\usepackage{graphicx}     % Use pdf, png, jpg, or eps§ with pdflatex; use eps in DVI mode
+\usepackage{amsmath}
+\usepackage{tikz}	
+\usepackage{placeins}		
+\usepackage[
+backend=bibtex8,
+style=alphabetic,
+sorting=ynt
+]{biblatex}					
+\addbibresource{sample.bib}
+\usepackage{wrapfig}	
+\usepackage{amssymb}
+\usepackage{hyperref}
+\hypersetup{
+    colorlinks=true, %set true if you want colored links
+    linktoc=all,     %set to all if you want both sections and subsections linked
+    linkcolor=blue,  %choose some color if you want links to stand out
+}
+
+
+
+
+\title{Searches for Electroweak Production of Compressed Supersymmetry in Events with Soft Leptons Plus Missing Transverse Momentum and Hard Jet Recoil}
+\author{Sheena Calie Schier}
+\date{}							
+
+\begin{document}
+\maketitle
+\clearpage
+\tableofcontents
+\clearpage
+%%%%%%%%%%%%%%%% INTRODUCTION%%%%%%%%%%%%%%%%%
+\section{Introduction}
+\label{sec:intro}
+
+Particle accelerators have been around since such and such time and have been the source of the most precise physics measurements and lead to deeper understanding of the most fundamental forces and particles in nature.  Discovery of top quarks at this collider and the W and Z bosons.  Da da da LEP $e^+e^-$ machine blah blah.  The Large Hadron Collider pushing into unseen energy realms has the imminent task of finding the Higgs boson, but that is not all.  There must be more, and it was believed for decades new physics was right around the corner from LEP(and others).  
+
+\clearpage
+%%%%%%%%%%%%%%%% THEORY%%%%%%%%%%%%%%%%%
+\section{The Standard Model of Particle Physics and Additional Theories}
+\label{sec:theory}
+The universe seems like a very complex place made out of many types of material that interacts by various complex mechanisms.  Although this will always remain true, particle physics has constructed a theory that incorporates all fundamental particles and explains their existence and interactions in simplicity through the field equations that describe the fundamental forces in the universe.  This theory is called the Standard Model of Particle Physics and, apart from the absence of gravity which is far too weak to be described by particle interactions, is fundamentally complete.
+
+\subsection{Forces and Particles}
+\label{sec:theory1}
+The Standard Model describes three of the four known fundamental forces or our universe; electromagnetic force, the strong force, and the weak force.  It leaves out the gravitational force only because the energy scale at which gravity does its business is so many orders of magnitude below the other forces that there are intrinsic incompatibilities in their description of particle interactions.  According to experiment, there are only a hand full of fundamental particles, among which can be separated into two distinct categories: fermions and bosons.  These two types of particles play completely different roles in the state and phenomena of the universe. \cite{tully}
+
+You and I and the entire world we experience is comprised of fermions, spin $frac{1}{2}$ Dirac particles, that can be further categorized as leptons and quarks depending on their intrinsic propensity to interact with a given fundamental force field or not.  The lepton family consists of three types of electron ($e, \mu, \tau$) and their associated neutrino partners ($\nu_e, \nu_\mu, \nu_\tau$).
+
+\subsection{Mathematical Formalism of the Standard Model}
+\label{sec:theory2}
+Field equations and fermion and boson interactions.
+
+\subsection{Gauge Symmetries and Spontaneous Symmetry Breaking}
+\label{sec:theory3}
+$U(1)_{Y} \times SU(2)_{L} \times SU(3)_{S}$
+
+\subsection{Higgs Mechanism and Gauge Boson Masses}
+\label{sec:theory4}
+Explain local SU(2) gauge symmetry breaking, the production of the Higgs boson and how this allows for massive weakly interacting gauge bosons.
+
+\subsection{Shortcomings of the Standard Model}
+\label{sec:theory5}
+\subsubsection{Darkmatter}
+One alarming problem with the Standard Model is its incapability the explain dark matter.
+
+\subsection{Supersymmetry}
+\label{sec:theory6}
+Extension of the Poincare Group which leads to boson-fermion symmetry.
+
+\subsection{Phenomenology of Direct Production of Higgsinos and Sleptons in Compressed Scenarios}
+Here talk about the discriminating variables for the higgsino and slepton signal regions (mll and mt2).
+
+\clearpage
+%%%%%%%%%%%%%%%%%%%%%% DETECTOR %%%%%%%%%%%%%%%%%%%%%
+%Currently no new and relevant information
+\section{ATLAS Experiment}
+\label{sec:detector}
+The Large Hadron Collider (LHC) is a 27 km long circular proton accelerator with proton beams in moving in opposite directions around the ring at speeds near 99.99\% the speed of light.  The beams travel around the ring in separate vacuum beam pipes and are accelerated and directed around the ring using gigantic semi-conducting magnets.  To reach LHC energies the proton beams are accelerated in smaller accelerator structures gradually increasing in size until they are injected into the LHC, which is still the largest and most powerful accelerator in the world.  The beams are made to collide at 4 different interaction points at which there are 4 different detector experiments: ALICE, LHC-B, CMS, and ATLAS.  
+
+%%%%%%%%%%%%%%%%%%%%%%
+\subsection{Tracking}
+\subsubsection{Pixel Detector}
+Inner most pixelated tracker.
+\subsubsection{Semi-Conductor Tracker}
+Middle silicon strip tracker.
+\subsubsection{Transition Radiation Tracker}
+Outer most straw tube tracker.
+
+%%%%%%%%%%%%%%%%%%%%%%
+\subsection{Calorimetry}
+\subsubsection{Electromagnetic Calorimeter}
+Measures energy of electromagnetic objects.
+\subsubsection{Hadronic Calorimeter}
+Measures energy of hadronic objects
+
+%%%%%%%%%%%%%%%%%%%%%%
+\subsection{Muon System}
+An outer tracker dedicated entirely to tracking muons.
+
+%%%%%%%%%%%%%%%%%%%%%%
+\subsection{DAQ and Trigger}
+Complex computing system to acquire and store data.
+
+\clearpage
+%%%%%%%%%%%%%%%%%%%%%% MC AND DATA %%%%%%%%%%%%%%%%%%%%%%%%
+
+\section{MC and Data samples}
+\label{sec:mcdata}
+ Can talk about integrated lumi and maybe event weight
+
+
+The event weights are very important.  Currently I am applying the total weight as:
+\begin{equation}
+\label{eq:weight}
+totalWeight = ttbarNNLOWeight*pileupWeight*eventWeight*leptonWeight*jvtWeight*bTagWeight
+\end{equation}
+The weights are recalculated during the merging phase using the cross-section and the sumOfWeightsHist.\
+
+\subsection{Signal Samples}
+
+  \begin{figure}[tbp]
+   % \centering
+\includegraphics[width=0.48\columnwidth]{/Users/sheenaschier/Documents/LaFiles/figures/thesis/signal_samples/ossf_Jet1Pt.pdf}
+\includegraphics[width=0.48\columnwidth]{/Users/sheenaschier/Documents/LaFiles/figures/thesis/signal_samples/ossf_Jet2Pt.pdf}\\
+ \includegraphics[width=0.48\columnwidth]{/Users/sheenaschier/Documents/LaFiles/figures/thesis/signal_samples/ossf_Lep1Pt.pdf}
+ \includegraphics[width=0.48\columnwidth]{/Users/sheenaschier/Documents/LaFiles/figures/thesis/signal_samples/ossf_Lep2Pt.pdf}\\
+ \includegraphics[width=0.48\columnwidth]{/Users/sheenaschier/Documents/LaFiles/figures/thesis/signal_samples/ossf_Mt_l1met.pdf}
+ \includegraphics[width=0.48\columnwidth]{/Users/sheenaschier/Documents/LaFiles/figures/thesis/signal_samples/ossf_Mt_l2met.pdf}\\
+  \includegraphics[width=0.48\columnwidth]{/Users/sheenaschier/Documents/LaFiles/figures/thesis/signal_samples/ossf_nJet20.pdf}
+ \includegraphics[width=0.48\columnwidth]{/Users/sheenaschier/Documents/LaFiles/figures/thesis/signal_samples/ossf_nLep_signal.pdf}\\
+   \caption{Kinematic distributions of signal samples}
+   \label{fig:SigSample1}
+ \end{figure}
+ 
+   \begin{figure}[tbp]
+   % \centering
+\includegraphics[width=0.48\columnwidth]{/Users/sheenaschier/Documents/LaFiles/figures/thesis/signal_samples/ossf_MET.pdf}
+\includegraphics[width=0.48\columnwidth]{/Users/sheenaschier/Documents/LaFiles/figures/thesis/signal_samples/ossf_lep_type.pdf}\\
+ \includegraphics[width=0.48\columnwidth]{/Users/sheenaschier/Documents/LaFiles/figures/thesis/signal_samples/ossf_dR_l1l2.pdf}
+ \includegraphics[width=0.48\columnwidth]{/Users/sheenaschier/Documents/LaFiles/figures/thesis/signal_samples/ossf_dphi_j1met.pdf}\\
+ \includegraphics[width=0.48\columnwidth]{/Users/sheenaschier/Documents/LaFiles/figures/thesis/signal_samples/ossf_mll.pdf}
+ \includegraphics[width=0.48\columnwidth]{/Users/sheenaschier/Documents/LaFiles/figures/thesis/signal_samples/ossf_ptll.pdf}\\
+   \caption{Kinematic distributions of signal samples}
+   \label{fig:SigSample2}
+ \end{figure}
+
+ \FloatBarrier
+\subsection{Triggers}
+\label{sec:eff}
+
+\subsubsection{MET Triggers}
+\label{sec:met}
+Inclusive met trigger efficiencies
+
+\subsubsection{Combined Triggers}
+Lepton plus jet plus met trigger efficiencies..
+
+  \begin{figure}[tbp]
+   % \centering
+     \includegraphics[width=0.48\columnwidth]{/Users/sheenaschier/Documents/LaFiles/figures/thesis/eventselection/eff_MM_signal_110_100.pdf}
+       \includegraphics[width=0.48\columnwidth]{/Users/sheenaschier/Documents/LaFiles/figures/thesis/eventselection/eff_MM_mtautau_110_100.pdf}\\
+   \caption{Trigger Efficiency as a function of MET after event preselection (left) and in a signal region similar to the analysis signal region (right)}
+   \label{fig:TrigEff1}
+ \end{figure}
+ 
+   \begin{figure}[tbp]
+   % \centering
+     \includegraphics[width=0.48\columnwidth]{/Users/sheenaschier/Documents/LaFiles/figures/thesis/eventselection/eff_MM_jet145_110_100.pdf}
+       \includegraphics[width=0.48\columnwidth]{/Users/sheenaschier/Documents/LaFiles/figures/thesis/eventselection/eff_MM_jet105_110_100.pdf}\\
+   \caption{Trigger efficiency as a function of MET for the combined single muon trigger (left) and the combined dimuon trigger (right)}
+   \label{fig:TrigEff2}
+ \end{figure}
+
+\clearpage
+%%%%%%%%%%%%%%%%%%%%%%%%% EVENT SELECTION AND SIGNAL REGIONS %%%%%%%%%%%%%%%%%%%%%
+\section{Event Selection and Signal Regions}
+\label{sec:sr}
+Study signal MonteCarlos samples to understand the phenomenology of compressed higgsino and slepton production during and LHC collision and subsequent decay in the ALTAS detector.  These studies inform our choices choices for signal region cuts for the slepton and higgsino searches. 
+\subsection{Object Definitions}
+\label{sec:objdef}
+Electrons, muons, jets, photons, met, overlap removal, isolation for nearby leptons.. (lepton truth matching?)
+
+  \begin{figure}[tbp]
+   % \centering
+     \includegraphics[width=0.48\columnwidth]{/Users/sheenaschier/Documents/LaFiles/figures/thesis/eventselection/eff_EE_Rll_110_100_NoOS_NoISO.pdf}
+       \includegraphics[width=0.48\columnwidth]{/Users/sheenaschier/Documents/LaFiles/figures/thesis/eventselection/eff_MM_Rll_110_100_GradLoose_NoOS_NoISO.pdf}\\
+     \includegraphics[width=0.48\columnwidth]{/Users/sheenaschier/Documents/LaFiles/figures/thesis/eventselection/eff_EE_Rll_110_100_NoOS.pdf}
+     \includegraphics[width=0.48\columnwidth]{/Users/sheenaschier/Documents/LaFiles/figures/thesis/eventselection/eff_MM_Rll_110_100_GradLoose_NoOS.pdf}\\
+   \caption{Dilepton $\Delta$ R distribution before LepIsoCorrection (top) and after LepIsoCorrection (bottom) for the $ee$-channel (left) and $\mu\mu$-channel (right).}
+   \label{fig:EffRll_ISOCorr}
+ \end{figure}
+
+  \begin{figure}[tbp]
+   % \centering
+     \includegraphics[width=0.48\columnwidth]{/Users/sheenaschier/Documents/LaFiles/figures/thesis/eventselection/eff_EE_Mll_110_100_NoOS_NoISO.pdf}
+       \includegraphics[width=0.48\columnwidth]{/Users/sheenaschier/Documents/LaFiles/figures/thesis/eventselection/eff_MM_Mll_110_100_GradLoose_NoOS_NoISO.pdf}\\
+     \includegraphics[width=0.48\columnwidth]{/Users/sheenaschier/Documents/LaFiles/figures/thesis/eventselection/eff_EE_Mll_110_100_NoOS.pdf}
+     \includegraphics[width=0.48\columnwidth]{/Users/sheenaschier/Documents/LaFiles/figures/thesis/eventselection/eff_MM_Mll_110_100_GradLoose_NoOS.pdf}\\
+   \caption{Dilepton invarient mass distribution before LepIsoCorrection (top) and after LepIsoCorrection (bottom) for the $ee$-channel (left) and $\mu\mu$-channel (right).}
+   \label{fig:EffMll_ISOCorr}
+ \end{figure}
+
+ \begin{figure}[tbp]
+  \includegraphics[width=0.48\columnwidth,trim=1.2cm 0cm 1.9cm 0cm,clip]{/Users/sheenaschier/Documents/LaFiles/figures/thesis/nearbylepiso.pdf}
+   \includegraphics[width=0.48\columnwidth]{/Users/sheenaschier/Documents/LaFiles/figures/thesis/nearbylepiso_signal.pdf}
+  \caption{(left) Impact of the \texttt{NearbyLepIsoCorrection} tool on the efficiency of low-mass dilepton pairs in data.  The data are shown in a region with $\Delta\phi(\met, p_{t}^{j1})<1.5$ to avoid the signal region.  Events are triggered with the inclusive-\met{} trigger.  The red trend shows events with two baseline leptons without applying any isolation; the green shows the impact of applying \texttt{GradientLoose} isolation; the blue shows the result of the \texttt{NearbyLepIsoCorrection} applied to the \texttt{GradientLoose} sample.  (right) Impact of the correction on a Higgsino LSP signal sample with $\Delta m(\chi,\chi)=3~\GeV$.}
+ \label{fig:nearbylepiso}
+ \end{figure}
+
+
+\subsection{Discriminating Variables}
+\label{sec:discvar}
+$\met$, d phi j-met, min d phi jets-met, $\pt(j_i)$, Number of $b$-tagged jets $N_\mathrm{b-jets}$\\
+Same flavour lepton pair with opposite charge, $\Delta R_{\ell\ell}$, $m_{\ell\ell}$, $m_{T2}^{m_{\chi}}$,$m_\text{T}^{\ell_1}$, $\met/\HT^\text{leptons}$, $m_{\tau\tau}$
+
+  % https://gitlab.cern.ch/jeliu/atlas-susy-ew-softlepton/blob/master/pyCut/refactor/central/plot1d_signals_only.py
+  \begin{figure}[tbp]
+   % \centering
+     \includegraphics[width=0.48\columnwidth]{/Users/sheenaschier/Documents/LaFiles/figures/thesis/higgsino_slep_signal_Rll_met0.pdf}
+  %  \caption{No \met{} requirement (only truth filter).}
+       \includegraphics[width=0.48\columnwidth]{/Users/sheenaschier/Documents/LaFiles/figures/thesis/higgsino_slep_signal_Rll_met100.pdf}\\
+   % \caption{$\met{} > 100$ GeV.}
+     \includegraphics[width=0.48\columnwidth]{/Users/sheenaschier/Documents/LaFiles/figures/thesis/higgsino_slep_signal_Rll_met200.pdf}
+ %   \caption{$\met{} > 200$ GeV.}
+     \includegraphics[width=0.48\columnwidth]{/Users/sheenaschier/Documents/LaFiles/figures/thesis/higgsino_slep_signal_Rll_met300.pdf}\\
+%    \caption{$\met{} > 300$ GeV.}
+   \caption{Comparison of Higgisno N2C1p (solid) and slepton (dashed) signals in the $R_{\ell\ell}$ variable for 10 GeV (dark) and 20 GeV (light) mass splittings. The \met{} here acts as a p    roxy for the boost of the system. Only a 2 signal lepton selection is applied.}
+   \label{fig:Rll_signals only}
+ \end{figure}
+ 
+ \begin{figure}[tbp]
+  \centering
+  \includegraphics[width=0.48\columnwidth]{/Users/sheenaschier/Documents/LaFiles/figures/thesis/METoverHTLep_mll}
+%\caption{Higgsinos}
+  \includegraphics[width=0.48\columnwidth]{/Users/sheenaschier/Documents/LaFiles/figures/thesis/METoverHTLep_mT2}
+%\caption{Sleptons}
+ \caption{Distributions of $\met/H_{T}^{leptons}$ for the Higgsino (left) and Slepton (right) selections, after applying all signal region cuts except those on the $\met/H_{T}^{leptons}$, $m_{ll}$, and $m_{T2}$.  The black dashed line indicates the cut applied in the signal region; events in the region below the black line are rejected.}
+ \label{fig:METoverHTLep2D}
+ \end{figure}
+ 
+ 
+  \begin{figure}
+  \centering
+  \input{/Users/sheenaschier/Documents/LaFiles/figures/thesis/ditau_schematic}
+  \caption{Schematic illustrating the fully leptonic $(Z\to\tau\tau)$ + jets system motivating the construction of $m_{\tau\tau}$. }
+  \label{fig:ditau_schematic}
+  \end{figure}
+  \subsection{Signal Regions}
+ \begin{figure}[h!]
+ \centering
+ \includegraphics[scale=0.6]{/Users/sheenaschier/Documents/LaFiles/figures/thesis/cutflow_SF.pdf}
+ \caption{Non-normalized cutflow with significance plot, showing how the significance for signal improves as more cuts are added.}
+ \label{fig:cutflow_zn}
+ \end{figure}
+\subsubsection{Slepton Signal Regions}
+This signal region based on MT2 cuts
+\subsubsection{Higgsino Signal Regions}
+This signal region based on Mll cuts
+
+\clearpage
+%%%%%%%%%%%%%%%%%%%%%%%%% FAKE FACTOR METHOD %%%%%%%%%%%%%%%%%%%%%
+\section{Fake Factor Method}
+\label{sec:ff}
+Backgrounds to beyond Standard Model physics signals mostly come from Standard Model physics processes that produce the same physics signal that describes the new physics we are looking for.  In that case the goal is the estimate the rate of the background process so that we can subtract it from the data and the signal we are looking for is all that remains.  Another type of background can come from processes that should not produce the same final state as the signal process, and yet, because of mismeasurements inside the detector, can still mimic signal events.  For low pt dilepton signals, this background is a dominant background and primarily comes from W+jets events where one jets is misidentified as a lepton.   The best estimate of this background comes from data because MC simulation does not model the detector shortcomings that lead to these mismeasurements very well.  The "fake factor" method is a data driven approach to modeling backgrounds from particle misidentification in the detector.
+(Explain the layout of the rest of the chapter)
+
+\subsection{Introduction}
+Efficient lepton identification techniques make leptons are powerful discriminators in ATLAS physics searches with large background rejection and heavily suppressed QCD multi-jets.  Jet suppression is very high in the range of lepton $\pt > 20 GeV$ but degrades at lower lepton $\pt$.  Sources of misidentified electrons are charged hadrons, where a hadronic jet fakes an electron, or photon conversions and heavy-flavor decays, where there is a true but non-prompt electron that id created inside the detector rather than at the primary vertex where true, prompt electrons are made.  
+\begin{figure}[h!]
+ \centering
+ \includegraphics[width=0.6\columnwidth]{/Users/sheenaschier/Documents/LaFiles/figures/thesis/fakes/fig_01.pdf}
+  \includegraphics[width=0.6\columnwidth]{/Users/sheenaschier/Documents/LaFiles/figures/thesis/fakes/fig_02.pdf}
+ \caption{Electron identification efficiency}
+ \label{fig:electronID}
+ \end{figure}
+
+**Make plot comparing production cross-sections, at least for W+jets and Higgsino/Slepton, and maybe even include other reducible background production cross-sections.
+ \FloatBarrier
+ 
+ 
+\subsection{Fake Factor Method}
+
+Explain signal and control regions as well as fake factor measurement and application regions. 
+\begin{figure}
+\centering
+ \input{/Users/sheenaschier/Documents/LaFiles/figures/thesis/fakes/fakefactor_schematic.tex}
+ \caption{Schematic illustrating the fake factor method to estimate the fake lepton contribution in the signal region.}
+ \label{fig:fake_schematic}
+ \end{figure}
+ 
+  \FloatBarrier
+  \subsection{Fake Factor Method Applied to Low-$\pt$ Di-lepton Events}
+
+\begin{table}[tbp]
+  \centering
+  \begin{tabular}{lll}
+    \hline
+    Trigger                             &\multicolumn{2}{c}{Prescaled Luminosity [\ipb]}\\
+                                        &2015           &2016\\
+    \hline
+    \texttt{HLT\_e5\_lhvloose}            &0.1               &0.1    \\
+    \texttt{HLT\_e10\_lhvloose\_L1EM7}     &0.5               &0.8    \\
+    \texttt{HLT\_e15\_lhvloose\_L1EM13VH}  &5.5               &9    \\
+    \texttt{HLT\_e20\_lhvloose}           &10                &17    \\
+    \hline
+    \texttt{HLT\_mu4}                    &0.5               &0.5    \\
+    \texttt{HLT\_mu10}                   &2.3               &2.5    \\
+    \texttt{HLT\_mu14}                   &25                &14    \\
+    \texttt{HLT\_mu18}                   &26                &48    \\
+    \hline
+  \end{tabular}
+  \caption{Pre-scaled single-lepton triggers from 2015 and 2016 used to compute the lepton fake factors. The pre-scaled luminosities shown are taken from \texttt{LumiCalc}.}
+  \label{tab:prescaledtrigs}
+\end{table}
+
+\begin{table}[!htb]
+\begin{center}
+\begin{tabular}{l|l}
+\hline
+Electrons                                                                   & Muons \\
+\hline
+$\pt > 4.5~\GeV$                                                             & $\pt > 4~\GeV$ \\
+$\abseta < 2.47$                                                            & $\abseta < 2.5$ \\
+$|z_0\sin\theta| < 0.5$~mm                                                  & $|z_0\sin\theta| < 0.5$~mm \\
+Pass LooseAndBLayer identification                                          & Pass Medium identification \\
+\hline
+(!Tight identification                                                     & ($|d_0/\sigma(d_0)| > 3$ \\
+  $||$ $|d_0/\sigma(d_0)| > 5$                                   &  $||$ !FixedCutTightTrackOnly isolation) \\
+  $||$ !GradientLoose isolation)                                            &  \\
+\hline
+\end{tabular}
+
+\caption{Summary of anti-ID lepton definitions.}
+\label{tab:antiIDLepDefs}
+\end{center}
+\end{table}
+
+\subsubsection{Fake Factor Monte Carlo Studies}
+
+\begin{figure}[htb]
+        \centering
+        \includegraphics[width=.45\textwidth]{/Users/sheenaschier/Documents/LaFiles/figures/thesis/fakes/fakeLeptonComposition/725_cdsComments_el_SR1_lep1Pt.pdf}
+        \includegraphics[width=.45\textwidth]{/Users/sheenaschier/Documents/LaFiles/figures/thesis/fakes/fakeLeptonComposition/725_cdsComments_el_SR2_lep2Pt.pdf}
+        \includegraphics[width=.45\textwidth]{/Users/sheenaschier/Documents/LaFiles/figures/thesis/fakes/fakeLeptonComposition/725_cds_noIso_el_SR1_lep1Pt.pdf}
+        \includegraphics[width=.45\textwidth]{/Users/sheenaschier/Documents/LaFiles/figures/thesis/fakes/fakeLeptonComposition/725_cds_noIso_el_SR2_lep2Pt.pdf}
+        \caption{Fake lepton composition as a function of leading and subleading lepton $p_{T}$, with and without prompt (``Isolated'' plus ``lep$\to$gamma$\to$lep'') leptons, for opposite sign electron pairs in the signal region.}
+        \label{fig:elSR}
+\end{figure}
+\begin{figure}[htb]
+        \centering
+        \includegraphics[width=.45\textwidth]{/Users/sheenaschier/Documents/LaFiles/figures/thesis/fakes/fakeLeptonComposition/626_cdsComments_mu_SR1_lep1Pt.pdf}
+        \includegraphics[width=.45\textwidth]{/Users/sheenaschier/Documents/LaFiles/figures/thesis/fakes/fakeLeptonComposition/626_cdsComments_mu_SR2_lep2Pt.pdf}
+        \includegraphics[width=.45\textwidth]{/Users/sheenaschier/Documents/LaFiles/figures/thesis/fakes/fakeLeptonComposition/626_cds_noIso_mu_SR1_lep1Pt.pdf}
+        \includegraphics[width=.45\textwidth]{/Users/sheenaschier/Documents/LaFiles/figures/thesis/fakes/fakeLeptonComposition/626_cds_noIso_mu_SR2_lep2Pt.pdf}
+        \caption{Fake lepton composition as a function of leading and subleading lepton $p_{T}$, with and without prompt (``Isolated'' plus ``lep$\to$gamma$\to$lep'') leptons, for opposite sign muon pairs in the signal region.}
+        \label{fig:muSR}
+\end{figure}
+\begin{figure}[htb]
+        \centering
+        \includegraphics[width=.45\textwidth]{/Users/sheenaschier/Documents/LaFiles/figures/thesis/fakes/fakeLeptonComposition/725_cdsComments_el_QCR1_lep1Pt.pdf}
+        \includegraphics[width=.45\textwidth]{/Users/sheenaschier/Documents/LaFiles/figures/thesis/fakes/fakeLeptonComposition/725_cdsComments_el_QCR2_lep2Pt.pdf}
+        \includegraphics[width=.45\textwidth]{/Users/sheenaschier/Documents/LaFiles/figures/thesis/fakes/fakeLeptonComposition/725_cds_noIso_el_QCR1_lep1Pt.pdf}
+        \includegraphics[width=.45\textwidth]{/Users/sheenaschier/Documents/LaFiles/figures/thesis/fakes/fakeLeptonComposition/725_cds_noIso_el_QCR2_lep2Pt.pdf}
+        \caption{Fake lepton composition as a function of leading and subleading lepton $p_{T}$, with and without prompt (``Isolated'' plus ``lep$\to$gamma$\to$lep'') leptons, for opposite sign electron pairs in the fake lepton control region.}
+        \label{fig:elCR}
+\end{figure}
+\begin{figure}[htb]
+        \centering
+        \includegraphics[width=.45\textwidth]{/Users/sheenaschier/Documents/LaFiles/figures/thesis/fakes/fakeLeptonComposition/626_cdsComments_mu_QCR1_lep1Pt.pdf}
+        \includegraphics[width=.45\textwidth]{/Users/sheenaschier/Documents/LaFiles/figures/thesis/fakes/fakeLeptonComposition/626_cdsComments_mu_QCR2_lep2Pt.pdf}
+        \includegraphics[width=.45\textwidth]{/Users/sheenaschier/Documents/LaFiles/figures/thesis/fakes/fakeLeptonComposition/626_cds_noIso_mu_QCR1_lep1Pt.pdf}
+        \includegraphics[width=.45\textwidth]{/Users/sheenaschier/Documents/LaFiles/figures/thesis/fakes/fakeLeptonComposition/626_cds_noIso_mu_QCR2_lep2Pt.pdf}
+        \caption{Fake lepton composition as a function of leading and subleading lepton $p_{T}$, with and without prompt (``Isolated'' plus ``lep$\to$gamma$\to$lep'') leptons, for opposite sign muon pairs in the fake lepton control region.}
+        \label{fig:muCR}
+\end{figure}
+
+\begin{figure}[htb]
+        \centering
+        \includegraphics[width=.45\textwidth]{/Users/sheenaschier/Documents/LaFiles/figures/thesis/fakes/fakeLeptonComposition/725_cds_ss_wIso_el_SR1_lep1Pt.pdf}
+        \includegraphics[width=.45\textwidth]{/Users/sheenaschier/Documents/LaFiles/figures/thesis/fakes/fakeLeptonComposition/725_cds_ss_wIso_el_SR2_lep2Pt.pdf}
+        \includegraphics[width=.45\textwidth]{/Users/sheenaschier/Documents/LaFiles/figures/thesis/fakes/fakeLeptonComposition/725_cds_ss_el_SR1_lep1Pt.pdf}
+        \includegraphics[width=.45\textwidth]{/Users/sheenaschier/Documents/LaFiles/figures/thesis/fakes/fakeLeptonComposition/725_cds_ss_el_SR2_lep2Pt.pdf}
+        \caption{Fake lepton composition as a function of leading and subleading lepton $p_{T}$, with and without prompt (``Isolated'' plus ``lep$\to$gamma$\to$lep'') leptons, for same sign electron pairs in the signal region.}
+        \label{fig:elSSSR}
+\end{figure}
+\begin{figure}[htb]
+        \centering
+        \includegraphics[width=.45\textwidth]{/Users/sheenaschier/Documents/LaFiles/figures/thesis/fakes/fakeLeptonComposition/626_cds_ss_wIso_mu_SR1_lep1Pt.pdf}
+        \includegraphics[width=.45\textwidth]{/Users/sheenaschier/Documents/LaFiles/figures/thesis/fakes/fakeLeptonComposition/626_cds_ss_wIso_mu_SR2_lep2Pt.pdf}
+        \includegraphics[width=.45\textwidth]{/Users/sheenaschier/Documents/LaFiles/figures/thesis/fakes/fakeLeptonComposition/626_cds_ss_mu_SR1_lep1Pt.pdf}
+        \includegraphics[width=.45\textwidth]{/Users/sheenaschier/Documents/LaFiles/figures/thesis/fakes/fakeLeptonComposition/626_cds_ss_mu_SR2_lep2Pt.pdf}
+        \caption{Fake lepton composition as a function of leading and subleading lepton $p_{T}$, with and without prompt (``Isolated'' plus ``lep$\to$gamma$\to$lep'') leptons, for same sign muon pairs in the signal region.}
+        \label{fig:muSSSR}
+\end{figure}
+\begin{figure}[htb]
+        \centering
+        \includegraphics[width=.45\textwidth]{/Users/sheenaschier/Documents/LaFiles/figures/thesis/fakes/fakeLeptonComposition/725_cds_ss_wIso_el_QCR1_lep1Pt.pdf}
+        \includegraphics[width=.45\textwidth]{/Users/sheenaschier/Documents/LaFiles/figures/thesis/fakes/fakeLeptonComposition/725_cds_ss_wIso_el_QCR2_lep2Pt.pdf}
+        \includegraphics[width=.45\textwidth]{/Users/sheenaschier/Documents/LaFiles/figures/thesis/fakes/fakeLeptonComposition/725_cds_ss_el_QCR1_lep1Pt.pdf}
+        \includegraphics[width=.45\textwidth]{/Users/sheenaschier/Documents/LaFiles/figures/thesis/fakes/fakeLeptonComposition/725_cds_ss_el_QCR2_lep2Pt.pdf}
+        \caption{Fake lepton composition as a function of leading and subleading lepton $p_{T}$, with and without prompt (``Isolated'' plus ``lep$\to$gamma$\to$lep'') leptons, for same sign electron pairs in the fake lepton control region.}
+        \label{fig:elSSCR}
+\end{figure}
+\begin{figure}[htb]
+        \centering
+        \includegraphics[width=.45\textwidth]{/Users/sheenaschier/Documents/LaFiles/figures/thesis/fakes/fakeLeptonComposition/626_cds_ss_wIso_mu_QCR1_lep1Pt.pdf}
+        \includegraphics[width=.45\textwidth]{/Users/sheenaschier/Documents/LaFiles/figures/thesis/fakes/fakeLeptonComposition/626_cds_ss_wIso_mu_QCR2_lep2Pt.pdf}
+        \includegraphics[width=.45\textwidth]{/Users/sheenaschier/Documents/LaFiles/figures/thesis/fakes/fakeLeptonComposition/626_cds_ss_mu_QCR1_lep1Pt.pdf}
+        \includegraphics[width=.45\textwidth]{/Users/sheenaschier/Documents/LaFiles/figures/thesis/fakes/fakeLeptonComposition/626_cds_ss_mu_QCR2_lep2Pt.pdf}
+        \caption{Fake lepton composition as a function of leading and subleading lepton $p_{T}$, with and without prompt (``Isolated'' plus ``lep$\to$gamma$\to$lep'') leptons, for same sign muon pairs in the fake lepton control region.}
+        \label{fig:muSSCR}
+\end{figure}
+ \FloatBarrier
+ 
+\subsubsection{Electron Fake Factors}
+\begin{figure}[htb]
+        \centering
+        \includegraphics[width=.45\textwidth]{/Users/sheenaschier/Documents/LaFiles/figures/thesis/fakes/FF_electron/AID_deco_Mt}
+        \includegraphics[width=.45\textwidth]{/Users/sheenaschier/Documents/LaFiles/figures/thesis/fakes/FF_electron/AID_deco_MET}
+        \caption{Fake electron composition as a function of $m_{T}$ for events in the full $m_{T}$ range (left) and as a function of $\met$ (top) for events in the range $m_{T}<40~\GeV$. }
+        \label{fig:elDeco_1}
+\end{figure}
+\begin{figure}[htb]
+        \centering
+        \includegraphics[width=.45\textwidth]{/Users/sheenaschier/Documents/LaFiles/figures/thesis/fakes/FF_electron/AID_deco_AntiIDelPt}
+        \includegraphics[width=.45\textwidth]{/Users/sheenaschier/Documents/LaFiles/figures/thesis/fakes/FF_electron/AID_deco_AntiIDelEta}
+        \caption{Fake electron composition as a function of denomonator electron \pt{} (left) and as a function of denominator electron $\eta$ (top) for events with $m_{T} < 40~\GeV$. }
+        \label{fig:elDeco_2}
+\end{figure}
+
+\begin{figure}[tbp]
+  \centering
+  \includegraphics[width=0.48\columnwidth]{/Users/sheenaschier/Documents/LaFiles/figures/thesis/fakes/FF_electron/ID_CR_MET}
+  \includegraphics[width=0.48\columnwidth]{/Users/sheenaschier/Documents/LaFiles/figures/thesis/fakes/FF_electron/ID_CR_Mt}\\
+  \includegraphics[width=0.48\columnwidth]{/Users/sheenaschier/Documents/LaFiles/figures/thesis/fakes/FF_electron/AID_CR_MET}
+  \includegraphics[width=0.48\columnwidth]{/Users/sheenaschier/Documents/LaFiles/figures/thesis/fakes/FF_electron/AID_CR_Mt}
+  \caption{The \met{} (left) and $m_{T}$ (right) distributions for numerator (top) and denominator (bottom) electrons in the prescaled single-lepton-trigger sample.  MC has been scaled to the data in the $\met > 200~\GeV$ region.}
+  \label{fig:elec_FF_dists_1}
+\end{figure}
+
+\begin{figure}[tbp]
+  \centering
+  \includegraphics[width=0.48\columnwidth]{/Users/sheenaschier/Documents/LaFiles/figures/thesis/fakes/FF_electron/ID_SR_IDelPt}
+  \includegraphics[width=0.48\columnwidth]{/Users/sheenaschier/Documents/LaFiles/figures/thesis/fakes/FF_electron/AID_SR_AntiIDelPt}\\
+  \caption{Electron \pt{} for numerator (left) and denominator (right) objects in the prescaled single-lepton-trigger sample for events with $m_{T} < 40 GeV$.  MC has been scaled to the data in the $\met > 200~\GeV$ region.}
+  \label{fig:elec_FF_dists_pt}
+\end{figure}
+
+% actual fake factors
+% Trigger distributions in lepton pt
+\begin{figure}[tbp]
+  \centering
+  \includegraphics[width=0.48\columnwidth]{/Users/sheenaschier/Documents/LaFiles/figures/thesis/fakes/FF_electron/electronTriggers}
+  \includegraphics[width=0.48\columnwidth]{/Users/sheenaschier/Documents/LaFiles/figures/thesis/fakes/FF_electron/AIDelectronTriggers}\\
+  \caption{The numerator electron (left) and denominator electron (right) \pt{} distributions for prescaled single-lepton-trigger, normalized to 1~\ipb{}. Blue curve: HLT\_e5\_lvhloose, red curve: HLT\_e10\_lvhloose\_L1EM7, purple curve: HLT\_e15\_lvhloose\_L1EM13, green curve: HLT\_e20\_lvhloose.}
+  \label{fig:triggers}
+\end{figure}
+
+The fake factors are computed from events  with $m_{\mathrm{T}}<40~\GeV$, using the distributions in Fig.~\ref{fig:elec_FF_dists_pt}, as:
+\begin{equation}
+  F(\pt) = \frac{\mathrm{Numerator}_{\mathrm{data}} - \mathrm{Numerator}_{\mathrm{MC}}}{\mathrm{Denominator}_{\mathrm{data}} - \mathrm{Denominator}_{\mathrm{MC}}}
+\end{equation}
+
+\begin{table}[tbp]
+  \centering
+  \begin{tabular}{|c|c|}
+    \hline
+    el trigger  & \pt{} range [\GeV]\\
+    \hline
+    HLT\_e5\_lvhloose & 5--11  \\
+    HLT\_e10\_lvhloose\_L1EM7 & 11--18  \\
+    HLT\_e15\_lvhloose\_L1EM13VH & 18--23  \\
+    HLT\_e20\_lvhloose & $>$ 23  \\
+    \hline
+  \end{tabular}
+  \caption{Single-Electron triggers used for fake factor computation and their corresponding \pt{} range.}
+  \label{tab:elec_trigger_range}
+\end{table}
+
+
+Electron fake factors show the largest dependance on electron \pt{}, but also display a dependence on the leading jet \pt{}, which is evident in Fig.~\ref{fig:elec_FF_hist_noCut} that shows electron fake factors as a function of electron \pt{} and leading jet \pt{} separately. Given this trend, and the fact that all signal regions used in this analysis require a hard jet with \pt{} greater than 100~\GeV, we design the fake factor measurement region to also require a hard jet of \pt{} greater than 100~\GeV.  Fake factors as a function of other kinematic variables are also studied as a cross-check and for understanding systematic uncertainties.
+
+\begin{figure}[tbp]
+  \centering
+  \includegraphics[width=0.48\columnwidth]{/Users/sheenaschier/Documents/LaFiles/figures/thesis/fakes/FF_electron/FakeFactor_el_pt_noCut}
+  \includegraphics[width=0.48\columnwidth]{/Users/sheenaschier/Documents/LaFiles/figures/thesis/fakes/FF_electron/FakeFactor_el_j1pt_noCut}\\
+  \caption{Electron fake factors \textit{before} requiring a hard jet of $\pt{} > 100~GeV$, computed from single-electron prescaled triggers as a function of electron \pt{} (left) and leading jet \pt{} (right). Fake factors for electron $\pt{}~ 4.5-5~\GeV$ are taken to be the same as electron $\pt{}~5-6~\GeV$.  A red line denotes the average electron fake factor over all electron \pt{} of 0.267. }
+  \label{fig:elec_FF_hist_noCut}
+\end{figure}
+
+
+Final fake factors computed as a function of electron \pt{} are shown in Fig.~\ref{fig:elec_FF_hist}a.  In addition, fake factors as functions of other variables are also inspected to check for significant trends:
+\begin{itemize}
+\item the dependence of the fake factors on $|\eta|$ is shown in Fig.~\ref{fig:elec_FF_hist}b,
+\item fake factors as a function of leading jet \pt{} and  $\Delta\phi_{jet-\met}$ are shown in Fig.~\ref{fig:elec_FF_hadronic},
+\item fake factors as a function of jet multiplicity and $b$-jet multiplicity are shown in Fig.~\ref{fig:elec_FF_njet},
+\item fake factors as a function of pile up variables, such as average interaction per bunch crossing and number of primary vertices, are also shown in Fig.~\ref{fig:elec_FF_pileup}.
+\end{itemize}
+The relative uncertianties on the final electron fake factors versus electron \pt{} are shown in Fig.~\ref{fig:elec_FF_rel_uncert}.
+
+%The relative statistical uncertaintiess are shown in Fig.~\ref{fig:elec_FF_2D} and  will be incorporated into the total systematic uncertainty on the electron fake factors.
+\begin{figure}[tbp]
+  \centering
+  \includegraphics[width=0.48\columnwidth]{/Users/sheenaschier/Documents/LaFiles/figures/thesis/fakes/FF_electron/FakeFactor_el_pt}
+  \includegraphics[width=0.48\columnwidth]{/Users/sheenaschier/Documents/LaFiles/figures/thesis/fakes/FF_electron/FakeFactor_el_eta}
+  \caption{Electron fake factors computed from single-electron prescaled triggers as a function of electron \pt{} (left) and electron $\eta$ (right) in the kinematic region with leading jet$ \pt{}>100GeV$  Fake factors for electron $\pt{}~ 4.5-5~\GeV$ are taken to be the same as electron $\pt{}~5-6~\GeV$.  A red line denotes the average electron fake factor over all electron \pt{} of 0.211. }
+  \label{fig:elec_FF_hist}
+\end{figure}
+
+\begin{figure}[tbp]
+  \centering
+  \includegraphics[width=0.48\columnwidth]{/Users/sheenaschier/Documents/LaFiles/figures/thesis/fakes/FF_electron/FakeFactor_el_j1pt}
+  \includegraphics[width=0.48\columnwidth]{/Users/sheenaschier/Documents/LaFiles/figures/thesis/fakes/FF_electron/FakeFactor_el_dphij}\\
+  \caption{Electron fake factors computed from single-electron prescaled triggers as a function of leading jet \pt{} (left) and $\Delta\phi_{jet-\met}$ (right). A red line denotes the average electron fake factor over all electron \pt{} of 0.211.}
+  \label{fig:elec_FF_hadronic}
+\end{figure}
+
+\begin{figure}[tbp]
+  \centering
+  \includegraphics[width=0.48\columnwidth]{/Users/sheenaschier/Documents/LaFiles/figures/thesis/fakes/FF_electron/FakeFactor_el_njet}
+  \includegraphics[width=0.48\columnwidth]{/Users/sheenaschier/Documents/LaFiles/figures/thesis/fakes/FF_electron/FakeFactor_el_nbjet}\\
+  \caption{Electron fake factors computed from single-electron prescaled triggers as a function of the jet multiplicity (left) and the $b$-jet multiplicity (right). A red line denotes the average electron fake factor over all electron \pt{} of 0.211.}
+  \label{fig:elec_FF_njet}
+\end{figure}
+
+
+\begin{figure}[tbp]
+  \centering
+  \includegraphics[width=0.48\columnwidth]{/Users/sheenaschier/Documents/LaFiles/figures/thesis/fakes/FF_electron/FakeFactor_el_mu}
+  \includegraphics[width=0.48\columnwidth]{/Users/sheenaschier/Documents/LaFiles/figures/thesis/fakes/FF_electron/FakeFactor_el_npv}\\
+  \caption{Electron fake factors computed from single-electron prescaled triggers as a function of the average interaction per bunch crossing (left) and the number of primary vertices (right). A red line denotes the average electron fake factor over all electron \pt{} of 0.211.}
+  \label{fig:elec_FF_pileup}
+\end{figure}
+
+\begin{figure}[tbp]
+  \centering
+  \includegraphics[width=0.48\columnwidth]{/Users/sheenaschier/Documents/LaFiles/figures/thesis/fakes/FF_electron/FakeFactor_el_pt_uncert}\\
+  \caption{Relative uncertainties on electron fake factors binned electron \pt{}.}
+  \label{fig:elec_FF_rel_uncert}
+\end{figure}
+
+ \FloatBarrier
+\subsubsection{Muon Fake Factors}
+
+The muon fake factors are derived in a very similar way as the electron fake factors.  The ``numerator'' muons, also called th ID muons, are the same as signal muons as defined in Section~\ref{sec:selection}, which are baseline muons that are required to pass \texttt{FixedCutTightTrackOnly} isolation and $|d_0/\sigma(d_0)|<3.0$.  "Denominator" muons, also called anti-ID muons, are defined as baseline muons that fail at least one of the signal muon requirements, i.e. they are required to fail either the \texttt{FixedCutTightTrackOnly} isolation or $|d_0/\sigma(d_0)|<3.0$. All numerators and denominators are required to pass the $|z_0\sin\theta| < 0.5$~mm requirement to reduce the impact of pileup.  One notable difference with respect to the signal muon requirements is that the muon-jet overlap removal is relaxed when performing the fake factor measurement\footnote{This enhances the statistics used for deriving the fake factors, and is motivated by the observation that the muon-jet overlap removal is primarily designed to reduce the number of heavy flavor decays which are inadvertently being classified as signal muons, i.e. a sample of events that is interesting to keep for a fake measurement.}.
+
+The decomposition of denominator muons in all events according to which ID criteria or combination of ID criteria failed is shown in Fig~\ref{fig:muDeco_1} and Fig~\ref{fig:muDeco_2}. The  $m_{T}$ distribution of this decomposition in Fig~\ref{fig:muDeco_1} is plotted over the entire $m_{T}$ range, while the $\met$ distribution in Fig~\ref{fig:muDeco_1} and the \pt{} and $\eta$ distributions in Fig~\ref{fig:muDeco_2} are all shown for $m_{T} <40~\GeV$.  Note that these distributions are separated into categories: one for events with exactly zero $b$-jets, and and another for events with one or more $b$-jets.
+
+\begin{figure}[htb]
+        \centering
+        \includegraphics[width=.45\textwidth]{/Users/sheenaschier/Documents/LaFiles/figures/thesis/fakes/FF_muon/AID_deco_Mt_b0}
+        \includegraphics[width=.45\textwidth]{/Users/sheenaschier/Documents/LaFiles/figures/thesis/fakes/FF_muon/AID_deco_MET_b0}\\
+        \includegraphics[width=.45\textwidth]{/Users/sheenaschier/Documents/LaFiles/figures/thesis/fakes/FF_muon/AID_deco_Mt_b1}
+        \includegraphics[width=.45\textwidth]{/Users/sheenaschier/Documents/LaFiles/figures/thesis/fakes/FF_muon/AID_deco_MET_b1}\\
+        \caption{Anti-ID muon composition in events with exactly zero $b$-jets(top) and one or more $b$-jets(bottom) as a function of $m_{T}$ (left) and as a function of $\met$ (right) The \met{} distribution corresponds to events with $m_{T} < 40~GeV$.}
+        \label{fig:muDeco_1}
+\end{figure}
+\begin{figure}[htb]
+        \centering
+        \includegraphics[width=.45\textwidth]{/Users/sheenaschier/Documents/LaFiles/figures/thesis/fakes/FF_muon/AID_deco_AntiIDmuPt_b0}
+        \includegraphics[width=.45\textwidth]{/Users/sheenaschier/Documents/LaFiles/figures/thesis/fakes/FF_muon/AID_deco_AntiIDmuEta_b0}\\
+        \includegraphics[width=.45\textwidth]{/Users/sheenaschier/Documents/LaFiles/figures/thesis/fakes/FF_muon/AID_deco_AntiIDmuPt_b1}
+        \includegraphics[width=.45\textwidth]{/Users/sheenaschier/Documents/LaFiles/figures/thesis/fakes/FF_muon/AID_deco_AntiIDmuEta_b1}\\
+        \caption{Anti-ID muon composition in events with exactly zero $b$-jets(top) and one or more $b$-jets(bottnom) as a function of denomonator muon \pt{} (left) and as a function of denominator muon $\eta$ (right) for events with $m_{T} < 40~\GeV$. }
+        \label{fig:muDeco_2}
+\end{figure}
+
+% normalization and prompt subtraction
+Both data and MC contributions to the numerator and denominator samples in the single-muon trigger sample are normalized to 10~\ipb, to remove the effects of the prescales in the data.  The MC is then re-scaled to the data in events with $\met{}>200$~\GeV, a kinematic region expected to pure in prompt leptons.  For events with exactly 0 $b$-jets, the MC re-scaling factor for numerator muons is $1.01 \pm 0.13$, for denominator muons it is $1.20\pm 0.29$. For events with one or more $b$-jets, the MC re-scaling factor for numerator muons is $1.24 \pm 0.20$, for denominator muons it is $7.34\pm 5.00$. If instead, the MC is re-scaled to match the data for events with $m_{T} > 100$~\GeV, a region that should also be pure in prompt leptons, the re-scaling factors for events with exactly 0 $b$-jets are $2.37 \pm 0.10$ for numerator muons and $11.68 \pm 2.28$ for denominator muons; events with one or more $b$-jets have re-scale factors $1.60 \pm 0.06$ for numerator muons and $10.41 \pm 6.34$ for denominator muons. The re-scaling factors vary significantly between the two methods but the fake factors themselves exhibit small changes between the two methods and can be used as a systematic uncertainty.
+
+Distributions of \met{} and $m_{T}$ for numerator and denominator muons for events with exactly zero $b$-jets are shown in Fig.~\ref{fig:muon_FF_dists_b0}, and for events with one or more $b$-jets in Fig.~\ref{fig:muon_FF_dists_b1}.  Muon \pt{} distributions for events with exactly zero $b$-jet are shown in Fig.~\ref{fig:muon_FF_dists_pt_b0}, and for events with one or more $b$-jets in Fig.~\ref{fig:muon_FF_dists_pt_b1}.
+
+% mT, MET, and lepton pT plots for ID, anti-ID
+\begin{figure}[tbp]
+  \centering
+  \includegraphics[width=0.48\columnwidth]{/Users/sheenaschier/Documents/LaFiles/figures/thesis/fakes/FF_muon/IDb0_CR_MET}
+  \includegraphics[width=0.48\columnwidth]{/Users/sheenaschier/Documents/LaFiles/figures/thesis/fakes/FF_muon/IDb0_CR_Mt}\\
+  \includegraphics[width=0.48\columnwidth]{/Users/sheenaschier/Documents/LaFiles/figures/thesis/fakes/FF_muon/AIDb0_CR_MET}
+  \includegraphics[width=0.48\columnwidth]{/Users/sheenaschier/Documents/LaFiles/figures/thesis/fakes/FF_muon/AIDb0_CR_Mt}
+  \caption{The \met{} (left) and  $m_{T}$ (right) distributions for numerator (top) and denominator (bottom) muons in the prescaled single-lepton-trigger sample for events with exactly zero $b$-jets.  MC has been scaled to the data in the $\met > 200~\GeV$ region.}
+  \label{fig:muon_FF_dists_b0}
+\end{figure}
+
+\begin{figure}[tbp]
+  \centering
+  \includegraphics[width=0.48\columnwidth]{/Users/sheenaschier/Documents/LaFiles/figures/thesis/fakes/FF_muon/IDb1_CR_MET}
+  \includegraphics[width=0.48\columnwidth]{/Users/sheenaschier/Documents/LaFiles/figures/thesis/fakes/FF_muon/IDb1_CR_Mt}\\
+  \includegraphics[width=0.48\columnwidth]{/Users/sheenaschier/Documents/LaFiles/figures/thesis/fakes/FF_muon/AIDb1_CR_MET}
+  \includegraphics[width=0.48\columnwidth]{/Users/sheenaschier/Documents/LaFiles/figures/thesis/fakes/FF_muon/AIDb1_CR_Mt}
+  \caption{The \met{} (left) and $m_{T}$ (right) distributions for numerator (top) and denominator (bottom) muons in the prescaled single-lepton-trigger sample for events with one or more $b$-jets.  MC has been scaled to the data in the $\met > 200~\GeV$ region.}
+  \label{fig:muon_FF_dists_b1}
+\end{figure}
+
+\begin{figure}[tbp]
+  \centering
+  \includegraphics[width=0.48\textwidth]{/Users/sheenaschier/Documents/LaFiles/figures/thesis/fakes/FF_muon/IDb0_SR_IDmuPt}
+  \includegraphics[width=0.48\textwidth]{/Users/sheenaschier/Documents/LaFiles/figures/thesis/fakes/FF_muon/AIDb0_SR_AntiIDmuPt}
+  \caption{Muon \pt{} for numerator (left) and denominator (right) objects in the prescaled single-muon trigger sample for events with $m_{T} < 40~ GeV$.  MC has been scaled to the data in the $m_{T} > 100~\GeV$ region. Distributions from~\cite{Boerner:2231917}.}
+  \label{fig:muon_FF_dists_pt_b0}
+\end{figure}
+
+\begin{figure}[tbp]
+  \centering
+  \includegraphics[width=0.48\textwidth]{/Users/sheenaschier/Documents/LaFiles/figures/thesis/fakes/FF_muon/IDb1_SR_IDmuPt}
+  \includegraphics[width=0.48\textwidth]{/Users/sheenaschier/Documents/LaFiles/figures/thesis/fakes/FF_muon/AIDb1_SR_AntiIDmuPt}
+  \caption{Muon \pt{} for numerator (left) and denominator (right) objects in the prescaled single-muon trigger sample for events with $m_{T}< 40~ GeV$.  MC has been scaled to the data in the $m_{T} > 100~\GeV$ region. Distributions from~\cite{Boerner:2231917}.}
+  \label{fig:muon_FF_dists_pt_b1}
+\end{figure}
+
+
+% actual fake factors
+The fake factors are computed using events with $m_{\mathrm{T}}<40~\GeV$, using the distribution in Figs.~\ref{fig:muon_FF_dists_pt_b0} and \ref{fig:muon_FF_dists_pt_b1}, as
+\begin{equation}
+  F(\pt) = \frac{\mathrm{Numerator}_{\mathrm{data}} - \mathrm{Numerator}_{\mathrm{MC}}}{\mathrm{Denominator}_{\mathrm{data}} - \mathrm{Denominator}_{\mathrm{MC}}}
+\end{equation}
+where the fake factor $F$ is computed in discrete \pt{} bins with different single-muon triggers applied. The specific trigger applied to each range in lepton \pt{} was chosen to reduce the effect of the trigger turn on and maintain good statistics. Muon \pt{} distributions for the prescaled triggers shown in Fig.~\ref{fig:mu_triggers} are arbitrarily normalized to 1~\ipb.  HLT\_mu4 trigger is required for muon \pt{} $4 - 11~ \GeV$, HLT\_mu10 is required for muon \pt{} $11- 15~\GeV$, HLT\_mu14 is required for muon \pt{} $15-20~\GeV$, and HLT\_mu18 is required for muon \pt{} $>20~\GeV$. A table of these triggers and corresponding \pt{} range is shown in Table~\ref{tab:muon_trigger_range}  %The final fake factors are shown in Table~\ref{fig:muon_FF_values}.
+
+% Trigger distributions in lepton pt
+\begin{figure}[tbp]
+  \centering
+  \includegraphics[width=0.48\columnwidth]{/Users/sheenaschier/Documents/LaFiles/figures/thesis/fakes/FF_muon/IDmuonTriggers}
+  \includegraphics[width=0.48\columnwidth]{/Users/sheenaschier/Documents/LaFiles/figures/thesis/fakes/FF_muon/AntiIDmuonTriggers}\\
+  \caption{The numerator muon (left) and denominator denominator (right) \pt{} distributions for prescaled single-muon triggers, normalized to 1~\ipb{}. Blue curve: HLT\_mu4, red curve: HLT\_mu10, purple curve: HLT\_mu14, green curve: HLT\_mu18.}
+  \label{fig:mu_triggers}
+\end{figure}
+\begin{table}[tbp]
+  \centering
+  \begin{tabular}{|c|c|}
+    \hline
+    el trigger  & \pt{} range [\GeV]\\
+    \hline
+    HLT\_mu4 &4 --11  \\
+    HLT\_mu10 & 11--15  \\
+    HLT\_mu14 & 18--20  \\
+    HLT\_mu18 & $>$ 20  \\
+    \hline
+  \end{tabular}
+  \caption{Single-muon triggers used for fake factor computation and their corresponding \pt{} range.}
+  \label{tab:muon_trigger_range}
+\end{table}
+
+Muon fake factors depend strongly on muon \pt, but also display a systematic dependence on the leading jet \pt{}.  Unlike the electron fake factors, there is also a separate dependence on $b$-jet multiplicity.  Fig.~\ref{fig:muon_FF_hist_noCut} shows the muon fake factors as functions of muon \pt{}, leading jet \pt{}, and $b$-jet multiplicity before any hard jet requirement.  Similar to the electron fake factor calculation, the fake factor measurement region requires a hard jet of \pt{} greater than $100~GeV$, but unlike the electron fake factors, the muon fake factros are also separated into two $b$-jet multiplicity bins: exactly zero $b$-jets, and one or more $b$-jets.  The bin with exactly zero $b$-jets is used to estimate the fake contribution in the signal region, and the bin with one or more $b$-jets is used to estimate the fake contribution in the $t\bar{t}$ control region.
+
+\begin{figure}[tbp]
+  \centering
+  \includegraphics[width=0.48\columnwidth]{/Users/sheenaschier/Documents/LaFiles/figures/thesis/fakes/FF_muon/FakeFactor_mu_pt}
+  \includegraphics[width=0.48\columnwidth]{/Users/sheenaschier/Documents/LaFiles/figures/thesis/fakes/FF_muon/FakeFactor_mu_j1pt}\\
+  \includegraphics[width=0.48\columnwidth]{/Users/sheenaschier/Documents/LaFiles/figures/thesis/fakes/FF_muon/FakeFactor_mu_nbjet}\\
+  \caption{Muon fake factors \textit{before} requiring a hard jet of $\pt{}> 100~GeV$, computed from single-muon prescaled triggers as a function of muon \pt{} (top-left), as a function of leading jep \pt{} (top-right), and as a function of $b$-jet multiplicity (bottom). A red line denotes the average muon fake factor over all muon \pt{}.}
+  \label{fig:muon_FF_hist_noCut}
+\end{figure}
+
+The final fake factors are shown in Fig.~\ref{fig:muon_FF_hist} as a functions of muon \pt{} for each of the $b$-jet multiplicity bins.  In addition to the final fake factors binned in \pt, fake factors binned in other variables are also inspected to check for significant trends:
+\begin{itemize}
+\item Fake factors as a function of muon $\eta$ are shown in Fig.~\ref{fig:muon_FF_hist_eta},
+\item Fake factors as a function of $\Delta\phi_{jet1-met}$ are shown in Fig.~\ref{fig:muon_FF_dphij1},
+\item Fake factors as a function of jet multiplicity are shown in Fig.~\ref{fig:muon_FF_njet},
+%\item Fake factors as a function of $b$-jet multiplicity are shown in Fig.~\ref{fig:muon_FF_nbjet},
+\item Fake factors as a function of average interactions per bunch crossing are shown in Fig.~\ref{fig:muon_FF_mu},
+\item Fake factors as a function of the number of primary vertices are shown in Fig.~\ref{fig:muon_FF_npv}.
+\end{itemize}
+The relative uncertianties on the muons fake factors versus muon \pt{} for the separate $b$-jet multiplicity bins are show in Fig.~\ref{fig:muon_FF_rel_uncert}.
+
+\begin{figure}[tbp]
+  \centering
+  \includegraphics[width=0.48\columnwidth]{/Users/sheenaschier/Documents/LaFiles/figures/thesis/fakes/FF_muon/FakeFactor_mu_ptb0}
+  \includegraphics[width=0.48\columnwidth]{/Users/sheenaschier/Documents/LaFiles/figures/thesis/fakes/FF_muon/FakeFactor_mu_ptb1}\\
+  \caption{Muon fake factors computed from single-muon prescaled triggers as a function of muon \pt{} in events with exactly zero $b$-jets (left) and one or more $b$-jets (right). A red line denotes the average muon fake factor over all muon \pt{}.}
+  \label{fig:muon_FF_hist}
+\end{figure}
+
+\begin{figure}[tbp]
+  \centering
+  \includegraphics[width=0.48\columnwidth]{/Users/sheenaschier/Documents/LaFiles/figures/thesis/fakes/FF_muon/FakeFactor_mu_etab0}
+  \includegraphics[width=0.48\columnwidth]{/Users/sheenaschier/Documents/LaFiles/figures/thesis/fakes/FF_muon/FakeFactor_mu_etab1}\\
+  \caption{Muon fake factors computed from single-muon prescaled triggers as a function of muon $\eta$ in events with exactly zero $b$-jets (left) and one or more $b$-jets (right). A red line denotes the average muon fake factor over all muon \pt{}.}
+  \label{fig:muon_FF_hist_eta}
+\end{figure}
+
+\begin{figure}[tbp]
+  \centering
+  \includegraphics[width=0.48\columnwidth]{/Users/sheenaschier/Documents/LaFiles/figures/thesis/fakes/FF_muon/FakeFactor_mu_dphijb0}
+  \includegraphics[width=0.48\columnwidth]{/Users/sheenaschier/Documents/LaFiles/figures/thesis/fakes/FF_muon/FakeFactor_mu_dphijb1}
+  \caption{Muon fake factors computed from single-muon prescaled triggers as a function of $\Delta\phi_{jet-\met}$ in events with exactly zero $b$-jets (left) and one or more $b$-jets (right).  A red line denotes the average muon fake factor over all muon \pt{}}
+  \label{fig:muon_FF_dphij1}
+\end{figure}
+
+\begin{figure}[tbp]
+  \centering
+  \includegraphics[width=0.48\columnwidth]{/Users/sheenaschier/Documents/LaFiles/figures/thesis/fakes/FF_muon/FakeFactor_mu_njetb0}
+  \includegraphics[width=0.48\columnwidth]{/Users/sheenaschier/Documents/LaFiles/figures/thesis/fakes/FF_muon/FakeFactor_mu_njetb1}\\
+  \caption{Muon fake factors computed from single-muon prescaled triggers as a function of the jet multiplicity in events with exactly zero $b$-jets (left) and one or more $b$-jets (right).  A red line denotes the average muon fake factor over all muon \pt{}}
+  \label{fig:muon_FF_njet}
+\end{figure}
+
+\begin{figure}[tbp]
+  \centering
+  \includegraphics[width=0.48\columnwidth]{/Users/sheenaschier/Documents/LaFiles/figures/thesis/fakes/FF_muon/FakeFactor_mu_mub0}
+  \includegraphics[width=0.48\columnwidth]{/Users/sheenaschier/Documents/LaFiles/figures/thesis/fakes/FF_muon/FakeFactor_mu_mub1}\\
+  \caption{Muon fake factors computed from single-muon prescaled triggers as a function of the average number of interactions per bunch crossing in events with exactly zero $b$-jets (left) and one or more $b$-jets (right).  A red line denotes the average muon fake factor over all muon \pt{}}
+  \label{fig:muon_FF_mu}
+\end{figure}
+
+\begin{figure}[tbp]
+  \centering
+  \includegraphics[width=0.48\columnwidth]{/Users/sheenaschier/Documents/LaFiles/figures/thesis/fakes/FF_muon/FakeFactor_mu_npvb0}
+  \includegraphics[width=0.48\columnwidth]{/Users/sheenaschier/Documents/LaFiles/figures/thesis/fakes/FF_muon/FakeFactor_mu_npvb1}\\
+  \caption{Muon fake factors computed from single-muon prescaled triggers as a function of the number of primary vertices in events with exactly zero $b$-jets (left) and one or more $b$-jets (right).  A red line denotes the average muon fake factor over all muon \pt{}}
+  \label{fig:muon_FF_npv}
+\end{figure}
+
+\begin{figure}[tbp]
+  \centering
+  \includegraphics[width=0.48\columnwidth]{/Users/sheenaschier/Documents/LaFiles/figures/thesis/fakes/FF_muon/FakeFactor_mu_ptb0_uncert}
+  \includegraphics[width=0.48\columnwidth]{/Users/sheenaschier/Documents/LaFiles/figures/thesis/fakes/FF_muon/FakeFactor_mu_ptb1_uncert}\\
+  \caption{Relative uncertianties on muon fake factors versus muon \pt{} in zero $b$-jets bin (left) and one or more $b$-jets bin (right).}
+  \label{fig:muon_FF_rel_uncert}
+\end{figure}
+
+ \FloatBarrier
+\clearpage
+%%%%%%%%%%%%%%%%%%%%%%% BACKGROUND ESTIMATION %%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Backgrounds}
+\label{sec:bkg}
+
+\subsection{Fake Lepton Background}
+Show the calculations and results of the fake estimate.  The method will be explained in a dedicated chapter/section.
+
+\subsection{$t\bar{t}$ Background}
+\label{sec:top}
+Mainly b-jet requirement
+
+\subsection{Drell-Yan Background}
+\label{sec:mettrigger}
+Off-shell $z\rightarrow ll$ events.
+
+ \begin{figure}
+ \centering
+    \includegraphics[width=0.6\columnwidth]{/Users/sheenaschier/Documents/LaFiles/figures/thesis/backgrounds/dataCR_mll_MuMu_pre.pdf}
+  % \caption{Di-muon.}
+ \includegraphics[width=0.6\columnwidth]{/Users/sheenaschier/Documents/LaFiles/figures/thesis/backgrounds/dataCR_mll_ElEl_pre.pdf}
+%  \caption{Di-electron.}
+  \includegraphics[width=0.6\columnwidth]{/Users/sheenaschier/Documents/LaFiles/figures/thesis/backgrounds/dataCR_mll_DF_pre.pdf}
+%  \caption{Different flavour ($e\mu+\mu e$).}
+  \caption{Data events passing inclusive \met{} triggers with opposite sign baseline leptons in the dilepton invariant mass $m_{\ell\ell}$ spectrum. The $\Delta\phi(j_1, \mathbf{p}_\mathrm{    T}^\mathrm{miss})$ variable is inverted to ensure this is orthogonal to the signal region.}
+  \label{fig:mll_data}
+ \end{figure}
+\FloatBarrier
+
+\subsection{Z+jets Background}
+\label{sec:elements}
+
+
+ \input{/Users/sheenaschier/Documents/LaFiles/figures/thesis/control_plots}
+\clearpage
+%%%%%%%%%%%%%%%%%%%%%% SYSTEMATIC UNCERTIANTIES %%%%%%%%%%%%%%%%%%%%%
+\section{Systematic Uncertianties}
+\label{sec:syst}
+Talk about the sources of uncertainty and the estimates.
+
+\subsection{Experimental}
+\label{sec:systexp}
+CP group uncertainties and fake factor uncertainties are the sources of experimental systematics
+
+\subsection{Theoretical}
+\label{sec:systthy}
+
+In this section we will go over the theoretical systematics and both signal and background estimates.
+ \begin{figure}
+  \centering
+  \includegraphics[width=0.4\columnwidth]{/Users/sheenaschier/Documents/LaFiles/figures/thesis/systematics/scaleVars_diboson2L_mll_SR_hg_SFDF_shape.pdf}
+ %\caption{$\mu_{F}$ and $\mu_{R}$ uncertainties on the $m_{\ell\ell}$ distribution in the Higgsino signal region.}
+  \includegraphics[width=0.4\columnwidth]{/Users/sheenaschier/Documents/LaFiles/figures/thesis/systematics/scaleVars_diboson2L_mt2leplsp_100_SR_sl_SFDF_shape.pdf}
+% \caption{$\mu_{F}$ and $\mu_{R}$ uncertainties on the $m_{\text{T}2}$ distribution in the slepton signal region.}
+ \includegraphics[width=0.4\columnwidth]{/Users/sheenaschier/Documents/LaFiles/figures/thesis/systematics/alphaVars_diboson2L_mll_SR_hg_SFDF_shape.pdf}
+ % \caption{$\alpha_{s}$ uncertainties on the $m_{\ell\ell}$ distribution in the Higgsino signal region.}
+ \includegraphics[width=0.4\columnwidth]{/Users/sheenaschier/Documents/LaFiles/figures/thesis/systematics/alphaVars_diboson2L_mt2leplsp_100_SR_sl_SFDF_shape.pdf}
+% \caption{$\alpha_{s}$ uncertainties on the $m_{\text{T}2}$ distribution in the slepton signal region.}
+  \includegraphics[width=0.4\columnwidth]{/Users/sheenaschier/Documents/LaFiles/figures/thesis/systematics/PDFVars_diboson2L_mll_SR_hg_SFDF_shape_allPDFs.pdf}
+ % \caption{PDF uncertainties on the $m_{\ell\ell}$ distribution in the Higgsino signal region.}
+  \includegraphics[width=0.4\columnwidth]{/Users/sheenaschier/Documents/LaFiles/figures/thesis/systematics/PDFVars_diboson2L_mt2leplsp_100_SR_sl_SFDF_shape_allPDFs.pdf}
+%\caption{PDF uncertainties on the $m_{\text{T}2}$ distribution in the slepton signal region.}
+ \caption{QCD scale, $\alpha_{s}$ and PDF uncertainties on the shape and normalization of the diboson background in the Higgsino and slepton signal regions (with no lepton flavor requirement).}
+\label{fig:theoryUncsVV}
+ \end{figure}
+ 
+  \begin{figure}
+  \centering
+   \includegraphics[width=0.4\columnwidth]{/Users/sheenaschier/Documents/LaFiles/figures/thesis/systematics/scaleVars_Zttjets_mll_SR_hg_SFDF_shape.pdf}
+ %\caption{$\mu_{F}$ and $\mu_{R}$ uncertainties on the $m_{\ell\ell}$ distribution in the Higgsino signal region.}
+  \includegraphics[width=0.4\columnwidth]{/Users/sheenaschier/Documents/LaFiles/figures/thesis/systematics/scaleVars_Zttjets_mt2leplsp_100_SR_sl_SFDF_shape.pdf}
+% \caption{$\mu_{F}$ and $\mu_{R}$ uncertainties on the $m_{\text{T}2}$ distribution in the slepton signal region.}
+ \includegraphics[width=0.4\columnwidth]{/Users/sheenaschier/Documents/LaFiles/figures/thesis/systematics/alphaVars_Zttjets_mll_SR_hg_SFDF_shape.pdf}
+ % \caption{$\alpha_{s}$ uncertainties on the $m_{\ell\ell}$ distribution in the Higgsino signal region.}
+ \includegraphics[width=0.4\columnwidth]{/Users/sheenaschier/Documents/LaFiles/figures/thesis/systematics/alphaVars_Zttjets_mt2leplsp_100_SR_sl_SFDF_shape.pdf}
+% \caption{$\alpha_{s}$ uncertainties on the $m_{\text{T}2}$ distribution in the slepton signal region.}
+  \includegraphics[width=0.4\columnwidth]{/Users/sheenaschier/Documents/LaFiles/figures/thesis/systematics/PDFVars_Zttjets_mll_SR_hg_SFDF_shape_allPDFs.pdf}
+ % \caption{PDF uncertainties on the $m_{\ell\ell}$ distribution in the Higgsino signal region.}
+  \includegraphics[width=0.4\columnwidth]{/Users/sheenaschier/Documents/LaFiles/figures/thesis/systematics/PDFVars_Zttjets_mt2leplsp_100_SR_sl_SFDF_shape_allPDFs.pdf}
+%\caption{PDF uncertainties on the $m_{\text{T}2}$ distribution in the slepton signal region.}
+\caption{QCD scale, $\alpha_{s}$ and PDF uncertainties on the shape and normalization of the $Z\to\tau\tau$ background in the Higgsino and slepton signal regions (with no lepton flavor requirement).}
+\label{fig:theoryUncsZtt}
+ \end{figure}
+ 
+  \begin{figure}
+  \centering 
+   \includegraphics[width=0.4\columnwidth]{/Users/sheenaschier/Documents/LaFiles/figures/thesis/systematics/scaleVars_alt_ttbar_PowPy8_dilep_hdamp258p75_mll_SR_hg_SFDF_shape.pdf}
+ %\caption{$\mu_{F}$ and $\mu_{R}$ uncertainties on the $m_{\ell\ell}$ distribution in the Higgsino signal region.}
+  \includegraphics[width=0.4\columnwidth]{/Users/sheenaschier/Documents/LaFiles/figures/thesis/systematics/scaleVars_alt_ttbar_PowPy8_dilep_hdamp258p75_mt2leplsp_100_SR_sl_SFDF_shape.pdf}
+% \caption{$\mu_{F}$ and $\mu_{R}$ uncertainties on the $m_{\text{T}2}$ distribution in the slepton signal region.}
+  \includegraphics[width=0.4\columnwidth]{/Users/sheenaschier/Documents/LaFiles/figures/thesis/systematics/PDFVars_alt_ttbar_PowPy8_dilep_hdamp258p75_mll_SR_hg_SFDF_shape_allPDFs.pdf}
+ % \caption{PDF uncertainties on the $m_{\ell\ell}$ distribution in the Higgsino signal region.}
+  \includegraphics[width=0.4\columnwidth]{/Users/sheenaschier/Documents/LaFiles/figures/thesis/systematics/PDFVars_alt_ttbar_PowPy8_dilep_hdamp258p75_mt2leplsp_100_SR_sl_SFDF_shape_allPDFs.pdf}
+%\caption{PDF uncertainties on the $m_{\text{T}2}$ distribution in the slepton signal region.}
+\caption{QCD scale and PDF uncertainties on the shape and normalization of the $t\bar{t}$ background in the Higgsino and slepton signal regions (with no lepton flavour requirement).}
+\label{fig:theoryUncsttbar}
+ \end{figure}
+ 
+   \begin{figure}
+  \centering 
+   \includegraphics[width=0.4\columnwidth]{/Users/sheenaschier/Documents/LaFiles/figures/thesis/systematics/ttbarComp_mll_SR_hg_SFDF_allBjet_v2.pdf}
+ %\caption{$m_{\ell\ell}$ distribution for $t\bar{t}$ in the Higgsino signal region.}
+  \includegraphics[width=0.4\columnwidth]{/Users/sheenaschier/Documents/LaFiles/figures/thesis/systematics/ttbarComp_mt2leplsp_100_SR_sl_SFDF_allBjet_v2.pdf}
+% \caption{$m_{\text{T}2}$ distribution for $t\bar{t}$ in the slepton signal region.}
+  \includegraphics[width=0.4\columnwidth]{/Users/sheenaschier/Documents/LaFiles/figures/thesis/systematics/VVcomp_mll_SR_hg_SFDF_VVsafe.pdf}
+ % \caption{$m_{\ell\ell}$ distribution for $VV$ in the Higgsino signal region.}
+  \includegraphics[width=0.4\columnwidth]{/Users/sheenaschier/Documents/LaFiles/figures/thesis/systematics/VVcomp_mt2leplsp_100_SR_sl_SFDF_VVsafe.pdf}
+%\caption{$m_{\text{T}2}$ distribution for $VV$ in the slepton signal region.}
+\caption{Comparison of the $m_{\ell\ell}$ (left) and $m_{\text{T}2}$ (right) shapes predicted by different $t\bar{t}$ (top) and $VV$ (bottom) MC generators, in the Higgsino and slepton signal regions. All distributions are normalized to the same number of entries. The gray band displayed in the ratio pad under each distribution represents the modeling uncertainty assigned to each background in each of the bins.}
+\label{fig:genComparisonBkgModelling}
+ \end{figure}
+\FloatBarrier
+\clearpage
+%%%%%%%%%%%%%%%%%%%%%% RESULTS %%%%%%%%%%%%%%%%%%%%%
+\section{Results}
+\label{sec:results}
+Model independent interpretations are shown as well as compressed higgsino and compressed slepton interpretations.
+\begin{figure}
+ \centering
+\includegraphics[width=0.6\columnwidth]{/Users/sheenaschier/Documents/LaFiles/figures/thesis/results/pull_plot_summary_yields}
+   \caption{Summary of Monte Carlo yields in control, validation and signal regions in a background-only fit using data only in the two CRs to constrain the fit.}
+  \label{fig:pull_plot_summary_yields}
+ \end{figure}
+\FloatBarrier
+
+\subsection{Compressed Higgsino}
+ \begin{figure}
+ \centering
+ \includegraphics[width=0.6\columnwidth]{/Users/sheenaschier/Documents/LaFiles/figures/thesis/results/exclusion_contour_higgsino.pdf}
+  \caption{
+ Expected 95\% CL exclusion sensitivity (blue dashed line) with $\pm 1 \sigma_\text{exp}$ (yellow band) from experimental systematics
+   and observed limits (red solid) with $\pm 1 \sigma_\text{theory}$ (dotted red) from signal cross section uncertainties.
+A shape fit of Higgsino signals to the $m_{\ell\ell}$ spectrum is used to derive
+ the limit is displayed in the $m(\tilde{\chi}^0_2) - m(\tilde{\chi}^0_1)$ vs $m(\tilde{\chi}^0_2)$ plane.
+ The chargino $\tilde{\chi}^\pm_1$ mass is assumed to be half way between the two lightest neutralinos.
+  The grey region denotes the lower chargino mass limit from LEP~\cite{LEPlimits}.}
+   \label{fig:exclusion_contour_higgsino}
+ \end{figure}
+ \FloatBarrier
+ 
+ \subsection{Compressed Slepton}
+  \begin{figure}
+ \centering
+ \includegraphics[width=0.6\columnwidth]{/Users/sheenaschier/Documents/LaFiles/figures/thesis/results/exclusion_contour_slepton.pdf}
+  \caption{
+Expected 95\% CL exclusion sensitivity (blue dashed line) with $\pm 1 \sigma_\text{exp}$ (yellow band) from experimental systematics
+and observed limits (red solid) with $\pm 1 \sigma_\text{theory}$ (dotted red) from signal cross section uncertainties.
+A shape fit of slepton signals to the $m_\text{T2}^{100}$ spectrum is used to derive
+the limit projected into the $m(\tilde{\ell}) - m(\tilde{\chi}^0_1)$ vs $m(\tilde{\ell})$ plane.
+The slepton $\tilde{\ell}$ refers to a 4-fold mass degenerate system of left- and right-handed selectron and smuon.
+The grey region denotes a conservative right-handed smuon $\tilde{\mu}_R$ mass limit from LEP~\cite{LEPlimits},
+while the blue region is the 4-fold mass degenerate slepton limit from ATLAS Run 1~\cite{SUSY-2013-11}.}
+   \label{fig:exclusion_contour_slepton}
+ \end{figure}
+ 
+\clearpage
+%%%%%%%%%%%%%%%%%%%%%% CONCLUSION %%%%%%%%%%%%%%%%%%%%%
+\section{Conclusion}
+\label{sec:conclusion}
+A search for supersymmetry in scenarios with compressed mass spectra was performed using ATLAS data collected in 2015 and 2016 at $\sqrt(s)$ 13 TeV, corresponding to $36.1 fb^{-1}$.
+What cool limits we get to put on things because of what we did not see at with LHC data taken by ATLAS detector
+
+\clearpage
+\printbibliography
+
+\end{document}  
