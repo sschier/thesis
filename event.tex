@@ -1,0 +1,84 @@
+\chapter{Event Selection and Signal Regions}
+%\label{sec:sr}
+Study signal MonteCarlos samples to understand the phenomenology of compressed higgsino and slepton production during and LHC collision and subsequent decay in the ALTAS detector.  These studies inform our choices choices for signal region cuts for the slepton and higgsino searches. 
+\section{Object Definitions}
+\label{sec:objdef}
+Electrons, muons, jets, photons, met, overlap removal, isolation for nearby leptons.. (lepton truth matching?)
+
+  \begin{figure}[tbp]
+   % \centering
+     \includegraphics[width=0.48\columnwidth]{/Users/sheenaschier/Documents/LaFiles/figures/thesis/eventselection/eff_EE_Rll_110_100_NoOS_NoISO.pdf}
+       \includegraphics[width=0.48\columnwidth]{/Users/sheenaschier/Documents/LaFiles/figures/thesis/eventselection/eff_MM_Rll_110_100_GradLoose_NoOS_NoISO.pdf}\\
+     \includegraphics[width=0.48\columnwidth]{/Users/sheenaschier/Documents/LaFiles/figures/thesis/eventselection/eff_EE_Rll_110_100_NoOS.pdf}
+     \includegraphics[width=0.48\columnwidth]{/Users/sheenaschier/Documents/LaFiles/figures/thesis/eventselection/eff_MM_Rll_110_100_GradLoose_NoOS.pdf}\\
+   \caption{Dilepton $\Delta$ R distribution before LepIsoCorrection (top) and after LepIsoCorrection (bottom) for the $ee$-channel (left) and $\mu\mu$-channel (right).}
+   \label{fig:EffRll_ISOCorr}
+ \end{figure}
+
+  \begin{figure}[tbp]
+   % \centering
+     \includegraphics[width=0.48\columnwidth]{/Users/sheenaschier/Documents/LaFiles/figures/thesis/eventselection/eff_EE_Mll_110_100_NoOS_NoISO.pdf}
+       \includegraphics[width=0.48\columnwidth]{/Users/sheenaschier/Documents/LaFiles/figures/thesis/eventselection/eff_MM_Mll_110_100_GradLoose_NoOS_NoISO.pdf}\\
+     \includegraphics[width=0.48\columnwidth]{/Users/sheenaschier/Documents/LaFiles/figures/thesis/eventselection/eff_EE_Mll_110_100_NoOS.pdf}
+     \includegraphics[width=0.48\columnwidth]{/Users/sheenaschier/Documents/LaFiles/figures/thesis/eventselection/eff_MM_Mll_110_100_GradLoose_NoOS.pdf}\\
+   \caption{Dilepton invarient mass distribution before LepIsoCorrection (top) and after LepIsoCorrection (bottom) for the $ee$-channel (left) and $\mu\mu$-channel (right).}
+   \label{fig:EffMll_ISOCorr}
+ \end{figure}
+
+ \begin{figure}[tbp]
+  \includegraphics[width=0.48\columnwidth,trim=1.2cm 0cm 1.9cm 0cm,clip]{/Users/sheenaschier/Documents/LaFiles/figures/thesis/nearbylepiso.pdf}
+   \includegraphics[width=0.48\columnwidth]{/Users/sheenaschier/Documents/LaFiles/figures/thesis/nearbylepiso_signal.pdf}
+  \caption{(left) Impact of the \texttt{NearbyLepIsoCorrection} tool on the efficiency of low-mass dilepton pairs in data.  The data are shown in a region with $\Delta\phi(\met, p_{t}^{j1})<1.5$ to avoid the signal region.  Events are triggered with the inclusive-\met{} trigger.  The red trend shows events with two baseline leptons without applying any isolation; the green shows the impact of applying \texttt{GradientLoose} isolation; the blue shows the result of the \texttt{NearbyLepIsoCorrection} applied to the \texttt{GradientLoose} sample.  (right) Impact of the correction on a Higgsino LSP signal sample with $\Delta m(\chi,\chi)=3~\GeV$.}
+ \label{fig:nearbylepiso}
+ \end{figure}
+
+
+\section{Discriminating Variables}
+\label{sec:discvar}
+$\met$, d phi j-met, min d phi jets-met, $\pt(j_i)$, Number of $b$-tagged jets $N_\mathrm{b-jets}$\\
+Same flavour lepton pair with opposite charge, $\Delta R_{\ell\ell}$, $m_{\ell\ell}$, $m_{T2}^{m_{\chi}}$,$m_\text{T}^{\ell_1}$, $\met/\HT^\text{leptons}$, $m_{\tau\tau}$
+
+  % https://gitlab.cern.ch/jeliu/atlas-susy-ew-softlepton/blob/master/pyCut/refactor/central/plot1d_signals_only.py
+  \begin{figure}[tbp]
+   % \centering
+     \includegraphics[width=0.48\columnwidth]{/Users/sheenaschier/Documents/LaFiles/figures/thesis/higgsino_slep_signal_Rll_met0.pdf}
+  %  \caption{No \met{} requirement (only truth filter).}
+       \includegraphics[width=0.48\columnwidth]{/Users/sheenaschier/Documents/LaFiles/figures/thesis/higgsino_slep_signal_Rll_met100.pdf}\\
+   % \caption{$\met{} > 100$ GeV.}
+     \includegraphics[width=0.48\columnwidth]{/Users/sheenaschier/Documents/LaFiles/figures/thesis/higgsino_slep_signal_Rll_met200.pdf}
+ %   \caption{$\met{} > 200$ GeV.}
+     \includegraphics[width=0.48\columnwidth]{/Users/sheenaschier/Documents/LaFiles/figures/thesis/higgsino_slep_signal_Rll_met300.pdf}\\
+%    \caption{$\met{} > 300$ GeV.}
+   \caption{Comparison of Higgisno N2C1p (solid) and slepton (dashed) signals in the $R_{\ell\ell}$ variable for 10 GeV (dark) and 20 GeV (light) mass splittings. The \met{} here acts as a p    roxy for the boost of the system. Only a 2 signal lepton selection is applied.}
+   \label{fig:Rll_signals only}
+ \end{figure}
+ 
+ \begin{figure}[tbp]
+  \centering
+  \includegraphics[width=0.48\columnwidth]{/Users/sheenaschier/Documents/LaFiles/figures/thesis/METoverHTLep_mll}
+%\caption{Higgsinos}
+  \includegraphics[width=0.48\columnwidth]{/Users/sheenaschier/Documents/LaFiles/figures/thesis/METoverHTLep_mT2}
+%\caption{Sleptons}
+ \caption{Distributions of $\met/H_{T}^{leptons}$ for the Higgsino (left) and Slepton (right) selections, after applying all signal region cuts except those on the $\met/H_{T}^{leptons}$, $m_{ll}$, and $m_{T2}$.  The black dashed line indicates the cut applied in the signal region; events in the region below the black line are rejected.}
+ \label{fig:METoverHTLep2D}
+ \end{figure}
+ 
+ 
+  \begin{figure}
+  \centering
+  \input{/Users/sheenaschier/Documents/LaFiles/figures/thesis/ditau_schematic}
+  \caption{Schematic illustrating the fully leptonic $(Z\to\tau\tau)$ + jets system motivating the construction of $m_{\tau\tau}$. }
+  \label{fig:ditau_schematic}
+  \end{figure}
+  \subsection{Signal Regions}
+ \begin{figure}[h!]
+ \centering
+ \includegraphics[scale=0.6]{/Users/sheenaschier/Documents/LaFiles/figures/thesis/cutflow_SF.pdf}
+ \caption{Non-normalized cutflow with significance plot, showing how the significance for signal improves as more cuts are added.}
+ \label{fig:cutflow_zn}
+ \end{figure}
+\subsection{Slepton Signal Regions}
+This signal region based on MT2 cuts
+\subsection{Higgsino Signal Regions}
+This signal region based on Mll cuts
+

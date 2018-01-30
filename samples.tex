@@ -1,0 +1,67 @@
+\chapter{MC and Data samples}
+%\label{sec:mcdata}
+ Can talk about integrated lumi and maybe event weight
+
+
+The event weights are very important.  Currently I am applying the total weight as:
+\begin{equation}
+\label{eq:weight}
+totalWeight = ttbarNNLOWeight*pileupWeight*eventWeight*leptonWeight*jvtWeight*bTagWeight
+\end{equation}
+The weights are recalculated during the merging phase using the cross-section and the sumOfWeightsHist.\
+
+\section{Signal Samples}
+
+  \begin{figure}[tbp]
+   % \centering
+\includegraphics[width=0.48\columnwidth]{/Users/sheenaschier/Documents/LaFiles/figures/thesis/signal_samples/ossf_Jet1Pt.pdf}
+\includegraphics[width=0.48\columnwidth]{/Users/sheenaschier/Documents/LaFiles/figures/thesis/signal_samples/ossf_Jet2Pt.pdf}\\
+ \includegraphics[width=0.48\columnwidth]{/Users/sheenaschier/Documents/LaFiles/figures/thesis/signal_samples/ossf_Lep1Pt.pdf}
+ \includegraphics[width=0.48\columnwidth]{/Users/sheenaschier/Documents/LaFiles/figures/thesis/signal_samples/ossf_Lep2Pt.pdf}\\
+ \includegraphics[width=0.48\columnwidth]{/Users/sheenaschier/Documents/LaFiles/figures/thesis/signal_samples/ossf_Mt_l1met.pdf}
+ \includegraphics[width=0.48\columnwidth]{/Users/sheenaschier/Documents/LaFiles/figures/thesis/signal_samples/ossf_Mt_l2met.pdf}\\
+  \includegraphics[width=0.48\columnwidth]{/Users/sheenaschier/Documents/LaFiles/figures/thesis/signal_samples/ossf_nJet20.pdf}
+ \includegraphics[width=0.48\columnwidth]{/Users/sheenaschier/Documents/LaFiles/figures/thesis/signal_samples/ossf_nLep_signal.pdf}\\
+   \caption{Kinematic distributions of signal samples}
+   \label{fig:SigSample1}
+ \end{figure}
+ 
+   \begin{figure}[tbp]
+   % \centering
+\includegraphics[width=0.48\columnwidth]{/Users/sheenaschier/Documents/LaFiles/figures/thesis/signal_samples/ossf_MET.pdf}
+\includegraphics[width=0.48\columnwidth]{/Users/sheenaschier/Documents/LaFiles/figures/thesis/signal_samples/ossf_lep_type.pdf}\\
+ \includegraphics[width=0.48\columnwidth]{/Users/sheenaschier/Documents/LaFiles/figures/thesis/signal_samples/ossf_dR_l1l2.pdf}
+ \includegraphics[width=0.48\columnwidth]{/Users/sheenaschier/Documents/LaFiles/figures/thesis/signal_samples/ossf_dphi_j1met.pdf}\\
+ \includegraphics[width=0.48\columnwidth]{/Users/sheenaschier/Documents/LaFiles/figures/thesis/signal_samples/ossf_mll.pdf}
+ \includegraphics[width=0.48\columnwidth]{/Users/sheenaschier/Documents/LaFiles/figures/thesis/signal_samples/ossf_ptll.pdf}\\
+   \caption{Kinematic distributions of signal samples}
+   \label{fig:SigSample2}
+ \end{figure}
+
+ \FloatBarrier
+\section{Triggers}
+\label{sec:eff}
+
+\subsection{MET Triggers}
+\label{sec:met}
+Inclusive met trigger efficiencies
+
+\subsection{Combined Triggers}
+Lepton plus jet plus met trigger efficiencies..
+
+  \begin{figure}[tbp]
+   % \centering
+     \includegraphics[width=0.48\columnwidth]{/Users/sheenaschier/Documents/LaFiles/figures/thesis/eventselection/eff_MM_signal_110_100.pdf}
+       \includegraphics[width=0.48\columnwidth]{/Users/sheenaschier/Documents/LaFiles/figures/thesis/eventselection/eff_MM_mtautau_110_100.pdf}\\
+   \caption{Trigger Efficiency as a function of MET after event preselection (left) and in a signal region similar to the analysis signal region (right)}
+   \label{fig:TrigEff1}
+ \end{figure}
+ 
+   \begin{figure}[tbp]
+   % \centering
+     \includegraphics[width=0.48\columnwidth]{/Users/sheenaschier/Documents/LaFiles/figures/thesis/eventselection/eff_MM_jet145_110_100.pdf}
+       \includegraphics[width=0.48\columnwidth]{/Users/sheenaschier/Documents/LaFiles/figures/thesis/eventselection/eff_MM_jet105_110_100.pdf}\\
+   \caption{Trigger efficiency as a function of MET for the combined single muon trigger (left) and the combined dimuon trigger (right)}
+   \label{fig:TrigEff2}
+ \end{figure}
+

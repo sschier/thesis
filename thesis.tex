@@ -1,0 +1,103 @@
+%% uctest.tex 11/3/94
+%% Copyright (C) 1988-2004 Daniel Gildea, BBF, Ethan Munson.
+%
+% This work may be distributed and/or modified under the
+% conditions of the LaTeX Project Public License, either version 1.3
+% of this license or (at your option) any later version.
+% The latest version of this license is in
+%   http://www.latex-project.org/lppl.txt
+% and version 1.3 or later is part of all distributions of LaTeX
+% version 2003/12/01 or later.
+%
+% This work has the LPPL maintenance status "maintained".
+% 
+% The Current Maintainer of this work is Daniel Gildea.
+\newcommand*{\ATLASLATEXPATH}{/Users/sheenaschier/Library/TexShop/texmf/tex/latex/atlaslatex-01-07-01/latex/}
+\documentclass[11pt]{ucthesis}
+\def\dsp{\def\baselinestretch{2.0}\large\normalsize}
+\dsp
+\usepackage{\ATLASLATEXPATH atlasphysics}
+\usepackage{graphicx}     % Use pdf, png, jpg, or eps§ with pdflatex; use eps in DVI mode
+\usepackage{amsmath}
+\usepackage{tikz}	
+\usepackage{placeins}
+
+\begin{document}
+
+% Declarations for Front Matter
+
+\title{Searches for Electroweak Production of Compressed Supersymmetry in Events with Soft Leptons Plus Missing Transverse Momentum and Hard Jet Recoil}
+\author{Sheena Calie Schier}
+\degreeyear{2018}
+\degreemonth{June}
+\degree{DOCTOR OF PHILOSOPHY}
+\chair{Professor Abraham Seiden}
+\committeememberone{Professor Jason Neilsen}
+\committeemembertwo{Professor Michael Hance}
+\numberofmembers{3} %% (including chair) possible: 3, 4, 5, 6
+\deanlineone{Dean Tyrus Miller}
+\deanlinetwo{Vice Provost and Dean of Graduate Studies}
+\deanlinethree{}
+\field{Physics}
+\campus{Santa Cruz}
+
+\begin{frontmatter}
+
+\maketitle
+\copyrightpage
+
+\tableofcontents
+\listoffigures
+\listoftables
+
+\begin{abstract}
+Supersymmetry (SUSY) is an extension of the Standard Model that predicts a boson (fermion) partner for each fermion (boson) in the Standard Model. Weak scale SUSY is attractive for reasons like improving gauge coupling unification, reducing fine-tuning in the Higgs sector and providing a dark matter candidate. In this thesis, I present a dedicated search for direct production of new colorless weak scale states in a compressed mass spectra with final states characterized by soft visible decay products. This analysis uses $pp$ collisions at $\sqrt s$ = 13 TeV at the Large Hadron Collider and collected by the ATLAS experiment during 2015 and 2016 corresponding to 36.1 $fb^{-1}$ of integrated luminosity. This analysis selects events with two soft electrons or muons and missing transverse momentum ($E_T^{miss}$) recoiling against hadronic initial state radiation. Backgrounds from $t\bar{t}$, diboson, and other production mechanisms with prompt leptons are estimated with Monte Carlo
+simulation while reducible backgrounds with instrumental $E_T^{miss}$ and fake/non-prompt leptons is estimated with a mix of Monte Carlo and data-driven methods. Results are consistent with Standard Model expectation and limits on compressed supersymmetric states are extended for the first time since LEP.
+
+\end{abstract}
+
+\begin{dedication}
+\null\vfil
+{\large
+\begin{center}
+To my father,\\\vspace{12pt}
+Lecil Charles Schier,\\\vspace{12pt}
+the person who taught me at the age of 7 that the grass in not green.
+\end{center}}
+\vfil\null
+\end{dedication}
+
+
+\begin{acknowledgements}
+I want to ``thank'' my committee, without whose ridiculous demands, I
+would have graduated so, so, very much faster.
+\end{acknowledgements}
+
+\end{frontmatter}
+
+\part{First Part}
+
+\include{introduction}
+\include{theory}
+\include{detector}
+\include{samples}
+\include{event}
+\include{fakefactor}
+\include{backgrounds}
+\include{systematics}
+\include{statanalysis}
+\include{results}
+\include{conclusion}
+
+
+\nocite{*}
+\bibliographystyle{plain}
+\bibliography{uctest}
+
+\appendix
+\chapter{Some Ancillary Stuff}
+
+Ancillary material should be put in appendices, which appear after the
+bibliography. 
+
+\end{document}
