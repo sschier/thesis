@@ -21,6 +21,9 @@
 \usepackage{amsmath}
 \usepackage{tikz}	
 \usepackage{placeins}
+\usepackage{caption}
+\usepackage{subcaption}
+\usepackage[font={small}]{caption}
 
 \begin{document}
 
@@ -34,7 +37,7 @@
 \chair{Professor Abraham Seiden}
 \committeememberone{Professor Jason Neilsen}
 \committeemembertwo{Professor Michael Hance}
-\numberofmembers{3} %% (including chair) possible: 3, 4, 5, 6
+\numberofmembers{3} 
 \deanlineone{Dean Tyrus Miller}
 \deanlinetwo{Vice Provost and Dean of Graduate Studies}
 \deanlinethree{}
@@ -95,7 +98,7 @@ would have graduated so, so, very much faster.
 \bibliography{uctest}
 
 \appendix
-\chapter{Some Ancillary Stuff}
+\include{apndx-A}
 
 Ancillary material should be put in appendices, which appear after the
 bibliography. 

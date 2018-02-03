@@ -63,6 +63,7 @@ The fake factors are computed from events  with $m_{\mathrm{T}}<40~\GeV$, using 
   \begin{itemize}
   \item Describe data samples used for FF measurement
   \item Describe data samples used for fake background estimate
+  \item Describe the single lepton triggers and how the pre-scales are unfolded to normalize the entire 2015+2016 dataset to $10pb^{-1}$
 \end{itemize}
 \begin{table}[tbp]
   \centering
@@ -89,80 +90,32 @@ The fake factors are computed from events  with $m_{\mathrm{T}}<40~\GeV$, using 
   \FloatBarrier
   %%%%%%%%%%%%%%%%%%%
   \subsection{Fake Lepton Composition}
+ Monte Carlo studies of fake and non-prompt lepton composition is done separately for events with opposite sign lepton pairs and events with same-sign lepton pairs.  In the MC samples, there is a variable MCTruthClassifier that determines lepton categories based on their source.  Real prompt leptons fall into two categories: \textit{isolated} and $lep\rightarrow \gamma \rightarrow lep$, which refers to truth matched leptons that arise from a Bremsstrahlung to photon conversion process. Fake and non-prompt leptons occupy the remaining categories: \textit{non-isolated}, which are mostly from heavy flavor decays, \textit{photons}, which are either photons faking leptons or actualy leptons from photon conversions, \textit{hadron}, which are from light flavor decays, and \textit{unknown, unknown electron, or unknown muon}, which are primarily from pile-up.\\
+(\textbf{Describe Figure~\ref{fig:elMC} and Figure~\ref{fig:muMC}}). Sources of fake leptons in the di-muon and di-electron signal regions mostly come from heavy flavor decays, and fake leptons in the  di-muonand di-electron control regions are primarily from light flavor decays.  One important result from this study is the similarity of fake lepton contribution between the opposite sign lepton pain and same sign lepton pair events.  This gives confidence that the same-sign validation region can be successfully used to validate our fake background predictions in the data without accidentally unblinding our signal region and biasing the results.  
 
+  
 \begin{figure}[htb]
         \centering
-        \includegraphics[width=.45\textwidth]{/Users/sheenaschier/Documents/LaFiles/figures/thesis/fakes/fakeLeptonComposition/725_cdsComments_el_SR1_lep1Pt.pdf}
-        \includegraphics[width=.45\textwidth]{/Users/sheenaschier/Documents/LaFiles/figures/thesis/fakes/fakeLeptonComposition/725_cdsComments_el_SR2_lep2Pt.pdf}
-        \includegraphics[width=.45\textwidth]{/Users/sheenaschier/Documents/LaFiles/figures/thesis/fakes/fakeLeptonComposition/725_cds_noIso_el_SR1_lep1Pt.pdf}
-        \includegraphics[width=.45\textwidth]{/Users/sheenaschier/Documents/LaFiles/figures/thesis/fakes/fakeLeptonComposition/725_cds_noIso_el_SR2_lep2Pt.pdf}
-        \caption{Fake lepton composition as a function of leading and subleading lepton $p_{T}$, with and without prompt (``Isolated'' plus ``lep$\to$gamma$\to$lep'') leptons, for opposite sign electron pairs in the signal region.}
-        \label{fig:elSR}
-\end{figure}
-\begin{figure}[htb]
-        \centering
-        \includegraphics[width=.45\textwidth]{/Users/sheenaschier/Documents/LaFiles/figures/thesis/fakes/fakeLeptonComposition/626_cdsComments_mu_SR1_lep1Pt.pdf}
-        \includegraphics[width=.45\textwidth]{/Users/sheenaschier/Documents/LaFiles/figures/thesis/fakes/fakeLeptonComposition/626_cdsComments_mu_SR2_lep2Pt.pdf}
-        \includegraphics[width=.45\textwidth]{/Users/sheenaschier/Documents/LaFiles/figures/thesis/fakes/fakeLeptonComposition/626_cds_noIso_mu_SR1_lep1Pt.pdf}
-        \includegraphics[width=.45\textwidth]{/Users/sheenaschier/Documents/LaFiles/figures/thesis/fakes/fakeLeptonComposition/626_cds_noIso_mu_SR2_lep2Pt.pdf}
+        \includegraphics[width=.48\textwidth]{/Users/sheenaschier/Documents/LaFiles/figures/thesis/fakes/fakeLeptonComposition/626_cdsComments_mu_SR2_lep2Pt.pdf}
+       \includegraphics[width=.48\textwidth]{/Users/sheenaschier/Documents/LaFiles/figures/thesis/fakes/fakeLeptonComposition/626_cds_noIso_mu_QCR2_lep2Pt.pdf}
+      \includegraphics[width=.48\textwidth]{/Users/sheenaschier/Documents/LaFiles/figures/thesis/fakes/fakeLeptonComposition/626_cds_ss_wIso_mu_SR2_lep2Pt.pdf}
+        \includegraphics[width=.48\textwidth]{/Users/sheenaschier/Documents/LaFiles/figures/thesis/fakes/fakeLeptonComposition/626_cds_ss_mu_QCR2_lep2Pt.pdf}
         \caption{Fake lepton composition as a function of leading and subleading lepton $p_{T}$, with and without prompt (``Isolated'' plus ``lep$\to$gamma$\to$lep'') leptons, for opposite sign muon pairs in the signal region.}
-        \label{fig:muSR}
-\end{figure}
-\begin{figure}[htb]
-        \centering
-        \includegraphics[width=.45\textwidth]{/Users/sheenaschier/Documents/LaFiles/figures/thesis/fakes/fakeLeptonComposition/725_cdsComments_el_QCR1_lep1Pt.pdf}
-        \includegraphics[width=.45\textwidth]{/Users/sheenaschier/Documents/LaFiles/figures/thesis/fakes/fakeLeptonComposition/725_cdsComments_el_QCR2_lep2Pt.pdf}
-        \includegraphics[width=.45\textwidth]{/Users/sheenaschier/Documents/LaFiles/figures/thesis/fakes/fakeLeptonComposition/725_cds_noIso_el_QCR1_lep1Pt.pdf}
-        \includegraphics[width=.45\textwidth]{/Users/sheenaschier/Documents/LaFiles/figures/thesis/fakes/fakeLeptonComposition/725_cds_noIso_el_QCR2_lep2Pt.pdf}
-        \caption{Fake lepton composition as a function of leading and subleading lepton $p_{T}$, with and without prompt (``Isolated'' plus ``lep$\to$gamma$\to$lep'') leptons, for opposite sign electron pairs in the fake lepton control region.}
-        \label{fig:elCR}
-\end{figure}
-\begin{figure}[htb]
-        \centering
-        \includegraphics[width=.45\textwidth]{/Users/sheenaschier/Documents/LaFiles/figures/thesis/fakes/fakeLeptonComposition/626_cdsComments_mu_QCR1_lep1Pt.pdf}
-        \includegraphics[width=.45\textwidth]{/Users/sheenaschier/Documents/LaFiles/figures/thesis/fakes/fakeLeptonComposition/626_cdsComments_mu_QCR2_lep2Pt.pdf}
-        \includegraphics[width=.45\textwidth]{/Users/sheenaschier/Documents/LaFiles/figures/thesis/fakes/fakeLeptonComposition/626_cds_noIso_mu_QCR1_lep1Pt.pdf}
-        \includegraphics[width=.45\textwidth]{/Users/sheenaschier/Documents/LaFiles/figures/thesis/fakes/fakeLeptonComposition/626_cds_noIso_mu_QCR2_lep2Pt.pdf}
-        \caption{Fake lepton composition as a function of leading and subleading lepton $p_{T}$, with and without prompt (``Isolated'' plus ``lep$\to$gamma$\to$lep'') leptons, for opposite sign muon pairs in the fake lepton control region.}
-        \label{fig:muCR}
+        \label{fig:muMC}
 \end{figure}
 
+ 
 \begin{figure}[htb]
         \centering
-        \includegraphics[width=.45\textwidth]{/Users/sheenaschier/Documents/LaFiles/figures/thesis/fakes/fakeLeptonComposition/725_cds_ss_wIso_el_SR1_lep1Pt.pdf}
-        \includegraphics[width=.45\textwidth]{/Users/sheenaschier/Documents/LaFiles/figures/thesis/fakes/fakeLeptonComposition/725_cds_ss_wIso_el_SR2_lep2Pt.pdf}
-        \includegraphics[width=.45\textwidth]{/Users/sheenaschier/Documents/LaFiles/figures/thesis/fakes/fakeLeptonComposition/725_cds_ss_el_SR1_lep1Pt.pdf}
-        \includegraphics[width=.45\textwidth]{/Users/sheenaschier/Documents/LaFiles/figures/thesis/fakes/fakeLeptonComposition/725_cds_ss_el_SR2_lep2Pt.pdf}
-        \caption{Fake lepton composition as a function of leading and subleading lepton $p_{T}$, with and without prompt (``Isolated'' plus ``lep$\to$gamma$\to$lep'') leptons, for same sign electron pairs in the signal region.}
-        \label{fig:elSSSR}
+        \includegraphics[width=.48\textwidth]{/Users/sheenaschier/Documents/LaFiles/figures/thesis/fakes/fakeLeptonComposition/725_cdsComments_el_SR2_lep2Pt.pdf}
+        \includegraphics[width=.48\textwidth]{/Users/sheenaschier/Documents/LaFiles/figures/thesis/fakes/fakeLeptonComposition/725_cds_noIso_el_QCR2_lep2Pt.pdf}
+        \includegraphics[width=.48\textwidth]{/Users/sheenaschier/Documents/LaFiles/figures/thesis/fakes/fakeLeptonComposition/725_cds_ss_wIso_el_SR2_lep2Pt.pdf}
+          \includegraphics[width=.48\textwidth]{/Users/sheenaschier/Documents/LaFiles/figures/thesis/fakes/fakeLeptonComposition/725_cds_ss_el_QCR2_lep2Pt.pdf}
+        \caption{Fake lepton composition in opposite sign signal and control region as a function of leading and subleading lepton $p_{T}$, with and without prompt (``Isolated'' plus ``lep$\to$gamma$\to$lep'') leptons, for opposite sign electron pairs in the signal region.}
+        \label{fig:elMC}
 \end{figure}
-\begin{figure}[htb]
-        \centering
-        \includegraphics[width=.45\textwidth]{/Users/sheenaschier/Documents/LaFiles/figures/thesis/fakes/fakeLeptonComposition/626_cds_ss_wIso_mu_SR1_lep1Pt.pdf}
-        \includegraphics[width=.45\textwidth]{/Users/sheenaschier/Documents/LaFiles/figures/thesis/fakes/fakeLeptonComposition/626_cds_ss_wIso_mu_SR2_lep2Pt.pdf}
-        \includegraphics[width=.45\textwidth]{/Users/sheenaschier/Documents/LaFiles/figures/thesis/fakes/fakeLeptonComposition/626_cds_ss_mu_SR1_lep1Pt.pdf}
-        \includegraphics[width=.45\textwidth]{/Users/sheenaschier/Documents/LaFiles/figures/thesis/fakes/fakeLeptonComposition/626_cds_ss_mu_SR2_lep2Pt.pdf}
-        \caption{Fake lepton composition as a function of leading and subleading lepton $p_{T}$, with and without prompt (``Isolated'' plus ``lep$\to$gamma$\to$lep'') leptons, for same sign muon pairs in the signal region.}
-        \label{fig:muSSSR}
-\end{figure}
-\begin{figure}[htb]
-        \centering
-        \includegraphics[width=.45\textwidth]{/Users/sheenaschier/Documents/LaFiles/figures/thesis/fakes/fakeLeptonComposition/725_cds_ss_wIso_el_QCR1_lep1Pt.pdf}
-        \includegraphics[width=.45\textwidth]{/Users/sheenaschier/Documents/LaFiles/figures/thesis/fakes/fakeLeptonComposition/725_cds_ss_wIso_el_QCR2_lep2Pt.pdf}
-        \includegraphics[width=.45\textwidth]{/Users/sheenaschier/Documents/LaFiles/figures/thesis/fakes/fakeLeptonComposition/725_cds_ss_el_QCR1_lep1Pt.pdf}
-        \includegraphics[width=.45\textwidth]{/Users/sheenaschier/Documents/LaFiles/figures/thesis/fakes/fakeLeptonComposition/725_cds_ss_el_QCR2_lep2Pt.pdf}
-        \caption{Fake lepton composition as a function of leading and subleading lepton $p_{T}$, with and without prompt (``Isolated'' plus ``lep$\to$gamma$\to$lep'') leptons, for same sign electron pairs in the fake lepton control region.}
-        \label{fig:elSSCR}
-\end{figure}
-\begin{figure}[htb]
-        \centering
-        \includegraphics[width=.45\textwidth]{/Users/sheenaschier/Documents/LaFiles/figures/thesis/fakes/fakeLeptonComposition/626_cds_ss_wIso_mu_QCR1_lep1Pt.pdf}
-        \includegraphics[width=.45\textwidth]{/Users/sheenaschier/Documents/LaFiles/figures/thesis/fakes/fakeLeptonComposition/626_cds_ss_wIso_mu_QCR2_lep2Pt.pdf}
-        \includegraphics[width=.45\textwidth]{/Users/sheenaschier/Documents/LaFiles/figures/thesis/fakes/fakeLeptonComposition/626_cds_ss_mu_QCR1_lep1Pt.pdf}
-        \includegraphics[width=.45\textwidth]{/Users/sheenaschier/Documents/LaFiles/figures/thesis/fakes/fakeLeptonComposition/626_cds_ss_mu_QCR2_lep2Pt.pdf}
-        \caption{Fake lepton composition as a function of leading and subleading lepton $p_{T}$, with and without prompt (``Isolated'' plus ``lep$\to$gamma$\to$lep'') leptons, for same sign muon pairs in the fake lepton control region.}
-        \label{fig:muSSCR}
-\end{figure}
+
+
  \FloatBarrier
  
 
@@ -176,130 +129,135 @@ The fake factors are computed from events  with $m_{\mathrm{T}}<40~\GeV$, using 
  \item Tighter anti-ID cuts increases the statistical uncertainty on the fake background prediction.
  \end{itemize}
 
-
-\subsubsection{Anti-ID Electrons}
-
-\begin{table}[!htb]
-\begin{center}
-\begin{tabular}{l}
-\hline
-Signal Electron Definition  \\
-\hline \hline
-$\pt > 4.5~\GeV$      \\
-$\abseta < 2.47$      \\
-$|z_0\sin\theta| < 0.5$~mm,  $|d_0/\sigma(d_0)| < 5$    \\
-Pass \textit{Tight} Identification     \\
-Pass \textit{GradientLoose} Isolation    \\
-Electron \textit{author} $!= 16$ \\
-\hline
-\end{tabular}
-\caption{Summary of signal electron definitions.}
-\label{tab:IDLepDefs}
-\end{center}
-\end{table}
-
-\begin{table}[!htb]
-\begin{center}
-\begin{tabular}{l}
-\hline
-Electrons    \\
-\hline
-$\pt > 4.5~\GeV$   \\
-$\abseta < 2.47$  \\
-$|z_0\sin\theta| < 0.5$~mm  \\
-Pass \textit{LooseAndBLayer} Identification \\
-\hline
-NOT \textit{Tight} Identification \textit{or} $|d_0/\sigma(d_0)| > 5$    \textit{or} NOT \textit{GradientLoose} Isolation  \\
-\hline
-\end{tabular}
-
-\caption{Summary of anti-ID electron definitions.}
-\label{tab:antiIDElDefs}
-\end{center}
-\end{table}
-
-
-\begin{figure}[htb]
-        \centering
-        \includegraphics[width=.45\textwidth]{/Users/sheenaschier/Documents/LaFiles/figures/thesis/fakes/FF_electron/AID_deco_Mt}
-        \includegraphics[width=.45\textwidth]{/Users/sheenaschier/Documents/LaFiles/figures/thesis/fakes/FF_electron/AID_deco_MET}
-        \caption{Fake electron composition as a function of $m_{T}$ for events in the full $m_{T}$ range (left) and as a function of $\met$ (top) for events in the range $m_{T}<40~\GeV$. }
-        \label{fig:elDeco_1}
-\end{figure}
-
-
-\begin{figure}[htb]
-        \centering
-        \includegraphics[width=.45\textwidth]{/Users/sheenaschier/Documents/LaFiles/figures/thesis/fakes/FF_electron/AID_deco_AntiIDelPt}
-        \includegraphics[width=.45\textwidth]{/Users/sheenaschier/Documents/LaFiles/figures/thesis/fakes/FF_electron/AID_deco_AntiIDelEta}
-        \caption{Fake electron composition as a function of denomonator electron \pt{} (left) and as a function of denominator electron $\eta$ (top) for events with $m_{T} < 40~\GeV$. }
-        \label{fig:elDeco_2}
-\end{figure}
-  \FloatBarrier
-  
  %%%%%%%%%% 
 \subsubsection{Anti-ID Muons}
 
+
+ID muons used for the fake factor calculation are the same as signal muons defined in Chapter~\ref{sec:event}, which are baseline muons that must pass \texttt{FixedCutTightTrackOnly} isolation and $|d_0/\sigma(d_0)|<3.0$.  Anti-ID muons are also baseline muons, but instead of requiring they pass the isolation and $d_0$ significance requirements of the ID muons, they instead must fail the \texttt{FixedCutTightTrackOnly} isolation or $|d_0/\sigma(d_0)|<3.0$ criteria\footnote{Failing both the isolation and the $d_0$ significance cut still satisfies the anti-ID definition.}. Both the ID and anti-ID muons are required to pass the $|z_0\sin\theta| < 0.5$~mm requirement to reduce the impact of pileup.  One notable difference with respect to the signal muon requirements is that the muon-jet overlap removal is relaxed when performing the fake factor measurement\footnote{This enhances the statistics used for deriving the fake factors, and is motivated by the observation that the muon-jet overlap removal is primarily designed to reduce the number of heavy flavor decays which are inadvertently being classified as signal muons.}.  A summary of the ID and anti-ID muon definitions are summarized in Table~\ref{tab:AllMuDefs}
+
+The decomposition of anti-ID muons in all events according to which set of ID criteria failed is shown in Fig~\ref{fig:muDeco}. The  $m_{T}$ distribution is plotted over the entire $m_{T}$ range, while the $\met$, \pt{} and $\eta$ distributions are all shown for $m_{T} <40~\GeV$.  Note that these distributions are separated into categories: one for events with exactly zero $b$-jets, and and another for events with one or more $b$-jets. \textbf{Here explain more about the 2 categories mentioned}
+
 \begin{table}[!htb]
 \begin{center}
-\begin{tabular}{l}
+\begin{tabular}{c|c}
 \hline
-Signal Muon Definition  \\
+Signal Muon Definition  & Anti-ID Muon Definition \\
 \hline \hline
-$\pt > 4~\GeV$      \\
-$\abseta < 2.5$      \\
-$|z_0\sin\theta| < 0.5$~mm,  $|d_0/\sigma(d_0)| < 3$    \\
-Pass \textit{Medium} Identification     \\
-Pass \textit{FixedCutTightTrackOnly} Isolation    \\
+\multicolumn{2}{c}{$\pt > 4~\GeV$}      \\
+\multicolumn{2}{c}{$\abseta < 2.5$ }     \\
+\multicolumn{2}{c}{$|z_0\sin\theta| < 0.5$~mm} \\
+\multicolumn{2}{c}{Pass \textit{Medium} Identification}     \\
+$|d_0/\sigma(d_0)| < 3$  &   \textbf{(}$|d_0/\sigma(d_0)| > 3$ \textbf{\textit{or}}\\
+Pass \textit{FixedCutTightTrackOnly} Isolation  & Fail \textit{FixedCutTightTrackOnly} Isolation\textbf{)} \\   \\
 \hline
 \end{tabular}
-\caption{Summary of signal muon definitions.}
-\label{tab:IDLepDefs}
+\caption{Summary of muon definitions.}
+\label{tab:AllMuDefs}
 \end{center}
 \end{table}
 
-\begin{table}[!htb]
-\begin{center}
-\begin{tabular}{l}
-\hline
-Anti-ID Muon Definition \\
-\hline
-$\pt > 4~\GeV$ \\
- $\abseta < 2.5$ \\
- $|z_0\sin\theta| < 0.5$~mm \\
-Pass \textit{Medium} Identification \\
-\hline
-$|d_0/\sigma(d_0)| > 3$ \textit{or} NOT \textit{FixedCutTightTrackOnly} Isolation \\
-\hline
-\end{tabular}
-
-\caption{Summary of anti-ID muon definitions.}
-\label{tab:antiIDMuDefs}
-\end{center}
-\end{table}
-
-
-\begin{figure}[htb]
+\begin{figure}
         \centering
-        \includegraphics[width=.45\textwidth]{/Users/sheenaschier/Documents/LaFiles/figures/thesis/fakes/FF_muon/AID_deco_Mt_b0}
-        \includegraphics[width=.45\textwidth]{/Users/sheenaschier/Documents/LaFiles/figures/thesis/fakes/FF_muon/AID_deco_MET_b0}\\
-        \includegraphics[width=.45\textwidth]{/Users/sheenaschier/Documents/LaFiles/figures/thesis/fakes/FF_muon/AID_deco_Mt_b1}
-        \includegraphics[width=.45\textwidth]{/Users/sheenaschier/Documents/LaFiles/figures/thesis/fakes/FF_muon/AID_deco_MET_b1}\\
-        \caption{Anti-ID muon composition in events with exactly zero $b$-jets(top) and one or more $b$-jets(bottom) as a function of $m_{T}$ (left) and as a function of $\met$ (right) The \met{} distribution corresponds to events with $m_{T} < 40~GeV$.}
-        \label{fig:muDeco_1}
+        \includegraphics[width=.4\textwidth]{/Users/sheenaschier/Documents/LaFiles/figures/thesis/fakes/FF_muon/AID_deco_Mt_b0}
+                \includegraphics[width=.4\textwidth]{/Users/sheenaschier/Documents/LaFiles/figures/thesis/fakes/FF_muon/AID_deco_Mt_b1}
+        \includegraphics[width=.4\textwidth]{/Users/sheenaschier/Documents/LaFiles/figures/thesis/fakes/FF_muon/AID_deco_MET_b0}
+        \includegraphics[width=.4\textwidth]{/Users/sheenaschier/Documents/LaFiles/figures/thesis/fakes/FF_muon/AID_deco_MET_b1}\\
+                \includegraphics[width=.4\textwidth]{/Users/sheenaschier/Documents/LaFiles/figures/thesis/fakes/FF_muon/AID_deco_AntiIDmuPt_b0}
+                        \includegraphics[width=.4\textwidth]{/Users/sheenaschier/Documents/LaFiles/figures/thesis/fakes/FF_muon/AID_deco_AntiIDmuPt_b1}
+        \includegraphics[width=.4\textwidth]{/Users/sheenaschier/Documents/LaFiles/figures/thesis/fakes/FF_muon/AID_deco_AntiIDmuEta_b0}
+        \includegraphics[width=.4\textwidth]{/Users/sheenaschier/Documents/LaFiles/figures/thesis/fakes/FF_muon/AID_deco_AntiIDmuEta_b1}\\
+        \caption{Anti-ID muon composition in events with exactly zero $b$-jets(left) and one or more $b$-jets(right) as a function of $m_{T}$, $\met$, muon \pt{}, and muon $\eta$. All but the $m_{T}$ distribution corresponds to events with $m_{T} < 40~GeV$.}
+        \label{fig:muDeco}
 \end{figure}
-\begin{figure}[htb]
-        \centering
-        \includegraphics[width=.45\textwidth]{/Users/sheenaschier/Documents/LaFiles/figures/thesis/fakes/FF_muon/AID_deco_AntiIDmuPt_b0}
-        \includegraphics[width=.45\textwidth]{/Users/sheenaschier/Documents/LaFiles/figures/thesis/fakes/FF_muon/AID_deco_AntiIDmuEta_b0}\\
-        \includegraphics[width=.45\textwidth]{/Users/sheenaschier/Documents/LaFiles/figures/thesis/fakes/FF_muon/AID_deco_AntiIDmuPt_b1}
-        \includegraphics[width=.45\textwidth]{/Users/sheenaschier/Documents/LaFiles/figures/thesis/fakes/FF_muon/AID_deco_AntiIDmuEta_b1}\\
-        \caption{Anti-ID muon composition in events with exactly zero $b$-jets(top) and one or more $b$-jets(bottnom) as a function of denomonator muon \pt{} (left) and as a function of denominator muon $\eta$ (right) for events with $m_{T} < 40~\GeV$. }
-        \label{fig:muDeco_2}
-\end{figure}
+
 
   \FloatBarrier
 
+%%%%%%%%
+\subsubsection{Anti-ID Electrons}
+
+
+ID electrons are the same as signal electrons defined in Section~\ref{sec:event}, which are baseline electrons that also pass \texttt{TightLLH} PID, \texttt{GradientLoose} isolation, and $|d_0/\sigma(d_0)|<5.0$ . Anti-ID electrons are also baseline electrons that pass \texttt{LooseAndBLayerLLH} PID but fail one of the signal selection criteria, i.e.~they are required to fail at least one of the \texttt{TightLLH}, \texttt{GradientLoose}, or $|d_0/\sigma(d_0)|<5.0$ requirements. Studies motivating the definition of the anti-ID electrons were performed and are documented in this section. All ID and anti-ID electrons are required to pass the $|z_0\sin\theta| < 0.5$~mm requirement to reduce the impact of pileup. The composition of anti-ID electrons in the fake factor signal samples according to which set of ID criteria failed is shown in Fig~\ref{fig:elDeco}. The $m_{T}$ distribution of this decomposition is plotted over the entire $m_{T}$ spectrum, while the $\met$, \pt{} and $\eta$ distributions are all shown for $m_{T} <40~\GeV$.
+
+
+\begin{table}[!htb]
+\begin{center}
+\begin{tabular}{c|c}
+\hline
+Signal Electron Definition  & Anti-ID Electron Definition \\
+\hline \hline
+\multicolumn{2}{c}{$\pt > 4.5~\GeV$}      \\
+\multicolumn{2}{c}{$\abseta < 2.47$ }     \\
+\multicolumn{2}{c}{$|z_0\sin\theta| < 0.5$~mm} \\
+\multicolumn{2}{c}{Electron \textit{author} $!= 16$}\\
+Pass \textit{Tight} Identification & Pass \textit{LooseAbdBLayer} Identification\\
+%Pass \textit{Tight} Identification}  &  Pass \textit{LooseAndBLayer} Identification\\
+      &             \textbf{(}Fail \textit{Tight} Identification \textbf{\textit{or}} \\
+Pass \textit{GradientLoose} Isolation  & Fail \textit{GradientLoose} Isolation \textbf{\textit{or}} \\   
+$|d_0/\sigma(d_0)| < 5$  &   $|d_0/\sigma(d_0)| > 5$\textbf{)} \\
+\hline
+\end{tabular}
+\caption{Summary of electron definitions.}
+\label{tab:AllElDefs}
+\end{center}
+\end{table}
+
+\begin{figure}[htb]
+        \centering
+        \includegraphics[width=.4\textwidth]{/Users/sheenaschier/Documents/LaFiles/figures/thesis/fakes/FF_electron/AID_deco_Mt}
+        \includegraphics[width=.4\textwidth]{/Users/sheenaschier/Documents/LaFiles/figures/thesis/fakes/FF_electron/AID_deco_MET}
+         \includegraphics[width=.4\textwidth]{/Users/sheenaschier/Documents/LaFiles/figures/thesis/fakes/FF_electron/AID_deco_AntiIDelPt}
+        \includegraphics[width=.4\textwidth]{/Users/sheenaschier/Documents/LaFiles/figures/thesis/fakes/FF_electron/AID_deco_AntiIDelEta}
+        \caption{Fake electron composition as a function of $m_{T}$, $\met$, electron \pt{}, electron $\eta$. All distributions corresponds to events with $m_{T} < 40~GeV$, excluding the $m_{T}$ distribution. }
+        \label{fig:elDeco}
+\end{figure}
+
+
+\begin{itemize}
+\item Dedicated study was done to find anti-ID electron definition that well models the source of fake electron background. (Struggling with where to place this in this section.. before or after introducing the anti-ID definitions used)
+\item Goal is to reduce the systematic uncertainty of the fake electron estimate
+\item Tighter electron identification enhances fraction of heavy flavor decays
+\item Requiring tracks to have a bit in the b-layer reduces fraction of fakes from conversions
+\item Loose or Medium isolation requirement narrows source of fakes towards heavy and light hadronic decays
+\item Requiring a large $d_0/\sigma_{d_0}$ can increase the fraction of heavy flavor decays and conversions
+\item Deciding which anti-ID definitions best models electron fake backgrounds is quite the balancing act.
+
+\end{itemize}
+
+ \begin{figure}
+ \centering
+ \begin{subfigure}[b]{0.47\textwidth}
+    \includegraphics[width=\textwidth]{/Users/sheenaschier/Documents/LaFiles/figures/thesis/fakes/antiIDStudies/AllMC_ee_SR_lep2Pt.pdf}
+    \caption{Signal lepton;\\ 9.99 MC W+jet events.}
+    \end{subfigure}
+     \begin{subfigure}[b]{0.47\textwidth}
+  \includegraphics[width=\textwidth]{/Users/sheenaschier/Documents/LaFiles/figures/thesis/fakes/antiIDStudies/AllMC_ee_VeryLoose_FailSignal_lep2Pt.pdf}
+ \caption{ VeryLoose \& !signal;\\ 433.02 MC W+jet events.}
+ \end{subfigure}
+  \begin{subfigure}[b]{0.47\textwidth}
+     \includegraphics[width=\textwidth]{/Users/sheenaschier/Documents/LaFiles/figures/thesis/fakes/antiIDStudies/AllMC_ee_VeryLooseBL_FailSignal_lep2Pt.pdf}
+      \caption{VeryLoose \& PassBL \& !signal;\\ 313.38 MC W+jet events.}
+ \end{subfigure}
+   \begin{subfigure}[b]{0.47\textwidth}
+     \includegraphics[width=\textwidth]{/Users/sheenaschier/Documents/LaFiles/figures/thesis/fakes/antiIDStudies/AllMC_ee_LooseBL_FailSignal_lep2Pt.pdf}
+      \caption{Loose \& PassBL \&\& !signal;\\ 168.85 MC W+jet events.}
+ \end{subfigure}       
+    \begin{subfigure}[b]{0.46\textwidth}
+     \includegraphics[width=\textwidth]{/Users/sheenaschier/Documents/LaFiles/figures/thesis/fakes/antiIDStudies/AllMC_ee_Medium_FailSignal_lep2Pt.pdf}
+      \caption{Loose \&\& Medium \& !signal;\\ 75.28 MC W+jet events.}
+ \end{subfigure}
+    \begin{subfigure}[b]{0.46\textwidth}
+     \includegraphics[width=\textwidth]{/Users/sheenaschier/Documents/LaFiles/figures/thesis/fakes/antiIDStudies/AllMC_ee_LooseBL_D0SigGt_OR_Medium_lep2Pt.pdf}
+      \caption{Medium$||$(Loose \& PassBL \& $d_0/\sigma_{d_0}> 1.5$) \& !signal; 86.28 MC W+jet events.}
+ \end{subfigure} 
+ 
+    \caption{Fake lepton composition as a function of the subleading lepton \pt. }
+ \label{fig:LeptonIDComposition}
+\end{figure}
+
+
+  \FloatBarrier
+  
  \subsection{Fake Factor Measurement}
 \begin{table}[tbp]
   \centering
@@ -413,9 +371,6 @@ The relative uncertianties on the final electron fake factors versus electron \p
  \FloatBarrier
 
 
-The muon fake factors are derived in a very similar way as the electron fake factors.  The ``numerator'' muons, also called th ID muons, are the same as signal muons as defined in Section~\ref{sec:selection}, which are baseline muons that are required to pass \texttt{FixedCutTightTrackOnly} isolation and $|d_0/\sigma(d_0)|<3.0$.  "Denominator" muons, also called anti-ID muons, are defined as baseline muons that fail at least one of the signal muon requirements, i.e. they are required to fail either the \texttt{FixedCutTightTrackOnly} isolation or $|d_0/\sigma(d_0)|<3.0$. All numerators and denominators are required to pass the $|z_0\sin\theta| < 0.5$~mm requirement to reduce the impact of pileup.  One notable difference with respect to the signal muon requirements is that the muon-jet overlap removal is relaxed when performing the fake factor measurement\footnote{This enhances the statistics used for deriving the fake factors, and is motivated by the observation that the muon-jet overlap removal is primarily designed to reduce the number of heavy flavor decays which are inadvertently being classified as signal muons, i.e. a sample of events that is interesting to keep for a fake measurement.}.
-
-The decomposition of denominator muons in all events according to which ID criteria or combination of ID criteria failed is shown in Fig~\ref{fig:muDeco_1} and Fig~\ref{fig:muDeco_2}. The  $m_{T}$ distribution of this decomposition in Fig~\ref{fig:muDeco_1} is plotted over the entire $m_{T}$ range, while the $\met$ distribution in Fig~\ref{fig:muDeco_1} and the \pt{} and $\eta$ distributions in Fig~\ref{fig:muDeco_2} are all shown for $m_{T} <40~\GeV$.  Note that these distributions are separated into categories: one for events with exactly zero $b$-jets, and and another for events with one or more $b$-jets.
 
 % normalization and prompt subtraction
 Both data and MC contributions to the numerator and denominator samples in the single-muon trigger sample are normalized to 10~\ipb, to remove the effects of the prescales in the data.  The MC is then re-scaled to the data in events with $\met{}>200$~\GeV, a kinematic region expected to pure in prompt leptons.  For events with exactly 0 $b$-jets, the MC re-scaling factor for numerator muons is $1.01 \pm 0.13$, for denominator muons it is $1.20\pm 0.29$. For events with one or more $b$-jets, the MC re-scaling factor for numerator muons is $1.24 \pm 0.20$, for denominator muons it is $7.34\pm 5.00$. If instead, the MC is re-scaled to match the data for events with $m_{T} > 100$~\GeV, a region that should also be pure in prompt leptons, the re-scaling factors for events with exactly 0 $b$-jets are $2.37 \pm 0.10$ for numerator muons and $11.68 \pm 2.28$ for denominator muons; events with one or more $b$-jets have re-scale factors $1.60 \pm 0.06$ for numerator muons and $10.41 \pm 6.34$ for denominator muons. The re-scaling factors vary significantly between the two methods but the fake factors themselves exhibit small changes between the two methods and can be used as a systematic uncertainty.
