@@ -1,26 +1,37 @@
 \chapter{ATLAS Experiment}
 %\label{sec:detector}
-The Large Hadron Collider (LHC) is a 27 km long circular proton accelerator with proton beams in moving in opposite directions around the ring at speeds near 99.99\% the speed of light.  The beams travel around the ring in separate vacuum beam pipes and are accelerated and directed around the ring using gigantic semi-conducting magnets.  To reach LHC energies the proton beams are accelerated in smaller accelerator structures gradually increasing in size until they are injected into the LHC, which is still the largest and most powerful accelerator in the world.  The beams are made to collide at 4 different interaction points at which there are 4 different detector experiments: ALICE, LHC-B, CMS, and ATLAS.  
+The Large Hadron Collider (LHC) is a 27 km long circular proton accelerator with proton beams moving in opposite directions around the ring at speeds near 99.99\% the speed of light.  The beams travel around the ring in separate vacuum beam pipes and are accelerated and directed around the ring using gigantic semi-conducting magnets.  To reach LHC energies the proton beams are accelerated in smaller accelerator structures gradually increasing in size until they are injected into the LHC, which is still the largest and most powerful accelerator in the world.  The beams are made to collide at 4 different interaction points.  At each of the interaction points, located approximately 100m underground, are 4 different detector experiments: ALICE, LHC-B, CMS, and ATLAS.  The first LHC $pp$ collisions were recorded in 2009 at center of mass energy $\sqrt{7}~TeV$, and since operated at several different center of mass energies, including the most recent and highest of $\sqrt{13}~TeV$.
+
+%(http://inspirehep.net/record/1240374/files/CHARGED%202012_011.pdf)
+ATLAS is a large multi-purpose particle physics detector with forward-backward detecting capabilities in the end-caps and the symmetric cylindrical barrel.  The complete detector system is 44m long, 25m in diameter, and weighs 4000 tons.  The ALTAS detector is comprised of several sub-detector systems, each calibrated and optimized for a different observational purpose.  Listed in order from the center of ATLAS outward, the sub-detectors are: the inner tracking detector (ID), the electromagnetic calorimeter (eCAL), the hadronic calorimeter (hCAL), and the muon spectrometer (MS).Together, these sub-detectors measure the energy and momentum of a variety of particles and reconstruct the dynamics of each recorded event.
+
+The combination of the detector systems provide charged particle measurements and efficient lepton and photon measurements out to $|\eta| < 2.4$.  Jets are MET are reconstructed using the full set of information out to $|\eta| < 4.9$.  
 
 %%%%%%%%%%%%%%%%%%%%%%
-\section{Tracking}
+\section{Inner Tracking Detector}
+The ID is composed of three separate tracking systems; the silicon pixel detector, the silicon microstrip semi-conductor tracker, and the straw-tube transition radiation tracker.  This section will overview the setup and capabilities of each component of the ID.  The ID is surrounded by a superconducting solenoid that encases the entire ID in a 2 Tesla magnetic field.  The material in each sub-tracker only interacts with charged particles.  The 2 T magnetic field bends the charged particles traversing the tracker with a curvature related to each particle's momentum.
 \subsection{Pixel Detector}
 Inner most pixelated tracker.
 \subsection{Semi-Conductor Tracker}
-Middle silicon strip tracker.
+Middle silicon microstrip tracker.
 \subsection{Transition Radiation Tracker}
-Outer most straw tube tracker.
+Outer most straw tube transition radiation tracker.
 
 %%%%%%%%%%%%%%%%%%%%%%
 \section{Calorimetry}
+**Extra coverage in the forward regions $3.2~<~|\eta|~<~4.9$ with LAr calorimeters for electromagnetic and hadronic measurements.
 \subsection{Electromagnetic Calorimeter}
+The eCAL is divided into a central barrel (pseudorapidity $|\eta|~<~1.475$) and two end-caps enclosing each side of the barrel.  The end-cap regions have an outer wheel corresponding to $1.375~<~|\eta|~<~2.5$, and an inner wheel for $2.5~<~|\eta|~<~3.2$.  The region $|\eta|~<~2.5$, which matches the coverage of the inner detector, is segmented into three layers.  The first layer is the most finely segmented in $\eta$ to aid the discrimination between true photons and neutral pions that have decayed to a pair of pions.  Both objects are trackless in flight and undetectable until they interact with the eCAL.  Closely-spaced photons from a boosted neutral pion decays can not be resolved into two objects without the extremely fine grain of this first layer.  The fine grain also helps improve the resolution of the shower position, shape and direction.  The eCAL is preceded by a pre-sampler at $|\eta| < 1.8$ to correct for upstream energy losses.
 Measures energy of electromagnetic objects.
+
 \subsection{Hadronic Calorimeter}
+Iron-scintillator/tile makes up the central hadronic calorimeter for $|\eta| < 1.7$ while the LAr hadronic end-caps cover the $\eta$ range $1.5~<~|\eta|~<~3.2$.  
 Measures energy of hadronic objects
 
 %%%%%%%%%%%%%%%%%%%%%%
 \section{Muon System}
-An outer tracker dedicated entirely to tracking muons.
+%https://arxiv.org/pdf/1603.05598.pdf
+The muon spectrometer, a tracking detector dedicated entirely to tracking muons, is the outer most sub-detector in ATLAS.  It is designed to track muons in the pseudorapidity region $|\eta|~<~2.7$ with a central barrel covering $|\eta|~<~1.05$ and two end-caps at $1.05~<~|\eta|~<~2.7$.  A network of three large super-conducting toroidal magnets, each with eight coils, supplies a magnetic to the muon spectrometer with am integral bending power in the barrel of around 2.5 Tm and up to 6Tm in the end caps.  Resistive plate chambers in the central region $|\eta|~<~1.05$ and end gap chambers in the forward-backward region $1.05~<~|\eta|~<~2.7$ impart triggering capabilities to the MS as well as position measurements in $\eta$ and $\phi$ with a spacial resolution of 5-10mm. Monitored drift tube chambers provide precision tracking out to $|\eta| < 2.7$ where each chamber provides 6-8 hits in $\eta$ along the muon flight path. 
 
 %%%%%%%%%%%%%%%%%%%%%%
 \section{DAQ and Trigger}

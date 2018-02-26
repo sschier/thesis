@@ -217,10 +217,11 @@ $|d_0/\sigma(d_0)| < 5$  &   $|d_0/\sigma(d_0)| > 5$\textbf{)} \\
 \item Dedicated study was done to find anti-ID electron definition that well models the source of fake electron background. (Struggling with where to place this in this section.. before or after introducing the anti-ID definitions used)
 \item Goal is to reduce the systematic uncertainty of the fake electron estimate
 \item Tighter electron identification enhances fraction of heavy flavor decays
-\item Requiring tracks to have a bit in the b-layer reduces fraction of fakes from conversions
+\item Requiring tracks to have a hit in the b-layer reduces fraction of fakes from conversions
 \item Loose or Medium isolation requirement narrows source of fakes towards heavy and light hadronic decays
 \item Requiring a large $d_0/\sigma_{d_0}$ can increase the fraction of heavy flavor decays and conversions
-\item Deciding which anti-ID definitions best models electron fake backgrounds is quite the balancing act.
+\item Deciding which anti-ID definitions best models electron fake backgrounds is a balancing act.
+\item \textbf{Need help thinking through how in depth to go with this part. }
 
 \end{itemize}
 
@@ -259,121 +260,10 @@ $|d_0/\sigma(d_0)| < 5$  &   $|d_0/\sigma(d_0)| > 5$\textbf{)} \\
   \FloatBarrier
   
  \subsection{Fake Factor Measurement}
-\begin{table}[tbp]
-  \centering
-  \begin{tabular}{|c|c|}
-    \hline
-    el trigger  & \pt{} range [\GeV]\\
-    \hline
-    HLT\_e5\_lvhloose & 5--11  \\
-    HLT\_e10\_lvhloose\_L1EM7 & 11--18  \\
-    HLT\_e15\_lvhloose\_L1EM13VH & 18--23  \\
-    HLT\_e20\_lvhloose & $>$ 23  \\
-    \hline
-  \end{tabular}
-  \caption{Single-Electron triggers used for fake factor computation and their corresponding \pt{} range.}
-  \label{tab:elec_trigger_range}
-\end{table}
-
-
-Electron fake factors show the largest dependance on electron \pt{}, but also display a dependence on the leading jet \pt{}, which is evident in Fig.~\ref{fig:elec_FF_hist_noCut} that shows electron fake factors as a function of electron \pt{} and leading jet \pt{} separately. Given this trend, and the fact that all signal regions used in this analysis require a hard jet with \pt{} greater than 100~\GeV, we design the fake factor measurement region to also require a hard jet of \pt{} greater than 100~\GeV.  Fake factors as a function of other kinematic variables are also studied as a cross-check and for understanding systematic uncertainties.
-
-
-
-\begin{figure}[tbp]
-  \centering
-  \includegraphics[width=0.48\columnwidth]{/Users/sheenaschier/Documents/LaFiles/figures/thesis/fakes/FF_electron/ID_CR_MET}
-  \includegraphics[width=0.48\columnwidth]{/Users/sheenaschier/Documents/LaFiles/figures/thesis/fakes/FF_electron/ID_CR_Mt}\\
-  \includegraphics[width=0.48\columnwidth]{/Users/sheenaschier/Documents/LaFiles/figures/thesis/fakes/FF_electron/AID_CR_MET}
-  \includegraphics[width=0.48\columnwidth]{/Users/sheenaschier/Documents/LaFiles/figures/thesis/fakes/FF_electron/AID_CR_Mt}
-  \caption{The \met{} (left) and $m_{T}$ (right) distributions for numerator (top) and denominator (bottom) electrons in the pre-scaled single-lepton-trigger sample.  MC has been scaled to the data in the $\met > 200~\GeV$ region.}
-  \label{fig:elec_FF_dists_1}
-\end{figure}
-
-\begin{figure}[tbp]
-  \centering
-  \includegraphics[width=0.48\columnwidth]{/Users/sheenaschier/Documents/LaFiles/figures/thesis/fakes/FF_electron/ID_SR_IDelPt}
-  \includegraphics[width=0.48\columnwidth]{/Users/sheenaschier/Documents/LaFiles/figures/thesis/fakes/FF_electron/AID_SR_AntiIDelPt}\\
-  \caption{Electron \pt{} for numerator (left) and denominator (right) objects in the pre-scaled single-lepton-trigger sample for events with $m_{T} < 40 GeV$.  MC has been scaled to the data in the $\met > 200~\GeV$ region.}
-  \label{fig:elec_FF_dists_pt}
-\end{figure}
-
-% actual fake factors
-% Trigger distributions in lepton pt
-\begin{figure}[tbp]
-  \centering
-  \includegraphics[width=0.48\columnwidth]{/Users/sheenaschier/Documents/LaFiles/figures/thesis/fakes/FF_electron/electronTriggers}
-  \includegraphics[width=0.48\columnwidth]{/Users/sheenaschier/Documents/LaFiles/figures/thesis/fakes/FF_electron/AIDelectronTriggers}\\
-  \caption{The numerator electron (left) and denominator electron (right) \pt{} distributions for pre-scaled single-lepton-trigger, normalized to 1~\ipb{}. Blue curve: HLT\_e5\_lvhloose, red curve: HLT\_e10\_lvhloose\_L1EM7, purple curve: HLT\_e15\_lvhloose\_L1EM13, green curve: HLT\_e20\_lvhloose.}
-  \label{fig:triggers}
-\end{figure}
-
-
-\begin{figure}[tbp]
-  \centering
-  \includegraphics[width=0.48\columnwidth]{/Users/sheenaschier/Documents/LaFiles/figures/thesis/fakes/FF_electron/FakeFactor_el_pt_noCut}
-  \includegraphics[width=0.48\columnwidth]{/Users/sheenaschier/Documents/LaFiles/figures/thesis/fakes/FF_electron/FakeFactor_el_j1pt_noCut}\\
-  \caption{Electron fake factors \textit{before} requiring a hard jet of $\pt{} > 100~GeV$, computed from single-electron prescaled triggers as a function of electron \pt{} (left) and leading jet \pt{} (right). Fake factors for electron $\pt{}~ 4.5-5~\GeV$ are taken to be the same as electron $\pt{}~5-6~\GeV$.  A red line denotes the average electron fake factor over all electron \pt{} of 0.267. }
-  \label{fig:elec_FF_hist_noCut}
-\end{figure}
-
-
-Final fake factors computed as a function of electron \pt{} are shown in Fig.~\ref{fig:elec_FF_hist}a.  In addition, fake factors as functions of other variables are also inspected to check for significant trends:
-\begin{itemize}
-\item the dependence of the fake factors on $|\eta|$ is shown in Fig.~\ref{fig:elec_FF_hist}b,
-\item fake factors as a function of leading jet \pt{} and  $\Delta\phi_{jet-\met}$ are shown in Fig.~\ref{fig:elec_FF_hadronic},
-\item fake factors as a function of jet multiplicity and $b$-jet multiplicity are shown in Fig.~\ref{fig:elec_FF_njet},
-\item fake factors as a function of pile up variables, such as average interaction per bunch crossing and number of primary vertices, are also shown in Fig.~\ref{fig:elec_FF_pileup}.
-\end{itemize}
-The relative uncertianties on the final electron fake factors versus electron \pt{} are shown in Fig.~\ref{fig:elec_FF_rel_uncert}.
-
-%The relative statistical uncertaintiess are shown in Fig.~\ref{fig:elec_FF_2D} and  will be incorporated into the total systematic uncertainty on the electron fake factors.
-\begin{figure}[tbp]
-  \centering
-  \includegraphics[width=0.48\columnwidth]{/Users/sheenaschier/Documents/LaFiles/figures/thesis/fakes/FF_electron/FakeFactor_el_pt}
-  \includegraphics[width=0.48\columnwidth]{/Users/sheenaschier/Documents/LaFiles/figures/thesis/fakes/FF_electron/FakeFactor_el_eta}
-  \caption{Electron fake factors computed from single-electron prescaled triggers as a function of electron \pt{} (left) and electron $\eta$ (right) in the kinematic region with leading jet$ \pt{}>100GeV$  Fake factors for electron $\pt{}~ 4.5-5~\GeV$ are taken to be the same as electron $\pt{}~5-6~\GeV$.  A red line denotes the average electron fake factor over all electron \pt{} of 0.211. }
-  \label{fig:elec_FF_hist}
-\end{figure}
-
-\begin{figure}[tbp]
-  \centering
-  \includegraphics[width=0.48\columnwidth]{/Users/sheenaschier/Documents/LaFiles/figures/thesis/fakes/FF_electron/FakeFactor_el_j1pt}
-  \includegraphics[width=0.48\columnwidth]{/Users/sheenaschier/Documents/LaFiles/figures/thesis/fakes/FF_electron/FakeFactor_el_dphij}\\
-  \caption{Electron fake factors computed from single-electron prescaled triggers as a function of leading jet \pt{} (left) and $\Delta\phi_{jet-\met}$ (right). A red line denotes the average electron fake factor over all electron \pt{} of 0.211.}
-  \label{fig:elec_FF_hadronic}
-\end{figure}
-
-\begin{figure}[tbp]
-  \centering
-  \includegraphics[width=0.48\columnwidth]{/Users/sheenaschier/Documents/LaFiles/figures/thesis/fakes/FF_electron/FakeFactor_el_njet}
-  \includegraphics[width=0.48\columnwidth]{/Users/sheenaschier/Documents/LaFiles/figures/thesis/fakes/FF_electron/FakeFactor_el_nbjet}\\
-  \caption{Electron fake factors computed from single-electron prescaled triggers as a function of the jet multiplicity (left) and the $b$-jet multiplicity (right). A red line denotes the average electron fake factor over all electron \pt{} of 0.211.}
-  \label{fig:elec_FF_njet}
-\end{figure}
-
-
-\begin{figure}[tbp]
-  \centering
-  \includegraphics[width=0.48\columnwidth]{/Users/sheenaschier/Documents/LaFiles/figures/thesis/fakes/FF_electron/FakeFactor_el_mu}
-  \includegraphics[width=0.48\columnwidth]{/Users/sheenaschier/Documents/LaFiles/figures/thesis/fakes/FF_electron/FakeFactor_el_npv}\\
-  \caption{Electron fake factors computed from single-electron prescaled triggers as a function of the average interaction per bunch crossing (left) and the number of primary vertices (right). A red line denotes the average electron fake factor over all electron \pt{} of 0.211.}
-  \label{fig:elec_FF_pileup}
-\end{figure}
-
-\begin{figure}[tbp]
-  \centering
-  \includegraphics[width=0.48\columnwidth]{/Users/sheenaschier/Documents/LaFiles/figures/thesis/fakes/FF_electron/FakeFactor_el_pt_uncert}\\
-  \caption{Relative uncertainties on electron fake factors binned electron \pt{}.}
-  \label{fig:elec_FF_rel_uncert}
-\end{figure}
-
- \FloatBarrier
-
-
-
-% normalization and prompt subtraction
-Both data and MC contributions to the numerator and denominator samples in the single-muon trigger sample are normalized to 10~\ipb, to remove the effects of the prescales in the data.  The MC is then re-scaled to the data in events with $\met{}>200$~\GeV, a kinematic region expected to pure in prompt leptons.  For events with exactly 0 $b$-jets, the MC re-scaling factor for numerator muons is $1.01 \pm 0.13$, for denominator muons it is $1.20\pm 0.29$. For events with one or more $b$-jets, the MC re-scaling factor for numerator muons is $1.24 \pm 0.20$, for denominator muons it is $7.34\pm 5.00$. If instead, the MC is re-scaled to match the data for events with $m_{T} > 100$~\GeV, a region that should also be pure in prompt leptons, the re-scaling factors for events with exactly 0 $b$-jets are $2.37 \pm 0.10$ for numerator muons and $11.68 \pm 2.28$ for denominator muons; events with one or more $b$-jets have re-scale factors $1.60 \pm 0.06$ for numerator muons and $10.41 \pm 6.34$ for denominator muons. The re-scaling factors vary significantly between the two methods but the fake factors themselves exhibit small changes between the two methods and can be used as a systematic uncertainty.
+ 
+ 
+ \subsubsection{Muon Fake Factors}
+ Both data and MC contributions to the numerator and denominator samples in the single-muon trigger sample are normalized to 10~\ipb, to remove the effects of the prescales in the data.  The MC is then re-scaled to the data in events with $\met{}>200$~\GeV, a kinematic region expected to pure in prompt leptons.  For events with exactly 0 $b$-jets, the MC re-scaling factor for numerator muons is $1.01 \pm 0.13$, for denominator muons it is $1.20\pm 0.29$. For events with one or more $b$-jets, the MC re-scaling factor for numerator muons is $1.24 \pm 0.20$, for denominator muons it is $7.34\pm 5.00$. If instead, the MC is re-scaled to match the data for events with $m_{T} > 100$~\GeV, a region that should also be pure in prompt leptons, the re-scaling factors for events with exactly 0 $b$-jets are $2.37 \pm 0.10$ for numerator muons and $11.68 \pm 2.28$ for denominator muons; events with one or more $b$-jets have re-scale factors $1.60 \pm 0.06$ for numerator muons and $10.41 \pm 6.34$ for denominator muons. The re-scaling factors vary significantly between the two methods but the fake factors themselves exhibit small changes between the two methods and can be used as a systematic uncertainty.
 
 Distributions of \met{} and $m_{T}$ for numerator and denominator muons for events with exactly zero $b$-jets are shown in Fig.~\ref{fig:muon_FF_dists_b0}, and for events with one or more $b$-jets in Fig.~\ref{fig:muon_FF_dists_b1}.  Muon \pt{} distributions for events with exactly zero $b$-jet are shown in Fig.~\ref{fig:muon_FF_dists_pt_b0}, and for events with one or more $b$-jets in Fig.~\ref{fig:muon_FF_dists_pt_b1}.
 
@@ -525,5 +415,123 @@ The relative uncertianties on the muons fake factors versus muon \pt{} for the s
 \end{figure}
 
  \FloatBarrier
+
+ 
+ 
+  \subsubsection{Electron Fake Factors}
+\begin{table}[tbp]
+  \centering
+  \begin{tabular}{|c|c|}
+    \hline
+    el trigger  & \pt{} range [\GeV]\\
+    \hline
+    HLT\_e5\_lvhloose & 5--11  \\
+    HLT\_e10\_lvhloose\_L1EM7 & 11--18  \\
+    HLT\_e15\_lvhloose\_L1EM13VH & 18--23  \\
+    HLT\_e20\_lvhloose & $>$ 23  \\
+    \hline
+  \end{tabular}
+  \caption{Single-Electron triggers used for fake factor computation and their corresponding \pt{} range.}
+  \label{tab:elec_trigger_range}
+\end{table}
+
+
+Electron fake factors show the largest dependance on electron \pt{}, but also display a dependence on the leading jet \pt{}, which is evident in Fig.~\ref{fig:elec_FF_hist_noCut} that shows electron fake factors as a function of electron \pt{} and leading jet \pt{} separately. Given this trend, and the fact that all signal regions used in this analysis require a hard jet with \pt{} greater than 100~\GeV, we design the fake factor measurement region to also require a hard jet of \pt{} greater than 100~\GeV.  Fake factors as a function of other kinematic variables are also studied as a cross-check and for understanding systematic uncertainties.
+
+
+
+\begin{figure}[tbp]
+  \centering
+  \includegraphics[width=0.48\columnwidth]{/Users/sheenaschier/Documents/LaFiles/figures/thesis/fakes/FF_electron/ID_CR_MET}
+  \includegraphics[width=0.48\columnwidth]{/Users/sheenaschier/Documents/LaFiles/figures/thesis/fakes/FF_electron/ID_CR_Mt}\\
+  \includegraphics[width=0.48\columnwidth]{/Users/sheenaschier/Documents/LaFiles/figures/thesis/fakes/FF_electron/AID_CR_MET}
+  \includegraphics[width=0.48\columnwidth]{/Users/sheenaschier/Documents/LaFiles/figures/thesis/fakes/FF_electron/AID_CR_Mt}
+  \caption{The \met{} (left) and $m_{T}$ (right) distributions for numerator (top) and denominator (bottom) electrons in the pre-scaled single-lepton-trigger sample.  MC has been scaled to the data in the $\met > 200~\GeV$ region.}
+  \label{fig:elec_FF_dists_1}
+\end{figure}
+
+\begin{figure}[tbp]
+  \centering
+  \includegraphics[width=0.48\columnwidth]{/Users/sheenaschier/Documents/LaFiles/figures/thesis/fakes/FF_electron/ID_SR_IDelPt}
+  \includegraphics[width=0.48\columnwidth]{/Users/sheenaschier/Documents/LaFiles/figures/thesis/fakes/FF_electron/AID_SR_AntiIDelPt}\\
+  \caption{Electron \pt{} for numerator (left) and denominator (right) objects in the pre-scaled single-lepton-trigger sample for events with $m_{T} < 40 GeV$.  MC has been scaled to the data in the $\met > 200~\GeV$ region.}
+  \label{fig:elec_FF_dists_pt}
+\end{figure}
+
+% actual fake factors
+% Trigger distributions in lepton pt
+\begin{figure}[tbp]
+  \centering
+  \includegraphics[width=0.48\columnwidth]{/Users/sheenaschier/Documents/LaFiles/figures/thesis/fakes/FF_electron/electronTriggers}
+  \includegraphics[width=0.48\columnwidth]{/Users/sheenaschier/Documents/LaFiles/figures/thesis/fakes/FF_electron/AIDelectronTriggers}\\
+  \caption{The numerator electron (left) and denominator electron (right) \pt{} distributions for pre-scaled single-lepton-trigger, normalized to 1~\ipb{}. Blue curve: HLT\_e5\_lvhloose, red curve: HLT\_e10\_lvhloose\_L1EM7, purple curve: HLT\_e15\_lvhloose\_L1EM13, green curve: HLT\_e20\_lvhloose.}
+  \label{fig:triggers}
+\end{figure}
+
+
+\begin{figure}[tbp]
+  \centering
+  \includegraphics[width=0.48\columnwidth]{/Users/sheenaschier/Documents/LaFiles/figures/thesis/fakes/FF_electron/FakeFactor_el_pt_noCut}
+  \includegraphics[width=0.48\columnwidth]{/Users/sheenaschier/Documents/LaFiles/figures/thesis/fakes/FF_electron/FakeFactor_el_j1pt_noCut}\\
+  \caption{Electron fake factors \textit{before} requiring a hard jet of $\pt{} > 100~GeV$, computed from single-electron prescaled triggers as a function of electron \pt{} (left) and leading jet \pt{} (right). Fake factors for electron $\pt{}~ 4.5-5~\GeV$ are taken to be the same as electron $\pt{}~5-6~\GeV$.  A red line denotes the average electron fake factor over all electron \pt{} of 0.267. }
+  \label{fig:elec_FF_hist_noCut}
+\end{figure}
+
+
+Final fake factors computed as a function of electron \pt{} are shown in Fig.~\ref{fig:elec_FF_hist}a.  In addition, fake factors as functions of other variables are also inspected to check for significant trends:
+\begin{itemize}
+\item the dependence of the fake factors on $|\eta|$ is shown in Fig.~\ref{fig:elec_FF_hist}b,
+\item fake factors as a function of leading jet \pt{} and  $\Delta\phi_{jet-\met}$ are shown in Fig.~\ref{fig:elec_FF_hadronic},
+\item fake factors as a function of jet multiplicity and $b$-jet multiplicity are shown in Fig.~\ref{fig:elec_FF_njet},
+\item fake factors as a function of pile up variables, such as average interaction per bunch crossing and number of primary vertices, are also shown in Fig.~\ref{fig:elec_FF_pileup}.
+\end{itemize}
+The relative uncertianties on the final electron fake factors versus electron \pt{} are shown in Fig.~\ref{fig:elec_FF_rel_uncert}.
+
+%The relative statistical uncertaintiess are shown in Fig.~\ref{fig:elec_FF_2D} and  will be incorporated into the total systematic uncertainty on the electron fake factors.
+\begin{figure}[tbp]
+  \centering
+  \includegraphics[width=0.48\columnwidth]{/Users/sheenaschier/Documents/LaFiles/figures/thesis/fakes/FF_electron/FakeFactor_el_pt}
+  \includegraphics[width=0.48\columnwidth]{/Users/sheenaschier/Documents/LaFiles/figures/thesis/fakes/FF_electron/FakeFactor_el_eta}
+  \caption{Electron fake factors computed from single-electron prescaled triggers as a function of electron \pt{} (left) and electron $\eta$ (right) in the kinematic region with leading jet$ \pt{}>100GeV$  Fake factors for electron $\pt{}~ 4.5-5~\GeV$ are taken to be the same as electron $\pt{}~5-6~\GeV$.  A red line denotes the average electron fake factor over all electron \pt{} of 0.211. }
+  \label{fig:elec_FF_hist}
+\end{figure}
+
+\begin{figure}[tbp]
+  \centering
+  \includegraphics[width=0.48\columnwidth]{/Users/sheenaschier/Documents/LaFiles/figures/thesis/fakes/FF_electron/FakeFactor_el_j1pt}
+  \includegraphics[width=0.48\columnwidth]{/Users/sheenaschier/Documents/LaFiles/figures/thesis/fakes/FF_electron/FakeFactor_el_dphij}\\
+  \caption{Electron fake factors computed from single-electron prescaled triggers as a function of leading jet \pt{} (left) and $\Delta\phi_{jet-\met}$ (right). A red line denotes the average electron fake factor over all electron \pt{} of 0.211.}
+  \label{fig:elec_FF_hadronic}
+\end{figure}
+
+\begin{figure}[tbp]
+  \centering
+  \includegraphics[width=0.48\columnwidth]{/Users/sheenaschier/Documents/LaFiles/figures/thesis/fakes/FF_electron/FakeFactor_el_njet}
+  \includegraphics[width=0.48\columnwidth]{/Users/sheenaschier/Documents/LaFiles/figures/thesis/fakes/FF_electron/FakeFactor_el_nbjet}\\
+  \caption{Electron fake factors computed from single-electron prescaled triggers as a function of the jet multiplicity (left) and the $b$-jet multiplicity (right). A red line denotes the average electron fake factor over all electron \pt{} of 0.211.}
+  \label{fig:elec_FF_njet}
+\end{figure}
+
+
+\begin{figure}[tbp]
+  \centering
+  \includegraphics[width=0.48\columnwidth]{/Users/sheenaschier/Documents/LaFiles/figures/thesis/fakes/FF_electron/FakeFactor_el_mu}
+  \includegraphics[width=0.48\columnwidth]{/Users/sheenaschier/Documents/LaFiles/figures/thesis/fakes/FF_electron/FakeFactor_el_npv}\\
+  \caption{Electron fake factors computed from single-electron prescaled triggers as a function of the average interaction per bunch crossing (left) and the number of primary vertices (right). A red line denotes the average electron fake factor over all electron \pt{} of 0.211.}
+  \label{fig:elec_FF_pileup}
+\end{figure}
+
+\begin{figure}[tbp]
+  \centering
+  \includegraphics[width=0.48\columnwidth]{/Users/sheenaschier/Documents/LaFiles/figures/thesis/fakes/FF_electron/FakeFactor_el_pt_uncert}\\
+  \caption{Relative uncertainties on electron fake factors binned electron \pt{}.}
+  \label{fig:elec_FF_rel_uncert}
+\end{figure}
+
+ \FloatBarrier
+
+
+
+
  
  \ \section{Conclusion}

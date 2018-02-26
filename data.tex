@@ -1,0 +1,149 @@
+\chapter{Data Samples and Event Selection}
+%\label{sec:mcdata}
+This analysis uses $pp$ collision data at $\sqrt{13}~TeV$ from the LHC, collected by the ATLAS detector in 2015 and 2016. events must pass data quality criteria (good runs list).  Events in data are chosen using inclusive MET triggers.  The MET trigger threshold varies by data taking period, where the lowest unprescaled inclusive MET trigger is used.  (Make table and refer to it). A total integrated luminosity of $36.1~fb^{-1}$ at $\sqrt{13} ~ TeV$ passing data quality criteria and the corresponding inclusive MET triggers was recorded.
+
+
+
+The event weights are very important.  Currently I am applying the total weight as:
+\begin{equation}
+\label{eq:weight}
+totalWeight = ttbarNNLOWeight*pileupWeight*eventWeight*leptonWeight*jvtWeight*bTagWeight
+\end{equation}
+
+\section{Triggers}
+\label{sec:eff}
+\subsection{MET Triggers}
+\label{sec:met}
+Inclusive met trigger efficiencies
+
+\subsection{Combined Trigger Studiies}
+Lepton plus jet plus met trigger efficiencies..  
+**Talk about the development and study of the new triggers implemented n data starting at run 308084, corresponding to an integrated luminosity of $8.8~fb^{-1}$.
+
+  \begin{figure}[tbp]
+   % \centering
+     \includegraphics[width=0.48\columnwidth]{/Users/sheenaschier/Documents/LaFiles/figures/thesis/eventselection/eff_MM_signal_110_100.pdf}
+       \includegraphics[width=0.48\columnwidth]{/Users/sheenaschier/Documents/LaFiles/figures/thesis/eventselection/eff_MM_mtautau_110_100.pdf}\\
+   \caption{Trigger Efficiency as a function of MET after event preselection (left) and in a signal region similar to the analysis signal region (right)}
+   \label{fig:TrigEff1}
+ \end{figure}
+ 
+   \begin{figure}[tbp]
+   % \centering
+     \includegraphics[width=0.48\columnwidth]{/Users/sheenaschier/Documents/LaFiles/figures/thesis/eventselection/eff_MM_jet145_110_100.pdf}
+       \includegraphics[width=0.48\columnwidth]{/Users/sheenaschier/Documents/LaFiles/figures/thesis/eventselection/eff_MM_jet105_110_100.pdf}\\
+   \caption{Trigger efficiency as a function of MET for the combined single muon trigger (left) and the combined dimuon trigger (right)}
+   \label{fig:TrigEff2}
+ \end{figure}
+ 
+
+
+\section{Signal Samples}
+Simplified models are used for Monte Carlo simulation of signal events.
+
+
+\subsection{Higgsino LSP Samples}
+  \begin{figure}[tbp]
+   % \centering
+
+ \includegraphics[width=0.45\columnwidth]{/Users/sheenaschier/Documents/LaFiles/figures/thesis/signal_samples/ossf_Lep1Pt.pdf}
+ \includegraphics[width=0.45\columnwidth]{/Users/sheenaschier/Documents/LaFiles/figures/thesis/signal_samples/ossf_Lep2Pt.pdf}\\
+ \includegraphics[width=0.45\columnwidth]{/Users/sheenaschier/Documents/LaFiles/figures/thesis/signal_samples/ossf_Mt_l1met.pdf}
+ \includegraphics[width=0.45\columnwidth]{/Users/sheenaschier/Documents/LaFiles/figures/thesis/signal_samples/ossf_Mt_l2met.pdf}\\
+  \includegraphics[width=0.45\columnwidth]{/Users/sheenaschier/Documents/LaFiles/figures/thesis/signal_samples/ossf_nJet20.pdf}
+ \includegraphics[width=0.45\columnwidth]{/Users/sheenaschier/Documents/LaFiles/figures/thesis/signal_samples/ossf_nLep_signal.pdf}\\
+   \caption{Kinematic distributions of signal samples}
+   \label{fig:SigSample1}
+ \end{figure}
+ 
+   \begin{figure}[tbp]
+   % \centering
+ \includegraphics[width=0.45\columnwidth]{/Users/sheenaschier/Documents/LaFiles/figures/thesis/signal_samples/ossf_Jet1Pt.pdf}
+\includegraphics[width=0.45\columnwidth]{/Users/sheenaschier/Documents/LaFiles/figures/thesis/signal_samples/ossf_Jet2Pt.pdf}\\
+\includegraphics[width=0.45\columnwidth]{/Users/sheenaschier/Documents/LaFiles/figures/thesis/signal_samples/ossf_MET.pdf}
+\includegraphics[width=0.45\columnwidth]{/Users/sheenaschier/Documents/LaFiles/figures/thesis/signal_samples/ossf_lep_type.pdf}\\
+ \includegraphics[width=0.45\columnwidth]{/Users/sheenaschier/Documents/LaFiles/figures/thesis/signal_samples/ossf_dR_l1l2.pdf}
+ \includegraphics[width=0.45\columnwidth]{/Users/sheenaschier/Documents/LaFiles/figures/thesis/signal_samples/ossf_dphi_j1met.pdf}\\
+ \includegraphics[width=0.45\columnwidth]{/Users/sheenaschier/Documents/LaFiles/figures/thesis/signal_samples/ossf_mll.pdf}
+ \includegraphics[width=0.45\columnwidth]{/Users/sheenaschier/Documents/LaFiles/figures/thesis/signal_samples/ossf_ptll.pdf}\\
+   \caption{Kinematic distributions of signal samples}
+   \label{fig:SigSample2}
+ \end{figure}
+
+\subsection{Compressed Slepton Samples}
+
+ \FloatBarrier
+ 
+ \section{Background Simulation}
+ \subsection{V+Jets}
+ \subsection{Diboson}
+ \subsection{Top Quark}
+ \subsection{Higgs}
+
+
+\section{Derivation}
+Describe details of the SUSY16 derivation used to select events from data
+
+ \section{Definition of the Measurement}
+ \label{sec:event}
+\begin{itemize}
+\item I don't think I need to say anything about the ntuples or framework.
+\item Introduce the ideas of selecting physics objects and events in ATLAS
+\item Overview of kinematic phase space that define our signal regions
+\item The next chapter will talk about how objects are identified and selected so don't make any references to that stuff
+\item Will talk about which events are chosen for this analysis
+\item Will talk about how the signal regions are defined for the Higgsino and Slepton analyses.
+\end{itemize}
+Study signal MonteCarlos samples to understand the phenomenology of compressed higgsino and slepton production during and LHC collision and subsequent decay in the ALTAS detector.  These studies inform our choices choices for signal region cuts for the slepton and higgsino searches. 
+
+\subsection{Discriminating Variables}
+\label{sec:discvar}
+$\met$, d phi j-met, min d phi jets-met, $\pt(j_i)$, Number of $b$-tagged jets $N_\mathrm{b-jets}$\\
+Same flavour lepton pair with opposite charge, $\Delta R_{\ell\ell}$, $m_{\ell\ell}$, $m_{T2}^{m_{\chi}}$,$m_\text{T}^{\ell_1}$, $\met/\HT^\text{leptons}$, $m_{\tau\tau}$
+
+  % https://gitlab.cern.ch/jeliu/atlas-susy-ew-softlepton/blob/master/pyCut/refactor/central/plot1d_signals_only.py
+  \begin{figure}[tbp]
+   % \centering
+     \includegraphics[width=0.48\columnwidth]{/Users/sheenaschier/Documents/LaFiles/figures/thesis/higgsino_slep_signal_Rll_met0.pdf}
+  %  \caption{No \met{} requirement (only truth filter).}
+       \includegraphics[width=0.48\columnwidth]{/Users/sheenaschier/Documents/LaFiles/figures/thesis/higgsino_slep_signal_Rll_met100.pdf}\\
+   % \caption{$\met{} > 100$ GeV.}
+     \includegraphics[width=0.48\columnwidth]{/Users/sheenaschier/Documents/LaFiles/figures/thesis/higgsino_slep_signal_Rll_met200.pdf}
+ %   \caption{$\met{} > 200$ GeV.}
+     \includegraphics[width=0.48\columnwidth]{/Users/sheenaschier/Documents/LaFiles/figures/thesis/higgsino_slep_signal_Rll_met300.pdf}\\
+%    \caption{$\met{} > 300$ GeV.}
+   \caption{Comparison of Higgisno N2C1p (solid) and slepton (dashed) signals in the $R_{\ell\ell}$ variable for 10 GeV (dark) and 20 GeV (light) mass splittings. The \met{} here acts as a p    roxy for the boost of the system. Only a 2 signal lepton selection is applied.}
+   \label{fig:Rll_signals only}
+ \end{figure}
+ 
+ \begin{figure}[tbp]
+  \centering
+  \includegraphics[width=0.48\columnwidth]{/Users/sheenaschier/Documents/LaFiles/figures/thesis/METoverHTLep_mll}
+%\caption{Higgsinos}
+  \includegraphics[width=0.48\columnwidth]{/Users/sheenaschier/Documents/LaFiles/figures/thesis/METoverHTLep_mT2}
+%\caption{Sleptons}
+ \caption{Distributions of $\met/H_{T}^{leptons}$ for the Higgsino (left) and Slepton (right) selections, after applying all signal region cuts except those on the $\met/H_{T}^{leptons}$, $m_{ll}$, and $m_{T2}$.  The black dashed line indicates the cut applied in the signal region; events in the region below the black line are rejected.}
+ \label{fig:METoverHTLep2D}
+ \end{figure}
+ 
+ 
+  \begin{figure}
+  \centering
+  \input{/Users/sheenaschier/Documents/LaFiles/figures/thesis/ditau_schematic}
+  \caption{Schematic illustrating the fully leptonic $(Z\to\tau\tau)$ + jets system motivating the construction of $m_{\tau\tau}$. }
+  \label{fig:ditau_schematic}
+  \end{figure}
+  \subsection{Signal Regions}
+ \begin{figure}[h!]
+ \centering
+ \includegraphics[scale=0.6]{/Users/sheenaschier/Documents/LaFiles/figures/thesis/cutflow_SF.pdf}
+ \caption{Non-normalized cutflow with significance plot, showing how the significance for signal improves as more cuts are added.}
+ \label{fig:cutflow_zn}
+ \end{figure}
+\subsubsection{Slepton Signal Regions}
+This signal region based on MT2 cuts
+\subsubsection{Higgsino Signal Regions}
+This signal region based on Mll cuts
+
+
+
