@@ -1,15 +1,12 @@
 \chapter{Fake Factor Method}
 %\label{sec:ff}
-Backgrounds to beyond Standard Model physics signals mostly come from Standard Model physics processes that produce the same physics signals we are looking for.  In that case, the goal is the estimate the rate of the background process and subtract it from the data so the new physics signal, if any, is all that remains.  Another type of background can come from processes that should not produce the same final state as the signal process, and yet, because of mismeasurements inside the detector, can still mimic signal events.  For low pt dilepton signals, this background is a dominant background and primarily comes from W+jets events where one jets is misidentified as a lepton.   The best estimate of this background comes from data because MC simulation does not model the detector shortcomings that lead to these mismeasurements very well.  The "fake factor" method is a data driven approach to modeling backgrounds from particle misidentification in the detector.
-(Explain the layout of the rest of the chapter)
-\begin{itemize}
-\item Introduction
-\item Description
-\item Application
-\item Conclusion
-\end{itemize}
+There are two main types of backgrounds, irreducible and reducible. Irreducible backgrounds are Standard Model processes that produce the same particle final state as our BSM final state.  In this case, Monte Carlo simulation is robust enough to model these background processes so their rates can be estimated in the data.  Reducible backgrounds arise from Standard Model processes that should not produce the same final state as the signal; and yet, because of mismeasurements inside the detector, these events can still pass signal selection cuts.  For low pt dilepton signals, the reducible fake background dominates and primarily comes from W+jets events where one jets is misidentified as a lepton.  Monte Carlo simulation does not model the detector shortcomings that lead to these mismeasurements very well, so the best estimate of this background must comes from data.  The "fake factor" method is a data driven approach to modeling backgrounds from particle misidentification in the detector by estimating the lepton fake rate with a set of data kinematically enriched in events producing fake leptons.  The background estimate is validated in an orthogonal control region before it is estimated in the signal region. 
+
+The rest of this chapter goes as follows:  In Section~\ref{sec:FFintro}, I will introduce fake leptons backgrounds more in detail, then in Section~\ref{sec:FFdesc} I will give a general overview of the method used to estimate the fake lepton background for this analysis.   The fake factor method applied to low \pt{} di-lepton events is explained for electrons and muons separately in Section~\ref{sec:FFmethod} and the results are summarized in Section~\ref{sec:FFcon}.
+
 %%%%%%%%%%%%%%%%%%%%
 \section{Introduction}
+\label{sec:FFintro}
 \begin{itemize}
 \item lepton identification and misidentification
 \item Compare production cross-sections of signal and W+jets processes
@@ -19,7 +16,7 @@ Backgrounds to beyond Standard Model physics signals mostly come from Standard M
 \item Primary fake background is W+jets (multi-jet is miniscule...  how do I qualify this?)
 \item Rest of chapter describes FF method in the context of my analysis
 \end{itemize}
-Efficient lepton identification techniques make leptons powerful discriminators in ATLAS physics searches with large background rejection and heavily suppressed QCD multi-jets.  Jet suppression is very high in the range of lepton $\pt > 20 GeV$ but degrades at lower lepton $\pt$.  Sources of misidentified electrons are charged hadrons, where a hadronic jet fakes an electron, or photon conversions and heavy-flavor decays, where there is a true but non-prompt electron that id created inside the detector rather than at the primary vertex where true, prompt electrons are made.  
+Efficient lepton identification techniques make leptons powerful discriminators in ATLAS physics searches with large background rejection and heavily suppressed QCD multi-jets.  Jet suppression is very high in the range of lepton $\pt > 20 GeV$ but degrades at lower lepton $\pt$.  Misidentified electrons can be true but non-prompt electrons from photon conversions and heavy-flavor decays, where there is a real electron in the event that does not originate at the primary vertex like true, prompt electrons or they can be charged hadrons where the  hadronic jet activity in the detector fakes an electron.  
 \begin{figure}[h!]
  \centering
  \includegraphics[width=0.6\columnwidth]{/Users/sheenaschier/Documents/LaFiles/figures/thesis/fakes/fig_01.pdf}
@@ -33,6 +30,7 @@ Efficient lepton identification techniques make leptons powerful discriminators 
  
  %%%%%%%%%%%%%%%%%%%%%%%%%
 \section{Description of Fake Factor Method}
+\label{sec:FFdesc}
 \begin{itemize}
 \item General description of fake factor method (measurement in control region then extrapolated to signal region)
 \item We know what the signal region is already (described in Chapter ..)
@@ -60,6 +58,7 @@ The fake factors are computed from events  with $m_{\mathrm{T}}<40~\GeV$, using 
   
   %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
   \section{Fake Factor Method Applied to Low-$\pt$ Di-lepton Events}
+  \label{sec:FFmethod}
   \begin{itemize}
   \item Describe data samples used for FF measurement
   \item Describe data samples used for fake background estimate
@@ -530,8 +529,7 @@ The relative uncertianties on the final electron fake factors versus electron \p
 
  \FloatBarrier
 
-
-
-
  
- \ \section{Conclusion}
+ \section{Conclusion}
+ \label{sec:FFcon}
+ This chapter went over a lot of material and I think somehow I have to reiterate the important points here..

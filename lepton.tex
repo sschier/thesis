@@ -57,15 +57,97 @@ stuff  & stuff              &Stuff  \\
 \end{table}
 
 \section{Particle Identification and Reconstruction}
-Reconstructed and identified particles in ATLAS are leptons($e, \mu, \tau$), photons, jets, which can further be identified as b-jets, and missing transverse momentum $\vec{E}^T_{miss}$.   There are two categories; \textit{baseline} objects, which is the most inclusive definition of an object and are typically used for preliminary event selection and background modeling, and \textit{signal} objects, a more exclusive object definition that is a subset of \textit{baseline} and used exclusively when defining signal events. 
 
-Baseline electrons are triggered from energy deposits in the electromagnetic calorimeter and reconstructed with algorithms using the electromagnetic calorimeter clusters that are matched to inner detector tracks.  Baseline electrons must pass \pt{} threshold of 4.5 ~\GeV and be in central detector region $|\eta | < 2.47$.  A transverse impact parameter requirement of $|z_0sin\theta| < 0.5~mm$ is also applied.  Electrons are distinguished from other particles using identification criteria that rely on the shower shape in the electromagnetic calorimeter, tracking quantities, and the health of the track to EM calorimeter cluster matching.  Identification criteria varies from loose to tight and evolves with increasing strictness in criteria cuts and can be based either on independent requirements or on the single requirement set on the output of the likelihood function based on all the discriminating quantities listed above.  This analysis uses likelihood based identification criteria only.  Baseline electrons are required to satisfy \textit{VeryLooseLLH} identification while signal electrons must pass  \textit{Tight} identification plus \textit{GradientLoose} isolation criteria.  Signal electrons also require a transverse impact parameter $|d_0/\sigma(d_0)| < 5$. Furthermore, electrons with author 16 are vetoed.  
+Reconstructed and identified particles in ATLAS are leptons($e, \mu, \tau$), photons, jets, which can further be identified as b-jets, and missing transverse momentum $\vec{E}^T_{miss}$.  This analysis does not use $\tau$ reconstruction \textcolor{red}{Talk with Mike about this..}. There are two categories; \textit{baseline} objects, which is the most inclusive definition of an object and are typically used for preliminary event selection and background modeling, and \textit{signal} objects, a more exclusive object definition that is a subset of \textit{baseline} and used exclusively when defining signal events. 
 
-Muon information primarily comes from charged tracks in the inner detector and tracks in the muon spectrometer.  The calorimeters essentially don't contribute any useful information about the muons that pass through since energy measurements in the Ecal or Hcal relay on a particle's complete energy deposition in the calorimeter layers.   Baseline muons are reconstructed with algorithms that combine tracks from the inner detector and muon spectrometer to form muon candidates.  They must pass \pt{} threshold of 4 ~\GeV and be in fiducial region $|\eta | < 2.5$. Baseline muons are also expected to satisfy \textit{Medium} identification standards (DEFINE THIS) and have a transverse impact parameter $|z_0sin\theta| < 0.5~mm$.  Signal muons must also satisfy \textit{FixedCutTightTrackOnly} isolation criteria and a transverse impact parameter requirement of $|d_0/\sigma(d_0)| < 3$.
+Baseline electrons are triggered from energy deposits in the electromagnetic calorimeter and reconstructed with algorithms using the electromagnetic calorimeter clusters that are matched to inner detector tracks.  Baseline electrons must pass \pt{} threshold of 4.5 ~\GeV and be in central detector region $|\eta | < 2.47$.  A longitudinal impact parameter requirement of $|z_0sin\theta| < 0.5~mm$ is also applied. \textcolor{red}{\textit{Have I defined impact parameter yet?}} Electrons are distinguished from other particles using identification criteria that rely on the shower shape in the electromagnetic calorimeter, tracking quantities, and the health of the track to EM calorimeter cluster matching.  Identification criteria varies from loose to tight and evolves with increasing strictness in criteria cuts that can be based either on independent requirements or on the single requirement set on the output of the likelihood function based on all the discriminating quantities listed above.  This analysis uses likelihood based identification criteria only.  \textcolor{red}{Explain more about identification criteria we use.}  Baseline electrons are required to satisfy \textit{VeryLooseLLH} identification while signal electrons must pass \textit{Tight} identification plus \textit{GradientLoose} isolation criteria. \textcolor{red}{Define the isolation criteria}  Signal electrons also require a transverse impact parameter $|d_0/\sigma(d_0)| < 5$. Furthermore, electrons with author 16 are vetoed.  \textcolor{red}{Explain what \textit{author 16} means}
+
+Muon information primarily comes from charged tracks in the inner detector and tracks in the muon spectrometer.  The calorimeters essentially don't contribute any useful information about the muons that pass through since energy measurements in the Ecal or Hcal rely on a particle's complete energy deposition in the calorimeter layers.   Baseline muons are reconstructed with algorithms that combine tracks from the inner detector and muon spectrometer to form muon candidates.  They must pass \pt{} threshold of 4 ~\GeV and be in fiducial region $|\eta | < 2.5$. Baseline muons are also expected to satisfy \textit{Medium} identification standards (DEFINE THIS) and have a transverse impact parameter $|z_0sin\theta| < 0.5~mm$.  Signal muons must also satisfy \textit{FixedCutTightTrackOnly} isolation criteria and a transverse impact parameter requirement of $|d_0/\sigma(d_0)| < 3$.
 
 Baseline jets are reconstructed using locally-calibrated three-dimensional topological clusters built from calorimeter cells.  Topo-clustering starts by determining calorimeter cells with energy significance $4\sigma$ about the quadrature sum of electronic and pileup noise.  Neighboring jets with energy significance $2\sigma$ about noise are iteratively added, forming seed cluster, then a ring of direct neighbor cells are added to the final topo-clusters.  Jets are constructed using anti-$K_t$ algorithm with radius parameter R = 0.4 in this case. Baseline jets must pass \pt{} threshold of 20 ~\GeV and be in fiducial region $|\eta | < 4.5$.  Also, jets within $|\eta | < 2.5$ originating from b-hadrons are identified with the \textit{MV2c10} algorithm (define this!) with an 85\% working point.  Signal jets are further restricted to fiducial region $|\eta | < 2.8$.
 
 TODO: Add paragraph about photon ID
+
+%\begin{table}[tbp]
+\begin{table}
+\tiny
+ \centering
+  \begin{tabular}{l||c|c|c}
+ \hline
+\small Selection Criteria & \small \textbf{Electrons} & \small \textbf{Muons} & \small \textbf{Jets}  \\
+%\small Criteria &     && \\
+ \hline
+ \hline
+\small \textbf{Baseline} &  & & \\ 
+ \hline
+\small Reco Algorithm &\small \textit{author 16 veto}  &&\\
+\small Kinematic&\small $\pt{} > 4.5$ \GeV,  &\small $\pt{} > 4$ \GeV,  &\small $\pt{} > 20$ \GeV,\\
+&\small $|\eta | < 2.47$&\small $|\eta | < 2.5$& $|\eta | < 4.5$\\
+\small Impact Parameter &\small $|z_0sin\theta|< 0.5$ mm &\small $|z_0sin\theta|< 0.5$ mm &\\
+& -- & -- &\\
+\small Identification &\small \textit{VeryLooseLLH}  &\small \textit{Medium}  &                 \\
+\small Isolation & --    & --  &   \\
+\small Clustering & & &\small Anti-$K_t$ R = 0.4 EMTopo\\
+\small Jet Vertex Tagging &&& -- \\
+\small \textit{b}-tagging &&& -- \\
+% \multicolumn{2}{c}{$\pt{} > 4.5 ~\GeV$, $|\eta | < 2.47$}   \\
+% \multicolumn{2}{c}{$|z_0sin\theta|< 0.5~mm$}    \\ 
+%& --       &$|d_0/\sigma(d_0)|< 5$     \\
+%& \multicolumn{2}{c}{$|\eta | < 2.47$}  \\
+ \hline
+ \hline
+ \small \textbf{Signal} &  & \\ 
+ \hline
+ \small Reco Algorithm &\small \textit{author 16 veto}  &&\\
+\small Kinematic&\small $\pt{} > 4.5 ~\GeV$, &\small $\pt{} > 4 ~\GeV$,  &\small $\pt{} > 30$ \GeV,\\
+&\small $|\eta | < 2.47$&\small $|\eta | < 2.5$&\small $|\eta | < 2.8$\\
+\small Impact Parameter &\small $|z_0sin\theta|< 0.5~mm$,&\small $|z_0sin\theta|< 0.5~mm$, &\\
+&\small $|d_0/\sigma(d_0)|< 5$&\small $|d_0/\sigma(d_0)|< 3$&\\
+\small Identification &\small \textit{Tight} &\small \textit{Medium}   &                 \\
+\small Isolation &\small \textit{GradientLoose}     & \small \textit{FixedCutTightTrackOnly} &    \\
+\small Clustering & & &\small Anti-$K_t$ R = 0.4 EMTopo\\
+\small Jet Vertex Tagging &&&\small \textit{JVT Medium}\\
+\small \textit{b}-tagging &&&\small $\pt{} > 20$, $|\eta | < 2.5$ \\
+&&& \small MV2c10 FixedCutBeff 85\% \\
+  \end{tabular}
+  \caption{Summary of object definitions}
+  \label{tab:objdef}
+\end{table}
+
+\iffalse
+\begin{table}[tbp]
+\tiny
+ \centering
+  \begin{tabular}{l||c|c}
+    \hline
+Selection  & ~~~~~~~~~~Baseline~~~~~~~~~~  & ~~~~~~~~~~Signal~~~~~~~~~~  \\
+ %Criteria &     && \\
+ \hline
+ \hline
+ \textbf{Electrons} &  & \\
+ \hline
+ Reco Algorithm & \multicolumn{2}{c}{\textit{author 16 veto}}     \\
+Kinematic& \multicolumn{2}{c}{$\pt{} > 4.5 ~\GeV$, $|\eta | < 2.47$}   \\
+Impact Parameter & \multicolumn{2}{c}{$|z_0sin\theta|< 0.5~mm$}    \\ 
+& --       &$|d_0/\sigma(d_0)|< 5$     \\
+%& \multicolumn{2}{c}{$|\eta | < 2.47$}  \\
+Identification & \textit{VeryLooseLLH}                 & \textit{Tight}    \\
+Isolation &      --         & \textit{GradientLoose}      \\
+ \hline
+ \hline
+\textbf{Muons} &  & \\ 
+ \hline
+ Kinematic& \multicolumn{2}{c}{$\pt{} > 4 ~\GeV$, $|\eta | < 2.5$}   \\
+Impact Parameter & \multicolumn{2}{c}{$|z_0sin\theta|< 0.5~mm$}    \\ 
+& --       &$|d_0/\sigma(d_0)|< 3$     \\
+%& \multicolumn{2}{c}{$|\eta | < 2.47$}  \\
+Identification &\multicolumn{2}{c}{ \textit{Medium}}      \\
+Isolation &      --         & \textit{GradientLoose}      \\
+  \end{tabular}
+  \caption{Summary of blah blah}
+  \label{tab:trkclustervtx}
+\end{table}
+\fi
 
 Well calibrated energy and momentum measurements of the directly observable objects is important for construction of the particles that traverse the detector without interacting.  These "missing" particles carry away energy and momentum which is recovered with energy and momentum conservation in the plane transverse to the beam pipe.  The vector quantity called "missing transverse momentum" ($\vec{E}^T_miss$) and the scalar magnitude representing the "missing transverse energy" ($E^T_miss$) 
 Missing Transverse momentum (MET) is the negative vector sum of the transverse momentum of all the identified physics objects (electrons, muons, jets, photons) plus an additional soft term.  The soft term is constructed from all the tracks not associated with any physics object, but are associated with the primary vertex.  Therefore, the met is adjusted for the best possible calibration of the jets and other identified physics objects and still pileup independent in the soft term. 

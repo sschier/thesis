@@ -3,7 +3,7 @@
 \section{The Large Hadron Collider Machine}
 \label{sec:LHC}
 
-The LHC is a circular proton accelerator and collider that has two rings with counter-rotating proton beams circumnavigating the 26.7 km long tunnel that was originally built for the CERN LEP machine.  The oppositely traveling proton beams have separate vacuum beam pipes and are accelerated around the ring to the TeV energy scale with a gigantic semi-conducting magnet system.  To reach LHC energies, the proton beams increase kinetic energy in smaller accelerator structures that gradually increase in size until they are injected into the LHC, which is still, at the completion of this thesis, the largest and most powerful accelerator in the world.  There are two transfer tunnels, each around 2.5 km long, that join the LHC to the CERN accelerator complex, now the injector for the LHC.  The LHC tunnel, previously the LEP tunnel, is broken into octets with eight straight sides and eight curves.   Each octet is considered as a reference point around the ring; for instance, octet 1 is "point 1", octet 2 is "point 2" and so on.  The beams collide at four interaction points located approximately 100m underground, and surrounding each interaction point is a physics detector apparatus to collect data from the proton collisions.  The four different detector experiments are ALICE, LHC-B, CMS, and ATLAS.  Figure~\ref{fig:lhc} depicts the tunnel octets and the beam injection and dump points.  It also shows the placement of the four detectors; ATLAS is located at point 1.
+The Large Hadron Collider (LHC) is a circular proton accelerator and collider that has two rings with counter-rotating proton beams circumnavigating the 26.7 km long tunnel that was originally built for the CERN LEP machine.  The oppositely traveling proton beams have separate vacuum beam pipes and are accelerated around the ring to the TeV energy scale with a gigantic semi-conducting magnet system.  To reach LHC energies, the proton beams move through a stream of smaller accelerator structures that increase the kinetic energy of the beam at each step, until the beam is finally injected into the LHC, which is still, at the completion of this thesis, the largest and most powerful accelerator in the world.  There are two transfer tunnels, each about 2.5 km long, that join the LHC to the CERN accelerator complex, now acting as the injector for the LHC.  The LHC tunnel is broken into octets with eight straight sides and eight curves.  This is not an LHC design, but rather an artifact of LEP.   That being said, each octet is considered as a reference point around the ring; for instance, octet 1 is "point 1", octet 2 is "point 2" and so on.  The beams collide at four interaction points located approximately 100m underground, and surrounding each interaction point is a physics detector apparatus to collect data from the proton collisions.  The four different detector experiments are ALICE, LHC-B, CMS, and ATLAS.  Figure~\ref{fig:lhc} depicts the tunnel octets and the beam injection and dump points.  It also shows the placement of the four detectors; ATLAS is located at point 1.
 
   \begin{figure}[tbp]
     \centering
@@ -12,7 +12,7 @@ The LHC is a circular proton accelerator and collider that has two rings with co
     \caption{Schematic of the LHC layout}
    \label{fig:lhc}
  \end{figure}
-The primary objective of the LHC is to expose the physics outside of the Standard Model of Particle Physics, with high enough center of mass energy to unlock the new physics interactions and abundant enough luminosity to measure even very low-cross-section-interactions.  The initial aim was a center of mass energy of 14 TeV, but only 13 TeV has been successfully achieved.  The machine luminosity depends only on beam parameters, as expressed in Eq~\ref{eq:lumi}.
+The primary objective of the LHC is to expose the physics outside of the Standard Model of Particle Physics; therefor, the accelerator needs to supply a high enough center of mass energy to the collisions to unlock possible new physics interactions.  The initial aim was a center of mass energy of 14 TeV, but only 13 TeV has been successfully achieved.  Many Beyond Standard Model (BSM) theories predict new particle interactions with weak-scale cross-sections or lower, creating the need abundant enough luminosity to measure these low probability events.  The machine luminosity depends only on beam parameters, as expressed in Eq~\ref{eq:lumi}.
 
 \begin{equation}
 L=\frac{N_b^2n_bf_{rev}\gamma_r}{4\pi\epsilon_n\beta\star}F
@@ -24,45 +24,74 @@ F=(1+(\frac{\Theta_c\sigma_z}{2\sigma^{\star}})^2)^{-1/2}
 \label{eq:reduction}
 \end{equation}
 $\Theta_c$ is the full crossing angle at the interaction point, $sigma_z$ is the RMS bunch length, and $\sigma^{\star}$ is the transverse RMS beam size at the interaction point.  ATLAS, one of the high luminosity experiments at the LHC, achieved a peak luminosity above $L=10^{34}cm^2s^1$
+
+\textcolor{red}{Say more about the achieved luminosity and all that}
  
- 
+TODO: Paragraph about magnet system	
+
+General detector requirements are set by the benchmark physics goals and the experimental environment and constraints of the LHC.  
+\begin{itemize}
+\item \textcolor{blue}{Detectors require fast, radiation-hard electronics and sensor elements since the LHC is designed for high energy and high luminosity performance.  The large number of interactions per bunch-crossing also creates the need for very granular detectors to reduce the effects of event pileup.}
+\item \textcolor{blue}{High acceptance in pseudorapidity with nearly full azimuthal angle coverage is needed for the general purpose detectors.}
+\item \textcolor{blue}{High track reconstruction efficiency and high resolution charged-particle momentum measurements are essential.}
+\item \textcolor{blue}{Good EM calorimetry for efficient electron and photon identification.}
+\end{itemize}
  
 \section{The ATLAS Experiment}
 
-The ATLAS experiment is a detector apparatus recording events at the LHC. The ATLAS experiment is a general purpose detector that almost completely covers the entire solid angle around a beam collision point.  ATLAS recorded its first LHC $pp$ collisions in 2009 at center of mass energy $\sqrt{7}~TeV$, and has since recorded events at several different center of mass energies, including the most extensive reach in the history of particle accelerators at $\sqrt{13}~TeV$.
-
-%(http://inspirehep.net/record/1240374/files/CHARGED%202012_011.pdf)
-ATLAS is a large multi-purpose particle physics detector with forward-backward detecting capabilities in the end-caps and the symmetric cylindrical barrel.  The complete detector system is 44m long, 25m in diameter, and weighs 4000 tons.  The ALTAS detector is comprised of several sub-detector systems, each calibrated and optimized for a different observational purpose.  Listed in order from the center of ATLAS outward, the sub-detectors are: the inner tracking detector (ID), the electromagnetic calorimeter (eCAL), the hadronic calorimeter (hCAL), and the muon spectrometer (MS).  Together, these sub-detectors measure the energy and momentum of a variety of particles and reconstruct the dynamics of each recorded event.  The combination of the detector systems provide charged particle measurements and efficient lepton and photon measurements out to $|\eta| < 2.4$.  Jets are MET are reconstructed using the full set of information out to $|\eta| < 4.9$.  
+The ATLAS experiment is a general purpose detector apparatus that almost completely covers the entire solid angle around one of the LHC beam collision points.  ATLAS recorded its first LHC $pp$ collisions in 2009 at center of mass energy $\sqrt{7}~TeV$, and has since recorded events at several different center of mass energies, including the most extensive reach in the history of particle accelerators at $\sqrt{13}~TeV$.  %(http://inspirehep.net/record/1240374/files/CHARGED%202012_011.pdf). 
+ATLAS achieves central coverage from in symmetric cylindrical barrel, and forward-backward detecting capabilities in the end-caps.  The complete detector system is 44m long, 25m in diameter, and weighs 4000 tons.  The ATLAS detector, shown in Figure~\ref{fig:ATLAS} is comprised of several sub-detector systems, each calibrated and optimized for a different observational purpose.  Listed in order from the center of ATLAS outward, the sub-detectors are: the inner tracking detector (ID), the electromagnetic calorimeter (eCAL), the hadronic calorimeter (hCAL), and the muon spectrometer (MS).  Together, these sub-detectors measure the energy and momentum of a variety of particles and reconstruct the dynamics of each recorded event.  The combination of the detector systems provide charged particle measurements and efficient lepton and photon measurements out to $|\eta| < 2.4$.  Jets are MET are reconstructed using the full set of information out to $|\eta| < 4.9$.  
+  \begin{figure}[tbp]
+  \centering
+ \includegraphics[width=0.6\columnwidth]{/Users/sheenaschier/Documents/LaFiles/figures/thesis/detector/ATLAS.pdf}
+    \caption{Cut-away view of the complete ALTAS Detector}
+   \label{fig:ATLAS}
+ \end{figure}
 
 %%%%%%%%%%%%%%%%%%%%%%
 \subsection{Inner Tracking Detector}
-The ID, show in Figure~\ref{fig:ID}, provides position measurements of charged particles passing through the fiducial region $|\eta|~<~2.5$, by combining information from three separate tracking systems; the silicon pixel detector, the silicon microstrip semi-conductor tracker, and the straw-tube transition radiation tracker.  The ID is made of a central cylindrical barrel that covers the region $|\eta|~<~1.5$, and two end-caps that complete the ID range $1.5~<~|\eta|~<~2.5$ . The ID is surrounded by a superconducting solenoid that encases the entire ID in a 2 Tesla magnetic field.  The 2 T magnetic field bends the charged particles traveling through the tracker and the curvature induced is driven by the momentum of the particle. This section will give an overview of the setup and capabilities of each sub-detector of the ID.  
-
   \begin{figure}[tbp]
-   % \centering
-% http://cdsweb.cern.ch/record/1095926
- \includegraphics[width=0.6\columnwidth]{/Users/sheenaschier/Documents/LaFiles/figures/thesis/detector/ID.pdf}
-    \caption{Schematic drawing of the ALTAS Inner Detector}
+ \includegraphics[width=0.49\columnwidth]{/Users/sheenaschier/Documents/LaFiles/figures/thesis/detector/IDlayout.pdf}
+  \includegraphics[width=0.49\columnwidth]{/Users/sheenaschier/Documents/LaFiles/figures/thesis/detector/IDtotal.pdf}
+    \caption{Layout of the ALTAS Inner Detector}
    \label{fig:ID}
  \end{figure}
+The ATLAS Inner Detector (ID), show in Figure~\ref{fig:ID}, provides position measurements of charged particles passing through the fiducial region $|\eta|~<~2.5$ by combining information from three separate tracking systems; the silicon pixel detector, the silicon microstrip semi-conductor tracker, and the straw-tube transition radiation tracker.  The ID is made of a central cylindrical barrel that covers the region $|\eta|~<~1.5$, and two end-caps that complete the ID range $1.5~<~|\eta|~<~2.5$ . The ID is surrounded by a superconducting solenoid that encases the entire ID in a 2 Tesla magnetic field.  The 2 T magnetic field bends the charged particles traveling through the tracker and the curvature induced is driven by the momentum of the particle. This section will give an overview of the setup and capabilities of each sub-detector of the ID.  
+\iffalse
+  \begin{figure}[tbp]
+ \includegraphics[width=0.48\columnwidth]{/Users/sheenaschier/Documents/LaFiles/figures/thesis/detector/ID.pdf}
+  \includegraphics[width=0.48\columnwidth]{/Users/sheenaschier/Documents/LaFiles/figures/thesis/detector/IDendcap.pdf}
+    \caption{Layout of the ALTAS Inner Detector}
+   \label{fig:IDscematic}
+ \end{figure}
+\fi
 \subsection{Pixel Detector}
-Inner most pixelated tracker.
+Inner most pixelated tracker has the highest granularity sensors in the ID.  There are three pixel layers in the central barrel and three layers in each end cap, providing up to three space-points per track.  The pixel detector has approximately 80.4 million readout channels bonded to pixel sensors segmented in the $R-\phi$ and $z$ directions.The pixel sensors have dimensions $50\mu m \times 400\mu m$ in $R-\phi \times z$, and provide an intrinsic resolution of $10\mu m$ in $R-\phi$ and $115 \mu m$ along $z$.  
 \subsection{Semi-Conductor Tracker}
-Middle silicon microstrip tracker.
+Middle silicon $\mu$strip tracker has overall radial extension $255 mm < R < 549 mm$ in the barrel and $251 mm < R < 610 mm$ in the end-caps.  The Semi-Conductor Tracker (SCT) has eight paired strip layers that provide four space points per track.  In the barrel (end-cap), one set of strips is aligned parallel (perpendicular) the beam axis and is daisy chained to a second set of strips that is misaligned with the its partner by a 40 $mrad$ stereo angle.  The strip pitch is $80\mu m$.  The resulting intrinsic resolution in both the barrel and the end-caps is $17\mu m$ in  $R-\phi$, and in the barrel (end-caps) it is $580 \mu m$ in $z$ ($R$).  There are approximately 6.3 million readout channels.
 \subsection{Transition Radiation Tracker}
-Outer most straw tube transition radiation tracker.
+Outer most straw tube transition radiation tracker provides an average of 36 track position measurements, making it responsible for the large majority of track hits.   Between the barrel and the end-caps, as described in Figure~\ref{fig:ID}(a), the TRT can track charged particles through the region $|\eta| < 2.0$.  All straw tubes in the TRT are 4mm in diameter but vary in length between the barrels and the end-caps.  In the barrel, the straw tubes are 144 cm (37cm) long and positioned parallel to the beam axis; in the end-caps, the tubes are 37 cm long and arranged transverse to the beam axis in the radial direction.  There are approximately 351,000 readout channels.
 
 
 %%%%%%%%%%%%%%%%%%%%%%
 \subsection{Calorimetry}
-**Extra coverage in the forward regions $3.2~<~|\eta|~<~4.9$ with LAr calorimeters for electromagnetic and hadronic measurements.
+ATLAS electromagnetic and hadronic calorimeters extend to $|\eta|~<~4.9$  To gain the extra coverage over the ID in the forward regions $3.2~<~|\eta|~<~4.9$, LAr calorimeters are used for both electromagnetic and hadronic measurements.  In the region  $|\eta|~<~2.5$, also secured by the ID, the EM calorimeter is finely segmented for precise measurement of electrons and photons. 
+
+  \begin{figure}[tbp]
+  \centering
+ \includegraphics[width=0.6\columnwidth]{/Users/sheenaschier/Documents/LaFiles/figures/thesis/detector/cal.pdf}
+    \caption{Picture of the ALTAS Calorimeters}
+   \label{fig:cal}
+ \end{figure}
+
 \subsubsection{Electromagnetic Calorimeter}
 The eCAL is divided into a central barrel (pseudorapidity $|\eta|~<~1.475$) and two end-caps enclosing each side of the barrel.  The end-cap regions have an outer wheel corresponding to $1.375~<~|\eta|~<~2.5$, and an inner wheel for $2.5~<~|\eta|~<~3.2$.  The region $|\eta|~<~2.5$, which matches the coverage of the inner detector, is segmented into three layers.  The first layer is the most finely segmented in $\eta$ to aid the discrimination between true photons and neutral pions that have decayed to a pair of pions.  Both objects are trackless in flight and undetectable until they interact with the eCAL.  Closely-spaced photons from a boosted neutral pion decays can not be resolved into two objects without the extremely fine grain of this first layer.  The fine grain also helps improve the resolution of the shower position, shape and direction.  The eCAL is preceded by a pre-sampler at $|\eta| < 1.8$ to correct for upstream energy losses.
 Measures energy of electromagnetic objects.
 
 \subsubsection{Hadronic Calorimeter}
-Iron-scintillator/tile makes up the central hadronic calorimeter for $|\eta| < 1.7$ while the LAr hadronic end-caps cover the $\eta$ range $1.5~<~|\eta|~<~3.2$.  
-Measures energy of hadronic objects
+The iron-scintillator/tile that makes up the hadronic calorimeter barrel spans the region $|\eta| < 1.7$ and sits just outside the EM calorimeter, extending radially from 2.28 m to 4.25 m.  Shown in Fig~\ref{fig:cal}, the tile barrel is in three sections, the central barrel and two extended barrels. 
+
+The LAr hadronic end-caps cover the $\eta$ range $1.5~<~|\eta|~<~3.2$.  Measures energy of hadronic objects
 
 %%%%%%%%%%%%%%%%%%%%%%
 \subsection{Muon System}
@@ -70,6 +99,14 @@ Measures energy of hadronic objects
 The muon spectrometer, a tracking detector dedicated entirely to tracking muons, is the outer most sub-detector in ATLAS.  It is designed to track muons in the pseudorapidity region $|\eta|~<~2.7$ with a central barrel covering $|\eta|~<~1.05$ and two end-caps at $1.05~<~|\eta|~<~2.7$.  A network of three large super-conducting toroidal magnets, each with eight coils, supplies a magnetic to the muon spectrometer with am integral bending power in the barrel of around 2.5 Tm and up to 6Tm in the end caps.  Resistive plate chambers in the central region $|\eta|~<~1.05$ and end gap chambers in the forward-backward region $1.05~<~|\eta|~<~2.7$ impart triggering capabilities to the MS as well as position measurements in $\eta$ and $\phi$ with a spacial resolution of 5-10mm. Monitored drift tube chambers provide precision tracking out to $|\eta| < 2.7$ where each chamber provides 6-8 hits in $\eta$ along the muon flight path. 
 
 %%%%%%%%%%%%%%%%%%%%%%
-\subsection{DAQ and Trigger}
-Complex computing system to acquire and store data.
+\subsection{Trigger and DAQ}
+\textcolor{blue}{Timing and  trigger control logic, the TDAQ system is complex computing system to acquire and store data.  It is partitioned into sub-systems that are typically affiliated with with sub-detectors that have the same logic components and building blocks.}  Originally a three-level trigger system in Run-1, the trigger was restructured into a two-level system with only a hardware level-1 (L1) trigger and a software-based high-level (HL) trigger.  Each trigger level makes decisions about which events to store and which events to throw away forever.
+
+\subsubsection{Trigger System}
+%https://cds.cern.ch/record/2133909/files/ATL-DAQ-PROC-2016-003.pdf
+The L1 trigger searches for electrons, muons, photons, jets, hadronically decaying $\tau$-leptons, and missing transverse momentum.  In each event, the L1 trigger defines Regions-of-Interest (ROIs), which are detector regions where interesting activity is identified, then stores the geographical ($\eta$, $\phi$) coordinates, the basic characteristics of the detector response in that region, and the set of criteria that triggered the L1.  This information is subsequently passed to the HL trigger to perform a more refined event selection.
+
+\subsubsection{Readout and Data Acquisition}
+
+Electronic elements called the Readout Drivers (RODs) gather information the detector-specific front-end data streams to multiplex highly concentrated data.  The front-end electronics are these combined sub-systems: the front-end analogue-to-digital converter, the L1 buffer that stores the information the L1 trigger will process, the de-randomising buffer that holds data accepted by the L1 trigger before passing it to the HLT, and the buses that move the front-end data stream to the HLT.  The L1 and the de-randomising buffers are important for decreasing the dead-time of the sensors and the L1 trigger.  The L1 buffer stores the information in buckets pass the information along a chain before passing to the L1 trigger to process.  This sequence produces a large enough latency in the detector output account for the intrinsic L1 trigger latency \textcolor{red}{what is the exact latency?}. The de-randomizing buffer allows the L1 store it decisions and process the next event without waiting for the HLT to finishing processing the previous event.
 
