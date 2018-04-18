@@ -17,13 +17,16 @@
 \def\dsp{\def\baselinestretch{2.0}\large\normalsize}
 \dsp
 \usepackage{\ATLASLATEXPATH atlasphysics}
-\usepackage{graphicx}     % Use pdf, png, jpg, or eps§ with pdflatex; use eps in DVI mode
+\usepackage{graphicx}     
 \usepackage{amsmath}
 \usepackage{tikz}	
 \usepackage{placeins}
 \usepackage{caption}
 \usepackage{subcaption}
 \usepackage[font={small}]{caption}
+\usepackage{lineno}
+\usepackage{booktabs}
+\linenumbers
 
 \begin{document}
 
@@ -53,6 +56,12 @@
 \listoffigures
 \listoftables
 
+\makeatletter
+\newcommand{\rmnum}[1]{\romannumeral #1}
+\newcommand{\Rmnum}[1]{\expandafter\@slowromancap\romannumeral #1@}
+\makeatother
+%TODO: LINE NUMBERS
+
 \begin{abstract}
 Supersymmetry (SUSY) is an extension of the Standard Model that predicts a boson (fermion) partner for each fermion (boson) in the Standard Model. Weak scale SUSY is attractive for reasons like improving gauge coupling unification, reducing fine-tuning in the Higgs sector and providing a dark matter candidate. In this thesis, I present a dedicated search for direct production of new colorless weak scale states in a compressed mass spectra with final states characterized by soft visible decay products. This analysis uses $pp$ collisions at $\sqrt s$ = 13 TeV at the Large Hadron Collider and collected by the ATLAS experiment during 2015 and 2016 corresponding to 36.1 $fb^{-1}$ of integrated luminosity. This analysis selects events with two soft electrons or muons and missing transverse momentum ($E_T^{miss}$) recoiling against hadronic initial state radiation. Backgrounds from $t\bar{t}$, diboson, and other production mechanisms with prompt leptons are estimated with Monte Carlo
 simulation while reducible backgrounds with instrumental $E_T^{miss}$ and fake/non-prompt leptons is estimated with a mix of Monte Carlo and data-driven methods. Results are consistent with Standard Model expectation and limits on compressed supersymmetric states are extended for the first time since LEP.
@@ -78,28 +87,32 @@ would have graduated so, so, very much faster.
 
 \end{frontmatter}
 
-\part{First Part}
-
 \include{introduction}
+\part{Theoretical Motivation and Experimental Setup}
 \include{theory}
 \include{detector}
+\part{Method}
 \include{data}
-\include{lepton}
-\include{fakefactor}
+\include{object}
+\include{regions}
 \include{backgrounds}
+\include{fakefactor}
+\part{Analysis and Results}
 \include{systematics}
 \include{statanalysis}
 \include{results}
+\include{interpretations}
 \include{conclusion}
 
 
 \nocite{*}
 \bibliographystyle{plain}
-\bibliography{uctest}
+\bibliography{myThesis.bib}
+%\printbibliography
 
 \appendix
 \include{apndx-A}
-
+\include{apndx-B}
 Ancillary material should be put in appendices, which appear after the
 bibliography. 
 

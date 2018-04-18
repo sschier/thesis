@@ -1,32 +1,166 @@
-\chapter{Backgrounds}
+\chapter{Background Estimation}
 %\label{sec:bkg}
+Here just introduce the flow of the chapter and that the dominant background from detector induced lepton mismeasurements is discussed in a dedicated chapter.  The background estimation strategy, with a description of the control and validation regions is discussed in Section~\ref{sec:bkg:summary}.  Next, in Section~\ref{sec:bkg:tt} estimation of the irreducible ($t\bar{t}$, $Z\rightarrow\tau\tau$, $VV\rightarrow\ell\nu\ell\nu$) backgrounds is explained.  Lastly, in Section~\ref{sec:bkg:dy}, the backgrounds from Drell-Yan processes with instrumental \met is described.  The fake and non-prompt contribution is discussed is the next chapter.
 
-\section{Fake Lepton Background}
-Show the calculations and results of the fake estimate.  The method will be explained in a dedicated chapter/section.
+\section{Summary of estimation strategy}
+\label{sec:bkg:summary}
+The majority, if not all, of the LHC collisions produces Standard Model processes, some of which look the same as Higgsino or slepton signal and sneak into the signal regions.  Table~\ref{tab:bkg:est} succinctly summarizes, in order of greatest contribution to least, the processes that contribute to the backgrounds, the type of background, and the method for estimating it. 
 
-\section{$t\bar{t}$ Background}
-\label{sec:top}
-Mainly b-jet requirement
+The dominant irreducible backgrounds come from $t\bar{t}$, $tW$, diboson, and $Z$+jets, where the $Z$-boson specifically decays to two $\tau$ leptons.  A top quark decays to a b-quark and a $W$-boson nearly $100\%$ of the time.  In the event that a b-jet fails the b-tagging algorithm, each $t\bar{t}$ event can essentially be seen as a diboson event with additional jets and some special topological features.  If both the $W$-bosons decay leptonically, you get two real leptons and \met from the neutrinos.  Similarly, insufficiently b-tagged $tW$ processes with leptonically decaying $W$-bosons also supply two real leptons, plus jets, and \met from neutrinos.  Even when one or both the $W$-bosons decay hadronically, the $tW$ and $t\bar{t}$ processes can still produce background events .  This means that one or two of the 'signal' leptons arise from jets faking leptons in the detector..  These contributions are accounted for in the data-driven fake estimate described in the next chapter.  
+
+Diboson events are $WW$, $ZZ$, and $WZ$.  Fully leptonic WW production is the most prominent diboson background in the two lepton plus \met signal region.  The fully leptonic WW decays lead to two real leptons that likely have opposite charge, but are necessarily of the same flavor.  The real \met in the event comes from the neutrinos, and an additional hard jet must be present in the event.  Fully leptonic WZ events can also find their way into the signal region since there is certainly an oppositely signed same flavor lepton pair from the Z, and real \met from the netrino in the W decay, but the third lepton must fail identification for this be selected as a signal event.  Semi-leptonic ZZ and WZ processes can pass signal selection is one Z decays into a proper lepton pair and the quarks from the other vector boson induce enough \met to pass the \met trigger.  In the fully hadronic cases, there are four jets, two of which must be misidentified as leptons, leaving the other to induce a significant amount of \met.  These contributions are negligible.    
+
+In $Z(\rightarrow\tau\tau)$+jets events, each leptonically decaying $\tau$ lepton produces one charged lepton and two neutrinos.  On the occasion that these leptons form an OSSF pair, this process well mimics signal events.  The top and $Z(\rightarrow\tau\tau)$+jets backgrounds are estimated with a semi-data-driven approach where the estimate is done in dedicated control regions designed to be enriched in the particular process.  The diboson backgrounds are evaluated with a combination of Monte Carlo and a validation region exploiting $\met/H_T$.
+
+Control and validation regions are designed to be kinematically similar to each other and, most importantly, to the signal regions, but statistically orthogonal so to not share events.  Control regions are expected to have low signal contamination...  \textcolor{red}{make table?}
+
+The Drell-Yan process contributes to SM backgrounds by \met induced by the mis-measurement of jet energy.. the rate is low and estimated using only Monte Carlo techniques.
+
+Rare processes..  what are they?
+
+Say something to segue into the next chapter all about the primary background for the analysis.
+
+\begin{table}
+%\begin{center}
+\small
+\begin{tabular}{lll}
+\hline
+\small Background Process  & \small Origin in Signal Region & \small Estimation Strategy \\
+\hline 
+\small Fakes ($W$+jets, $VV$(1$\ell$), $t\bar{t}$(1$\ell$) &\small Reducible, jet fakes $2^{nd}$ $\ell$ &\small Fake factor, same sign VR\\
+\small $t\bar{t}$, $tW(2\ell)$  &\small Irreducible, b-jet fails ID  & \small CR using b-tagging\\
+\small $Z\rightarrow(ee, \mu\mu)$+jets  &\small Instrumental \met  & \small Monte Carlo (MC)\\
+\small $VV$ & \small Irreducible ($\ell\ell\ell$), missed $3^{rd}$ $\ell$ & \small MC, VR using \met/$H_T$ \\
+\small $Z\rightarrow(\tau\tau)$+jets  &\small Irreducible ($\tau\tau\rightarrow\ell\nu\ell\nu$) & \small CR using $m_{\tau\tau}$\\
+\small Low mass Drell-Yan  &\small Instrumental \met  & \small MC, data-driven cross check\\
+\small Other rare & \small Irreducible leptonic decays & \small MC\\
+\hline
+\end{tabular}
+\caption{Background estimation summary}
+\label{tab:bkg:est}
+
+\end{table}
+
+\section{Irreducible Backgrounds}
+\label{sec:bkg:tt}
+This section describes the control regions constructed $t\bar{t}$ and $Z(\rightarrow\tau\tau)$+jets backgrounds.
+
+\subsection{Top Control Region (CR-top)}
+One of the most unique aspect of the top quark signature is the presence of a b-jet.  To enrich a dilepton sample in top quarks, at least one b-tagged jet is required in each event.  The control region is centered around this requirement.  The dilepton invariant mass is restricted to $m_{\ell\ell}<60~\GeV$ to stay kinematically consistent with the dilepton signal region.  \textcolor{red}{Say something about $\met/H_T$} A dilepton pair is required for CR-top, since the top and W decay widths to electrons versus muons is identical, different flavor lepton pairs are statistically the same and are accepted in CR-top selection. \textcolor{red}{..the last sentence is just horrible}. Figures~\ref{fig:CR-top-1} and~\ref{fig:CR-top-2} show the distributions of some of the variables used to define the Higgsino and slepton signal regions.  \textcolor{red}{Say more about these plots}.
+
+\begin{figure}
+    \centering
+    \includegraphics[width=0.47\columnwidth]{/Users/sheenaschier/Documents/LaFiles/figures/thesis/backgrounds/CRtop/hist1d_met_Et_CR-top-AF}
+    \includegraphics[width=0.47\columnwidth]{/Users/sheenaschier/Documents/LaFiles/figures/thesis/backgrounds/CRtop/hist1d_nJet30_CR-top-AF}
+    \includegraphics[width=0.47\columnwidth]{/Users/sheenaschier/Documents/LaFiles/figures/thesis/backgrounds/CRtop/hist1d_nBJet20_MV2c10_CR-top-AF}
+    \includegraphics[width=0.47\columnwidth]{/Users/sheenaschier/Documents/LaFiles/figures/thesis/backgrounds/CRtop/hist1d_METOverHTLep_CR-top-AF}
+     \includegraphics[width=0.47\columnwidth]{/Users/sheenaschier/Documents/LaFiles/figures/thesis/backgrounds/CRtop/hist1d_DPhiJ1Met_CR-top-AF}
+     \includegraphics[width=0.47\columnwidth]{/Users/sheenaschier/Documents/LaFiles/figures/thesis/backgrounds/CRtop/hist1d_minDPhiAllJetsMet_CR-top-AF}
+        
+    \caption{CR-top $ee+\mu\mu +e\mu + \mu e$ channel, pre-fit distributions.}
+    \label{fig:CR-top-1}
+\end{figure} 
+
+\begin{figure}
+    \centering
+        \includegraphics[width=0.47\columnwidth]{/Users/sheenaschier/Documents/LaFiles/figures/thesis/backgrounds/CRtop/hist1d_lep1Pt_CR-top-AF}
+        \includegraphics[width=0.47\columnwidth]{/Users/sheenaschier/Documents/LaFiles/figures/thesis/backgrounds/CRtop/hist1d_lep2Pt_CR-top-AF}
+        \includegraphics[width=0.47\columnwidth]{/Users/sheenaschier/Documents/LaFiles/figures/thesis/backgrounds/CRtop/hist1d_MTauTau_CR-top-AF}
+        \includegraphics[width=0.47\columnwidth]{/Users/sheenaschier/Documents/LaFiles/figures/thesis/backgrounds/CRtop/hist1d_mll_CR-top-AF}
+        \includegraphics[width=0.47\columnwidth]{/Users/sheenaschier/Documents/LaFiles/figures/thesis/backgrounds/CRtop/hist1d_Rll_CR-top-AF}
+        \includegraphics[width=0.47\columnwidth]{/Users/sheenaschier/Documents/LaFiles/figures/thesis/backgrounds/CRtop/hist1d_mt2leplsp_100_CR-top-AF}
+        
+    \caption{CR-top $ee+\mu\mu +e\mu + \mu e$ channel, pre-fit distributions.}
+    \label{fig:CR-top-2}
+\end{figure}
+
+\subsection{Ditau Control Region (CR-tau)}
+Getting a handle of the invariant mass of a ditau system is the clearest approach to constructing a dilepton sample enriched in $Z\rightarrow\tau\tau$ events.  The $m_{\tau\tau}$ variable, described in section~\ref{dunno}, is shown to do a good job blah blah.  Events in CR-tau are required to have an $m_{\tau\tau}$ between $60 \GeV$ and $120 \GeV$ as a way to envelope the $Z$ mass.  There are also upper and lower bounds on $\met/H_T$.  Say something about allowing different flavor lepton pairs because of the lepton flavor universality..  Figures~\ref{fig:CR-tau-1} and~\ref{fig:CR-tau-2} show distributions of the same variables used to define the Higgsino and slepton signal regions as show above to CR-top.  \textcolor{red}{Say more about these plots}
+
+
+\begin{figure}
+    \centering
+        \includegraphics[width=0.48\columnwidth]{/Users/sheenaschier/Documents/LaFiles/figures/thesis/backgrounds/CRtau/hist1d_met_Et_CR-tau-AF}
+        \includegraphics[width=0.48\columnwidth]{/Users/sheenaschier/Documents/LaFiles/figures/thesis/backgrounds/CRtau/hist1d_nJet30_CR-tau-AF}
+        \includegraphics[width=0.48\columnwidth]{/Users/sheenaschier/Documents/LaFiles/figures/thesis/backgrounds/CRtau/hist1d_nBJet20_MV2c10_CR-tau-AF}
+        \includegraphics[width=0.48\columnwidth]{/Users/sheenaschier/Documents/LaFiles/figures/thesis/backgrounds/CRtau/hist1d_METOverHTLep_CR-tau-AF}
+        \includegraphics[width=0.48\columnwidth]{/Users/sheenaschier/Documents/LaFiles/figures/thesis/backgrounds/CRtau/hist1d_DPhiJ1Met_CR-tau-AF}
+        \includegraphics[width=0.48\columnwidth]{/Users/sheenaschier/Documents/LaFiles/figures/thesis/backgrounds/CRtau/hist1d_minDPhiAllJetsMet_CR-tau-AF}
+    \caption{CR-tau $ee+\mu\mu +e\mu + \mu e$ channel, pre-fit distributions.}
+    \label{fig:CR-tau-1}
+\end{figure} 
+
+% set 2 vars ee
+\begin{figure}
+    \centering
+        \includegraphics[width=0.48\columnwidth]{/Users/sheenaschier/Documents/LaFiles/figures/thesis/backgrounds/CRtau/hist1d_lep1Pt_CR-tau-AF}
+        \includegraphics[width=0.48\columnwidth]{/Users/sheenaschier/Documents/LaFiles/figures/thesis/backgrounds/CRtau/hist1d_lep2Pt_CR-tau-AF}
+        \includegraphics[width=0.48\columnwidth]{/Users/sheenaschier/Documents/LaFiles/figures/thesis/backgrounds/CRtau/hist1d_MTauTau_CR-tau-AF}
+        \includegraphics[width=0.48\columnwidth]{/Users/sheenaschier/Documents/LaFiles/figures/thesis/backgrounds/CRtau/hist1d_mll_CR-tau-AF}
+        \includegraphics[width=0.48\columnwidth]{/Users/sheenaschier/Documents/LaFiles/figures/thesis/backgrounds/CRtau/hist1d_Rll_CR-tau-AF}
+        \includegraphics[width=0.48\columnwidth]{/Users/sheenaschier/Documents/LaFiles/figures/thesis/backgrounds/CRtau/hist1d_mt2leplsp_100_CR-tau-AF}
+    \caption{CR-tau $ee+\mu\mu +e\mu + \mu e$ channel, pre-fit distributions.}
+    \label{fig:CR-tau-2}
+\end{figure} 
+
+
+
+\subsection{Diboson Validation Region (VR-VV)}
+B-jet veto and $\met/H_T<3.0$ requirement.  Remember, signal samples should populate high $H_T$, which mitigates signal contamination.  Figures~\ref{} and\ref{} show these distributions..
+
+Refer to plots
+
+\begin{figure}
+    \centering
+        \includegraphics[width=0.48\columnwidth]{/Users/sheenaschier/Documents/LaFiles/figures/thesis/backgrounds/VRVV/hist1d_met_Et_VR-VV-AF}
+        \includegraphics[width=0.48\columnwidth]{/Users/sheenaschier/Documents/LaFiles/figures/thesis/backgrounds/VRVV/hist1d_nJet30_VR-VV-AF}
+        \includegraphics[width=0.48\columnwidth]{/Users/sheenaschier/Documents/LaFiles/figures/thesis/backgrounds/VRVV/hist1d_nBJet20_MV2c10_VR-VV-AF}
+        \includegraphics[width=0.48\columnwidth]{/Users/sheenaschier/Documents/LaFiles/figures/thesis/backgrounds/VRVV/hist1d_METOverHTLep_VR-VV-AF}
+        \includegraphics[width=0.48\columnwidth]{/Users/sheenaschier/Documents/LaFiles/figures/thesis/backgrounds/VRVV/hist1d_DPhiJ1Met_VR-VV-AF}
+        \includegraphics[width=0.48\columnwidth]{/Users/sheenaschier/Documents/LaFiles/figures/thesis/backgrounds/VRVV/hist1d_minDPhiAllJetsMet_VR-VV-AF}
+    \caption{VR-VV $ee+\mu\mu +e\mu + \mu e$ channel, pre-fit distributions.}
+    \label{fig:VR-VV-AF-set1vars}
+\end{figure} 
+
+
+% set 3 vars ee
+\begin{figure}
+    \centering
+        \includegraphics[width=0.48\columnwidth]{/Users/sheenaschier/Documents/LaFiles/figures/thesis/backgrounds/VRVV/hist1d_lep1Pt_VR-VV-AF}
+        \includegraphics[width=0.48\columnwidth]{/Users/sheenaschier/Documents/LaFiles/figures/thesis/backgrounds/VRVV/hist1d_lep2Pt_VR-VV-AF}
+        \includegraphics[width=0.48\columnwidth]{/Users/sheenaschier/Documents/LaFiles/figures/thesis/backgrounds/VRVV/hist1d_MTauTau_VR-VV-AF}
+        \includegraphics[width=0.48\columnwidth]{/Users/sheenaschier/Documents/LaFiles/figures/thesis/backgrounds/VRVV/hist1d_mll_VR-VV-AF}
+        \includegraphics[width=0.48\columnwidth]{/Users/sheenaschier/Documents/LaFiles/figures/thesis/backgrounds/VRVV/hist1d_Rll_VR-VV-AF}
+        \includegraphics[width=0.48\columnwidth]{/Users/sheenaschier/Documents/LaFiles/figures/thesis/backgrounds/VRVV/hist1d_mt2leplsp_100_VR-VV-AF}
+    \caption{VR-VV $ee+\mu\mu +e\mu + \mu e$ channel, pre-fit distributions.}
+    \label{fig:VR-VV-AF-set3vars}
+\end{figure}
+Say something about the value of the $m_{\ellell}$ cut imposed
+\subsection{Different flavor validation regions}
+The purpose of these VRs is to check the eventual extrapolation of the fitted Monte Carlo prediction of the irreducible backgrounds that are symmetric in $ee+\mu\mu$ and $e\mu+\mu e$.  Figures such and such \textcolor{red}{still need to add this last set of figures.}
+
+
 
 \section{Drell-Yan Background}
-\label{sec:mettrigger}
-Off-shell $z\rightarrow ll$ events.
+\label{sec:bkg:dy}
+Off-shell $z\rightarrow ll$ events.  Explain how these events get into the signal region.  Because of the \met trigger, contribution small but not negligible.
+
+Refer to DY figures
+
+Two strategies are employed to reduce this background, what are they?
+
+After reducing this as much as possible, Monte Carlo estimates the remaining piece.
 
  \begin{figure}
  \centering
-    \includegraphics[width=0.6\columnwidth]{/Users/sheenaschier/Documents/LaFiles/figures/thesis/backgrounds/dataCR_mll_MuMu_pre.pdf}
+    \includegraphics[width=0.48\columnwidth]{/Users/sheenaschier/Documents/LaFiles/figures/thesis/backgrounds/dataCR_mll_MuMu_pre.pdf}
   % \caption{Di-muon.}
- \includegraphics[width=0.6\columnwidth]{/Users/sheenaschier/Documents/LaFiles/figures/thesis/backgrounds/dataCR_mll_ElEl_pre.pdf}
+ \includegraphics[width=0.48\columnwidth]{/Users/sheenaschier/Documents/LaFiles/figures/thesis/backgrounds/dataCR_mll_ElEl_pre.pdf}
 %  \caption{Di-electron.}
-  \includegraphics[width=0.6\columnwidth]{/Users/sheenaschier/Documents/LaFiles/figures/thesis/backgrounds/dataCR_mll_DF_pre.pdf}
+%  \includegraphics[width=0.6\columnwidth]{/Users/sheenaschier/Documents/LaFiles/figures/thesis/backgrounds/dataCR_mll_DF_pre.pdf}
 %  \caption{Different flavour ($e\mu+\mu e$).}
   \caption{Data events passing inclusive \met{} triggers with opposite sign baseline leptons in the dilepton invariant mass $m_{\ell\ell}$ spectrum. The $\Delta\phi(j_1, \mathbf{p}_\mathrm{    T}^\mathrm{miss})$ variable is inverted to ensure this is orthogonal to the signal region.}
   \label{fig:mll_data}
  \end{figure}
 \FloatBarrier
 
-\section{Z+jets Background}
-\label{sec:elements}
-
-
- \input{/Users/sheenaschier/Documents/LaFiles/figures/thesis/control_plots}

@@ -1,41 +1,60 @@
 \chapter{Results}
-\label{sec:results}
-Model independent interpretations are shown as well as compressed higgsino and compressed slepton interpretations.
+\label{ch:results}
+\section{Background Only Fit}
+In the background only fit, only the CRs are used to constrain the fit parameters by maximizing the likelihood function assuming there are no signal events in the CRs.  In this way, the SM background predictions are independent of the signal regions.  The factors $\mu_{top}$ and $\mu_{\tau\tau}$, used to normalize of the combined $t$, $tW$, and  $t\bar{t}$ samples and the  $Z(\rightarrow\tau\tau)$+jets samples, are obtained in a simultaneous fit to data in CR-top and CR-tau.  For exclusion, two simultaneous shape fits are performed across $ee$ and $\mu\mu$ channels, one in the $m_{\ell\ell}$ variable, and the other in the $m_{T2}^{100}$ variable.   The normalization parameters $\mu_{top}$ and $\mu_{\tau\tau}$ for the background only fit are $\mu_{top} = 0.72\pm0.13$ and $\mu_{\tau\tau} = 1.02\pm0.09$, where the uncertainty is the combination of the statistical and systematic contributions.
+
+The accuracy of the background predictions is tested in the validation regions and, as shown in Figure~\ref{fig:pull_plot_summary_yields}, are consistently within 1.5 standard deviations of the observed data yields.  \textcolor{red}{Talk about this plot}. \textcolor{blue}{ Figure~\ref{fig:postfitplots} shows distributions of the data and expected backgrounds for a selection of VRs and and kinematic variables, including the $m_{\ell\ell}$ distribution in VR-VV and the $m_{T2}$ distribution in VR-SS.  Data and background predictions are compatible within uncertainties.}.  Figure~\ref{fig:SRpostfitplots} shows kinematic distributions of data and expected backgrounds in the inclusive Higgsino and slepton signal regions.  No significant excesses above expected backgrounds are observed.
+
+
 \begin{figure}
  \centering
-\includegraphics[width=0.6\columnwidth]{/Users/sheenaschier/Documents/LaFiles/figures/thesis/results/pull_plot_summary_yields}
+\includegraphics[width=0.9\columnwidth]{/Users/sheenaschier/Documents/LaFiles/figures/thesis/results/histpull_HiggsinoFit_doCRonly_VRs.pdf}
    \caption{Summary of Monte Carlo yields in control, validation and signal regions in a background-only fit using data only in the two CRs to constrain the fit.}
   \label{fig:pull_plot_summary_yields}
  \end{figure}
-\FloatBarrier
 
-\section{Compressed Higgsino}
- \begin{figure}
- \centering
- \includegraphics[width=0.6\columnwidth]{/Users/sheenaschier/Documents/LaFiles/figures/thesis/results/exclusion_contour_higgsino.pdf}
-  \caption{
- Expected 95\% CL exclusion sensitivity (blue dashed line) with $\pm 1 \sigma_\text{exp}$ (yellow band) from experimental systematics
-   and observed limits (red solid) with $\pm 1 \sigma_\text{theory}$ (dotted red) from signal cross section uncertainties.
-A shape fit of Higgsino signals to the $m_{\ell\ell}$ spectrum is used to derive
- the limit is displayed in the $m(\tilde{\chi}^0_2) - m(\tilde{\chi}^0_1)$ vs $m(\tilde{\chi}^0_2)$ plane.
- The chargino $\tilde{\chi}^\pm_1$ mass is assumed to be half way between the two lightest neutralinos.
-  The grey region denotes the lower chargino mass limit from LEP~\cite{LEPlimits}.}
-   \label{fig:exclusion_contour_higgsino}
+ \begin{figure}%[h!]
+  \begin{center}
+  \includegraphics[width=0.49\textwidth]{/Users/sheenaschier/Documents/LaFiles/figures/thesis/results/Higgsino_bkg_VRDF_iMT2f_VRDF_iMT2f_lep2Pt.pdf}
+  \includegraphics[width=0.49\textwidth]{/Users/sheenaschier/Documents/LaFiles/figures/thesis/results/Higgsino_bkg_VR_VV_VR_VV_mt2leplsp_100.pdf}
+   \includegraphics[width=0.49\textwidth]{/Users/sheenaschier/Documents/LaFiles/figures/thesis/results/Higgsino_bkg_VR_SS_AF_VR_SS_AF_lep2Pt.pdf}
+   \includegraphics[width=0.49\textwidth]{/Users/sheenaschier/Documents/LaFiles/figures/thesis/results/Higgsino_bkg_VR_SS_AF_VR_SS_AF_mll.pdf}
+   \end{center}
+   %\caption{Kinematic distributions after the background-only fit}
+ \caption{Kinematic distributions after the background-only fit showing the data and the expected background in the different-flavor validation region VRDF-$m_\text{T2}^{100}$ (top left), the diboson validation region VR-VV (top right), and the same-sign validation region VR-SS inclusive of lepton flavor (bottom).  Similar levels of agreement are observed in other kinematic distributions for VR-SS and VR-VV.  Background processes containing fewer than two prompt leptons are categorized as `Fake/nonprompt'.  The category `Others' contains rare backgrounds from triboson, Higgs boson, and the remaining top-quark production processes listed in Table.  The last bin includes overflow. The uncertainty bands plotted include all statistical and systematic uncertainties. Orange arrows in the Data/SM panel indicate values that are beyond the y-axis range.}
+ \label{fig:postfitplots}
  \end{figure}
- \FloatBarrier
  
- \section{Compressed Slepton}
-  \begin{figure}
- \centering
- \includegraphics[width=0.6\columnwidth]{/Users/sheenaschier/Documents/LaFiles/figures/thesis/results/exclusion_contour_slepton.pdf}
-  \caption{
-Expected 95\% CL exclusion sensitivity (blue dashed line) with $\pm 1 \sigma_\text{exp}$ (yellow band) from experimental systematics
-and observed limits (red solid) with $\pm 1 \sigma_\text{theory}$ (dotted red) from signal cross section uncertainties.
-A shape fit of slepton signals to the $m_\text{T2}^{100}$ spectrum is used to derive
-the limit projected into the $m(\tilde{\ell}) - m(\tilde{\chi}^0_1)$ vs $m(\tilde{\ell})$ plane.
-The slepton $\tilde{\ell}$ refers to a 4-fold mass degenerate system of left- and right-handed selectron and smuon.
-The grey region denotes a conservative right-handed smuon $\tilde{\mu}_R$ mass limit from LEP~\cite{LEPlimits},
-while the blue region is the 4-fold mass degenerate slepton limit from ATLAS Run 1~\cite{SUSY-2013-11}.}
-   \label{fig:exclusion_contour_slepton}
+ \begin{figure}%[tp]
+  \begin{center}
+   \includegraphics[width=0.49\textwidth]{/Users/sheenaschier/Documents/LaFiles/figures/thesis/results/Higgsino_bkg_SRSF_iMLLg_SRSF_iMLLg_METOverHTLep_METOverHTLep.pdf}
+   \includegraphics[width=0.49\textwidth]{/Users/sheenaschier/Documents/LaFiles/figures/thesis/results/Higgsino_bkg_SRSF_iMLLg_SRSF_iMLLg_mll.pdf}
+   \includegraphics[width=0.49\textwidth]{/Users/sheenaschier/Documents/LaFiles/figures/thesis/results/Higgsino_bkg_SRSF_iMT2f_SRSF_iMT2f_METOverHTLep_METOverHTLep.pdf}
+   \includegraphics[width=0.49\textwidth]{/Users/sheenaschier/Documents/LaFiles/figures/thesis/results/Higgsino_bkg_SRSF_iMT2f_SRSF_iMT2f_mt2leplsp_100.pdf}
+   \end{center}
+%   \caption{Kinematic distributions after the background-only fit}
+ \caption{Kinematic distributions after the background-only fit showing the data as well as the expected background in the inclusive electroweakino SR$\ell\ell$-$m_{\ell\ell}$~$[1, 60]$ (top) and slepton}% \SRllmtt~$[100, \infty]$ (bottom) signal regions. The arrow in the $\met/\Htlep$ variables indicates the minimum value of the requirement imposed in the final SR selection. The $\mll$ and $\mtt$ distributions (right) have all the SR requirements applied. Background processes containing fewer than two prompt leptons are categorized as `Fake/nonprompt'. The category `Others' contains rare backgrounds from triboson, Higgs boson, and the remaining top-quark production processes listed in Table~\ref{tab:MCconfig}. The uncertainty bands plotted include all statistical and systematic uncertainties. The last bin includes overflow. The dashed lines represent benchmark signal samples corresponding to the Higgsino $\widetilde{H}$ and slepton $\slepton$ simplified models. Orange arrows in the Data/SM panel indicate values that are beyond the y-axis range.}
+  \label{fig:SRpostfitplots}
  \end{figure}
+
+
+\section{Model Independent Upper Limits on New Physics}
+Model independent limits are useful so that, for any signal model of interest, one can evaluate the number of events predicted in a signal region and check if the model is excluded by current measurements.  For this, single-binned inclusive SRs are used, since binning in the SRs requires some model-based assumptions about the distribution of the signal over these bins.   An upper limit on the number of observed ($S^{95}_{obs}$) and expected ($S^{95}_{exp}$) signal events in each SR at $95\%$ CL is procured in the same way as the background only fit, but now using CRs and SRs and with the observed number of events in a signal region given as inputs to the fit.  The observed and predicted event yields are used to set the upper limits by including one inclusive signal region at a time in a simultaneous fit with the CRs.  The profile-likelihood hypothesis test performed to get the upper limits uses the background estimates obtained from the background only test in the CRs and SRs, and both the expected and observed upper limits use the same background estimates.  In this way, the expected upper limits inadvertently depend on the observed data.  \
+\textcolor{red}{Talk to Mike about the signal strength parameter being set to 1 or 0.. talk to him about the mathematical formalism in general}.  Add something about the signal contamination in the CRs is assumed to be none.
+
+\textcolor{red}{Refer to Table~\ref{table.results.exclxsec.pval.upperlimit.SRSF_iMLLa}}.  An upper limit on the visible cross-section for new physics in a given SR, $\langle\epsilon\mathrm{\sigma}\rangle_\text{obs}^{95}$ [fb], is equal to product of the signal region acceptance, the reconstruction efficiency, and the production cross-section.  The discovery p-value, p(s=0) in the right most column of the table, represents the significance of an excess of events in a signal region by considering the probability that the backgrounds in a SR are more signal-like than observed. 
+
+ {\renewcommand{\arraystretch}{1.3}
+\input{/Users/sheenaschier/Documents/LaFiles/figures/thesis/results/Merged_SimpleDiscoveryUpperLimits_unrounded.tex}
+
+\section{Model Dependent Sensitivity with Shape Fit}
+Here we assume the Higgsino and slepton signals give rise to the $m_{\ell\ell}$ and $M_{T2}$ distributions in our signal regions.  This consideration provides better constraining power for these models over the model independent upper limits of the 'Discovery' fit.  Like in the model independent case, the fit is performed on the CRs and SRs simultaneously, but different from the model independent case, the multi-binned exclusive SRs and considered.  \textcolor{red}{Say something about the binning in signal sensitive observables $m_{\ell\ell}$ and $M_{T2}$}.  Background and signal samples are included in in both the CR and SR fits to account for any signal contamination in the CRs.
+
+\textcolor{red}{Refer to Tables~\ref{tab:results:exclusiveSRYields} and ~\ref{tab:results:exclusiveSRYields2}.}
+
+
+
+
+
+
  

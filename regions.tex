@@ -1,0 +1,185 @@
+\chapter{Signal Region Optimization}
+ \label{sec:sr}
+Introduce what a signal region is and that there are two separate signal regions for each the Higgsino and the slepton analyses.  There are common cuts where the signal regions are being optimized in parallel, and then there are set of cuts that are specific to each analysis, and most importantly, they exploit a different kinematic signature of the system.  Events in the signal regions are required to contain two signal leptons.  The lepton with the highest \pt, the leading lepton, is required to have $\pt > 5~\GeV$ and the lepton with the next highest \pt, the subleading lepton, is required to have $\pt > 4.5~\GeV$.  \textcolor{red}{Explain why this choice is made}.  Collinear leptons from photon conversions are filtered out with a restriction on the minimum $\Delta R_{\ell\ell}$ between the leptons of $0.05$, and an invariant mass cut of $m_{\ell\ell} > 1 ~\GeV$.
+Summarize the sections to come.
+\section{Discriminating Variables}
+\label{sec:discvar}
+Here I will define all the discriminating variables, and in the next section I will go into detail how they are applied to the signal regions and what benefits or limitations there are.  There are discriminating variables that exploit the lepton information (Same flavor lepton pair with opposite charge, $\Delta R_{\ell\ell}$, $m_{\ell\ell}$), and there are those that exploit the topology of only the jets and the \met{} ($\Delta\phi_{ j_1-met}$, $min \Delta\phi_{jets-met}$, $\pt(j_i)$, Number of $b$-tagged jets $N_\mathrm{b-jets}$), and there are those that exploit both ($m_{T2}^{m_{\chi}}$,$m_\text{T}^{\ell_1}$, $\met/\HT^\text{leptons}$, $m_{\tau\tau}$).  
+
+\textcolor{red}{Make clear summarizing the non-leptonic variables first}. $|\Delta\phi(j_1, \pt^{miss})|$ measures the angular separation between the leading jet and missing transverse momentum.  Missing transverse momentum from jet mismeasurements tends to align the quantities and leads to small $\Delta\phi$.  This variable should have a minimum requirement that reduces this induced \met{}, which is mostly occurs in QCD and $Z$+jets events.  Similarly, the $min|\Delta\phi(jets, \pt^{miss})|$ is a variable that considers the minimum angular separation between \met{} and the nearest reconstructed jet.  $\pt(j_1)$ is the momentum of the leading jet in an event.  Because of the soft leptons, the \met{} is correlated to this variable.  If the threshold on the $\pt(j_1)$ is too low, this will allow other subleading jet to contribute to the measured hadronic recoil of the system.  $N(b-jets)$, number of b-tagged jets, is a discriminating variable because the $t\bar{t}$ background is significantly enhanced in b-tagged jets, while the Higgsino signal is not.   Also, the slepton signal does not include heavy flavor quarks in the decay chains.  Therefore, rejecting jets tagged as coming from b-quarks reduces the $t\bar{t}$ backgrounds.
+
+\textcolor{red}{Now make clear I am going over leptonic variables}.  Same flavor lepton pair with opposite charge requirement prefers the dominant leptonic decay mode of the Higgsino via off-shell $Z^*$.  Also, light flavor sleptons always decays to two oppositely charges leptons of the same flavor.  This selection in signal regions targets the decays of this analysis and leaves the control and validation regions to exploit the different flavor or same signed lepton pairs.  The distance between the dilepton pair, $\Delta R_{\ell\ell}$ is defined as:
+\begin{equation}
+\Delta R_{\ell\ell} = \sqrt{(\eta_{\ell_1}-\eta_{\ell_2})^2+(\phi_{\ell_1}-\phi_{\ell_2})^2}
+\end{equation} 
+The transverse mass of the leading lepton and the \met{} $m_T(\pt^{\ell_1}$ is defined as:
+\begin{equation}
+\label{eq:mt}
+m_T(\pt^{\ell_1}, \pt^{miss}) = \sqrt{m^2_{\ell_1}+2(E^{\ell_1}_TE^{miss}_T-\pt^{\ell_1}\pt^{miss})} 
+\end{equation}
+For electroweakino signals, the leading lepton and the $\pt^{miss}$ are more likely to be closer together than in background events.  \textcolor{red}{Maybe mention in optimization studies that the $m_T(\pt^{\ell_1}$ can also reconstruct ($W\rightarrow\ell\nu$) processes, which leads to an $m_T(\pt^{\ell_1} < 70~\GeV$ cut imposed.}
+The dilepton mass $m_{\ell\ell}$ can both suppress backgrounds as well as exploit special features of Higgsino model.  \textcolor{red}{Continue on about the kinematic endpoint..}  Similarly, slepton signals a kinematic endpoint defined by the 'stransverse' mass $m^{m_\chi}_{T2}$, which is a function of the measures momentum of the leading two leptons $p_{\ell_1}$, $p_{\ell_2}$, the measured \pt, and the hypothesized invisible particle mass $m_\chi$.  \textcolor{red}{explain how the $m^{m_\chi}_{T2}$ is actually restricted in signal samples.. and more on all of this in section such and such}.  The 'stransverse' mass is defined as the extremitization of $q_T$, the sum of immeasurable missing transverse momentum vectors $\pt^{\chi,i}$ of each of the initially produced invisible particles.  The calculation of $q_T$ is shown in Eq~\ref{eq:qt}, and $m^{m_\chi}_{T2}$ is shown in Eq~\ref{eq:mt2}.
+\begin{equation}
+\label{eq:qt}
+q_T = \pt^{\chi,1}+\pt^{\chi,2}
+\end{equation}
+\begin{equation}
+\label{eq:mt2}
+m^{m_\chi}_{T2}(p_{\ell_1}, p_{\ell_2}, \pt^{miss}, m_\chi)  = min(max[m_T(\pt^{\ell_1}, \chi), m_T(\pt^{\ell_2}, \pt^{miss}-q_T, \chi)])
+\end{equation}
+$m_T$ is described in Eq~\ref{eq:mt} except for... For the pair of semi-invisible particles in the slepton signal \textcolor{red}{is this the slepton pair that decay to leptons and neutralinos?}, $m^{m_\chi}_{T2}$ is always less than the parent slepton mass $m_{\tilde\ell}$ when the hypothesized $m_\chi$ mass is set to the neutralino mass in the underlying process.  This defines the lower kinematic endpoint in $m^{m_\chi}_{T2}$ for slepton signals.  Requiring $m^{m_\chi}_{T2} < m_{\tilde\ell}$, various mass scenarios can be probed in the slepton-neutrino mass plane.  Standard Model backgrounds not display this kind of feature since the invisible particles are massless neutrinos, therefor there is not such enhancement in background when making this requirement.  In fact, in the compressed region of the slepton-neutrino mass  plane, events populate a narrower region in $m_{T2}$, giving this variable more discriminating power.  \textcolor{red}{Should expand on this, either here or in next sections}.
+
+\paragraph{\met/$H_T^{leptons}$}
+A variable that discriminates between events with soft and hard leptonic activity is ratio of \met over $H_T^{leptons}$, where $H_T^{leptons}$ is defined as:
+\begin{equation}
+H_T^{leptons} = \Sigma\pt^{\ell_i}
+\end{equation}
+ For given values of \met \textcolor{red}{Which values?}, Standard Model diboson and $t\bar{t}$ background processes produce hard leptons, likewise diminishing the values of $\met/H_T^{leptons}$.  In compressed electroweakino and slepton events, the \met{} is mostly from the boost of the hadronic recoil.  The recoiling jet affects the heavier invisible particle much more than it effects the lighter leptons; therefore, these signal events prefer larger values of $\met/H_T^{leptons}$. \textcolor{red}{Motivate more completely in the next section}.  
+ 
+ Lastly, the di-tau invariant mass, $m_{\tau\tau}\left(p_{\ell_1}, p_{\ell_2}, \mathbf{p}_\mathrm{T}^\mathrm{miss}\right) $ is used by this analysis to veto the $Z\rightarrow\tau\tau$ background.  The di-tau invariant mass is a function of the measure lepton momenta, $p_{\ell_{1,2}}$ and the missing transverse momentum, $\mathbf{p}_\mathrm{T}^\mathrm{miss}$, as defined in Eq~\ref{eq:mtt}.
+ \begin{equation}
+ \label{eq:mtt}
+ m_{\tau\tau}\left(p_{\ell_1}, p_{\ell_2}, \mathbf{p}_\mathrm{T}^\mathrm{miss}\right) =
+\begin{cases}
+\hphantom{-}\sqrt{m_{\tau\tau}^2}               & m_{\tau\tau}^2 \geq 0,\\
+ -\sqrt{\left| m_{\tau\tau}^2\right|} & m_{\tau\tau}^2 < 0.
+\end{cases} 
+ \end{equation}
+ The purpose of this variable is to reconstruct the di-tau invariant mass of the fully leptonic $Z\rightarrow\tau\tau$ process from the measurable quantities in the event, the 4-momenta of the two leptons and the missing transverse momentum. In Eq~\ref{eq:mtt}, $p_{\ell_1}$ and $p_{\ell_2}$ are the measured lepton 4-momenta, and $\mathbf{p}_\mathrm{T}^\mathrm{miss}$ is the measured missing transverse momentum.  A ($Z\rightarrow\tau\tau$) + jets event within the signal region relies on the $Z$ boson recoiling off the jet activity, boosting the decaying di-tau system oppositely along the jet axis.  This kick from the jets causes the leptons and neutrinos to remain close to a single axis, so the 4-momentum of the invisible neutrino system $p_{\nu_i}$, for the $i_{th}$ $\tau$ in the event, can be well approximated by a simple rescaling of the lepton 4-momentum.  \textcolor{red}{GEEZ there is so much to explain here!}
+ %Z. Han, G. D. Kribs, A. Martin and A. Menon, Hunting quasidegenerate Higgsinos, Phys. Rev. D 89 (2014) 075007, arXiv: 1401.1235 [hep-ph].
+ % H. Baer, A. Mustafayev and X. Tata, Monojet plus soft dilepton signal from light higgsino pair production at LHC14, Phys. Rev. D 90 (2014) 115007, arXiv: 1409.7058 [hep-ph].
+ %A. Barr and J. Scoville, A boost for the EW SUSY hunt: monojet-like search for compressed sleptons at LHC14 with 100 fb?1, JHEP 04 (2015) 147, arXiv: 1501.02511 [hep-ph].
+  \begin{figure}
+  \centering
+  \input{/Users/sheenaschier/Documents/LaFiles/figures/thesis/ditau_schematic}
+  \caption{Schematic illustrating the fully leptonic $(Z\to\tau\tau)$ + jets system motivating the construction of $m_{\tau\tau}$. }
+  \label{fig:ditau_schematic}
+  \end{figure}
+  
+\section{Optimization Studies}
+Now that the discriminating variables have been introduced, this will discuss the process of choosing the best signal region.  \textcolor{red}{This section is very important, so work hard to get the material in here!}. Both signal regions satisfy a \met{} threshold $200~\GeV$ \met{} to be efficient in the \met{} trigger.  The optimal cut on \met{} to achieve best signal over background discrimination might be lower (\textcolor{red}{maybe say here what the \met{} cut affets most and how to qualify or quantify this statement}), but with increasing luminosity and average $\mu$, the lowest unprescaled \met{} trigger thresholds only went up, not down, as dating taking continued through 2016.  The \met{} requirement sculpts the topology of the signal to prefer events where the direction of the \met and the direction of the leading jet are opposite each other in the transverse plane.  Due to small mass-splittings leading to such soft decay products, the NLSP daughters of the electroweakinos or sleptons will typically only get significant enough \met{} to pass the \met{} signal region cut when they are oppositely aligned in the transverse plane with the hadronic initial state radiation.  
+
+The slepton and Higgsino analyses have different $\Delta R_{\ell\ell}$ requirements.  Refer to the plots that shows the comparison of the Higgsino $\chi_2^0\chi_1^+$ and the slepton signals in $\Delta R_{\ell\ell}$ for $10~\GeV$ and $20~\GeV$ mass-splittings.
+  \begin{figure}[tbp]
+   % \centering
+     \includegraphics[width=0.48\columnwidth]{/Users/sheenaschier/Documents/LaFiles/figures/thesis/higgsino_slep_signal_Rll_met0.pdf}
+  %  \caption{No \met{} requirement (only truth filter).}
+       \includegraphics[width=0.48\columnwidth]{/Users/sheenaschier/Documents/LaFiles/figures/thesis/higgsino_slep_signal_Rll_met100.pdf}\\
+   % \caption{$\met{} > 100$ GeV.}
+     \includegraphics[width=0.48\columnwidth]{/Users/sheenaschier/Documents/LaFiles/figures/thesis/higgsino_slep_signal_Rll_met200.pdf}
+ %   \caption{$\met{} > 200$ GeV.}
+     \includegraphics[width=0.48\columnwidth]{/Users/sheenaschier/Documents/LaFiles/figures/thesis/higgsino_slep_signal_Rll_met300.pdf}\\
+%    \caption{$\met{} > 300$ GeV.}
+   \caption{Comparison of Higgisno N2C1p (solid) and slepton (dashed) signals in the $R_{\ell\ell}$ variable for 10 GeV (dark) and 20 GeV (light) mass splittings. The \met{} here acts as a proxy for the boost of the system. Only a 2 signal lepton selection is applied.}
+   \label{fig:Rll_signals only}
+ \end{figure}
+ 
+ \begin{figure}[tbp]
+  \centering
+  \includegraphics[width=0.48\columnwidth]{/Users/sheenaschier/Documents/LaFiles/figures/thesis/METoverHTLep_mll}
+%\caption{Higgsinos}
+  \includegraphics[width=0.48\columnwidth]{/Users/sheenaschier/Documents/LaFiles/figures/thesis/METoverHTLep_mT2}
+%\caption{Sleptons}
+ \caption{Distributions of $\met/H_{T}^{leptons}$ for the Higgsino (left) and Slepton (right) selections, after applying all signal region cuts except those on the $\met/H_{T}^{leptons}$, $m_{ll}$, and $m_{T2}$.  The black dashed line indicates the cut applied in the signal region; events in the region below the black line are rejected.}
+ \label{fig:METoverHTLep2D}
+ \end{figure}
+ 
+ \begin{table}[]
+ \centering
+ \renewcommand{\arraystretch}{1.1}
+ \begin{tabular}{ll}
+ \hline
+ Variable                                                & Requirement    \\
+ \hline
+ \met                                                    & $>200$~GeV                 \\
+ Leading jet $\pt(j_1)$                                  & $>100$ GeV              \\
+ $|\Delta\phi(j_{1},\met)|$                                           & $>2.0$                     \\
+ min$|\Delta\phi(all~jets,\met)|$                                       & $>0.4$                   \\
+ $N_\mathrm{b-jet}^{20}$, 85\% WP                        & Exactly zero               \\
+ $N_\mathrm{leptons}$                                    & Exactly two signal leptons\\
+ Lepton charge and flavor                               & $e^\pm e^\mp$ or $\mu^\pm \mu^\mp$\\
+ %Author 16 Electrons (ambiguous conversions)             & Veto\\
+ Leading electron (muon) $\pt^{\ell_1}$                  & $>5 (5)$ GeV             \\
+ Subleading electron (muon) $\pt^{\ell_2}$               & $>4.5 (4)$ GeV             \\
+ $m_{\tau\tau}$                                          & Veto [0, 160] GeV          \\
+ $m_{\ell\ell}$                                          & $> 1, < 60$ GeV, veto [3, 3.2] GeV  \\
+ $\Delta R_{\ell\ell}$                                   & $> 0.05$           \\
+ \hline
+ \end{tabular}
+ \label{tab:2LSRselection}
+ \end{table}
+ 
+\section{Slepton Signal Regions}
+This signal region based on MT2 cuts.  \textcolor{red}{Make different tables that make more sense on the surface}.
+\begin{table}[]
+ \tiny
+\centering
+\resizebox{\linewidth}{!}{
+\begin{tabular}{llllllll}
+\hline
+Variable                  & \multicolumn{7}{l}{\textbf{\textcolor{red}{Selections optimised for sleptons}}}                           \\
+\hline
+$\met/\HT^\text{leptons}$ & \multicolumn{7}{l}{$> \text{Max}\left(3.0, 15 - 2 \cdot \left[m_\text{T2}^{100} / \text{~GeV}-100\right] \right)$}\\
+\hline
+SRee-, SRmm-              & eMT2a        & eMT2b       & eMT2c       & eMT2d        & eMT2e        & eMT2f      & \\
+$m_\text{T2}^{100}$ [GeV] & $[100,102]$ & $[102,105]$ & $[105,110]$ & $[110, 120]$ & $[120, 130]$ & $\geq 130$ &\\
+\hline
+SRSF-                     & iMT2a       & iMT2b       & iMT2c       & iMT2d        & iMT2e       &  iMT2f      &\\
+$m_\text{T2}^{100}$ [GeV] & $<102$      & $<105$      & $<110$      & $<120$       & $<130$      &  $\geq 100$ & \\
+\hline
+\end{tabular}
+}
+\label{tab:SRMLLMT2}
+\end{table}
+\section{Higgsino Signal Regions}
+This signal region based on Mll cuts
+
+ \begin{table}[]
+ \tiny
+\centering
+\resizebox{\linewidth}{!}{
+\begin{tabular}{llllllll}
+\hline
+Variable                  & \multicolumn{7}{l}{\textbf{\textcolor{red}{Selections optimised for Higgsinos}}}                                \\
+\hline
+$\met/\HT^\text{leptons}$ & \multicolumn{7}{l}{$> \text{Max}\left(5.0, 15 - 2 \cdot m_{\ell\ell}/\text{~GeV} \right)$}\\
+$\Delta R_{\ell\ell}$     & \multicolumn{7}{l}{$<2.0$} \\
+$m_\text{T}^{\ell_1}$     & \multicolumn{7}{l}{$<70$ GeV}                                                      \\
+\hline
+SRee-, SRmm-              & eMLLa   & eMLLb   & eMLLc    & eMLLd      & eMLLe      & eMLLf      & eMLLg     \\
+$m_{\ell\ell}$ [GeV]      & $[1,3]$ & $[3.2,5]$ & $[5,10]$ & $[10, 20]$ & $[20, 30]$ & $[30, 40]$ & $[40,60]$ \\
+\hline
+SRSF-                     & iMLLa   & iMLLb   & iMLLc    & iMLLd      & iMLLe      & iMLLf      & iMLLg     \\
+$m_{\ell\ell}$ [GeV]      & $<3$    & $<5$    & $<10$    & $<20$      & $<30$      & $<40$      & $<60$     \\
+\hline
+\end{tabular}
+}
+\end{table}
+
+\section{Conclusion}
+Here say some final summarizing remarks and reference these final cutflow plots.  \textcolor{red}{Say something about non-normalized cutflow with significance plot showing how the significance for signal improves as more cuts are added.}
+
+\begin{figure}[h!]
+\centering
+\begin{subfigure}[b]{0.47\textwidth}
+\includegraphics[width=\textwidth]{/Users/sheenaschier/Documents/LaFiles/figures/thesis/signal_regions/cutflow_bkg_SF.pdf}
+\caption{Normalized cutflow, background-only}
+\end{subfigure}
+ \begin{subfigure}[b]{0.47\textwidth}
+\includegraphics[width=\textwidth]{/Users/sheenaschier/Documents/LaFiles/figures/thesis/signal_regions/cutflow_norm_SF.pdf}
+ \caption{Normalized cutflow, with signal}
+\end{subfigure}
+\begin{subfigure}[b]{0.58\textwidth}
+\includegraphics[width=\textwidth]{/Users/sheenaschier/Documents/LaFiles/figures/thesis/signal_regions/cutflow_SF.pdf}
+ \caption{Non-normalized cutflow with significance plot.}
+\end{subfigure}
+
+ \caption{Normalized Cutflow for background-only, signal-inclusive, and  non-normalized cutflow with significance plots. }
+ \label{fig:cutflow_norm}
+\end{figure}
+
+\textcolor{red}{Show signal region plots?}
+
+
+
+

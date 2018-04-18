@@ -1,2 +1,72 @@
 \chapter{Statistical Analysis}
-Explain all the things I don't yet understand about likelihood functions and such....
+\label{ch:statanal}
+The model dependent analysis is performed by a shape fit of signal to background in the $m_{\ell\ell}$ and $m_{T2}$ distributions.  Analysis channels are defined as multi-binned distributions of $m_{\ell\ell}$ and $m_{T2}$ and a channel object can represent a CR, SR, or VR. The statistical combination of multiple channels is based on a profile likelihood method implemented in the HistFitter package that builds probability density functions, fits them to data, and interprets them with statistical tests.  In this method, a likelihood is constructed as the product of the Poisson probability distributions that describe the total number of events observed in each channel.  The mean is taken as the nominal MC yield in a given region and systematic uncertainties are treated as nuisance parameters in the fit.  
+
+\section{Test Statistics and p-values}
+\label{sec:statanal:pval}
+The test statistic that provides the most powerful test is the likelihood ratio function, given by Equation~\ref{eq:likelihood}.
+\begin{equation}
+L(\mu,\vec{\theta})=\prod_c\prod_iPois\big(n_{ci}^{obs}|n_{ci}^{sig}(\mu\vec{\theta})+n_{ci}^{bkg}(\vec{\theta})\big)\prod_kf_k(\theta'_k|\theta_k)
+\label{eq:likelihood}
+\end{equation}
+In Equation~\ref{eq:likelihood}, $\mu$ and $\vec{\theta}$ represent the signal strength and the set of nuisance parameters.  The values of these parameters that maximize $L(\mu,\vec{\theta})$, or equivalently, minimize -$\ln L(\mu,\vec{\theta})$ are called maximum likelihood estimates (MLEs) and denoted as $\hat{\mu}$ and $\hat{\vec{\theta}}$.  There is also a conditional maximum likelihood estimate, $\hat{\hat{\vec{\theta}}}$, which is the value of $\vec{\theta}$ that maximizes $L(\mu,\vec{\theta})$ for a fixed $\mu$.  These are all used with the likelihood function $L(\mu,\vec{\theta})$ to construct the profile likelihood ratio:
+\begin{equation}
+\lambda(\mu)=\bigg(\frac{L\big(\mu,\hat{\hat{\vec{\theta}}}(\mu)\big)}{L(\hat{\mu},\hat{\vec{\theta}})}\bigg)
+%t=-2\ln\lambda(\mu)=-2\ln\bigg(\frac{L\big(\mu,\hat{\hat{\vec{\theta}}}(\mu)\big)}{L(\hat{\mu},\hat{\vec{\theta}})}\bigg)
+\end{equation}
+In a physical theory, the true signal strength $\mu$ is a non-negative value, and a negative value of $\hat{\mu}$ implies a shortage of signal-like events in the background.  The boundary at $\mu=0$ convolutes the asymptotic distributions in $\lambda(\mu)$, so $\mu$ is free to occupy positive and negative values while the full profile likelihood ratio is defined as:
+\begin{equation}
+\tilde{\lambda}(\mu)=
+ \begin{cases} 
+      \frac{L\big(\mu,\hat{\hat{\vec{\theta}}}(\mu)\big)}{L(\hat{\mu},\hat{\vec{\theta}})} & \hat{\mu}\geq 0 \\
+      \frac{L\big(\mu,\hat{\hat{\vec{\theta}}}(\mu)\big)}{L(0,\hat{\hat{\vec{\theta}}}(0))} & \hat{\mu}< 0 \\
+   \end{cases}
+\end{equation}
+As stated before, maximizing the likelihood is equivalent to minimizing the negative-log likelihood, which is more convenient for visualization.  The test statistic $\tilde{q}$ is defined separately for discovery and limit-setting using the negative-log likelihood ratio (NLLR).  
+
+For discovery, the test statistic $\tilde{q}_0$ is built to distinguish the background only hypothesis $\mu=0$ from the alternative hypothesis $\mu>0$, where there is an excess above background.  When the MLE $\hat{\mu}$ is positive, the test statistic is the NLLR, otherwise it is zero, as shown in Equation~\ref{eq:disc}.
+\begin{equation}
+\tilde{q}_0=
+ \begin{cases} 
+      -2\ln\lambda(\mu) & \hat{\mu}> 0 \\
+      0 & \hat{\mu}\leq 0 \\
+   \end{cases}
+   \label{eq:disc}
+\end{equation}
+
+When setting limits, the test statistic $\tilde{q}_\mu$ is meant to distinguish the signal hypothesis, where signal events are produced above background at some rate $\mu$, from the alternative hypothesis with signal events produced at some rate less than or equal to $\mu$.  In this case, when the MLE $\hat{\mu}$ is less than $\mu$, $\tilde{q}_\mu$ equals the NLLR, otherwise, it is set to zero.  This is shown in Equation~\ref{eq:lim}
+\begin{equation}
+\tilde{q}_\mu=
+ \begin{cases} 
+      -2\ln\lambda(\mu) & \hat{\mu}\leq\mu  \\
+      0 & \hat{\mu}>\mu \\
+   \end{cases}
+   \label{eq:lim}
+\end{equation}
+
+Through the test statistic, the data is mapped to a single real-valued number that represents the outcome of the experiment.  If the experiment was performed many times, the test profile likelihood ratio function would output a different value each time, making a distribution of real-valued discriminating variables.  In practice, Monte Carlo simulation \textcolor{red}{\textit{get the right language here, talk about throwing the toys and such}} is used to generate numerous pseudo experiments, and while the test statistic $\tilde{q}$ is a function of $\mu$, the distribution of $\tilde{q}$ becomes explicitly a function of the nuisance parameters $\vec{\theta}$, denoted as $f(\tilde{q}|\mu,\vec{\theta})$.  The p-value for any given hypothesis represents the probability to observe an equal or more extreme outcome given that hypothesis as the integral of the test statistic distribution from $\tilde{q}_{\mu,obs}$ to $\infty$.  
+\begin{equation}
+p_{\mu,\vec{\theta}}=\int_{\tilde{q}_{\mu,obs}}^\infty f(\tilde{q}_\mu|\mu,\vec{\theta}) d\tilde{q}_\mu
+\label{eq:p0}
+\end{equation}
+
+Conventionally in high energy particle physics experiments, a standard one-sided frequentist confidence interval defines an upper limit on the parameter of interest at $95\%$ confidence level.  The p-value can be used to measure how well the data agrees with a signal hypothesis of signal strength $\mu$, given in Equation~\ref{eq:pmu}, or it can be used to measure how consistent the data is with the background only hypothesis, as in Equation~\ref{eq:pb}.
+\begin{equation}
+p_\mu=\int_{\tilde{q}_{\mu,obs}}^\infty f(\tilde{q}_\mu|\mu,\hat{\hat{\vec{\theta}}}(\mu,obs)) d\tilde{q}_\mu
+\label{eq:pmu}
+\end{equation}
+\begin{equation}
+p_b=1-\int_{\tilde{q}_{\mu,obs}}^\infty f(\tilde{q}_\mu|0,\hat{\hat{\vec{\theta}}}(\mu=0,obs)) d\tilde{q}_\mu
+\label{eq:pb}
+\end{equation}
+The $CL_s$ upper limit on $\mu$ comes from solving as a function of $\mu$ for $p'_\mu=0.05$, where $p'_\mu$ is the ratio of p-values in Equation~\ref{eq:pp}.
+\begin{equation}
+p_\mu ' = \frac{p_\mu}{1-p_b}
+\end{equation}
+
+Confidence intervals will come up again in Chapter~\ref{ch:results} when the actual model interpretations are discussed.
+
+%\textcolor{red}{things are okay up to here..}. This likelihood maxima are found by the HISTFITTER package, %M. Baak et al., HistFitter software framework for statistical data analysis, Eur. Phys. J. C 75 (2015) 153, arXiv: 1410.1280 [hep-ex].  
+%which constrains the values and uncertainties on $\mu_{top}$ and $\mu_{\tau\tau}$, the variables used to extrapolate the background prediction into the validation regions.   The concept of signal, control, and validation regions are woven into the structure of HistFitter and are used to constrain, extrapolate, and test data model predictions with statistically rigorous built-in methods.  HistFitter is capable of working with multiple data models at once, keeping track of all input histograms, both before and after renormalization.  This allows for straightforward bookkeeping, control, and testing of large collections of signal hypotheses.  HistFitter also includes methods to \textcolor{blue}{ determine the statistical significance  of signal hypotheses, estimate the quality of likelihood fits, and produce high-quality tables and plots for publications}.  HistFitter is written with a Python configuration wrapper around  CPU intensive C++ algorithms.
+
+
