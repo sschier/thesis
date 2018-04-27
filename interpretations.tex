@@ -3,16 +3,30 @@
 
 In absence of any significant excesses over backgrounds, the results are interpreted as constraints on the SUSY models presented in Chapter~\ref{ch:thy} using the exclusive, multi-binned Higgsino and slepton signal regions.  \textcolor{blue}{The background only fit is extended to allow for a signal model with a corresponding signal strength parameter in a simultaneous fit of all CRs and relevant SRs, this is referred to as the exclusion fit}.  \textcolor{red}{I can say it better than this}.  In the previous chapter, background-level estimates obtained from a background-only fit in the CRs only were presented.  When electroweakino simplified models are assumed, the results are interpreted in the 14 exclusive Higgsino signal regions, binned in $m_{\ell\ell}$ and split evenly between the $ee$ and $\mu\mu$ channels.  \textcolor{blue}{By statistically combining these signal regions, the signal shape of the $m_{\ell\ell}$ spectrum can be exploited to improve the sensitivity.} When slepton simplified models are assumed, the results are interpreted in 12 slepton signal regions, binned in $m_{T2^{100}}$ with 6 SRs the $ee$-channel and 6 in the $\mu\mu$ channel are used for the fit.
 
-Table~\ref{tab:results:exclusiveSRYields} summarizes the observed event yields in the exclusive electroweakinio signal regions, and Table~\ref{tab:results:exclusiveSRYields2} summarizes the observed event yields in the exclusive slepton signal regions after the fit is performed using an exclusion fit configuration where the signal strength parameter is set to zero.  Extending the background only fit to include the signal regions further constrains the background contributions in the absence of any signal, therefore these predicted yields differ slightly compared to those obtained with the background only fit.
+Table~\ref{tab:results:exclusiveSRYields} summarizes the observed event yields in the exclusive electroweakinio signal regions, and Table~\ref{tab:results:exclusiveSRYields2} summarizes the observed event yields in the exclusive slepton signal regions after the fit is performed using an exclusion fit configuration where the signal strength parameter is set to zero.  Extending the background only fit to include the signal regions further constrains the background contributions in the absence of any signal, therefore these predicted yields differ slightly compared to those obtained with the background only fit.  Figure~\ref{fig:pull_plot_summary_yields:exclSRs} demonstrates the harmony between the fitted and observed yields in these signal regions.  No significant contrast between the fitted background estimates and the observed event yields are observed in any of the exclusive signal regions.
 
 {\renewcommand{\arraystretch}{1.3}
 \input{/Users/sheenaschier/Documents/LaFiles/figures/thesis/results/MyYieldsTable_exclSRs.tex}
+
+\begin{figure}
+\centering
+ \includegraphics[width=\textwidth]{/Users/sheenaschier/Documents/LaFiles/figures/thesis/results/histpull_HiggsinoFit_doCRplusSRMLLandMT2_exclSR.pdf}
+ \caption{Comparison of observed and expected event yields after the
+exclusion fit with the signal strength parameter set to zero in the exclusive signal regions.
+Background processes containing fewer than two prompt leptons are categorized as `Fake/nonprompt'.
+The category `Others' contains rare backgrounds from triboson, Higgs boson, and the remaining top-quark
+  production processes listed in Table~\ref{tab:MCconfig}. Uncertainties in the background estimates include
+     both the statistical and systematic uncertainties, where $\sigma_\text{tot}$ denotes the total uncertainty.}
+     \label{fig:pull_plot_summary_yields:exclSRs}
+ \end{figure}
 \FloatBarrier
 
-\subsection{Compressed Higgsino}
+\section{Compressed Higgsino}
+\textcolor{blue}{Hypothesis tests are performed to set limits on simplified model scenarios using the $CL_s$ prescription.} \textcolor{red}{What is $CL_s$ prescription?}. Figure~\ref{fig:exclusion_contour_higgsino} shows the $95\%$ confidence interval limits set on the Higgsino simplified model projected onto the plane defined by the mass difference between the lightest and next-to-lightest neutralino as a function of the next-to-lightest neutralino mass.  These limits are based on an exclusion fit that exploits the shape of the dilepton invariant mass spectrum from the exclusive electroweakino signal regions and exclude next-to-lightest neutralino masses up to $130~\GeV$ for mass splittings between $5$ and $10~\GeV$.  For mass splittings down to $3~\GeV$ next-to-lightest neutralino masses are excluded up to $100~\GeV$. 
+
  \begin{figure}
  \centering
- \includegraphics[width=0.6\columnwidth]{/Users/sheenaschier/Documents/LaFiles/figures/thesis/results/exclusion_contour_higgsino.pdf}
+ \includegraphics[width=0.95\columnwidth]{/Users/sheenaschier/Documents/LaFiles/figures/thesis/results/exclusion_contour_higgsino.pdf}
   \caption{
  Expected 95\% CL exclusion sensitivity (blue dashed line) with $\pm 1 \sigma_\text{exp}$ (yellow band) from experimental systematics
    and observed limits (red solid) with $\pm 1 \sigma_\text{theory}$ (dotted red) from signal cross section uncertainties.
@@ -24,10 +38,11 @@ A shape fit of Higgsino signals to the $m_{\ell\ell}$ spectrum is used to derive
  \end{figure}
  \FloatBarrier
  
- \subsection{Compressed Slepton}
+ \section{Compressed Slepton}
+ Figure~\ref{fig:exclusion_contour_slepton} shows the $95\%$ confidence interval limits set on the slepton simplified model projected onto the plane defined by the mass difference between the slepton and lightest neutralino as a function of the slepton mass.  These limits are based on an exclusion fit that exploits the shape of the $m_{T2}$ spectrum from the exclusive slepton signal regions and exclude slepton masses up to $180~\GeV$ for mass splittings down to $5~\GeV$.  For mass splittings down to $1~\GeV$ slepton masses are excluded up to $70~\GeV$.  In slepton simplified models, a fourfold degeneracy is assumed between the left and right-handed selectrons and smuons: $\tilde{e}_R=\tilde{e}_L=\tilde{\mu}_R=\tilde{\mu}_L=$.
   \begin{figure}
  \centering
- \includegraphics[width=0.6\columnwidth]{/Users/sheenaschier/Documents/LaFiles/figures/thesis/results/exclusion_contour_slepton.pdf}
+ \includegraphics[width=0.95\columnwidth]{/Users/sheenaschier/Documents/LaFiles/figures/thesis/results/exclusion_contour_slepton.pdf}
   \caption{
 Expected 95\% CL exclusion sensitivity (blue dashed line) with $\pm 1 \sigma_\text{exp}$ (yellow band) from experimental systematics
 and observed limits (red solid) with $\pm 1 \sigma_\text{theory}$ (dotted red) from signal cross section uncertainties.
@@ -38,13 +53,18 @@ The grey region denotes a conservative right-handed smuon $\tilde{\mu}_R$ mass l
 while the blue region is the 4-fold mass degenerate slepton limit from ATLAS Run 1~\cite{SUSY-2013-11}.}
    \label{fig:exclusion_contour_slepton}
  \end{figure}
- 
- \subsection{Compressed Wino}
+  \FloatBarrier
+ \section{Compressed Wino}
+ The $95\%$ confidence level intervals for the wino-bino simplified model are shown in Figure~\ref{fig:exclusion_contour_wino}.  Just like in the Higgsino exclusion plot, these limits are based on an exclusion fit that exploits the shape of the dilepton invariant mass spectrum from the exclusive electroweakino signal regions.  Exclusion limits are projected onto the mass difference $\Delta m(\tilde{\chi}^0_2, \tilde{\chi}^0_1)$ plane as a function of the $\tilde{\chi}^0_2$ mass.  For wino-bino simplified models, next-to-lightest neutralino masses are excluded up to $170~\GeV$ for mass splittings above $10~\GeV$, and excluded up to $100~\GeV$ for mass splittings down to $2.5~\GeV$. 
    \begin{figure}
  \centering
- \includegraphics[width=0.6\columnwidth]{/Users/sheenaschier/Documents/LaFiles/figures/thesis/results/exclusion_contour_slepton.pdf}
-  \caption{Expected 95\% CL exclusion sensitivity (blue dashed line) with $\pm1\sigma$ exp (yellow band) from experimental systematic uncertainties and observed limits (red solid line) with pm1?theory (dotted red line) from signal cross-section uncertainties for simplified models of direct Higgsino (top) and wino (bottom) production.} %A fit of signals to the m?? spectrum is used to derive the limit, which is projected into the $\delta$m(?20, ?10) vs. m(?20) plane. For Higgsino production, the chargino ?1pm mass is assumed to be halfway between the two lightest neutralino masses, while m(?20) = m(?1pm) is assumed for the wino--bino model. The gray regions denote the lower chargino mass limit from LEP. The blue region in the lower plot indicates the limit from the 2$\ell$+3$\ell$ combination of ATLAS Run 1.}
-     \label{fig:exclusion_contour_slepton}
+ \includegraphics[width=0.95\columnwidth]{/Users/sheenaschier/Documents/LaFiles/figures/thesis/results/exclusion_contour_wino.pdf}
+  \caption{Expected 95\% CL exclusion sensitivity (blue dashed line) with $\pm1\sigma$ exp (yellow band) from experimental systematic uncertainties and observed limits (red solid line) with pm1?theory (dotted red line) from signal cross-section uncertainties for simplified models direct wino production. 
+  A shape fit of wino signals to the $m_{\ell\ell}$ spectrum is used to derive
+ the limit is displayed in the $m(\tilde{\chi}^0_2) - m(\tilde{\chi}^0_1)$ vs $m(\tilde{\chi}^0_2)$ plane.
+ The chargino $\tilde{\chi}^\pm_1$ mass is assumed equal to the $m(\tilde{\chi}^0_2)$ mass.
+  The grey region denotes the lower chargino mass limit from LEP~\cite{LEPlimits}, and the blue region in the lower plot indicates the limit from the 2$\ell$+3$\ell$ combination of ATLAS Run 1.} 
+     \label{fig:exclusion_contour_wino}
  \end{figure}
- \subsection{NUHM2}
+% \subsection{NUHM2}
  

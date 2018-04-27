@@ -1,33 +1,114 @@
-\chapter{The Standard Model of Particle Physics and Additional Theories}
-The universe seems like a very complex place made out of many types of material that interacts by various complex mechanisms.  Although this will always remain true, particle physics has constructed a theory that incorporates all fundamental particles and explains their existence and interactions in simplicity through the field equations that describe the fundamental forces in the universe.  This theory is called the Standard Model of Particle Physics and, apart from the absence of gravity which is far too weak to be described by particle interactions, is fundamentally complete.
+\chapter{Theoretical Background and Motivation}
+To any curious mind staring into the starry deep late in the night or gazing at pictures from the Hubble Space Telescope, the universe can seem deeply mysterious as a vast space containing a rich spectra of matter moving and transforming via some set of complex mechanisms.  Although this mysterious sense of the universe rings true even in the mind of the most learned physics scholar, large leaps in understanding the true nature of the matter and forces that make up the observable universe have been made in human history.   In the last century, particle physicists have constructed a theory that incorporates all the directly observed fundamental particles and explains their existence and interactions in simplicity through the field equations that describe the fundamental forces in the universe.  This theory is called the Standard Model of Particle Physics (SM) and, apart from gravity being far too weak to be described by particle interactions, is fundamentally complete.  \textcolor{red}{mention here to discovery of the Higgs boson in 2012, and it confirming the theory of electroweak symmetry breaking, which remained the last undiscovered piece of the SM puzzle.}
 
+But the story doesn't end here.  There are reasons to think the complete and successful Standard Model is a lower-order version of a much larger theory.  Some of these reasons are philosophical in nature; we want to understand why the SM has its structure, or lack confidence in a theory that is so incredibly fine-tuned as the Standard Model.  Other reasons come from observations that we can not resolve with the SM, like the lack of CP-violation in Standard Model mechanics to account for the baryon-antibaryon asymmetry in the early universe, or the abundance of 'dark matter' that drives massive galaxies to rotate contrary to predictions by models accounting only for the known matter and forces of the Standard Model.
+
+The proceeding structure of this chapter is as follows: Section~\ref{sec:forces}, summarizes all the forces and particles in the standard model, then Section~\ref{sec:gauge} , describes the gauge symmetries that give the Standard Model its particular structure and spontaneous electroweak symmetry breaking  that calls for the existence of the Higgs boson.  %Next, Section~\ref{sec:higgs} relates electroweak symmetry breaking to the Higgs mechanism and the gauge boson masses.  
+Section~\ref{sec:fail} goes over some of the shortcomings of the Standard Model, and supersymmetry is introduced in Section~\ref{sec:susy} as a viable model for physics beyond the Standard Model.  Lastly, Section~\ref{sec:pheno} describes the phenomenology of supersymmetric Higgsinos and sleptons in compressed scenarios.
+
+\iffalse
+By the early 1930's, particle physics theory came out of nuclear physics studies of electrons and atomic nuclei.  At this time, of the observed particle phenomena could be explained by a very small set of particles consisting of the electron and positron, proton and neutron, the photon, and the neutrino and anti-neutrino.  Electromagnetism was still understood through Maxwell's Equations and weak force interactions were newly enlightened by Enrico Fermi's development of contact interactions.  Soon, our knowledge of particles and interactions was proven to be insufficient as relativistic calculations were being attempted and new particle discoveries were emerging from cloud and bubble chamber experiments.
+\fi
 
 \section{Forces and Particles}
-\label{sec:theory1}
-The Standard Model describes three of the four known fundamental forces or our universe; electromagnetic force, the strong force, and the weak force.  It leaves out the gravitational force only because the energy scale at which gravity does its business is so many orders of magnitude below the other forces that there are intrinsic incompatibilities in their description of particle interactions.  According to experiment, there are only a hand full of fundamental particles, among which can be separated into two distinct categories: fermions and bosons.  These two types of particles play completely different roles in the state and phenomena of the universe. \cite{tully}
+\label{sec:forces}
+The Standard Model of Particle Physics provides a quantum description of three of the four known fundamental forces; the electromagnetic force, the strong force, and the weak force.  It leaves out the gravitational force because the energy scale at which gravity does its business is many orders of magnitude below the other forces, which leads to intrinsic incompatibilities in a description of quantum gravitational interactions.   The SM was pieced together throughout the second half of the twentieth century by several progressive discoveries, and we now know that there are only a hand full of fundamental particles that make up the incredible collection of particles in nature.  The fundamental particles separate into two distinct categories: fermions and bosons.  These two types of particles are characterized by their spin and interactions, and ultimately play completely different roles in the state and phenomena of the universe. \cite{tully}
 
-You and I and the entire world we experience is comprised of fermions, spin $\frac{1}{2}$ Dirac particles, that can be further categorized as leptons and quarks depending on their intrinsic propensity to interact with a given fundamental force field or not.  The lepton family consists of three types of electron ($e, \mu, \tau$) and their associated neutrino partners ($\nu_e, \nu_\mu, \nu_\tau$).
 
+Fermions fall into two categorized, leptons and quarks.  Leptons are spin $\frac{1}{2}$ particles that do not carry strong color charge, but they do carry electromagnetic charge and weak isospin.  The lepton group consists of three generations of electron and anti-electron ($e^\pm, \mu^\pm, \tau^\pm$) and their associated neutrino and anti-neutrino partners\\ ($\nu_e/\tilde{\nu_e}, \nu_\mu/\tilde{\nu_\mu}, \nu_\tau/\tilde{\nu_\tau}$).  Quarks are strongly charged particles that also carry weak isospin and fractional electromagnetic charge.  Like the leptons, there are three quark families, each forming an isospin doublet and consisting of an up-type and a down-type quark: {(u,d), (c, s), (t,b)}.
+
+Bosons are integer spin particles that are often called force-carriers because they are responsible for mediating interactions between particles. 
+
+\textcolor{red}{\textit{Include one table that summarizes and categorizes all fermions and bosons.}}
+
+
+\iffalse
 \section{Mathematical Formalism of the Standard Model}
-\label{sec:theory2}
+\label{sec:math}
 Field equations and fermion and boson interactions.
 
-\section{Gauge Symmetries and Spontaneous Symmetry Breaking}
-\label{sec:theory3}
-$U(1)_{Y} \times SU(2)_{L} \times SU(3)_{S}$
+A major push in particle physics in the twentieth century was to describe the strong and weak nuclear forces by renormalized quantum fields.  The related field quanta for the strong force are the eight massless gluons, and for the weak force we have the $W^\pm$ and the $Z^0$ bosons.  The interactions of these force carriers with particles carrying the corresponding color and isospin charge describe by field theories. 
 
+Group theory plays an important role in describing the forces and interactions of fundamental particles.  It provides a mathematical structure that exploits the underlying symmetries behind the fundamental forces.  The structure of the quark combinations that give rise to a slew of mesons and baryons is given by the $SU(3)_{color}$ symmetry.  It contains the $SU(2)$ isospin symmetry, where sets of quark combinations either form SU(2) doublets or triplets. \textit{singlets?}. Group theory is also used to describe the unification of the electromagnetic and weak interactions to form the electroweak theory of the Standard Model. 
+
+Feynman diagrams provide a visual representing the matrix calculations of particle interactions.  Feynman rules make up the mathematical expression relating to each element of a Feynman diagram derived by quantum field theory.  \textcolor{red}{\textit{Give example?}}
+\fi
+\section{Gauge Symmetries and Spontaneous Symmetry Breaking}
+\label{sec:gauge}
+The main ingredients of the Standard Model are a set of Dirac fermion fields having specific muliplet representations in group theory given by the $U(1)_{Y} \times SU(2)_{L} \times SU(3)_{S}$ gauge group.  In SM quantum field theory (QFT), called the "Yang Mills theory" \textcolor{red}{reference here}, fermion interactions are mediated by gauge bosons.  The structure of the gauge bosons and the interactions they govern is a consequence of gauge invariance in $SU(n)$ type Lie groups \textcolor{red}{find reference}.  
+
+Gauge invariance in QFT demands the existence of gauge boson fields, which occur in two independent sectors: the electroweak sector described by quantum electroweak dynamics (QED), and the strong sector, described by quantum chromodynamics (QCD).  The $U(1)\otimes SU(2)$ symmetry of QED produces the photon and the weak gauge bosons, $W^\pm$ and $Z^0$, and the $SU(3)$ symmetry produces a color octet of massless gluons.  For the symmetries to be exact, all the force carriers must be massless, and an external mechanism called the \textit{Higgs mechanism} induces masses in the electroweak gauge bosons, $W^\pm$ and $Z^0$.  To quantize this exchange, an extra boson called the Higgs boson must exist, and it's discovery at the LHC was recently announced in June 2012.
+
+Electrodynamics is 'gauge-invariant', meaning one obtains the same solutions to Maxwell's equations under a transformation of the electromagnetic 4-vector potential: $A_\mu \rightarrow A_\mu - \partial_\mu\Lambda$, where $\Lambda$ is some scalar function.  Under this gauge transformation, the wave function changes by a phase $\psi\rightarrow\psi e^{-ie\Lambda}$, revealing a $U(1)$ symmetry.
+
+\iffalse
 \section{Higgs Mechanism and Gauge Boson Masses}
-\label{sec:theory4}
+\label{sec:higgs}
 Explain local SU(2) gauge symmetry breaking, the production of the Higgs boson and how this allows for massive weakly interacting gauge bosons.
+\fi
 
 \section{Shortcomings of the Standard Model}
-\label{sec:theory5}
-\subsection{Darkmatter}
-One alarming problem with the Standard Model is its incapability the explain dark matter.
+\label{sec:fail}
+As mentioned before, the Standard Model of Particle Physics in all its glory has some deficiencies. \textcolor{red}{List and briefly explain.}
+
+One alarming problem with the Standard Model is its incapability to explain dark matter.
 
 \section{Supersymmetry}
-\label{sec:theory6}
-Extension of the Poincare Group which leads to boson-fermion symmetry.
+\label{sec:susy}
+Supersymmetry offers an extension to the Standard Model by extending the Poincare symmetry of quantum field theory.  This extension leads to boson-fermion symmetry which predicts a supersymmetric partner for all standard model partners that are equivalent in mass and all quantum characteristics but differ intrinsically by half-integer spin.  So, each SM fermion has a bosonic supersymmetric partner, and each SM boson has a fermionic supersymmetric partner.  According to this symmetry, assuming it is a perfect symmetry, these particles should have already been observed with their SM masses, but this is not the case.  In order for this theory to remain true, the new symmetry must be broken in a way that preserves the fermion-boson symmetry and all observations of the Standard Model while allowing fermion-boson partners to be decoupled in mass.  A description of the various models for mediating this symmetry-breaking and communicating it the visible sector of observable particles is beyond the scope of this thesis, but I will say a few words about electroweak symmetry breaking models since they are the focus of this thesis.
 
-\section{Phenomenology of Direct Production of Higgsinos and Sleptons in Compressed Scenarios}
-Here talk about the discriminating variables for the higgsino and slepton signal regions (mll and mt2).
+Add a SUSY picture and make sure I have at least alluded to all the particles.
+
+Explain about electroweak symmetry breaking
+
+Talk about winos, binos, and Higgsinos and how they mix to make up the charginos and neutralinos.
+
+Explain about naturalness in electroweak SUSY and how this would make the Higgsino light, at the electroweak scale, and how the winos and binos, with masses given by $M_1$ and $M_2$, can still be heavy.
+
+\textit{Try} to explain how the electroweakino mass spectrum works and that the more Higgsino like they are the smaller the mass-splittings become, until pure Higgsino states are completely degenerate
+
+\section{Phenomenology of Directly Produced Higgsinos and Sleptons in Compressed Scenarios}
+\label{sec:pheno}
+Say here a word or two about how these two searches are so similar they are combined into one search effort with minor differences in their search strategies.
+\subsection{Higgsino Simplified Models}
+Higgsinos are the superpartners of the Standard Model Higgs doublets, the masses of which are controlled by the $\mu$ parameter, which, in supersymmetry, enters directly into the Higgs mass mixing matrix for calculating the squared Higgs mass $M_H^2$. \cite{han}  \textcolor{red}{Naturalness of the Higgsinos refers to the fact that in order for electroweak symmetry breaking to occur at the correct scale without any unnatural corrections, the parameter $\mu$ must be near the weak scale $\approx 100~\GeV$.}. Other supersymmetric particles enter the mass matrix indirectly through quantum loop corrections, but the Higgsinos are the only particle to have a direct effect on the Higgs mass.  This make Higgsinos a powerful tool in understanding electroweak symmetry breaking in SUSY.
+
+Could search for Higgsinos through direct production of squarks that then decay to Higgsinos, but these particles have little effect on the mass of the Higgs and therefor, may naturally have masses well beyond the reach of the LHC.  Also, Higgsino models are very sensitive to the spectrum of light SUSY particles when trying to observe them through direct squark production.
+
+ \begin{figure}%[h!]
+  \begin{center}
+  \includegraphics[width=0.5\textwidth]{/Users/sheenaschier/Documents/LaFiles/figures/thesis/theory/C1N2-WZN1N1}
+   \end{center}
+ \caption{Feynman diagram of direct Higgsino production}
+ \label{fig:fn1}
+ \end{figure}
+ 
+Direct Higgsino production allows one to remain fairly agnostic to the spectrum of the SUSY sector, and therefore, retain sensitivity to a large range of EWSB SUSY models.  Unfortunately, the direct production of electroweakinos, including Higgsinos, is subject to electroweak cross-sections, limiting the search sensitivity at the LHC.  \textit{Refer to the Feynman diagram in Figure~\ref{fig:fn1}.}  When the mass differences between the electroweakinos are close to mass of the $W$ boson, Standard Model $W$ and $Z$ bosons are produced on-shell, or produced at their nominal masses, and about $30\%$ of the time will decay leptonically, subsequently giving birth to detectable leptons.  In this case, analyses have been performed in both ATLAS and CMS to search for all three leptons from the $W$ and $Z$, where the $Z$ can be reconstructed from an opposite-sign-same-flavor lepton pair.  The searches also require a substantial amount of missing transverse momentum from the lightest neutral electroweakinos.
+
+When the mass-splittings fall below the $W$ mass, the $W$ and $Z$ bosons are produced off-shell, they are lighter than their nominal $80-90~\GeV$ mass, and the leptons from these decays become softer, or less energetic.  This type of analysis is limited by how well these events are recorded, and how efficiently leptons are reconstructed at low energies.  Until recently, no experiment at the LHC has been able to search for these models with electroweakino mass-splittings below $\approx 60~\GeV$.  \textcolor{red}{Introduce the 2 lepton search and the Feynman diagram.}
+
+\textit{Say something before here about using simplified models}.
+One important kinematic feature in these Higgsino simplified models is the dilepton invariant mass distribution and how it is linked to the mass-splitting between the chargino and the lightest neutralino through the mass of the very off-shell $Z$.
+
+ \begin{figure}%[h!]
+  \begin{center}
+  \includegraphics[width=0.7\textwidth]{/Users/sheenaschier/Documents/LaFiles/figures/thesis/theory/Feynman_2}
+   \end{center}
+ \caption{Feynman diagram of direct Higgsino production in compressed scenario}
+ \label{fig:fn1}
+ \end{figure}
+ 
+ \subsection{Slepton Simplified Models}
+ Explain slepton models and direct production of sleptons
+ 
+ Talk about searches for models with large mass-splittings and how there is redundancy with the Higgsino models in why these searches have not been available for models with small mass-splitting between the sleptons, whcih assume a fourfold degeneracy, and the lightest neutral electroweakino.
+ 
+ Talk about the $m{T2}$ variable and why is s great discriminator for these signals.
+ 
+  \begin{figure}%[h!]
+  \begin{center}
+  \includegraphics[width=0.5\textwidth]{/Users/sheenaschier/Documents/LaFiles/figures/thesis/theory/slsl-llN1N1j.pdf}
+   \end{center}
+ \caption{Feynman diagram of direct slepton production}
+ \label{fig:fn1}
+ \end{figure}
