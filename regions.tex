@@ -1,11 +1,11 @@
 \chapter{Signal Region Optimization}
- \label{sec:sr}
-This analysis relies on external predictions of signal and background processes in the data to help interpret the observations.  It is imperative to search for new physics where its presence is not excessively drowned out by SM backgrounds.  To achieve this, a signal enriched region in phase space called a \textit{signal region} (SR) is defined through a series of selection cuts on kinematic variables targeting a region in phase space where there is a significant excess in the signal events over the predicted background events.    While signal regions are enriched in the process of interest, backgrounds are still present, and to estimate the background contamination in the SR, a semi-data-driven approach is employed.  This requires defining new regions enriched with certain backgrounds, for instance top or $Z\rightarrow\tau\tau$, that are free of signal contamination.  This type of region enriched with background events is called a \textit{control region} (CR).  The CRs used in this analysis are described in Chapter~\ref{sec:bkg:tt} 
+ \label{ch:sr}
+This analysis relies on external predictions of signal and background processes in data to help interpret observations, and for observations to be meaningful, it is imperative to search for new physics where its presence is not excessively drowned out by SM backgrounds.  To achieve this, a signal enriched region in phase space, called a \textit{signal region} (SR), is defined through a series of selection cuts on kinematic variables targeting events where predicted signal yields display a significant excess over the estimated backgrounds, which are discussed in Chapter~\ref{ch:bkg}.   
  
-There are two separate signal regions for each the Higgsino and the slepton analyses.  There are common cuts where the signal regions are being optimized in parallel, and then there are set of cuts that are specific to each analysis, and most importantly, they exploit a different kinematic signature of the system.  Events in the signal regions are required to contain two signal leptons.  The lepton with the highest \pt, the leading lepton, is required to have $\pt > 5~\GeV$ and the lepton with the next highest \pt, the subleading lepton, is required to have $\pt > 4.5~\GeV$.  \textcolor{red}{Explain why this choice is made}.  Collinear leptons from photon conversions are filtered out with a restriction on the minimum $\Delta R_{\ell\ell}$ between the leptons of $0.05$, and an invariant mass cut of $m_{\ell\ell} > 1 ~\GeV$.
-Summarize the sections to come.
+ In the chapter, the discriminating variables that define the Higgsino and slepton signal regions are expounded first in Section~\ref{sec:sr:discvar}, then the signal regions are defined in Section~\ref{sec:sr:srdef}.  To exploit the Higgsino and sleptons models fully, they are treated by separate analyses in independent signal regions, but the compressed nature of these models makes many of their SR cuts overlap.  Section~\ref{sec:sr:srdef} is broken into sections, first detailing the common SR selection cuts in Section~\ref{sec:sr:commom}:, then the Higgsino SR specific cuts and the slepton SR specific cuts in Section~\ref{sec:sr:mll} and~\ref{sec:sr:mt2}. 
+ 
 \section{Discriminating Variables}
-\label{sec:discvar}
+\label{sec:sr:discvar}
 Here I will define all the discriminating variables, and in the next section I will go into detail how they are applied to the signal regions and what benefits or limitations there are.  There are discriminating variables that exploit the lepton information (Same flavor lepton pair with opposite charge, $\Delta R_{\ell\ell}$, $m_{\ell\ell}$), and there are those that exploit the topology of only the jets and the \met{} ($\Delta\phi_{ j_1-met}$, $min \Delta\phi_{jets-met}$, $\pt(j_i)$, Number of $b$-tagged jets $N_\mathrm{b-jets}$), and there are those that exploit both ($m_{T2}^{m_{\chi}}$,$m_\text{T}^{\ell_1}$, $\met/\HT^\text{leptons}$, $m_{\tau\tau}$).  
 
 \textcolor{red}{Make clear summarizing the non-leptonic variables first}. $|\Delta\phi(j_1, \pt^{miss})|$ measures the angular separation between the leading jet and missing transverse momentum.  Missing transverse momentum from jet mismeasurements tends to align the quantities and leads to small $\Delta\phi$.  This variable should have a minimum requirement that reduces this induced \met{}, which is mostly occurs in QCD and $Z$+jets events.  Similarly, the $min|\Delta\phi(jets, \pt^{miss})|$ is a variable that considers the minimum angular separation between \met{} and the nearest reconstructed jet.  $\pt(j_1)$ is the momentum of the leading jet in an event.  Because of the soft leptons, the \met{} is correlated to this variable.  If the threshold on the $\pt(j_1)$ is too low, this will allow other subleading jet to contribute to the measured hadronic recoil of the system.  $N(b-jets)$, number of b-tagged jets, is a discriminating variable because the $t\bar{t}$ background is significantly enhanced in b-tagged jets, while the Higgsino signal is not.   Also, the slepton signal does not include heavy flavor quarks in the decay chains.  Therefore, rejecting jets tagged as coming from b-quarks reduces the $t\bar{t}$ backgrounds.
@@ -58,7 +58,11 @@ H_T^{leptons} = \Sigma\pt^{\ell_i}
   \label{fig:ditau_schematic}
   \end{figure}
   
-\section{Optimization Studies}
+\section{Signal Region Definitions}
+\label{sec:sr:srdef}
+ There are two separate signal regions for each the Higgsino and the slepton analyses.  There are common cuts where the signal regions are being optimized in parallel, and then there are set of cuts that are specific to each analysis, and most importantly, they exploit a different kinematic signature of the system.  Events in the signal regions are required to contain two signal leptons.  The lepton with the highest \pt, the leading lepton, is required to have $\pt > 5~\GeV$ and the lepton with the next highest \pt, the subleading lepton, is required to have $\pt > 4.5~\GeV$.  \textcolor{red}{Explain why this choice is made}.  Collinear leptons from photon conversions are filtered out with a restriction on the minimum $\Delta R_{\ell\ell}$ between the leptons of $0.05$, and an invariant mass cut of $m_{\ell\ell} > 1 ~\GeV$.
+\subsection{Common Signal Regions}
+\label{sec:sr:commom}
 Now that the discriminating variables have been introduced, this will discuss the process of choosing the best signal region.  \textcolor{red}{This section is very important, so work hard to get the material in here!}. Both signal regions satisfy a \met{} threshold $200~\GeV$ \met{} to be efficient in the \met{} trigger.  The optimal cut on \met{} to achieve best signal over background discrimination might be lower (\textcolor{red}{maybe say here what the \met{} cut affets most and how to qualify or quantify this statement}), but with increasing luminosity and average $\mu$, the lowest unprescaled \met{} trigger thresholds only went up, not down, as dating taking continued through 2016.  The \met{} requirement sculpts the topology of the signal to prefer events where the direction of the \met and the direction of the leading jet are opposite each other in the transverse plane.  Due to small mass-splittings leading to such soft decay products, the NLSP daughters of the electroweakinos or sleptons will typically only get significant enough \met{} to pass the \met{} signal region cut when they are oppositely aligned in the transverse plane with the hadronic initial state radiation.  
 
 The slepton and Higgsino analyses have different $\Delta R_{\ell\ell}$ requirements.  Refer to the plots that shows the comparison of the Higgsino $\chi_2^0\chi_1^+$ and the slepton signals in $\Delta R_{\ell\ell}$ for $10~\GeV$ and $20~\GeV$ mass-splittings.
@@ -110,32 +114,10 @@ The slepton and Higgsino analyses have different $\Delta R_{\ell\ell}$ requireme
  \end{tabular}
  \label{tab:2LSRselection}
  \end{table}
- 
-\section{Slepton Signal Regions}
-This signal region based on MT2 cuts.  \textcolor{red}{Make different tables that make more sense on the surface}.
-\begin{table}[]
- \tiny
-\centering
-\resizebox{\linewidth}{!}{
-\begin{tabular}{llllllll}
-\hline
-Variable                  & \multicolumn{7}{l}{\textbf{\textcolor{red}{Selections optimised for sleptons}}}                           \\
-\hline
-$\met/\HT^\text{leptons}$ & \multicolumn{7}{l}{$> \text{Max}\left(3.0, 15 - 2 \cdot \left[m_\text{T2}^{100} / \text{~GeV}-100\right] \right)$}\\
-\hline
-SRee-, SRmm-              & eMT2a        & eMT2b       & eMT2c       & eMT2d        & eMT2e        & eMT2f      & \\
-$m_\text{T2}^{100}$ [GeV] & $[100,102]$ & $[102,105]$ & $[105,110]$ & $[110, 120]$ & $[120, 130]$ & $\geq 130$ &\\
-\hline
-SRSF-                     & iMT2a       & iMT2b       & iMT2c       & iMT2d        & iMT2e       &  iMT2f      &\\
-$m_\text{T2}^{100}$ [GeV] & $<102$      & $<105$      & $<110$      & $<120$       & $<130$      &  $\geq 100$ & \\
-\hline
-\end{tabular}
-}
-\label{tab:SRMLLMT2}
-\end{table}
-\section{Higgsino Signal Regions}
-This signal region based on Mll cuts
-
+ \FloatBarrier
+ \subsection{Higgsino Signal Regions}
+\label{sec:sr:mll}
+\textcolor{red}{Talk about the three extra cuts that make the Higgsino SR, then introduce the inclusive and exclusive signal regions defined by $m_{\ell\ell}$}
  \begin{table}[]
  \tiny
 \centering
@@ -156,9 +138,38 @@ $m_{\ell\ell}$ [GeV]      & $<3$    & $<5$    & $<10$    & $<20$      & $<30$   
 \hline
 \end{tabular}
 }
+\caption{Higgsino specific SR cuts.}
+\end{table}
+\FloatBarrier
+ 
+\subsection{Slepton Signal Regions}
+\label{sec:sr:mt2}
+\textcolor{red}{Talk about the extra cut that makes the slepton SR, then introduce the inclusive and exclusive signal regions defined by $M_{T2}$.}
+\begin{table}[]
+ \tiny
+\centering
+\resizebox{\linewidth}{!}{
+\begin{tabular}{llllllll}
+\hline
+Variable                  & \multicolumn{7}{l}{\textbf{\textcolor{red}{Selections optimised for sleptons}}}                           \\
+\hline
+$\met/\HT^\text{leptons}$ & \multicolumn{7}{l}{$> \text{Max}\left(3.0, 15 - 2 \cdot \left[m_\text{T2}^{100} / \text{~GeV}-100\right] \right)$}\\
+\hline
+SRee-, SRmm-              & eMT2a        & eMT2b       & eMT2c       & eMT2d        & eMT2e        & eMT2f      & \\
+$m_\text{T2}^{100}$ [GeV] & $[100,102]$ & $[102,105]$ & $[105,110]$ & $[110, 120]$ & $[120, 130]$ & $\geq 130$ &\\
+\hline
+SRSF-                     & iMT2a       & iMT2b       & iMT2c       & iMT2d        & iMT2e       &  iMT2f      &\\
+$m_\text{T2}^{100}$ [GeV] & $<102$      & $<105$      & $<110$      & $<120$       & $<130$      &  $\geq 100$ & \\
+\hline
+\end{tabular}
+}
+\caption{Slepton specific signal region cuts}
+\label{tab:SRMLLMT2}
 \end{table}
 
+\iffalse
 \section{Conclusion}
+\label{sec:concl}
 Here say some final summarizing remarks and reference these final cutflow plots.  \textcolor{red}{Say something about non-normalized cutflow with significance plot showing how the significance for signal improves as more cuts are added.}
 
 \begin{figure}[h!]
@@ -181,7 +192,7 @@ Here say some final summarizing remarks and reference these final cutflow plots.
 \end{figure}
 
 \textcolor{red}{Show signal region plots?}
-
+\fi
 
 
 

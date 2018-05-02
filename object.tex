@@ -1,83 +1,42 @@
 \chapter{Physics Object Reconstruction and Identification}
 \label{ch:obj}
-Refer to what we learned about the ATLAS detector and what really is read out is detector response through readout electrons and stored in some form (\textit{What form is raw detector output stored?}.  To actually do physics analysis with ATLAS data, physics objects and their observable characteristics must first be reconstructed and identified from that data that represents their interactions with the detector volume.  The term reconstruction describes the process of interpreting the signal output from the detector and transferring the information to measurements associated with actual physics objects.  ATLAS was specifically designed to optimize particle energy and momentum measurements as well as particle identification. There are teams in the ATLAS Collaboration called Combined Performance groups with the concurrent goal of optimizing and assessing the performance of the reconstruction and identification algorithms for different types of particles.  The Combined Performance groups then make recommendations to the analysis groups for which object definitions to use and the efficiencies to expect.
+To do a collider physics analysis, detector data must first be transformed into physics objects with their observable characteristics reconstructed and identified.  The term \textit{reconstruction} describes the process of interpreting signal output from the detector and using that information to make measurements associated with actual physics objects.  The ATLAS detector and the reconstruction algorithms are specifically designed for efficient particle identification and precise energy and momentum measurement.  The detector itself naturally presents limitations to the reconstruction algorithms, but there are teams in the ATLAS Collaboration called Combined Performance (CP) groups with the concurrent and continuous goal of assessing and optimizing the reconstruction and identification software for different types of particles.  These CP groups then make recommendations to the analysis teams for which object definitions to use and the efficiencies to expect.
 
-Reliable tracking, clustering, and vertexing are the building blocks for efficient object reconstruction.  The assembly of tracks, clusters and vertices will be described first, an explanation of the identification are reconstruction of directly observable and indirectly observable in the ATLAS detector: electrons, muons, jets, photons, missing energy and momentum measurements.  Lastly, I will describe the techniques of overlap removal, isolation correction of closely-spaced lepton, and lepton truth matching in Monte Carlo.  
+Reliable tracking and vertexing are the building blocks for efficient reconstruction and identification.  In this chapter, the assembly of tracks and vertices will first be described in Section~\ref{sec:obj:bb}.    Next, reconstruction are identification variables are defined for directly and indirectly observable objects in Section~\ref{sec:obj:reco}.  In ATLAS, these objects are; electrons, muons, jets, photons, and missing energy and momentum.  Lastly, Section~\ref{sec:obj:treat} describes the techniques of overlap removal and isolation correction of closely-spaced leptons as subsequent treatment of reconstructed objects before analysis.  
 
 \section{The Building Blocks}
+\label{sec:obj:bb}
 %1704.07983.pdf - 1
 %Salzburger_2015_J._Phys.__Conf._Ser._664_072042.pdf - 2
 
 %luminosities $2*10^{33}cm^{-2}s^{-1}$ in 2008 -> $10^{34}cm^{-2}s^{-1}$
-Track reconstruction provided the important information needed for primary and secondary vertex reconstruction, charged particle reconstruction, jet flavor tagging, and photon conversions; therefore, track reconstruction algorithms must be swift, concise, perform with high efficiency, low fake rates and with proper resolution on tracking parameters.  In 2015, at the start of Run-2, the LHC extended the center of mass energy in proton-proton collisions to 13 TeV, and over the duration of Run-2, ramped-up the instantaneous luminosity pushing the average interactions per bunch crossing ($\mu$) to above 40 by the end of Run-2.  This extension of center of mass energy and instantaneous luminosity enhances the outlook of discovery while simultaneously slowing down track reconstruction and degrading reconstruction efficiency.  Events with jet showers in the TeV range and $\tau$ leptons and B-hadrons that traverse multiple ID layers before decaying, occur at rates high enough to be considered in optimizing track and cluster reconstruction in Run 2.  In the core of boosted hadronic jets and $\tau$ lepton decays, particles in flight do not spread out much as they traverse the inner tracking layers, making separate energy deposits in the discrete sensors hard to resolve and near-by tracks hard to distinguish from each other.  If tracking efficiency is low in events with high track density, mismeasurements are expected in identifying long-lived b-hadron and hadron $\tau$ decays and in calibrating the energy and mass of jets.  These mismeasurements will also cause induced $\vec{E}^T_{miss}$, which is an important quantity for this search and many other beyond standard model searches.* Another challenge to track reconstruction during Run-2 is the CPU time increase as $\mu$, the average interactions per bunch crossing, increases.  As $\mu$ goes up, the pattern recognition algorithms suffer a non-linear increase of the combinatorics in track-hit association.  
+Track reconstruction, also called tracking, provides the important information needed for primary and secondary vertex reconstruction, charged particle reconstruction, jet flavor tagging, and photon conversions; therefore, track reconstruction algorithms must be swift, concise, and perform with high efficiency, low fake rates and with proper resolution on tracking parameters.  In 2015, at the start of Run-2, the LHC extended the center of mass energy in proton-proton collisions to 13 TeV, and over the duration of Run-2, ramped-up the instantaneous luminosity pushing the average interactions per bunch crossing ($\mu$) to above 40 by the end of Run-2.  This extension of center of mass energy and instantaneous luminosity enhances the outlook of discovery while simultaneously slowing down track reconstruction and degrading its efficiency.  Events with jet showers in the TeV range and $\tau$ leptons and B-hadrons that traverse multiple ID layers before decaying, occur at rates high enough to be considered in optimizing track and cluster reconstruction in Run 2 \cite{aad}.  In the core of boosted hadronic jets and $\tau$ lepton decays, particles in flight do not spread out much as they traverse the inner tracking layers, making separate energy deposits in the discrete sensors hard to resolve and near-by tracks hard to distinguish from each other.  If tracking efficiency is low in events with high track density, mismeasurements are expected in identifying long-lived b-hadron and hadron $\tau$ decays and in calibrating the energy and mass of jets.  These mismeasurements will also cause induced $\vec{E}^T_{miss}$, which is an important quantity for this search and many other beyond standard model searches.  Another challenge to track reconstruction during Run-2 is the CPU time increase as $\mu$, the average interactions per bunch crossing, increases.  As $\mu$ goes up, the pattern recognition algorithms suffer a non-linear increase of the combinatorics in track-hit association.  
 
-Event by event charged track reconstruction in the pixel and SCT detectors starts with clustering groups of pixels and strips in the same sensor that respond to an energy deposition above a set threshold and share a common edge or corner.  These clusters form three-dimensional space-points that measure where a particle intersects the active material in the ID.  In the pixel detector, each particle corresponds to one space-point, while in the SCT, clusters must be combined from both sides of a strip layer to obtain a three-dimensional position measurement.  Charge in the pixel sensors is often collected in more than one adjoining pixels \textit{Maybe connect here hit resolution to cluster size and use plots from the IBL paper.. remembering to explain how impact parameter resolution is driven by the resolution of the hit closest to the primary vertex}
+The first step in track reconstruction involves preprocessing Pixel, SCT, and TRT information. Event by event charged track reconstruction in the pixel and SCT detectors starts with clustering groups of pixels and strips in each sensor that respond to an energy deposition above a set threshold and share a common edge or corner.  These clusters form three-dimensional space-points that measure where a particle intersects the active material in the ID.  In the pixel detector, each particle corresponds to one space-point, while in the SCT, clusters must be combined from both sides of a strip layer to obtain a three-dimensional position measurement.  Charge in the pixel sensors is often collected in more than one adjoining pixels \textit{Maybe connect here hit resolution to cluster size and use plots from the IBL paper.. remembering to explain how impact parameter resolution is driven by the resolution of the hit closest to the primary vertex.  Talk about TRT drift circles?}
 
-%ATL-PHYS-SLIDE-2017-791.pdf
-Steps in track reconstruction: 
-\begin{itemize}
-\item Preprocessing  
-\begin{enumerate}
-\item Pixel and SCT clustering 
-\item drift-circle creation in TRT
-\item Clusters transformed in 3D space-points
-\end{enumerate}
-\item Track Finding 
-\begin{enumerate}
-\item Triplets of pixel and SCT space-point combined into seeds
-\item Seeds with an additional compatible cluster are sent to a Kalman filter (??)
-\end{enumerate}
-\item Ambiguity Solving
-\begin{enumerate}
-\item Tracks fit using a global chi-squared function 
-\item Tracks are scored based upon fit quality, number of shared clusters, and holes
-\item Tracks below quality threshold are removed
-\end{enumerate}
-\item TRT Extension
-\begin{enumerate}
-\item Tracks passing the ambiguity solver and extended into the TRT and refit
-\item Tracks with no matching TRT extension are also kept 
-\end{enumerate}
-\end{itemize}
-\textit{What is the primary vertex?}. 
-Primary vertices are identified using inner detector tracks that satisfy a set of requirements.  For a track to be considered in the construction of a primary vertex, it must have $ \pt{} > 400~GeV$, $|\eta| < 2.5$, between 9 ($|\eta| \leq 1.65$) and 11 ($|\eta| > 1.65$) silicon hits, at least 1 hit in the IBL or B-Layer, a maximum of one shared pixel hit or two shared SCT hits, no holes in the pixel layers, and no more that one hole in the SCT layers.  Any primary vertex must have at least two associated tracks for reconstruction.  The track criteria is summarized in Table~\ref{tab:trkclustervtx}.
-
-\begin{table}[tbp]
-  \centering
-  \begin{tabular}{lll}
-    \hline
- Tracks                             & Clusters & Vertices\\
- \hline
-stuff  & stuff              &Stuff  \\
- \hline
- stuff                  & stuff               & more stuff  \\
- \hline
-  \end{tabular}
-  \caption{Summary of blah blah}
-  \label{tab:trkclustervtx}
-\end{table}
+The next step in tracking is called track finding.  This involves combining Pixel and SCT hits into tracks seeds.  Three consecutive hits are required for a track seed, and seeds with an additional compatible cluster are sent to a Kalman filter.  The final tracking step is called ambiguity solving.  In this step, hits from all three of the tracking detectors are fit to make tracks using a global $\chi^2$ function.  These tracks are then given a score based on the fit quality and the number of holes and shared clusters.  Tracks that fall below the minimum allowable score are rejected. \textcolor{red}{Wait.. what is this TRT extension?  As a last step, Tracks passing the ambiguity solver and extended into the TRT and refit. Tracks with no matching TRT extension are also kept.  ?} \cite{salz}
+ 
+The primary vertex is defined as space position in the detector of the initial pp interaction.  From here the sequent particles from the collision travel from and decay... blah!  Primary vertices are identified using inner detector tracks that satisfy a set of requirements.  For a track to be considered in the construction of a primary vertex, it must have $ \pt{} > 400~GeV$, $|\eta| < 2.5$, between 9 ($|\eta| \leq 1.65$) and 11 ($|\eta| > 1.65$) silicon hits, at least 1 hit in the IBL or B-Layer, a maximum of one shared pixel hit or two shared SCT hits, no holes in the pixel layers, and no more that one hole in the SCT layers.  Any primary vertex must have at least two associated tracks for reconstruction.  %The track criteria is summarized in Table~\ref{tab:trkclustervtx}.
 
 \section{Particle Identification and Reconstruction}
 \label{sec:obj:reco}
 
-Reconstructed and identified particles in ATLAS are leptons($e, \mu, \tau$), photons, jets, which can further be identified as b-jets, and missing transverse momentum $\vec{E}^T_{miss}$.  This analysis does not use $\tau$ reconstruction \textcolor{red}{Talk with Mike about this..}. There are two categories; \textit{baseline} objects, which is the most inclusive definition of an object and are typically used for preliminary event selection and background modeling, and \textit{signal} objects, a more exclusive object definition that is a subset of \textit{baseline} and used exclusively when defining signal events. 
+Reconstructed and identified particles in ATLAS are leptons($e, \mu, \tau$), photons, hadronic jets, which can further be identified as b-jets, and missing transverse momentum $\vec{E}^T_{miss}$.  This analysis does not use $\tau$ reconstruction \textcolor{red}{Talk with Mike about this..}. There are two categories of reconstructed objects; \textit{baseline}, which is the most inclusive definition of an object and is typically used for preliminary event selection and background modeling, and \textit{signal}, a more exclusive object definition that is a subset of \textit{baseline} and is typically used in defining signal events.  A summary of all the signal and baseline object definitions is given in Table~\ref{tab:objdef}
 
-Baseline electrons are triggered from energy deposits in the electromagnetic calorimeter and reconstructed with algorithms using the electromagnetic calorimeter clusters that are matched to inner detector tracks.  Baseline electrons must pass \pt{} threshold of 4.5 ~\GeV and be in central detector region $|\eta | < 2.47$.  A longitudinal impact parameter requirement of $|z_0sin\theta| < 0.5~mm$ is also applied. \textcolor{red}{\textit{Have I defined impact parameter yet?}} Electrons are distinguished from other particles using identification criteria that rely on the shower shape in the electromagnetic calorimeter, tracking quantities, and the health of the track to EM calorimeter cluster matching.  Identification criteria varies from loose to tight and evolves with increasing strictness in criteria cuts that can be based either on independent requirements or on the single requirement set on the output of the likelihood function based on all the discriminating quantities listed above.  This analysis uses likelihood based identification criteria only.  \textcolor{red}{Explain more about identification criteria we use.}  Baseline electrons are required to satisfy \textit{VeryLooseLLH} identification while signal electrons must pass \textit{Tight} identification plus \textit{GradientLoose} isolation criteria. \textcolor{red}{Define the isolation criteria}  Signal electrons also require a transverse impact parameter $|d_0/\sigma(d_0)| < 5$. Furthermore, electrons with author 16 are vetoed.  \textcolor{red}{Explain what \textit{author 16} means}
+Baseline electrons are seeded from energy deposits in the EM calorimeter and reconstructed with algorithms using EM calorimeter clusters that are matched to inner detector tracks.  Baseline electrons must pass \pt{} threshold of 4.5~\GeV~and exclusively travel through the central detector region $|\eta | < 2.47$.  A longitudinal impact parameter requirement of $|z_0sin\theta| < 0.5~mm$ is also applied. \textcolor{red}{\textit{Have I defined impact parameter yet?}} Electrons are distinguished from other particles using identification criteria that rely on the shower shape in the electromagnetic calorimeter, tracking quantities, and the health of the track to EM calorimeter cluster matching.  In general, identification criteria varies from loose to tight and evolves with increasing strictness in criteria cuts that can be based either on independent requirements or on the single requirement set on the output of the likelihood function based on all the discriminating quantities listed above.  This analysis uses likelihood based identification criteria only.  \textcolor{red}{Explain more about identification criteria we use.}  Baseline electrons are required to satisfy \textit{VeryLooseLLH} identification while signal electrons must pass \textit{Tight} identification plus \textit{GradientLoose} isolation criteria. \textcolor{red}{Define the isolation criteria}  Signal electrons also require a transverse impact parameter $|d_0/\sigma(d_0)| < 5$. Furthermore, electrons with author 16 are vetoed.  \textcolor{red}{Explain what \textit{author 16} means}
 
-Muon information primarily comes from charged tracks in the inner detector and tracks in the muon spectrometer.  The calorimeters essentially don't contribute any useful information about the muons that pass through since energy measurements in the Ecal or Hcal rely on a particle's complete energy deposition in the calorimeter layers.   Baseline muons are reconstructed with algorithms that combine tracks from the inner detector and muon spectrometer to form muon candidates.  They must pass \pt{} threshold of 4 ~\GeV and be in fiducial region $|\eta | < 2.5$. Baseline muons are also expected to satisfy \textit{Medium} identification standards (DEFINE THIS) and have a transverse impact parameter $|z_0sin\theta| < 0.5~mm$.  Signal muons must also satisfy \textit{FixedCutTightTrackOnly} isolation criteria and a transverse impact parameter requirement of $|d_0/\sigma(d_0)| < 3$.
+Muon information primarily comes from tracks in the muon spectrometer that are often matched charged tracks in the inner detector.  The calorimeters essentially don't contribute any useful information about the muons because energy measurements in the Ecal or Hcal rely on a particle's complete energy deposition in the calorimeter layers, and muons only deposit about $3~\GeV$.   Baseline muons are reconstructed with algorithms that combine tracks from the inner detector and muon spectrometer to form muon candidates.  They must pass \pt{} threshold of 4 ~\GeV and be in fiducial region $|\eta | < 2.5$. Baseline muons are also expected to satisfy \textit{Medium} identification standards (DEFINE THIS) and have a transverse impact parameter $|z_0sin\theta| < 0.5~mm$.  Signal muons must also satisfy \textit{FixedCutTightTrackOnly} isolation criteria and a transverse impact parameter requirement of $|d_0/\sigma(d_0)| < 3$.
 
-Baseline jets are reconstructed using locally-calibrated three-dimensional topological clusters built from calorimeter cells.  Topo-clustering starts by determining calorimeter cells with energy significance $4\sigma$ about the quadrature sum of electronic and pileup noise.  Neighboring jets with energy significance $2\sigma$ about noise are iteratively added, forming seed cluster, then a ring of direct neighbor cells are added to the final topo-clusters.  Jets are constructed using anti-$K_t$ algorithm with radius parameter R = 0.4 in this case. Baseline jets must pass \pt{} threshold of 20 ~\GeV and be in fiducial region $|\eta | < 4.5$.  Also, jets within $|\eta | < 2.5$ originating from b-hadrons are identified with the \textit{MV2c10} algorithm (define this!) with an 85\% working point.  Signal jets are further restricted to fiducial region $|\eta | < 2.8$.
+Baseline jets are reconstructed using locally-calibrated three-dimensional topological clusters built from calorimeter cells.  Topo-clustering starts by determining calorimeter cells with energy significance $4\sigma$ above the quadrature sum of electronic and pileup noise.  Neighboring jets with energy significance $2\sigma$ above noise are iteratively added to form seed clusters; after which, a ring of direct neighboring cells are added to the final topo-clusters.  Jets are constructed using anti-$K_t$ algorithm with radius parameter R = 0.4 in this case. Baseline jets must pass \pt{} threshold of 20 ~\GeV and be in fiducial region $|\eta | < 4.5$.  Also, jets within $|\eta | < 2.5$ originating from b-hadrons are identified with the \textit{MV2c10} algorithm (define this!) with an 85\% working point.  Signal jets are further restricted to fiducial region $|\eta | < 2.8$.
 
-TODO: Add paragraph about photon ID
 
-%\begin{table}[tbp]
+
 \begin{table}
 \tiny
  \centering
   \begin{tabular}{l||c|c|c}
  \hline
 \small Selection Criteria & \small \textbf{Electrons} & \small \textbf{Muons} & \small \textbf{Jets}  \\
-%\small Criteria &     && \\
  \hline
  \hline
 \small \textbf{Baseline} &  & & \\ 
@@ -92,10 +51,6 @@ TODO: Add paragraph about photon ID
 \small Clustering & & &\small Anti-$K_t$ R = 0.4 EMTopo\\
 \small Jet Vertex Tagging &&& -- \\
 \small \textit{b}-tagging &&& -- \\
-% \multicolumn{2}{c}{$\pt{} > 4.5 ~\GeV$, $|\eta | < 2.47$}   \\
-% \multicolumn{2}{c}{$|z_0sin\theta|< 0.5~mm$}    \\ 
-%& --       &$|d_0/\sigma(d_0)|< 5$     \\
-%& \multicolumn{2}{c}{$|\eta | < 2.47$}  \\
  \hline
  \hline
  \small \textbf{Signal} &  & \\ 
@@ -116,52 +71,13 @@ TODO: Add paragraph about photon ID
   \label{tab:objdef}
 \end{table}
 
-\iffalse
-\begin{table}[tbp]
-\tiny
- \centering
-  \begin{tabular}{l||c|c}
-    \hline
-Selection  & ~~~~~~~~~~Baseline~~~~~~~~~~  & ~~~~~~~~~~Signal~~~~~~~~~~  \\
- %Criteria &     && \\
- \hline
- \hline
- \textbf{Electrons} &  & \\
- \hline
- Reco Algorithm & \multicolumn{2}{c}{\textit{author 16 veto}}     \\
-Kinematic& \multicolumn{2}{c}{$\pt{} > 4.5 ~\GeV$, $|\eta | < 2.47$}   \\
-Impact Parameter & \multicolumn{2}{c}{$|z_0sin\theta|< 0.5~mm$}    \\ 
-& --       &$|d_0/\sigma(d_0)|< 5$     \\
-%& \multicolumn{2}{c}{$|\eta | < 2.47$}  \\
-Identification & \textit{VeryLooseLLH}                 & \textit{Tight}    \\
-Isolation &      --         & \textit{GradientLoose}      \\
- \hline
- \hline
-\textbf{Muons} &  & \\ 
- \hline
- Kinematic& \multicolumn{2}{c}{$\pt{} > 4 ~\GeV$, $|\eta | < 2.5$}   \\
-Impact Parameter & \multicolumn{2}{c}{$|z_0sin\theta|< 0.5~mm$}    \\ 
-& --       &$|d_0/\sigma(d_0)|< 3$     \\
-%& \multicolumn{2}{c}{$|\eta | < 2.47$}  \\
-Identification &\multicolumn{2}{c}{ \textit{Medium}}      \\
-Isolation &      --         & \textit{GradientLoose}      \\
-  \end{tabular}
-  \caption{Summary of blah blah}
-  \label{tab:trkclustervtx}
-\end{table}
-\fi
+Well calibrated energy and momentum measurements of the directly observable objects is important for construction of the particles that traverse the detector without interacting.  These "missing" particles carry away energy and momentum which is recovered with energy and momentum conservation in the plane transverse to the beam pipe.  The vector quantity missing transverse momentum \pt{} is the negative vector sum of the transverse momentum of all the identified physics objects (electrons, muons, jets, photons) plus an additional soft term.  The soft term is constructed from all the tracks not associated with any physics object, but are associated with the primary vertex.  Therefore, the met is adjusted for the best possible calibration of the jets and other identified physics objects and still independent of pileup in the soft term.  The scalar of the missing transverse momentum vector gives the missing transverse energy \met. 
 
-Well calibrated energy and momentum measurements of the directly observable objects is important for construction of the particles that traverse the detector without interacting.  These "missing" particles carry away energy and momentum which is recovered with energy and momentum conservation in the plane transverse to the beam pipe.  The vector quantity called "missing transverse momentum" ($\vec{E}^T_miss$) and the scalar magnitude representing the "missing transverse energy" ($E^T_miss$) 
-Missing Transverse momentum (MET) is the negative vector sum of the transverse momentum of all the identified physics objects (electrons, muons, jets, photons) plus an additional soft term.  The soft term is constructed from all the tracks not associated with any physics object, but are associated with the primary vertex.  Therefore, the met is adjusted for the best possible calibration of the jets and other identified physics objects and still pileup independent in the soft term. 
+\section{Special Treatment of Reconstructed Objects}
+\label{sec:obj:treat}
+Once objects are reconstructed and identified, special algorithms often need to be performed before these objects can be used.  For this analysis, these final steps were the removal of overlapping objects and the isolation correction of closely-spaced leptons.
 
-\section{Treatment of Reconstructed Objects}
-
-Once objects are identified special algorithms must still be performed before these objects can confidently used for analysis.  Here I describe the object removal, the isolation correction we performed on closely-spaced leptons, and the truth matching done with Monte Carlo samples.
-
-Overlap removal is performed to prevent double counting of physics objects. First, jet-electron overlap removal is performed.  If $\Delta_{R(jet, electron)}$ is less than 0.2 and the the jet is not tagged as a b-jet, the jet is removed and the electron is kept.  If the jet is identified as a b-jet, then the jet is kept and the electron object is removed since the electron is most likely from the semi-leptonic decay of a B-hadron.  If $\Delta_{R(jet, electron)}$ is less than 0.4, we remove the electron and keep the jet.  Similarly, if the $\Delta_{R(jet, muon)}$ is less than 0.4, we remove the muon and keep the jet unless the jet has less than three tracks; in which case, the muon will be kept and the jet is discarded.  Lastly, we perform overlap removal on photons and other objects.  It is common that electron and muon objects will also be included in the photon container since they pass the Ecal shower requirements, so typically, overlapping photons and leptons will result in the photon object being removed from the photon container.  If $\Delta_{R(photon, electron)}$ is less than 0.4 we remove the photon and keep the electron.  If $\Delta_{R(photon, muon)}$ is less than 0.4, we remove the photon and keep the muon.  If $\Delta_{R(photon, jet)}$ is less than 0.4, we keep the photon and remove the jet.  (TODO:Explain more about why the overlap removal is done in this way.
-
- Soft leptons in a boosted system can have small angular separation, especially is products of a low-mass $Z^*$ decay.  These closely-spaced leptons can lies within each others isolation cones, leading to a loss of efficiency for very small mass-splittings.  *Refer to Figures~ \ref{fig:EffRll_ISOCorr} and ~\ref{fig:EffMll_ISOCorr} for additional motivation and explanation  This loss is corrected for using a dedicated tool that checks baseline leptons that fail the isolation criteria for other nearby leptons that are within it's isolation cone.  Tracks associated with the nearby lepton are removed from the track isolation sum.  If the nearby lepton is an electron, the topocluster $E_T$ is removed from the calorimeter isolation sum.  The corrected isolation variables are then reanalyzed using the original isolation working point.  Figure~\ref{fig:nearbylepiso} shows the effect of this correction on low invariant mass dilepton pairs in both data and Monte Carlo samples.
-
+Overlap removal is performed to prevent double counting of physics objects. First, jet-electron overlap removal is performed.  If $\Delta_{R(jet, electron)}$ is less than 0.2 and the the jet is not tagged as a b-jet, the jet is removed and the electron is kept.  If the jet is identified as a b-jet, then the jet is kept and the electron object is removed since the electron is most likely from the semi-leptonic decay of a B-hadron.  If $\Delta_{R(jet, electron)}$ is less than 0.4, we remove the electron and keep the jet.  Similarly, if the $\Delta_{R(jet, muon)}$ is less than 0.4, we remove the muon and keep the jet unless the jet has less than three tracks; in which case, the muon will be kept and the jet is discarded.  Lastly, we perform overlap removal on photons and other objects.  It is common that electron and muon objects will also be included in the photon container since they pass the Ecal shower requirements, so typically, overlapping photons and leptons will result in the photon object being removed from the photon container.  If $\Delta_{R(photon, electron)}$ is less than 0.4 we remove the photon and keep the electron.  If $\Delta_{R(photon, muon)}$ is less than 0.4, we remove the photon and keep the muon.  If $\Delta_{R(photon, jet)}$ is less than 0.4, we keep the photon and remove the jet.  
 
   \begin{figure}[tbp]
    % \centering
@@ -182,6 +98,8 @@ Overlap removal is performed to prevent double counting of physics objects. Firs
    \caption{Dilepton invarient mass distribution before LepIsoCorrection (top) and after LepIsoCorrection (bottom) for the $ee$-channel (left) and $\mu\mu$-channel (right).}
    \label{fig:EffMll_ISOCorr}
  \end{figure}
+ Soft leptons in a boosted system often have small angular separation, especially when they are products of a low-mass $Z^*$ decay, and these closely-spaced leptons can lie within each others isolation cones, leading to a loss of efficiency for very small mass-splittings.  \textcolor{red}{Refer to Figures~ \ref{fig:EffRll_ISOCorr} and ~\ref{fig:EffMll_ISOCorr} for additional motivation and explanation.}  This loss is corrected for using a dedicated tool that checks for baseline leptons that fail the isolation criteria to due to another nearby lepton within it's isolation cone and removes tracks associated with the nearby lepton from the track isolation sum.  If the nearby lepton is an electron, the topocluster $E_T$ is also removed from the calorimeter isolation sum.  The corrected isolation variables are then reanalyzed using the original isolation working point  Figure~\ref{fig:nearbylepiso} shows the effect of this correction on low invariant mass dilepton pairs in both data and Monte Carlo samples.
+
 
  \begin{figure}[tbp]
   \includegraphics[width=0.48\columnwidth,trim=1.2cm 0cm 1.9cm 0cm,clip]{/Users/sheenaschier/Documents/LaFiles/figures/thesis/nearbylepiso.pdf}
@@ -190,7 +108,7 @@ Overlap removal is performed to prevent double counting of physics objects. Firs
  \label{fig:nearbylepiso}
  \end{figure}
  
- While detector effects that result in the misidentification of physics objects are not well modeled in simulation, misidentification still occurs during reconstruction.  Reducible fake lepton backgrounds are estimated with a data-driven method and therefore are already accounted for.  Background estimated done in Monte Carlo use only truth matched leptons to prevent overlap in the MC and data-driven estimates. 
+
  
  
 
