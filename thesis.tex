@@ -19,6 +19,7 @@
 \usepackage{\ATLASLATEXPATH atlasphysics}
 \usepackage{graphicx}     
 \usepackage{amsmath}
+\usepackage{accents}
 \usepackage{tikz}	
 \usepackage{placeins}
 \usepackage{caption}
@@ -32,7 +33,7 @@
 
 % Declarations for Front Matter
 
-\title{Searches for Electroweak Production of Compressed Supersymmetry in Events with Soft Leptons Plus Missing Transverse Momentum and Hard Jet Recoil}
+\title{Searches for Electroweak Production of Compressed Supersymmetry in Events with Soft Leptons, Missing Transverse Momentum, and a Hard Jet}
 \author{Sheena Calie Schier}
 \degreeyear{2018}
 \degreemonth{June}
@@ -63,8 +64,7 @@
 %TODO: LINE NUMBERS
 
 \begin{abstract}
-Supersymmetry (SUSY) is an extension of the Standard Model that predicts a boson (fermion) partner for each fermion (boson) in the Standard Model. Weak scale SUSY is attractive for reasons like improving gauge coupling unification, reducing fine-tuning in the Higgs sector and providing a dark matter candidate. In this thesis, I present a dedicated search for direct production of new colorless weak scale states in a compressed mass spectra with final states characterized by soft visible decay products. This analysis uses $pp$ collisions at $\sqrt s$ = 13 TeV at the Large Hadron Collider and collected by the ATLAS experiment during 2015 and 2016 corresponding to 36.1 $fb^{-1}$ of integrated luminosity. This analysis selects events with two soft electrons or muons and missing transverse momentum ($E_T^{miss}$) recoiling against hadronic initial state radiation. Backgrounds from $t\bar{t}$, diboson, and other production mechanisms with prompt leptons are estimated with Monte Carlo
-simulation while reducible backgrounds with instrumental $E_T^{miss}$ and fake/non-prompt leptons is estimated with a mix of Monte Carlo and data-driven methods. Results are consistent with Standard Model expectation and limits on compressed supersymmetric states are extended for the first time since LEP.
+Supersymmetry (SUSY) is an extension of the Standard Model that predicts a boson (fermion) partner for each fermion (boson) in the Standard Model. Weak-scale SUSY is attractive for reasons like improving gauge coupling unification, reducing fine-tuning in the Higgs sector and providing a dark matter candidate. In this thesis, I present a dedicated search for direct production of new, colorless, weak-scale states with a compressed mass spectra in final states characterized by soft visible decay products. This analysis uses $pp$ collisions at $\sqrt s$ = 13 TeV at the Large Hadron Collider and collected by the ATLAS experiment during 2015 and 2016 corresponding to 36.1 $\mathrm{fb}^{-1}$ of integrated luminosity. This analysis selects events with two soft electrons or muons and missing transverse momentum (\met{}) recoiling against hadronic initial state radiation. Backgrounds with two prompt leptons are estimated with Monte Carlo simulation, while reducible backgrounds are estimated with a mix of Monte Carlo and data-driven methods. Results are consistent with Standard Model expectations and used to put limits on compressed supersymmetric states.  Limits are extended on compressed electroweak SUSY model for the first time since LEP.
 
 \end{abstract}
 
@@ -94,6 +94,7 @@ would have graduated so, so, very much faster.
 \part{Method}
 \include{data}
 \include{object}
+%\iffalse
 \include{regions}
 \include{backgrounds}
 \include{fakefactor}
@@ -103,17 +104,18 @@ would have graduated so, so, very much faster.
 \include{results}
 \include{interpretations}
 \include{conclusion}
-
+%\fi
 
 \nocite{*}
 \bibliographystyle{plain}
 \bibliography{uctest.bib}
 %\printbibliography
-
+\iffalse
 \appendix
 \include{apndx-A}
 \include{apndx-B}
+\include{apndx-C}
 Ancillary material should be put in appendices, which appear after the
 bibliography. 
-
+\fi
 \end{document}
