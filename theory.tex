@@ -1,23 +1,23 @@
 \chapter{Theoretical Background and Motivation}
-To any curious mind staring into the starry deep late in the night, or gazing at pictures from the Hubble Space Telescope, the universe can seem deeply mysterious, as a vast space containing a rich spectra of matter moving and transforming via some set of complex mechanisms.  Although this mysterious sense of the universe rings true even in the mind of the most learned physics scholar, large leaps have been made in understanding the true nature of the matter and forces that make up the observable universe.   In the last century, particle physicists have constructed a theory that incorporates all the directly observed fundamental particles and explains their existence and interactions in simplicity through field equations that describe the fundamental forces in the universe.  This theory is called the Standard Model of Particle Physics (SM) and, apart from gravity being far too weak to be described by particle interactions, is fundamentally complete.  
+To any curious mind staring into the starry deep late in the night, or gazing at pictures from the Hubble Space Telescope, the universe can seem deeply mysterious, as a vast space containing a rich spectra of matter moving and transforming via some set of complex mechanisms.  Although this mysterious sense of the universe rings true even in the mind of the most learned physics scholar, large leaps have been made in understanding the true nature of the matter and forces that make up the observable universe.   In the last century, particle physicists have constructed a theory that incorporates all the directly observed fundamental particles and explains their existence and interactions in simplicity through field equations that describe the fundamental forces in the universe.  This theory is called the Standard Model of Particle Physics (SM) and, apart from gravity being far too weak to be described by particle interactions, is internally complete in that every piece of the SM has been observed according to prediction.
 
-But the story doesn't end here.  There are reasons to think the complete and successful Standard Model is a lower-order version of a much larger theory.  Some reasons are philosophical in nature; we want to understand why the SM has its structure, or lack confidence in a theory that is so incredibly fine-tuned as the Standard Model.  Other reasons come from observations that we can not resolve with SM predictions, like the missing CP-violation in SM mechanics to account for the baryon-antibaryon asymmetry in the early universe, or the abundance of 'dark matter' that drives massive galaxies to rotate contrary to predictive models accounting only SM particles and forces.
+But the story doesn't end here.  There are reasons to think the complete and successful Standard Model is a low-scale approximation of a much larger theory.  Some reasons are philosophical in nature; we want to understand why the SM has its structure, or lack confidence in a theory that is so incredibly fine-tuned as the Standard Model.  Other reasons come from observations that we can not be resolved with SM predictions, like the  abundance of 'dark matter' that drives massive galaxies to rotate contrary to predictive models accounting only for gravity and SM particles and forces.
 
 The proceeding structure of this chapter is as follows: Section~\ref{sec:sm}, summarizes the Standard Model of Particle Physics; %Section~\ref{sec:gauge} , describes the gauge symmetries that give the Standard Model its particular structure and spontaneous electroweak symmetry breaking  that calls for the existence of the Higgs boson.  Next, Section~\ref{sec:higgs} relates electroweak symmetry breaking to the Higgs mechanism and the gauge boson masses.  
 Section~\ref{sec:fail} goes over some of the shortcomings of the Standard Model, and supersymmetry is introduced in Section~\ref{sec:susy} as a viable model for physics beyond the Standard Model.  Lastly, Section~\ref{sec:pheno} describes the phenomenology of supersymmetric Higgsinos and sleptons in compressed scenarios.
 
 \section{The Standard Model of Particle Physics}
 \label{sec:sm}
-The Standard Model of Particle Physics provides a quantum description of three of the four known fundamental forces; the electromagnetic force, the strong force, and the weak force.  It leaves out the gravitational force because the strength of gravitational interactions is several orders of magnitude lower than the others, which leads to intrinsic incompatibilities in a description of quantum gravitational interactions at energies below the Plank scale, $M_P\approx10^{19}~\GeV$.  The SM was pieced together throughout the second half of the twentieth century by several progressive discoveries, and we now know that there are only a hand full of fundamental constituents that make up the incredible collection of particles in nature.  The fundamental components separate into two distinct categories: fermions and bosons.  These two types of particles are characterized by their spin and interactions, and ultimately play completely different roles in the state and phenomena of the universe. \cite{tully}
+The Standard Model of Particle Physics provides a quantum description of three of the four known fundamental forces; the electromagnetic force, the strong force, and the weak force.  It leaves out the gravitational force because the strength of gravitational interactions is several orders of magnitude lower than the others, which leads to intrinsic incompatibilities in a description of quantum gravitational interactions at energies below the Plank scale, $M_P\approx10^{19}\GeV$.  The SM was pieced together throughout the second half of the twentieth century by several progressive discoveries, and we now know that there are only a hand full of fundamental constituents that make up the incredible collection of particles in nature.  The fundamental components separate into two distinct categories: fermions and bosons.  These two types of particles are characterized by their spin and interactions, and ultimately play completely different roles in the state and phenomena of the universe. \cite{tully}
 
-The main ingredients of the Standard Model are a set of Dirac fermion fields having specific muliplet representations in group theory given by the $SU(3)_{C} \times SU(2)_{L} \times U(1)_{Y}$ gauge group.  In SM quantum field theory (QFT), called the "Yang Mills theory" \cite{PhysRev.96.191}, fermion interactions are mediated by gauge bosons.  The structure of the gauge bosons and the interactions they govern is a consequence of gauge invariance in $SU(n)$ type Lie groups \cite{westra}.  
+The main ingredients of the Standard Model are a set of Dirac fermion fields having specific muliplet representations in group theory given by the $SU(3)_{C} \times SU(2)_{L} \times U(1)_{Y}$ gauge group.  In SM quantum field theory (QFT), called the "Yang Mills theory" \cite{PhysRev.96.191}, fermion interactions are mediated by gauge bosons.  %The structure of the gauge bosons and the interactions they govern is a consequence of gauge invariance in $SU(n)$ type Lie groups \cite{westra}.  
 
 Gauge invariance in QFT demands the existence of gauge boson fields, which occur in two independent sectors: the electroweak sector, described by quantum electroweak dynamics (QED), and the strong sector, described by quantum chromodynamics (QCD).  Glashow, Salam, and Weinberg first presented the structure for the electroweak model in the 1960's \cite{Glashow:1961tr, PhysRevLett.19.1264, Salam:1968rm}.  The $SU(2)_L\otimes U(1)_Y$ symmetry of QED produces the photon $\gamma$ and the massive bosons, $W^\pm$ and $Z^0$.  $U(1)_Y$ is a mathematical group described by unitary $1\times1$ matrices generated by weak-hypercharge symmetry $Y$, defined as 
 \begin{equation}
 Y=  2(Q-T_3)
 \label{eq:Y}
 \end{equation}
-, where Q is the electromagnetic charge, and $T_3$ is the z-component of the weak isospin\footnote{Weak isospin is the charge associated with the $SU(2)_L$ symmetry.  $SU(2)_L$ multiplets are often called \textit{isospin multiplets}.}.   This symmetry produces the $B^0$ gauge boson.  Similarly, $SU(2)_L$ represents a group of unitary $2\times2$ matrices with determinant 1.  These are generated by a left-handed chiral symmetry \textcolor{red}{explain or give reference} and produces the $W^{\pm}$ and $W^0$, or $W_3$ gauge bosons.  If this were a perfect symmetry, these gauge bosons would be mass eigenstates with mass equal to zero. But the observed charged and neutral vector\footnote{The $W^{\pm}$ and $Z^0$ are sometimes called vector bosons of axial vector bosons because of their chiral couplings} bosons are not massless; therefore, the symmetry must be broken.  The mass eigenstates are informed by the mixing of the $B$ and $W_3$ states to get the  photon and the neutral vector boson $Z^0$, shown in Eq~\ref{eq:mix}.
+, where Q is the electromagnetic charge, and $T_3$ is the z-component of the weak isospin\footnote{Weak isospin is the charge associated with the $SU(2)_L$ symmetry.  $SU(2)_L$ multiplets are often called \textit{isospin multiplets}.}.   This symmetry produces the $B^0$ gauge boson.  Similarly, $SU(2)_L$ represents a group of unitary $2\times2$ matrices with determinant 1.  These are generated by a left-handed chiral symmetry~\cite{koch} that produces the $W^{\pm}$ and $W^0$, or $W_3$ gauge bosons.  If this were a perfect symmetry, these gauge bosons would be mass eigenstates with mass equal to zero. But the observed electroweak gauge bosons are not massless; therefore, the symmetry must be broken.  The mass eigenstates of the photon and the neutral vector boson $Z^0$ are informed by the mixing of the neutral $B$ and $W_3$ states, shown in Eq~\ref{eq:mix}.
 \begin{equation}
 \begin{pmatrix}
 \gamma \\
@@ -25,8 +25,8 @@ Z^0 \\
 \end{pmatrix}
 =
 \begin{pmatrix}
-cos\theta_W & sin\theta_W\\
-\sin\theta_W & cos\theta_W\\
+\cos\theta_W & \sin\theta_W\\
+\sin\theta_W & \cos\theta_W\\
 \end{pmatrix}
 \begin{pmatrix}
 B^0 \\
@@ -34,8 +34,25 @@ W_3 \\
 \end{pmatrix}
 \label{eq:mix}
 \end{equation}
-In Eq~\ref{eq:mix}, $\theta_W$ is the weak mixing angle \textcolor{red}{ref}.  In the wake of electroweak symmetry breaking, an external mechanism called the \textit{Higgs mechanism} is needed to induce the masses of the $W^\pm$ and $Z^0$.  To quantize this exchange, an extra spin-0 boson called the Higgs boson must exist.  Until recently, this remained the last missing piece of the Standard Model.  \textcolor{red}{Mention how the Higgs is really an $SU(2)_L$ doublet with charged and neutral parts to the $H_u$ and $H_d$ fields.  The neutral Higgs that would exist in nature is the linear combination of $H_d^0$ and $H_u^0$.  Somehow the others get eaten and the only one that does not break electromagnetism is the neutral field.}
- 
+In Eq~\ref{eq:mix}, $\theta_W$ is the weak mixing angle~\cite{BILENKY198273}.  
+
+In the wake of electroweak symmetry breaking, an external mechanism called the \textit{Higgs mechanism} is needed to provide the masses of the $W^\pm$ and $Z^0$.  To generate the masses of the charged and neutral electroweak bosons, the Higgs Mechanism is expressed as two scalar fields, producing a chiral doublet, as in Equation~\ref{eq:h1}.
+\begin{equation}
+\Phi= \begin{pmatrix}
+\Phi^+ \\
+\Phi^0 \\
+\end{pmatrix} \Rightarrow
+\begin{pmatrix}
+H^\pm_u & H^0_u \\
+H^\pm_d & H^0_d  \\
+\end{pmatrix}
+\label{eq:h1}
+\end{equation}
+The \textit{u} and \textit{d} subscripts in Equation~\ref{eq:h1} mean \textit{up} and \textit{down}, referring to the relative direction of the weak isospin.  The two charged and one neutral boson states provide the longitudinal degrees of freedom to the $W^\pm$ and the $Z^0$ bosons, and the last neutral boson provides the SM Higgs, which, until recently, remained the last missing piece of the Standard Model.  The squared mass of the Higgs, seen in Equation~\ref{eq:h2} is quadratically sensitive to the scale $\Lambda$ at which particle couplings to the Higgs turn on.  In the SM, this is the weak-scale at $\sim 100\GeV$.
+ \begin{equation}
+ m_H^2 = (m_H^2)_0+\frac{kg^2\Lambda^2}{16\pi^2}
+ \label{eq:h2}
+ \end{equation}
 The $SU(3)_C$ represents a group of unitary $3\times3$ matrices with determinant 1 generated by color symmetry.  The gauge invariance imposed on this symmetry produces a color octet of massless gluons.  The gauge bosons (plus the Higgs) masses and their $SU(3)_{C} \times SU(2)_{L} \times U(1)_{Y}$ multiplet representations are summarized in Table~\ref{tab:boson}.  All bosons are integer-spin particles.      
 \begin{table}[!htb]
 \centering
@@ -46,8 +63,8 @@ State  & Spin & Mass &  $SU(3)_{C}, SU(2)_{L}, U(1)_{Y}$ \\
 \hline \hline
 $g$ & 1&  $0$ & $(\mathbf{8}, \mathbf{1}, 0)$ \\ 
 \hline
-$W^\pm$ & 1 & $80.4~GeV$ & $(\mathbf{1}, \mathbf{3}, 0)$  \\  
-$Z^0$ & 1 & $91.2~GeV$ & $(\mathbf{1}, \mathbf{3}, 0)$\\ 
+$W^\pm$ & 1 & $80.4\GeV$ & $(\mathbf{1}, \mathbf{3}, 0)$  \\  
+$Z^0$ & 1 & $91.2\GeV$ & $(\mathbf{1}, \mathbf{3}, 0)$\\ 
 $\gamma$ & 1 & $0$ & $(\mathbf{1}, \mathbf{1}, 0)$ \\  
 \hline
 $H^0$& 0 & $125~\GeV$&$(\mathbf{1}, \mathbf{2}, \pm\frac{1}{2})$\\
@@ -59,7 +76,7 @@ $H^0$& 0 & $125~\GeV$&$(\mathbf{1}, \mathbf{2}, \pm\frac{1}{2})$\\
 \label{tab:boson}
 \end{table} 
 
-Fermions are 1/2-integer-spin particle that fall into two categorizes, leptons and quarks.  Leptons carry electromagnetic and weak isospin charge, but do not carry strong color charge.  The leptons consists of three generations of isospin doublets which give the electron, muon, and tau-lepton with their associated neutrino partners.  Quarks are strongly charged particles that also carry weak isospin and fractional electromagnetic charge.  Like the leptons, there are three quark families, each forming an isospin doublet and consisting of an up-type and a down-type quark.  The fermion masses and multiplet representations are summarized in Table~\ref{tab:fermion}.
+Fermions are 1/2-integer-spin particle that fall into two categorizes, leptons and quarks.  Leptons carry electromagnetic and weak isospin charge, but do not carry strong color charge.  The leptons consists of three generations of isospin doublets which contain the electron, muon, and tau-lepton with their associated neutrino partners.  Quarks are strongly charged particles that also carry weak isospin and fractional electromagnetic charge.  Like the leptons, there are three quark families, each forming an isospin doublet and consisting of an up-type and a down-type quark.  The fermion masses and multiplet representations are summarized in Table~\ref{tab:fermion}.
 \begin{table}[!htb]
 \centering
 \small
@@ -74,8 +91,8 @@ e^- \\
 \nu_e\\
 \end{pmatrix}$
 &$\begin{matrix}
-0.511~MeV \\
-<2~eV\\
+0.511\MeV \\
+<2~\mathrm{eV}\\
 \end{matrix}$
 &$\begin{matrix}
 -1\\
@@ -83,11 +100,11 @@ e^- \\
 \end{matrix}$&\\
 \hline
 $\begin{pmatrix} \mu^-\\ \nu_\mu \end{pmatrix}$
- &$\begin{matrix} 105.7~MeV\\  <0.19~MeV \\ \end{matrix}$
+ &$\begin{matrix} 105.7\MeV\\  <0.19\MeV \\ \end{matrix}$
   &$\begin{matrix} -1\\  ~0 \\ \end{matrix}$&\\
 \hline
 $\begin{pmatrix} \tau^- \\ \nu_\tau \end{pmatrix}$
-&$\begin{matrix} 1.78~GeV  \\ <18.2~MeV \end{matrix}$
+&$\begin{matrix} 1.78\GeV  \\ <18.2\MeV \end{matrix}$
   &$\begin{matrix} -1\\  ~0 \\ \end{matrix}$&\\  
 \hline 
 
@@ -95,14 +112,16 @@ $\begin{pmatrix} \tau^- \\ \nu_\tau \end{pmatrix}$
 \textbf{quarks}&&&$(\mathbf{3}, \mathbf{2}, 1/6)$\\
 \hline 
 $\begin{pmatrix} d\\ u \end{pmatrix}$
- &$\begin{matrix} 5~MeV\\  2~MeV \\ \end{matrix}$
+ &$\begin{matrix} 5\MeV\\  2\MeV \\ \end{matrix}$
   &$\begin{matrix} -1/3\\  ~2/3 \\ \end{matrix}$&\\  
 \hline
-s & $\approx 100~MeV$ &&  \\  
-c & $\approx 1~GeV$ && \\ 
-\hline
-b & $4.19~GeV$ &&  \\  
-t & $<172.0~GeV$ &&\\ 
+$\begin{pmatrix} s\\ c \end{pmatrix}$
+&$\begin{matrix}\approx100\MeV \\  \approx1\GeV \\ \end{matrix}$
+  &$\begin{matrix} -1/3\\  ~2/3 \\ \end{matrix}$&\\  
+  \hline
+  $\begin{pmatrix} b\\ t \end{pmatrix}$
+&$\begin{matrix} 4.19\GeV\\  <172.0\GeV \\ \end{matrix}$
+  &$\begin{matrix} -1/3\\  ~2/3 \\ \end{matrix}$&\\  
 \hline
 
 \hline
@@ -114,21 +133,24 @@ t & $<172.0~GeV$ &&\\
 
 \section{Shortcomings of the Standard Model}
 \label{sec:fail}
-As mentioned before, the Standard Model of Particle Physics in all its glory has limitations. This section will briefly explain them.
+As mentioned before, the Standard Model of Particle Physics in all its glory has limitations.
 
 \begin{itemize}
-\item One alarming problem with the Standard Model is its incapability to explain dark matter.
-\item Neutrino masses and mixing
-\item CP-violation (\cite{Sakharov:1967dj}
-\item The hierarchy problem in relation to $M_P/M_W$.  Problematic because of the Higgs potential being so sensitive to new physics in any sensible extension to the SM.  Quantum loop corrections from any particle that couples to the Higgs potential can cause quadratic divergences in the Higgs mass.  Supersymmetry has the benefit of cancelling these diverging mass corrections by adding new particles to the spectrum that cancel corrections from SM particles already there.  (Mention the ultra-violate cut-off scale $\Lambda$, which in QCD is many orders of magnitude below the Planck scale.)  The only other option is to make the rather \textit{ad hoc} assumption that none of the undiscovered high-mass particles or condensates (from new physics far above the weak scale) couple in any way to the Higgs potential.  In SUSY, fermion loop and boson loop contributions to the Higgs mass have a relative minus sign.
-\end{itemize}
+\item The inability to explain dark matter \cite{BERTONE2005279}
+\item The hierarchy problem in relation to $M_W/M_P$
+\item Neutrino masses and mixing \cite{1367-2630-16-4-045018}
+\item CP-violation in the early universe \cite{Sakharov:1967dj}
+ 
+Dark matter is proposed to make up about $80\%$ of the matter in the universe, and yet, unlike matter from SM particles, does not interact with the electromagnetic or the strong forces, and possibly not even the weak force.  The fact that the SM only accounts for $20\%$ of the matter in the universe is perplexing, but there are hints to what type of new particles we should be looking for.  First, we know that dark matter does not interact via the electromagnetic or strong forces.  We have no reason to believe it interacts via the weak force, but it could, and for experimental purposes we often assume that it does.  Another important quality of dark matter is that it is stable enough to statically populate the universe.  This also relates to the relic abundance of dark matter, which is the measured abundance of dark matter 'frozen' into existence in the early universe once it cooled to the point that dark matter could no longer be produced.  This puts theorized constraints on the masses of dark matter candidates.  We also know from cosmological dark matter mapping, like from recent Dark Energy Survey~\cite{surveydm}, that it must have the ability to cluster, therefore it should not be extremely light and relativistic.  The lightest supersymmetric particle (LSP) in some SUSY models that conserve what is called R-parity provides a stable, weak-scale, weakly interacting candidate for dark matter. 
 
+The hierarchy between the weak-scale and the Planck-scale is a problem of the SM because the Higgs potential is quite sensitive to new physics in any sensible extension to the SM.  Quantum loop corrections from any particle that couples to the Higgs potential can cause quadratic divergences in the Higgs mass through $\Lambda$, as in Equation~\ref{eq:h2}.  Supersymmetry, introduced in the next section, has the benefit of cancelling these diverging mass corrections by adding new particles to the spectrum with corrections opposite to those from SM particles.  The only other option in extending the SM is to make the rather \textit{ad hoc} assumption that none of the undiscovered high-mass particles or condensates from new physics far above the weak scale couple in any way to the Higgs potential.  
+\end{itemize}
 
 \section{Supersymmetry}
 \label{sec:susy}
-Supersymmetry offers an extension to the Standard Model by extending the Poincare symmetry of quantum field theory to $SO(10)_{SUSY}$.  This extension leads to a boson-fermion symmetry that can be expressed by a supersymmetric transformation operator which carries $1/2$-integer spin angular momentum that transforms boson states to fermion states, and vice versa.  This symmetry generates a supersymmetric partner for all standard model particles, with each pair being equivalent in mass and all other quantum numbers, but differing intrinsically by half-integer spin.  So, each SM fermion has a bosonic supersymmetric partner, and each SM boson has a fermionic supersymmetric partner.  
+Supersymmetry offers an extension to the Standard Model by extending the Poincare symmetry of quantum field theory to $SO(10)_{SUSY}$~\cite{Martin:1997ns}.  This extension leads to a boson-fermion symmetry that can be expressed by a supersymmetric transformation operator which carries $1/2$-integer spin angular momentum that transforms boson states to fermion states, and vice versa.  If unbroken, this symmetry generates a supersymmetric partner for all Standard Model particles, with each pair being equivalent in mass and all other quantum numbers, but differing intrinsically by half-integer spin.  So, each SM fermion has a bosonic supersymmetric partner, and each SM boson has a fermionic supersymmetric partner.  
 
-According to this symmetry, assuming it is a perfect symmetry, these new particles should have already been observed with their SM masses, but this is not the case.  In order for this theory to remain true, the new symmetry must be broken in a way that preserves the fermion-boson symmetry and all observations of the Standard Model while allowing fermion-boson partners to be decoupled in mass.  The symmetry breaking could be spontaneous or could be explicitly added to the Lagrangian.  If the breaking is soft (having a positive mass dimension), then the hierarchy between the electroweak scale and the Planck scale remains in tact, and the theory is free of quadratic divergences in the scalar Higgs mass due to quantum corrections.  
+According to this symmetry, assuming it is a perfect symmetry, these new particles should have already been observed with their SM masses, but this is not the case.  In order for this theory to remain viable, the new symmetry must be broken in a way that preserves the fermion-boson symmetry and all observations of the Standard Model while allowing fermion-boson partners to be decoupled in mass.  If the effective scale of supersymmetry breaking is near the weak scale, no unnatural cancellations need to be added to Equation~\ref{eq:h2} to keep the Higgs mass near the electroweak scale and free of quadratic divergences due to quantum corrections.  
 
 A detailed description of the various models for mediating this symmetry-breaking and communicating it the visible sector of observable particles is beyond the scope of this thesis, but a very clear explanation by Howard Haber can be found in the Supersymmetry (Theory) chapter in the PDG \cite{haber}.   This search targets SUSY models that have undergone soft-breaking in the SUSY electroweak sector. 
 
@@ -167,100 +189,94 @@ Spin 0  & Spin $\frac{1}{2}$& Spin 1 &  $SU(3)_{C}, SU(2)_{L}, U(1)_{Y}$ \\
 \caption{SUSY MSSM spectrum in $SU(3)_{C}, SU(2)_{L}, U(1)_{Y}$ multiplet representation.}
 \label{tab:susy}
 \end{table}
-The general MSSM has 124 free parameters, many of which are related to each other only through some unknown SUSY breaking mechanism.  Observed or inferred constraints can be placed on many of the 100 plus parameters, reducing this number down to 19.  Among these is the top quark mass \cite{Bechtle2006}.  Table~\ref{tab:susy} shows the particle content in the MSSM.  In this table,  ($e~\nu$) stands for all three generations of SM lepton, and ($u~d$) refers to the three generations of quark.  In the MSSM, these form chiral supermultiplets with their superpartners; three generations of \textit{sleptons} ($\tilde{e}~\tilde{\nu}$) and three generations of \textit{squarks} ($\tilde{u}~\tilde{d}$).  The name for all supersymmetric quark partners and supersymmetric lepton partners is just the SM partner name with an \textit{s} in front.  This \textit{s} does not mean \textit{supersymmetric}; but rather, it means \textit{scalar}, which refers to a particle with spin angular momentum 0, as seen in Table~\ref{tab:susy}.   \textcolor{red}{Talk about the how Higgs doublet and \textit{higgsino} doublet also form a chiral supermultiplet.}
+Supersymmetric extensions to the SM are free to include multiple sectors and new sets of supersymmetric partners, and a minimal supersymmetric extension to the Standard Model (MSSM) adds the minimal number of new states needed to complete the theory, and most importantly, just one new Higgs doublet.  The general MSSM has 124 free parameters, many of which are related to each other only through some unknown SUSY breaking mechanism.  Observed or inferred constraints can be placed on many of the 100 plus parameters, reducing this number down to 19.  Among these is the top quark mass \cite{Bechtle2006}.  Table~\ref{tab:susy} shows the particle content in the MSSM.  In this table,  ($e~\nu$) stands for all three generations of SM lepton, and ($u~d$) refers to the three generations of quark.  Both chiral representation of the Higgs fields are shown explicitly.  In the MSSM, these form chiral supermultiplets with their superpartners; three generations of \textit{sleptons} ($\tilde{e}~\tilde{\nu}$), three generations of \textit{squarks} ($\tilde{u}~\tilde{d}$), and four new spin-1 Higgsino fields.  The name for all supersymmetric quark partners and supersymmetric lepton partners is just the SM partner name with an \textit{s} in front.  This \textit{s} does not mean \textit{supersymmetric}; but rather, it means \textit{scalar}, which refers to a particle with spin angular momentum 0, as seen in Table~\ref{tab:susy}.  The names for SM boson partners have the suffix \textit{ino}/
 
-Standard model gauge bosons and their superpartners, typically referred to as \textit{gauginos}, form gauge supermultiplets.  The superpartner to the gluon $g$ is the spin-1/2 color-octet \textit{gluino} $\tilde{g}$.  The spin-1 gauge bosons that mix to form the SM vector bosons are the $W^+$, $W^0$, $W^-$, and $B^0$.  Their spin-1/2 superpartners are the \textit{winos} and \textit{binos}: $\tilde{W}^+$, $\tilde{W}^0$, $\tilde{W}^-$, and $\tilde{B}^0$.  Like with SM gauge boson, their superpartners are not necessarily mass eigenstates.  There can be mixing between the electroweak gauginos and the Higgsinos to form the charged and neutral SUSY mass eigenstates called the \textit{charginos} and \textit{neutralinos}.  They can also be referred together as \textit{electroweakinos}. 
+Standard model gauge bosons and their superpartners, typically referred to as \textit{gauginos}, form gauge supermultiplets.  The superpartner to the gluon $g$ is the spin-1/2 color-octet \textit{gluino} $\tilde{g}$.  The spin-1 gauge eigenstates that mix to form the SM vector bosons are the $W^+$, $W^0$, $W^-$, and $B^0$.  Their spin-1/2 superpartners are the \textit{winos} and \textit{binos}: $\tilde{W}^+$, $\tilde{W}^0$, $\tilde{W}^-$, and $\tilde{B}^0$.  Like with SM gauge boson, their superpartners are not necessarily eigenstates.  There can be mixing between the electroweak gauginos and the Higgsinos to form the charged and neutral SUSY mass eigenstates called the \textit{charginos} and \textit{neutralinos}.  Typically there are two light charged states and four light neutral states.  Other chargino and neutralino states can exist with higher masses, and all the charged and neutral states can be referred to together as \textit{electroweakinos}.
 
-Of the 19 free parameters in the constrained MSSM, only a handful determine the chargino and neutralino masses; $M_1$, $M_2$, $\mu$, and $tan\beta$.  $M_1$ and $M_2$ are the bino and wino mass parameters, $\mu$ is the Higgsino mass parameter, and $tan\beta$ is the ratio of the vacuum expectation values of the two Higgs doublets:
+Of the 19 free parameters in the constrained MSSM, only a handful determine the chargino and neutralino masses; $M_1$, $M_2$, $\mu$, and $\tan\beta$.  $M_1$ and $M_2$ are the bino and wino mass parameters, $\mu$ is the Higgsino mass parameter, and $\tan\beta$ is the ratio of the vacuum expectation values of the two Higgs doublets:
 \begin{equation}
-tan\beta=\nu_u/\nu_d
+\tan\beta=\nu_u/\nu_d
 \end{equation}
 The chargino and neutralino mass mixing matrices are shown in Equations~\ref{eq:chargino} and ~\ref{eq:neutralino}.
 \begin{equation}
-M_{\chi^0}=
+M_{\chi^\pm}=
 \begin{pmatrix}
-M_2 & \sqrt{2}M_Wsin\beta \\
-\sqrt{2}M_Wcos\beta & \mu \\
+M_2 & \sqrt{2}M_W\sin\beta \\
+\sqrt{2}M_W\cos\beta & \mu \\
 \end{pmatrix}
 \label{eq:chargino}
 \end{equation}
 
 \begin{equation}
-M_{\chi^\pm}=
+M_{\chi^0}=
 \begin{pmatrix}
-M_1 & 0 & -M_Zcos\beta sin\theta_W & M_Zsin\beta sin\theta_W\\
-0 & M_2 & M_Zcos\beta cos\theta_W & -M_Zsin\beta cos\theta_W\\
--M_Zcos\beta sin\theta_W & M_Zcos\beta cos\theta_W & 0 & -\mu \\
-M_Zsin\beta sin\theta_W & -M_Zsin\beta cos\theta_W & -\mu & 0 \\
+M_1 & 0 & -M_Z\cos\beta \sin\theta_W & M_Z\sin\beta \sin\theta_W\\
+0 & M_2 & M_Z\cos\beta \cos\theta_W & -M_Z\sin\beta \cos\theta_W\\
+-M_Z\cos\beta \sin\theta_W & M_Z\cos\beta \cos\theta_W & 0 & -\mu \\
+M_Z\sin\beta \sin\theta_W & -M_Z\sin\beta \cos\theta_W & -\mu & 0 \\
 \end{pmatrix}
 \label{eq:neutralino}
 \end{equation}
-In these equations, $cos\beta$ and $sin\beta$ are the x- and y-components of $tan\beta$.  When $\mu\ll~M_1,~M_2$, the mass eigenstates of the mass mixing matrices are mostly Higgsino with little or no wino/bino mixing.  When the eigenstates are purely Higgsino, the solution gives a fully degenerate set of electroweakinos\footnote{Small mass-splitting of order MeV can occur through radiative corrections.}, and there needs to be some level of wino/bino mixing added in to get small differences between the lightest and next-to-lightest chargino and neutralino masses \cite{PhysRevD.93.063525}.
-
-
-%Explain about naturalness in electroweak SUSY and how this would make the Higgsino light, at the electroweak scale, and how the winos and binos, with masses given by $M_1$ and $M_2$, can still be heavy.
-
-\cite{PhysRevD.96.055018}
-\cite{Martin:1997ns}
-
-
-\textit{Try} to explain how the electroweakino mass spectrum works and that the more Higgsino like they are the smaller the mass-splittings become, until pure Higgsino states are completely degenerate.
-
-\textcolor{red}{Maybe mention in reference to sleptons that the SM fermions have left and right chirality and these parts might not transform the same.  the superpartners of the SM fermions must be in chiral supermultiplets, and be spin-0 scalars rather than spin-1 vector bosons.}
-
-\subsection{Phenomenology of Directly Produced Higgsinos and Sleptons in Compressed Scenarios}
-\label{sec:pheno}
-
-The MSSM is defined to conserve R-parity.  All the SM particles have R-parity +1, while all SUSY particles have R-parity -1.  R-parity is defined as:
+In these equations, $\cos\beta$ and $\sin\beta$ are the x- and y-components of $\tan\beta$.  The structure of wino/bino/higgsino mixing and relative mass spectrum of the lightest electroweakinos is governed by the relative magnitudes of the mass parameters $M_1$, $M_2$, and $\mu$ in Equations~\ref{eq:chargino} and~\ref{eq:neutralino}.  When $|\mu|\ll~|M_1|,~|M_2|$, the lightest mass eigenstates of the mass mixing matrices are mostly Higgsino with little or no wino/bino mixing.  When the eigenstates are purely Higgsino, the solution gives a fully degenerate set of electroweakinos\footnote{Small mass-splitting of order 200 MeV can occur through radiative corrections.}, and there needs to be some level of wino/bino mixing added to get larger differences between the lightest and next-to-lightest chargino and neutralino masses \cite{PhysRevD.93.063525}.  \textcolor{red}{Here define the LSP as the $\tilde\chi_1^0$.  This case gives. Higgsino LSP.}  Another relevant scenario, $|M_1| <|M_2|\ll~|\mu|$, leads to wino dominated $\tilde\chi_1^\pm$ and $\tilde\chi_2^0$ states that are nearly mass degnerate and $\sim~1-10\GeV$ heavier than the bino LSP. Other scenarios can occur as well, for example: the Higgsino-bino model $|\mu|\sim |M_1|\ll~|M_2|$, the Higgsino-wino model $|\mu|\sim |M_2|\ll~|M_1|$ and the wino-bino model $|M_1|\sim |M_2|\ll~|\mu|$ display mass spectra related to $\Delta(\mu, M_1)$, $\Delta(\mu, M_2)$ and $\Delta(M_1, M_2)$ respectively~\cite{PhysRevD.96.055018}.  
+  
+The MSSM is defined to conserve R-parity.  All SM particles have R-parity +1, while all SUSY particles have R-parity -1.  R-parity is defined as:
 \begin{equation}
  P_R=(-1)^{3(B+L)+2s}
  \end{equation}
- where B and L are the baryon number and lepton number defined in Section~\ref{sec:sm}.  The conservation of R-parity means that, in the collision of two R-parity even SM particles, R-parity odd SUSY particles must be produced in pairs, and the subsequent decay chain of each must with the lightest SUSY particle (LSP) in the MSSM model.  The LSP must be stable since decaying to only lighter SM particles would fail to conserve R-parity. 
- 
- 
-\textcolor{red}{ There is so far no sign of the colored sector, so we can ignore those all together by assuming there masses and very large.  We can exploit the dilepton invariant mass for the electroweakinos, but the slepton model does not have the same sensitivity.  For sleptons signals, we can exploit the angular correlations between the SM leptons and the met coming from the neutralino LSP.}
+ where B and L are the baryon number and lepton number defined in Section~\ref{sec:sm}.  The conservation of R-parity means that, in the collision of two R-parity even SM particles, R-parity odd SUSY particles must be produced in pairs, and the subsequent decay chain of each must end with the lightest SUSY particle (LSP) in the MSSM model.  The LSP must be stable since the only kinematically available decays are to lighter SM particles, which would violate R-parity conservation.  The stability of a weakly interacting LSP in R-parity conserving models can make them good candidates for dark matter.  
 
-Say here a word or two about how these two searches are so similar they are combined into one search effort with minor differences in their search strategies.
-
-%\subsection{Higgsino Simplified Models}
-Higgsinos are the superpartners of the Standard Model Higgs doublets, the masses of which are controlled by the $\mu$ parameter, which, in supersymmetry, enters directly into the Higgs mass mixing matrix for calculating the squared Higgs mass $M_H^2$. \cite{han}  \textcolor{red}{Naturalness of the Higgsinos refers to the fact that in order for electroweak symmetry breaking to occur at the correct scale without any unnatural corrections, the parameter $\mu$ must be near the weak scale $\approx 100~\GeV$.}. Other supersymmetric particles enter the mass matrix indirectly through quantum loop corrections, but the Higgsinos are the only particle to have a direct effect on the Higgs mass.  This make Higgsinos a powerful tool in understanding electroweak symmetry breaking in SUSY.
-
-Could search for Higgsinos through direct production of squarks that then decay to Higgsinos, but these particles have little effect on the mass of the Higgs and therefor, may naturally have masses well beyond the reach of the LHC.  Also, Higgsino models are very sensitive to the spectrum of light SUSY particles when trying to observe them through direct squark production.
-
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsection{Phenomenology of Directly Produced Higgsinos and Sleptons in Compressed Scenarios}
+\label{sec:pheno}
  \begin{figure}%[h!]
   \begin{center}
-  \includegraphics[width=0.5\textwidth]{/Users/sheenaschier/Documents/LaFiles/figures/thesis/theory/C1N2-WZN1N1}
+  \includegraphics[width=0.64\textwidth]{/Users/sheenaschier/Documents/LaFiles/figures/thesis/theory/C1N2-WZN1N1}
+  \includegraphics[width=0.35\textwidth]{/Users/sheenaschier/Documents/LaFiles/figures/thesis/theory/SEW_mass_spectra2}
    \end{center}
- \caption{Feynman diagram of direct Higgsino production}
+ \caption{Feynman diagram of direct Higgsino production (left), and schematic of electroweakino mass spectrum (right)}
  \label{fig:fn1}
  \end{figure}
- 
-Direct Higgsino production allows one to remain fairly agnostic to the spectrum of the SUSY sector, and therefore, retain sensitivity to a large range of EWSB SUSY models.  Unfortunately, the direct production of electroweakinos, including Higgsinos, is subject to electroweak cross-sections, limiting the search sensitivity at the LHC.  \textit{Refer to the Feynman diagram in Figure~\ref{fig:fn1}.}  When the mass differences between the electroweakinos are close to mass of the $W$ boson, Standard Model $W$ and $Z$ bosons are produced on-shell, or produced at their nominal masses, and about $30\%$ of the time will decay leptonically, subsequently giving birth to detectable leptons.  In this case, analyses have been performed in both ATLAS and CMS to search for all three leptons from the $W$ and $Z$, where the $Z$ can be reconstructed from an opposite-sign-same-flavor lepton pair.  The searches also require a substantial amount of missing transverse momentum from the lightest neutral electroweakinos.
-
-When the mass-splittings fall below the $W$ mass, the $W$ and $Z$ bosons are produced off-shell, they are lighter than their nominal $80-90~\GeV$ mass, and the leptons from these decays become softer, or less energetic.  This type of analysis is limited by how well these events are recorded, and how efficiently leptons are reconstructed at low energies.  Until recently, no experiment at the LHC has been able to search for these models with electroweakino mass-splittings below $\approx 60~\GeV$.  \textcolor{red}{Introduce the 2 lepton search and the Feynman diagram.}
-
-\textit{Say something before here about using simplified models}.
-One important kinematic feature in these Higgsino simplified models is the dilepton invariant mass distribution and how it is linked to the mass-splitting between the chargino and the lightest neutralino through the mass of the very off-shell $Z$.
-
- \begin{figure}%[h!]
+This analysis targets direct production of electroweakinos that decay to  Higgsino LSPs, as in Figure~\ref{fig:fn1} and sleptons that decay to bino LSPs , as in Figure~\ref{fig:fn2} in compressed scenarios.  Small mass splittings among the electroweakinos come from the Higgsino scenario with $\mu\ll~M_1,~M_2$, and in order for supersymmetry breaking to occur at the correct scale without any unnatural corrections, the parameter $\mu$ must be near the weak scale $\approx 100~\GeV$, which sets the Higgsinos masses near the weak scale, while allowing the winos and binos, with masses given by $M_1$ and $M_2$, to still be heavy.  Sleptons can have masses near the weak scale just above the mass of a pure bino LSP, as motivated by "coannihilation" scenarios~\cite{seckel}, when $|M_1| <|M_2|\ll~|\mu|$.  In the natural scenario, $M_1$ and $M_2$ are near the weak scale, and the bino becomes a valid dark matter candidate, except that it leads to a higher dark matter relic abundance than measured with the WMAP and Planck experiments.  This motivates setting the slepton mass just above the bino LSP so that coannihilation between the bino and the sleptons can occur~\cite{gondolo}.  So far, there no sign of the colored SUSY sector, so we can ignore the colored states all together by assuming there masses are very large.  
+   \begin{figure}%[h!]
   \begin{center}
-  \includegraphics[width=0.7\textwidth]{/Users/sheenaschier/Documents/LaFiles/figures/thesis/theory/Feynman_2}
+  \includegraphics[width=0.64\textwidth]{/Users/sheenaschier/Documents/LaFiles/figures/thesis/theory/slsl-llN1N1j.pdf}
+   \includegraphics[width=0.35\textwidth]{/Users/sheenaschier/Documents/LaFiles/figures/thesis/theory/SEW_mass_spectra_slep}
+   \end{center}
+ \caption{Feynman diagram of direct slepton production (left) and schematic of electroweakino and slepton mass spectrum}
+ \label{fig:fn2}
+  \end{figure}
+
+One way to search for Higgsinos is through direct production of squarks that then decay to Higgsinos, but these particles have little effect on the mass of the Higgs, and therefor, may naturally have masses well beyond the reach of the LHC.  Also, Higgsino models are very sensitive to the spectrum of light SUSY particles when trying to observe them through direct squark production.  Direct Higgsino or slepton production allows one to remain fairly agnostic to the spectrum of the SUSY sector, and therefore, retain sensitivity to a large range of weak-scale SUSY models.  Unfortunately, the direct production of electroweakinos, including Higgsinos, is subject to electroweak cross-sections $\sim 1\ipb$, and the slepton cross-sections are even lower, limiting the search sensitivity at the LHC.  Figure~\ref{fig:thy:xsec} shows the cross-sections for the SUSY particles in the MSSM as a function of mass to show how much smaller electroweakino and slepton cross-sections are compared to strongly produced SUSY.
+
+     \begin{figure}%[h!]
+  \begin{center}
+  \includegraphics[width=0.6\textwidth]{/Users/sheenaschier/Documents/LaFiles/figures/thesis/theory/SUSYx-sec.png}
+   \end{center}
+ \caption{SUSY cross-sections in pp collisions~\cite{Bechtle:2015nta}}
+ \label{fig:thy:xsec}
+ \end{figure}
+
+When the electroweakino mass-splittings are close to mass of the $W$ boson, Standard Model $W$ and $Z$ bosons are produced on-shell, or produced at their nominal masses, and about $30\%$ of the time will decay to detectable leptons.  In this case, analyses have been performed in both ATLAS and CMS to search for all three leptons from the $W$ and $Z$, where the $Z$ can be reconstructed from an opposite-sign-same-flavor lepton pair.  These searches also require a substantial amount of missing transverse momentum from the lightest neutral electroweakinos.  When the mass-splittings fall below the $W$ mass, the $W$ and $Z$ bosons are produced off-shell, they are lighter than their nominal $80-90~\GeV$ mass, and the leptons from these decays become less energetic, or \textit{softer}.  When the leptons become very soft, triggering and lepton reconstruction become challenging; therefore, dedicated efforts are needed to probe model-space where the electroweakino mass-splittings are less than $\sim~60\GeV$. 
+   \begin{figure}%[h!]
+  \begin{center}
+  \includegraphics[width=0.8\textwidth]{/Users/sheenaschier/Documents/LaFiles/figures/thesis/theory/Feynman_2}
    \end{center}
  \caption{Feynman diagram of direct Higgsino production in compressed scenario}
- \label{fig:fn1}
+ \label{fig:fn3}
  \end{figure}
- \FloatBarrier
-% \subsection{Slepton Simplified Models}
- Explain slepton models and direct production of sleptons
- 
- Talk about searches for models with large mass-splittings and how there is redundancy with the Higgsino models in why these searches have not been available for models with small mass-splitting between the sleptons, whcih assume a fourfold degeneracy, and the lightest neutral electroweakino.
- 
- Talk about the $m{T2}$ variable and why is s great discriminator for these signals.
- 
-  \begin{figure}%[h!]
+For final states with soft leptons and \met{}, requiring a hard ISR jet in the event helps sculpt the kinematic signature in a way that makes the decays of the nearly degenerate particles more distinguished from the backgrounds.  Figure~\ref{fig:fn3} points out some of the kinematic features of direct production of compressed electroweakinos with an ISR jet.   The jet boosts the system, increases the \met, and forces a large angular separation between the leading jet in the system and the intermediate amount of \met.  Having more \met associated with the LSPs is also important for triggering, as \met might be the most efficient object on which to trigger.  The characteristic are also relevant for compressed slepton production with hardonic ISR.  
+
+Another important feature is that the dilepton invariant mass ($m_{\ell\ell}$) distribution electroweakino production is linked to the mass-splitting between the chargino and the lightest neutralino through the mass of the very off-shell $Z$.  We can exploit the dilepton invariant mass for the electroweakinos, through what is called the kinematic end-point, which is a strict limit on the dilepton invariant mass set by $m(\tilde\chi_2^0)-m(\tilde\chi_1^0)$. The sleptons do not have the same sensitivity in $m_{\ell\ell}$, but instead show angular correlations between the SM leptons and \met{} coming from the bino LSP.  This relationship is expressed through a variable called the \textit{stransverse mass} ($M_{T2}$), which is define in Chapter~\ref{ch:sr}, and is subject to kinematic boundaries set by the mass of the LSP and its difference from the slepton masses.
+
+ \iffalse
+   \begin{figure}%[h!]
   \begin{center}
-  \includegraphics[width=0.5\textwidth]{/Users/sheenaschier/Documents/LaFiles/figures/thesis/theory/slsl-llN1N1j.pdf}
+  \includegraphics[width=0.7\textwidth]{/Users/sheenaschier/Documents/LaFiles/figures/thesis/theory/SEW_mass_spectra.png}
    \end{center}
- \caption{Feynman diagram of direct slepton production}
- \label{fig:fn1}
+ \caption{Schematic of the mass spectrum among lightest electroweakinos, $\tilde\chi_1^0$, $\tilde\chi_1^\pm$, and $\tilde\chi_2^0$.}
+ \label{fig:thy:mass}
  \end{figure}
+ \fi
+ \FloatBarrier
+
+ 
