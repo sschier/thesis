@@ -11,24 +11,24 @@ The chapter will describe the actual and simulated data used for this analysis a
  \caption{Cumulative luminosity versus time delivered to (green) and recorded by (yellow) ATLAS during stable beams for $pp$ collisions at $13~\TeV$ in 2015 (left) and 2016 (right).}
  \label{fig:lumi}
  \end{figure}
-In June of 2015, the LHC began $pp$ collisions at $\sqrt{s}=13~\TeV$ in a run campaign called "Run-2", that is scheduled to continue through the end of 2018.  The center of mass energy in Run-2 collisions is almost a factor of 2 higher than in the previous LHC Run-1 campaign that lasted from 2010 through 2012. The analysis described in this thesis uses $pp$ collision data at $\sqrt{s}=13~\TeV$ created at the LHC and recorded by ATLAS in 2015 and 2016.  In those two years, the peak instantaneous luminosity progressed from $5\times10^{33}~cm^{-2}~s^{-1}$ in 2015, to $13.8\times10^{33}~cm^{-2}~s^{-1}$ in 2016, corresponding to a combined $36.1~fb^{-1}$ of total integrated luminosity, $90\%$ of which comes from 2016 data-taking.  The cumulative luminosity versus day in 2015 and 2016 are separately shown in Figure~\ref{fig:lumi}.
+In June of 2015, the LHC began $pp$ collisions at $\sqrt{s}=13\TeV$ in a run campaign called "Run-2", that is scheduled to continue through the end of 2018.  The center of mass energy in Run-2 collisions is almost a factor of 2 higher than in the previous LHC Run-1 $\sqrt{s}=8\TeV$ campaign that lasted from 2010 through 2012. The analysis described in this thesis uses $pp$ collision data at $\sqrt{s}=13\TeV$ created at the LHC and recorded by ATLAS in 2015 and 2016.  In those two years, the peak instantaneous luminosity progressed from $5\times10^{33}~\mathrm{cm}^{-2}~\mathrm{s}^{-1}$ in 2015, to $13.8\times10^{33}~\mathrm{cm}^{-2}~\mathrm{s}^{-1}$ in 2016, corresponding to a combined $36.1~\mathrm{fb}^{-1}$ of total integrated luminosity, $90\%$ of which comes from 2016 data-taking.  The cumulative luminosity versus day in 2015 and 2016 are separately shown in Figure~\ref{fig:lumi}.
 
-Events in data are initially selected from the sea of LHC events using different inclusive \met{} triggers according to the lowest \met{} threshold available that is not prescaled.  A trigger prescale refers to the fraction of data passing the trigger that gets stored, so having an unprescaled trigger means that every event passing the trigger is kept.  The \met{} threshold of the lowest unprescaled trigger can increase as data taking progresses if the increasing luminosity makes the trigger rate too large.  Table~\ref{tab:trig} shows the evolution of and the corresponding cumulative integrated luminosity collected from the lowest unprescaled \met{} trigger during 2015+2016 data taking.  The lowest unprescaled \met{} trigger threshold throughout 2015 was $70~\GeV$ and grew to $110~\GeV$ towards the middle of 2016.
+Events in data are initially selected using different inclusive \met{} triggers according to the lowest \met{} threshold available that is not prescaled.  A trigger prescale refers to the fraction of data passing the trigger that gets stored, so having an unprescaled trigger means that every event passing the trigger is kept.  The \met{} threshold of the lowest unprescaled trigger can increase as data taking progresses if the increasing luminosity makes the trigger rate too large.  Table~\ref{tab:trig} shows the evolution of and the corresponding cumulative integrated luminosity collected from the lowest unprescaled \met{} trigger during 2015+2016 data taking.  The lowest unprescaled \met{} trigger threshold throughout 2015 was $70\GeV$ and grew to $110\GeV$ towards the middle of 2016.
 \begin{table}[!htb]
 \begin{center}
 \begin{tabular}{ccccc}
 \hline
 Data Period  & \met Threshold & Total Integrated Lumi \\
 \hline
-2015 & $70~\GeV$ & $3.2~fb^{-1}$ \\   
+2015 & $70\GeV$ & $3.2~fb^{-1}$ \\   
 \hline \hline
 2016&&\\
 \hline 
-April-June & $90~\GeV$ & $7.5~fb^{-1}$\\ 
-July-Oct & $110~\GeV$ & $25.4~fb^{-1}$ \\   
+April-June & $90\GeV$ & $7.5~fb^{-1}$\\ 
+July-Oct & $110\GeV$ & $25.4~fb^{-1}$ \\   
 \hline
 \end{tabular}
-\caption{Evolution of lowest unprescaled \met trigger and corresponding total integrated luminosity from the start of 2015 to the end of 2016. }
+\caption{Evolution of lowest unprescaled \met trigger and corresponding total integrated luminosity from the start of 2015 to the end of 2016.  All through 2015 the lewest unprescaled \met{} trigger threshold was $70\GeV$, and increased to $90\GeV$ at the start of 2016.  By July of 2016, the threshold rose to $110\GeV$. }
 \label{tab:trig}
 \end{center}
 \end{table}  
@@ -38,106 +38,102 @@ July-Oct & $110~\GeV$ & $25.4~fb^{-1}$ \\
 
 \section{Simulated Signal Samples}
 \label{sec:sig}
-This analysis is designed around two types of signal processes, for which simulated samples were generated using SUSY Higgsino and slepton simplified models \cite{wacker, toro, alves}.  To help interpret the results, another simplified model assuming the direct production of mostly wino like electroweakinos is considered.  Each of these simplified models incorporate the structure and kinematics of the full MSSM with the majority of the free parameters decoupled, leaving only the $\mu$, $M_1$, and $M_2$ to float.  The production cross-sections in these simplified models, shown in Fig.~\ref{fig:xsec}, are SUSY MSSM cross-sections calculated in terms of $\mu$, $M_1$, and $M_2$. 
+This analysis is designed around two types of signal processes, for which simulated samples were generated using SUSY Higgsino and slepton simplified models \cite{wacker, toro, alves}.  To help interpret the results, another simplified model assuming the direct production of wino-like electroweakinos is considered.  Each of these simplified models incorporate the structure and kinematics of the full MSSM with the majority of the mass parameters decoupled, leaving only $\mu$, $M_1$, and $M_2$ to float at low scales.  The production cross-sections in these simplified models, shown in Fig.~\ref{fig:xsec}, are SUSY MSSM cross-sections calculated in terms of $\mu$, $M_1$, and $M_2$. 
   \begin{figure}[tbp]
-   \includegraphics[width=0.6\columnwidth]{/Users/sheenaschier/Documents/LaFiles/figures/thesis/signal_samples/slepton_higgsino_13TeV_xsect.pdf}
-   \caption{\cite{fuks, klasen}}
+   \includegraphics[width=0.8\columnwidth]{/Users/sheenaschier/Documents/LaFiles/figures/thesis/signal_samples/slepton_higgsino_13TeV_xsect.pdf}
+   \caption{Cross-sections for electroweakino $\tilde\chi$ and slepton $\tilde\ell$ pair production in LHC pp collisions at $\sqrt{s}=13\TeV$ from LHC SUSY Cross-sections Working Group and Refs.~\cite{fuks, klasen}.  Total cross-sections are exhibited according to production process, with electroweakinos labelled as either being wino $\tilde W$ or Higgsino $\tilde H$ and slepton by their right and left handed chirality.}
    \label{fig:xsec}
   \end{figure}
 
-The Higgsino simplified model assumes direct production of Higgsino-like electroweakino pairs that decay to their SM partners and a Higgsino-like LSP.  The complete set of Higgsino signal samples include the production of $\tilde\chi_2^0\chi_1^+$, $\tilde\chi_2^0\chi_1^-$ , $\tilde\chi_2^0\chi_1^0$, and $\tilde\chi_1^+\chi_1^-$ on a grid of $\chi_1^0$ and $\chi_2^0$ masses.  The chargino mass is set in terms of $m(\chi_1^0)$ and $m(\chi_2^0)$ as $m(\chi_1^\pm)=\frac{1}{2}[m(\chi_1^0)+m(\chi_2^0)]$.  The signal cross-sections are calculated at next-to-leading order in the strong coupling, and next-to-leading-logarithm order for soft gluon corrections with a package called Resummino v1.0.7 \cite{fuks, klasen}.
+The Higgsino simplified model assumes direct production of Higgsino-like electroweakino pairs that decay to $W$ and $Z$ bosons and a Higgsino-like LSP.  The complete set of Higgsino signal samples include the production of $\tilde\chi_2^0\tilde\chi_1^+$, $\tilde\chi_2^0\tilde\chi_1^-$ , $\tilde\chi_2^0\tilde\chi_1^0$, and $\tilde\chi_1^+\tilde\chi_1^-$ on a grid of $\tilde\chi_1^0$ and $\tilde\chi_2^0$ masses.  The chargino mass is set in terms of $m(\tilde\chi_1^0)$ and $m(\tilde\chi_2^0)$ as $m(\tilde\chi_1^\pm)=\frac{1}{2}[m(\tilde\chi_1^0)+m(\tilde\chi_2^0)]$.  The signal cross-sections are calculated at next-to-leading order in the strong coupling, and next-to-leading-logarithm order for soft gluon corrections with Resummino v1.0.7 \cite{fuks}.
 
 %Signal is produced from $Z^*$ decays and so the $\tilde\chi_1^+\chi_1^-$ samples don't really play a role in the optimization.  The cross-sections are too low and the lepton pairs come from two $W$-boson decays.  
-This analysis targets $\tilde\chi_2^0-\chi_1^0$ mass-splittings of $1-10~\GeV$, which is not a natural artifact of pure Higgsino models.  Radiative corrections give rise to mass-splittings of pure Higgsino states of order MeV, and some level of wino or bino mixing is needed for larger mass splittings.  The models used to generate Higgsino signal samples use cross-sections according to electroweak mixing matrices that assume pure Higgsino states for all mass combinations of $\tilde\chi_2^0, \chi_1^0$, $\tilde\chi_1^+$, and $\chi_1^-$.  
-Branching ratios for $\tilde\chi_2^0 \rightarrow Z^*\tilde\chi_1^0$ and $\tilde\chi_1^\pm \rightarrow W^* \tilde\chi_1^0$ are fixed at 100\%.  $Z^*\rightarrow \ell^+\ell^-$ branching fractions are modeled with SUSY-HIT v1.5b, which correctly treats the finite b-hadron and $\tau$-lepton masses \cite{spira}.  
-The branching ratio $Z^* \rightarrow \ell^+\ell^-$ depends on the invariant mass of the $Z^*$, which is driven by the mass-splitting between $\chi^0_2$ and $\chi^0_1$.  For example, the $Z^* \rightarrow \ell^+\ell^-$ branching ratio for a 60 GeV mass-splitting is lower than for a mass-splitting of 2 GeV by  $46\%$ in $Z^* \rightarrow e^+e^-$ and by $40\%$ for $Z^* \rightarrow \mu^+\mu^-$.  This happens as the $Z^*$ mass falls below the threshold needed to produce a pair of heavy quarks or $\tau$ leptons.  Branching ratio for $W^* \rightarrow \bar{\nu}_\ell \ell$ also increases as the mass-splitting becomes sufficiently low to suppress decay widths to heavy quarks and $tau$ leptons. %($11\%$ for large $\Delta m$ changes to $20\%$ for a $\Delta m$ of 3 GeV.
+This analysis targets $\tilde\chi_2^0-\tilde\chi_1^0$ mass-splittings of $1-10\GeV$, which is not a natural spectrum in pure Higgsino models.  Radiative corrections give rise to mass-splittings of pure Higgsino states of order $200\MeV$, and some level of wino or bino mixing is needed for larger mass splittings.  The models used to generate Higgsino signal samples use cross-sections according to electroweak mixing matrices that assume pure Higgsino states for all mass combinations of $\tilde\chi_2^0, \chi_1^0$, $\tilde\chi_1^+$, and $\tilde\chi_1^-$.  Branching ratios for $\tilde\chi_2^0 \rightarrow Z^*\tilde\chi_1^0$ and $\tilde\chi_1^\pm \rightarrow W^* \tilde\chi_1^0$ are fixed at 100\%.  $Z^*\rightarrow \ell^+\ell^-$ branching fractions are modeled with SUSY-HIT v1.5b~\cite{spira}, which correctly treats the finite b-hadron and $\tau$-lepton masses \cite{spira}.  
+The branching ratio $Z^* \rightarrow \ell^+\ell^-$ depends on the invariant mass of the $Z^*$, which is driven by the mass-splitting between $\tilde\chi^0_2$ and $\tilde\chi^0_1$.  For example, the $Z^* \rightarrow \ell^+\ell^-$ branching ratio for a 60 GeV mass-splitting is lower than for a mass-splitting of 2 GeV by  $46\%$ in $Z^* \rightarrow e^+e^-$ and by $40\%$ for $Z^* \rightarrow \mu^+\mu^-$.  This happens as the $Z^*$ mass falls below the threshold needed to produce a pair of heavy quarks or $\tau$ leptons.  Branching ratio for $W^* \rightarrow \bar{\nu}_\ell \ell$ also increases as the mass-splitting becomes sufficiently low to suppress decay widths to heavy quarks and $\tau$-leptons. %($11\%$ for large $\Delta m$ changes to $20\%$ for a $\Delta m$ of 3 GeV.  
 
-Events are generated at leading order with up to two extra partons in the matrix element using MG5\_aMC@NLO v2.4.2 event generator \cite{alwall} and the NNPDF23LO PDF set \cite{ball}.  Electroweakinos are decayed via MadSpin \cite{1126-6708-2007-04-081, Artoisenet2013} with a two-lepton event filter.  This means, events that were stored in the signal samples contained at least two final state leptons, even if one or more of the leptons came from a leptonic $\tau$ decay.  The resulting events are interfaced with Pythia v8.186 using the A14 set of tuned parameters to model the parton shower, hadronization, and underlying event.  ME-CS matching done with CKKWL-scheme, with the merging scale set to 15 GeV.
+Events are generated at leading order with up to two extra partons in the matrix element using MG5\_aMC@NLO v2.4.2 event generator \cite{alwall} and the NNPDF23LO parton distribution function (PDF) set \cite{ball}.   A PDF is a description of the parton momentum distribution inside a proton or other hadron in terms of the parton momentum fraction $x$ for a given squared energy scale $Q^2$.   Electroweakinos are decayed via MadSpin \cite{1126-6708-2007-04-081, Artoisenet2013} with a two-lepton event filter.  This means, events that were stored in the signal samples contained at least two final state leptons, even if one or more of the leptons came from a leptonic $\tau$ decay.  The resulting events are interfaced with Pythia v8.186~\cite{pythia} using the A14~\cite{a14} set of PDF tune parameters to model the parton shower, hadronization, and underlying event.  The A14 set tune parameters correspond to the leading tune parameters in the CTEQ6L1~\cite{Pumplin:2002vw}, MSTW2008LO~\cite{Watt:2012tq}, NNPDF23LO~\cite{ball}, and HERAPDF15LO PDF sets.  Matrix element parton shower (ME-PS) jet matching is done with CKKW-L scheme~\cite{ckkwl}, with the merging scale set to 15 GeV.  
 
-
-
-\textcolor{red}{Introduce signal distributions}
-
-%\textcolor{red}{Must talk about how the relative sign of the $chi_1$ and $\chi_2$ mass parameters affects the model.} %U. De Sanctis, T. Lari, S. Montesano, and C. Troncon, Perspectives for the detection and measurement of supersymmetry in the focus point region of mSUGRA models with the ATLAS detector at LHC, Eur. Phys. J. C 52 (2007) 743, arXiv: 0704.2515 [hep-ex].}
+Figure~\ref{fig:SigSample1} shows kinematic distributions in direct electroweakino production samples with decays and parton showing simulated the same as described above.  Events are selected with at least two \textit{signal} leptons with $\pt>3\GeV$, at least one \textit{signal} jet with $\pt>20\GeV$, and \met{}>50, and electroweakino masses ($m_{\tilde\chi_2^0}$, $m_{\tilde\chi_1^\pm}$, $m_{\tilde\chi_1^0}$) are set to ($120\GeV$, $110\GeV$, $100\GeV$).  In these plots, all four production mechanisms are shown: $\tilde\chi_2^0\tilde\chi_1^0$ in green, $\tilde\chi_2^0\tilde\chi_1^+$ in red, $\tilde\chi_2^0\tilde\chi_1^-$ in blue, and $\tilde\chi_1^\pm\tilde\chi_1^\mp$ in magenta.  One distinct feature is that the dilepton invariant mass $m_{\ell\ell}$ in Figure~\ref{fig:SigSample1} falls off sharply at the mass-difference $m_{\tilde\chi_2^0}-m_{\tilde\chi_1^0} = 20\GeV$.  Other important characteristics are the distance between the leading lepton pair $\Delta R_{\ell_1\ell_2}$ is generally less than 1, and the angular distance between the leading jet and \met $\Delta\phi_{j_1-\met{}}$ concentrated near $\pi$, which means they are mostly back-to-back.  These kinematic variables and features will be explained more in Chapter~\ref{ch:sr}. 
 
   \begin{figure}[tbp]
    % \centering
  \includegraphics[width=0.45\columnwidth]{/Users/sheenaschier/Documents/LaFiles/figures/thesis/signal_samples/ossf_Lep1Pt.pdf}
  \includegraphics[width=0.45\columnwidth]{/Users/sheenaschier/Documents/LaFiles/figures/thesis/signal_samples/ossf_Lep2Pt.pdf}\\
- \includegraphics[width=0.45\columnwidth]{/Users/sheenaschier/Documents/LaFiles/figures/thesis/signal_samples/ossf_nLep_signal.pdf}
- \includegraphics[width=0.45\columnwidth]{/Users/sheenaschier/Documents/LaFiles/figures/thesis/signal_samples/ossf_lep_type.pdf}\\
-  \includegraphics[width=0.45\columnwidth]{/Users/sheenaschier/Documents/LaFiles/figures/thesis/signal_samples/ossf_mll.pdf}
- \includegraphics[width=0.45\columnwidth]{/Users/sheenaschier/Documents/LaFiles/figures/thesis/signal_samples/ossf_ptll.pdf}\\
+ %\includegraphics[width=0.45\columnwidth]{/Users/sheenaschier/Documents/LaFiles/figures/thesis/signal_samples/ossf_nLep_signal.pdf}
+ \includegraphics[width=0.45\columnwidth]{/Users/sheenaschier/Documents/LaFiles/figures/thesis/signal_samples/ossf_lep_type.pdf}
+  \includegraphics[width=0.45\columnwidth]{/Users/sheenaschier/Documents/LaFiles/figures/thesis/signal_samples/ossf_mll.pdf}\\
+ %\includegraphics[width=0.45\columnwidth]{/Users/sheenaschier/Documents/LaFiles/figures/thesis/signal_samples/ossf_ptll.pdf}\\
   \includegraphics[width=0.45\columnwidth]{/Users/sheenaschier/Documents/LaFiles/figures/thesis/signal_samples/ossf_dR_l1l2.pdf}
-
-   \caption{Kinematic distributions of signal samples}
+    \includegraphics[width=0.45\columnwidth]{/Users/sheenaschier/Documents/LaFiles/figures/thesis/signal_samples/ossf_MET.pdf}\\
+      \includegraphics[width=0.45\columnwidth]{/Users/sheenaschier/Documents/LaFiles/figures/thesis/signal_samples/ossf_dphi_j1met.pdf}
+       \includegraphics[width=0.45\columnwidth]{/Users/sheenaschier/Documents/LaFiles/figures/thesis/signal_samples/ossf_Jet1Pt.pdf}
+ \caption{Kinematics distribution in electroweakino signal samples, with decays simulated with MadSpin and parton showing performed by Pythia v8.186.}
    \label{fig:SigSample1}
  \end{figure}
  
+ \iffalse
    \begin{figure}[tbp]
    % \centering
-     \includegraphics[width=0.45\columnwidth]{/Users/sheenaschier/Documents/LaFiles/figures/thesis/signal_samples/ossf_MET.pdf}
-      \includegraphics[width=0.45\columnwidth]{/Users/sheenaschier/Documents/LaFiles/figures/thesis/signal_samples/ossf_dphi_j1met.pdf}\\
-         \includegraphics[width=0.45\columnwidth]{/Users/sheenaschier/Documents/LaFiles/figures/thesis/signal_samples/ossf_Mt_l1met.pdf}
- \includegraphics[width=0.45\columnwidth]{/Users/sheenaschier/Documents/LaFiles/figures/thesis/signal_samples/ossf_Mt_l2met.pdf}\\
- \includegraphics[width=0.45\columnwidth]{/Users/sheenaschier/Documents/LaFiles/figures/thesis/signal_samples/ossf_Jet1Pt.pdf}
-\includegraphics[width=0.45\columnwidth]{/Users/sheenaschier/Documents/LaFiles/figures/thesis/signal_samples/ossf_Jet2Pt.pdf}\\
-  \includegraphics[width=0.45\columnwidth]{/Users/sheenaschier/Documents/LaFiles/figures/thesis/signal_samples/ossf_nJet20.pdf}
-
- 
-   \caption{Kinematic distributions of signal samples}
+     \includegraphics[width=0.45\columnwidth]{/Users/sheenaschier/Documents/LaFiles/figures/thesis/signal_samples/ossf_MET.pdf}      
+    %  \includegraphics[width=0.45\columnwidth]{/Users/sheenaschier/Documents/LaFiles/figures/thesis/signal_samples/ossf_Mt_l1met.pdf}\\
+      \includegraphics[width=0.45\columnwidth]{/Users/sheenaschier/Documents/LaFiles/figures/thesis/signal_samples/ossf_dphi_j1met.pdf}
+     \includegraphics[width=0.45\columnwidth]{/Users/sheenaschier/Documents/LaFiles/figures/thesis/signal_samples/ossf_Jet1Pt.pdf}
+% \includegraphics[width=0.45\columnwidth]{/Users/sheenaschier/Documents/LaFiles/figures/thesis/signal_samples/ossf_Mt_l2met.pdf}\\
+%\includegraphics[width=0.45\columnwidth]{/Users/sheenaschier/Documents/LaFiles/figures/thesis/signal_samples/ossf_Jet2Pt.pdf}\\
+  %\includegraphics[width=0.45\columnwidth]{/Users/sheenaschier/Documents/LaFiles/figures/thesis/signal_samples/ossf_nJet20.pdf}
+\caption{Jet and \met{} kinematics in electroweakino signal samples, with decays simulated with MadSpin and parton showing performed by Pythia v8.186.}
    \label{fig:SigSample2}
  \end{figure}
+ \fi
 
-\FloatBarrier
  
-%\subsection{Compressed Slepton Samples}
-Slepton simplified models exploit the direct pair productions of the selectron $\tilde{e}_{L,R}$ and smuon $\tilde{\mu}_{L,R}$, where the L and R subscripts denote the left and right chirality of the partner electron or muon.  All four sleptons are assumed to be mass degenerate \textcolor{red} {I know I have a reference for this}.  Sleptons decay to their Standard Model lepton partner and a $\chi_1^0$ $100\%$ of the time.  Events were generated at tree level with MG5\_aMC@NLO v2.2.3 with the NNPDF23LO PDF set, with up to two additional partons in the mixing matrix.  The MadGraph generation was interfaced with PYTHIA v8.186.  ME-PS jet matching  is done with the CKKW-L prescription with the merging scale was set to one quarter the slepton mass.
+Slepton simplified models exploit the direct pair production of selectrons $\tilde{e}_{L,R}$ and smuons $\tilde{\mu}_{L,R}$, where the L and R subscripts denote the left and right chirality.  All four sleptons are assumed to be mass degenerate and decay to their Standard Model lepton partner and a $\tilde\chi_1^0$ $100\%$ of the time~\cite{Ajaib:2015yma}.  Simulated slepton events were generated at tree level with MG5\_aMC@NLO v2.2.3 with the NNPDF23LO PDF set, with up to two additional partons in the mixing matrix.  The MadGraph generation was interfaced with PYTHIA v8.186.  ME-PS jet matching is done with the CKKW-L prescription with the merging scale set to one quarter the slepton mass.
  \FloatBarrier
- 
-  
- \textcolor{red}{Add wino rescaling here.}
- 
+%\textcolor{red}{Must talk about how the relative sign of the $chi_1$ and $\chi_2$ mass parameters affects the model.} %U. De Sanctis, T. Lari, S. Montesano, and C. Troncon, Perspectives for the detection and measurement of supersymmetry in the focus point region of mSUGRA models with the ATLAS detector at LHC, Eur. Phys. J. C 52 (2007) 743, arXiv: 0704.2515 [hep-ex].}
+
+%\textcolor{red}{Add wino rescaling here.}
+ \iffalse
 \begin{figure}[tbp]
     \centering
  \includegraphics[width=0.6\columnwidth]{/Users/sheenaschier/Documents/LaFiles/figures/thesis/signal_samples/mll_theory.pdf}
  \caption{Dilepton invariant mass distributions simulated with Higgsino (blue) and wino/bino (red) simplified models.  In both models, $m(\chi_2^0, \chi_1^0$ = ($100, 80$) GeV.}
 \label{fig:samples:invMass}
 \end{figure}
+\fi
  \FloatBarrier
  
  \section{Simulated SM Background Samples}
  \label{sec:simbkg}
- Standard Model background processes were generated with multiple different generators, summarized in Table~\ref{tab:summarySMMC}.  V + jets, diboson, and triboson samples were made using the SHERPA version 2.1.1, 2.2.1, and 2.2.2.  Matrix elements were calculated with COMIX \cite{comix} and OpenLoops \cite{loop} for up to two additional partons at NLO and four additional partons and LO for some processes.  Merging was then performed SHERPA parton shower according to the ME-PS\@ NLO prescription.  The $Z{(*)}/\gamma^*$ + jets samples exploit invariant masses down to 0.5 GeV for $Z{(*)}/\gamma^* \rightarrow e^+e^-/\mu^+\mu^-$, and down to 3.8 GeV for $Z{(*)}/\gamma^* \rightarrow \tau^+\tau^-$.  Dilepton invariant mass in diboson samples covers down to 0.5 GeV.  Singletop and $t\bar{t}$ samples generated at NLO in matrix element calculations with POWHEG-BOX v1, and v2 interfaced with PYTHIA 6.428 and the PERUGIA 2012 tune.  Higgs+$V$, $t$ + $V$, $t\bar{t}$ +$V/h/\gamma^*$ and $t\bar{t}$ + diboson production simulated with POWHEG-BOX v2 interfaced with PYTHIA 6.428 and 8.184 and the ATLAS A14 tune.  These are all generated with NLO matrix elements, except the $t$ + $Z$, $t\bar{t}$ + $WW$, three-top and four-top samples, which were calculated to LO. 
+ Standard Model background processes were generated with multiple different generators, summarized in Table~\ref{tab:summarySMMC}.  These processes include: $W/Z$ + jets, $W/Z\gamma$, diboson, triboson $t\bar t$, singletop, Higgs, and rare three and four top production.   %diboson, and triboson samples were made using the SHERPA version 2.1.1, 2.2.1, and 2.2.2.  Matrix elements were calculated with COMIX \cite{comix} and OpenLoops \cite{loop} for up to two additional partons at NLO and up to four additional partons at LO for some processes.  Merging was then performed SHERPA parton shower according to ME-PS\@ NLO prescription.  The $Z^*/\gamma^*$ + jets and diboson samples extend down to invariant masses of 0.5 GeV for $Z{(*)}/\gamma^* \rightarrow e^+e^-/\mu^+\mu^-$, and down to 3.8 GeV for $Z{(*)}/\gamma^* \rightarrow \tau^+\tau^-$.  $t\bar{t}$ samples generated at NLO in matrix element calculations with POWHEG-BOX v1, and v2 interfaced with PYTHIA 6.428 and the PERUGIA 2012 tune.  Higgs+$V$, $t$ + $V$, $t\bar{t}$ +$V/h/\gamma^*$ and $t\bar{t}$ + diboson production simulated with POWHEG-BOX v2 interfaced with PYTHIA 6.428 and 8.184 and the ATLAS A14 tune.  These are all generated with NLO matrix elements, except the $t$ + $Z$, $t\bar{t}$ + $WW$, three-top and four-top samples, which were calculated to LO. 
  
  \begin{table}[tbp]
 \centering
-\begin{tabular}{ll}
+\begin{tabular}{lll}
 \hline
-Short Name       & Generators\\
+Short Name       & Generators & PDF Sets\\
 \hline
 \hline
-$V$+jets & \texttt{SHERPA 2.2.1}\\
+$W/Z$+jets & \texttt{SHERPA 2.2.1} & NNPDF30NNLO/\\
 \hline
-Diboson &   \texttt{SHERPA 2.2.1, 2}\\
+Diboson &   \texttt{SHERPA 2.2.1, 2} & NNPDF30NNLO\\
 \hline
-$t\bar{t}$ & \texttt{POWHEG+PYTHIA 6}\\
+$t\bar{t}$ & \texttt{POWHEG+PYTHIA 6} & NNPDF30NNLO\\
 \hline
-Singletop & \texttt{POWHEG+PYTHIA 6}\\
- ($tZ$)& \texttt{MADGRAPH+PYTHIA 6}\\
- ($tWZ$)& \texttt{aMC\@ NLO+PYTHIA}\\
+Singletop & \texttt{POWHEG+PYTHIA 6} & NLO CT10\\
+ ($tZ$)& \texttt{MADGRAPH+PYTHIA 6} & NLO CT10\\
+ ($tWZ$)& \texttt{aMC@NLO+PYTHIA} & NLO CT10\\
 \hline 
-$t\bar{t}V$ &  \texttt{MADGRAPH+PYTHIA 8}\\
-($t\bar{t}Z$ low $m_{\ell\ell}$) & \texttt{aMC\@ NLO+PYTHIA 8}\\
+$t\bar{t}V$ &  \texttt{MADGRAPH+PYTHIA 8} & NNPDF30NNLO\\
+($t\bar{t}Z$ low $m_{\ell\ell}$) & \texttt{aMC@NLO+PYTHIA 8} & NNPDF30NNLO\\
 \hline
-$V\gamma$ & \texttt{SHERPA}\\
+$W/Z\gamma$ & \texttt{SHERPA} & CT10\\
 \hline
-Higgs &  \texttt{POWHEG+PYTHIA 8}\\
- (Vh)& \texttt{PYTHIA 8}\\
+Higgs &  \texttt{POWHEG+PYTHIA 8} & NLOCTEQ6L1\\
+ ($W/Zh$)& \texttt{PYTHIA 8} & NNPDF23LO\\
 \hline
-Triboson &  \texttt{SHERPA 2.2.1}\\
+Triboson &  \texttt{SHERPA 2.2.1} & NNPDF30NNLO\\
 \hline
-Rare top &  \texttt{MADGRAPH+PYTHIA 8}\\
+Rare top &  \texttt{MADGRAPH+PYTHIA 8} & NNPDF23LO\\
 \hline
 \end{tabular}
 \caption{Summary of the Monte Carlo generators used for each SM background sample production.}
@@ -155,16 +151,16 @@ Rare top &  \texttt{MADGRAPH+PYTHIA 8}\\
  \fi
  
 % \subsubsection{V+Jets}
- Modelling of leptonically decaying W or Z bosons is done with SHERPA with NNPDF30NNLO PDF set.  The matrix element is calculated with up to four additional partons in the shower.  Merging the parton shower is done with the ME+PS\@ NLO prescription.  \textcolor{blue}{The samples are sliced in maxHTPTV and quark flavor content} \textcolor{red}{I don't know what this means}.  The dilepton invariant mass of the on shell Z+jets samples is required to be above $50~\GeV$, and the $Z^*$+jets samples are restricted to dilepton invariant mass between $10~\GeV$ and $40~\GeV$ with the leading and subleading leptons having \pt above $5~\GeV$.  The $Z$+jets samples were extended down to very off-shell $Z$ production for dilepton invariant mass below $10~\GeV$, but no less than twice the mass of the leading lepton in the system.  \textcolor{blue}{The samples are inclusive in quark flavor and only available for maxHTPTV $>~280~\GeV$ slice.}
+ Modeling of leptonically decaying W or Z bosons in $Z$+jets processes is done with SHERPA 2.2.1 and NNPDF30NNLO PDF set.  The matrix element is calculated with COMIX \cite{comix} and OpenLoops \cite{loop} with up to four additional partons at leading order, and jet merging is performed with SHERPA parton showers according to ME-PS @ NLO prescription.  Samples are sliced according to the maximum energy sum of the jets (maxHTPTV) and quark flavor content.  The dilepton invariant mass of the on shell Z+jets samples is required to be above $50\GeV$, and the $Z^*$+jets samples are restricted to dilepton invariant mass between $10\GeV$ and $40\GeV$ with the leading and subleading leptons having \pt above $5\GeV$.  The $Z^*/\gamma^*$ + jets samples extend down to invariant masses of 0.5 GeV for $Z{(*)}/\gamma^* \rightarrow e^+e^-/\mu^+\mu^-$, and down to 3.8 GeV for $Z{(*)}/\gamma^* \rightarrow \tau^+\tau^-$.  The samples are inclusive in quark flavor and only available for maxHTPTV $>~280\GeV$ slice.  W and Z production in association with an energetic photon is modeled with SHERPA and CT10 PDF set. %The $Z$+jets samples extend down to very off-shell $Z$ production for dilepton invariant mass below $10\GeV$, but no less than twice the mass of the leading lepton in the system. 
  
 % \subsubsection{Multiboson}
- Multiboson refers to two and three vector boson production modes.  SHERPA is used diboson and fully leptonic triboson processes.  The NNPDF30NNLO PDF set was used for most samples, but for the few where this was not an option, CT10 PDF set was used instead.  The initial samples are made of events with same flavor and oppositely signed leptons, where the invariant mass of the dilepton system is above $4~\GeV$, and the leading and subleading leptons have masses above $5~\GeV$.  The samples were later extended to lower lepton masses, where the leading two leptons have masses above $2~\GeV$ and their invariant mass must be below $10~\GeV$, and can be as low as twice the mass of the leading lepton.  W and Z production in association with an energetic photon is also modeled with SHERPA, but samples were generated exclusively with the CT10 PDF set.
+Diboson ($WW$, $WZ$, $ZZ$) and triboson ($WWW$, $WWZ$, etc.) samples are generated with SHERPA 2.2.1 and 2.2.2 and NNPDF30NNLO and CT10 PDF sets.  Like in the $W/Z$+jets samples, the matrix element is calculated with COMIX and OpenLoops with up to two additional partons at next-to-leading order, and up to four additional partons are leadng order for some processes.  In events with two leptons, the dilepton invariant mass is required to be above $4\GeV$, with leading and subleading leptons masses above $5\GeV$.  Extended diboson samples have coverage in dilepton invariant mass down to $0.5\GeV$.    
  
 % \subsubsection{Top Quark}
  Single top production (t- and s- channel), $tW$, and $t\bar{t}$ events were generated with POWHEG and interfaced with PYTHIA 6 for parton showering.  The $tZ$ process is filtered to have at least one lepton.  Matrix elements were calculated with MADGRAPH5 and parton showering was handled by PYTHIA 6.  Rare events with three and four top quarks or $t\bar{t}$ in association with a $Z$, $W$, or $WW$ bosons have matrix elements calculated with MADGRAPH5 and showered with PYTHIA8 according to PFD set NNPDF30NNLO.
  
 % \subsubsection{Higgs}
-Single Higgs production through gluon-gluon fusion (ggF) and vector boson fusion (VBF) processes with fully leptonic decays are modeled using POWHEG, interfaced with PYTHIA 8 for parton showing, and hadronized using the NLOCTEQ6L1 PDF set.  Processes involving a single Higgs in association with $W$ or $Z$ boson is modeled with PYTHIA 8 only, and using the NNPDF23LO PDF set.
+Single Higgs production through gluon-gluon fusion (ggF) and vector boson fusion (VBF) processes with fully leptonic decays are modeled using POWHEG and NLOCTEQ6L1 PDF set, and interfaced with PYTHIA 8 for parton showing.  Processes involving a single Higgs in association with $W$ or $Z$ boson is modeled with PYTHIA 8 only, and using the NNPDF23LO PDF set.
  
  \iffalse
  \section{Derivation}
