@@ -1,10 +1,8 @@
 \chapter{Statistical Analysis}
-\label{ch:statanal}
-\textcolor{red}{Say something here first about the fits} The model dependent analysis is performed by a shape fit of signal to background in the $m_{\ell\ell}$ and $m_{T2}$ distributions.  A channel object can represent a SR, CR, or VR, and channels are defined as the separate bins within them.  The definition of an SR, signal region, and a CR, control region, was given in the beginning of Chapter~\ref{sec:sr}.  A \textit{validation region} (VR) is a region in kinematic phase space designed to validate the model used to predict the background contribution to the SRs in data.  It is defined in a way that maximizes the region's statistical significance while minimizing its signal contamination.  Kinematically positioned between the CR and the SR, it should also help mediate the assumptions made in the CR to SR extrapolation.  The extrapolation happens in variables chosen to separate the regions and the bins within them.  Keeping the SRs and CR statistically independent means they can be described by different probability density functions and can be combined into a simultaneous fit. The statistical combination of multiple channels is based on a profile likelihood method implemented in the HistFitter package that builds probability density functions, fits them to data, and interprets them with statistical tests.  In this method, a likelihood is constructed as the product of the Poisson probability distributions that describe the total number of events observed in each channel.  The mean is taken as the nominal MC yield in a given region and systematic uncertainties are treated as nuisance parameters in the fit.  
+\label{ch:statanal} 
+The signal, control, and validation regions, defined in Chapters~\ref{ch:sr} are related through statistical fits in the data.  SRs are defined to maximize the statistical significance of signal over background, and CRs are defined to maximize the statistical significance of certain backgrounds related to the SRs while minimizing signal contamination.  VRs are kinematically positioned between the CRs and the SRs, and are meant to help mediate the assumptions made in extrapolations between the CRs and SRs.  It is important that the CRs and SRs are statistically independent so they can be described by different probability density functions and eventually combined into a simultaneous fit. The statistical combination of multiple regions or bins within them is based on a profile likelihood method implemented in the HistFitter package~\cite{baak} that builds probability density functions, fits them to data, and interprets them with statistical tests.  In this method, a likelihood is constructed as the product of the Poisson probability distributions that describe the total number of events observed in each bin.  The mean is taken as the nominal MC yield in a given region and systematic uncertainties are treated as nuisance parameters in the fit.  
 
-\iffalse
- Channels are multi-binned distributions of $m_{\ell\ell}$ and $m_{T2}$.  A channel object can represent a CR, SR, or VR.  Samples are components of RooFit probability density functions that are decorated by HistFitter meta-data and correspond to a specific physics process.  These samples can be defined in a specific channel or simultaneously over multiple channels.  Systematic uncertainties are taken into account for each samples by providing HistFitter with a distribution representing the best possible available prediction.  \textcolor{blue}{For  each  model  component,  a  nominal  distribution  representing  the  best  available  prediction  is typically provided to the physics analysis as a histogram owned by a Sample object.  These components typically have systematic uncertainties whose impact gets quantified in dedicated studies. This is often modeled as variations of one standard deviation around the nominal prediction, provided to the physics analysis as sets of two additional histograms.  The systematic uncertainties are parameterized in the PDF as Gaussian distributed nuisance parameters.}
-\fi
+In this chapter, test statistics and p-values are discussed in Section~\ref{sec:statanal:pval}, fit strategies are presented in Section~\ref{sec:statanal:fit}, and nuisance parameter pulls are discussed in Section~\ref{sec:statanal:pull}.
 
 \section{Test Statistics and p-values}
 \label{sec:statanal:pval}
@@ -13,7 +11,7 @@ The test statistic that provides the most powerful test is the likelihood ratio 
 L(\mu,\vec{\theta})=\prod_c\prod_iPois\big(n_{ci}^{obs}|n_{ci}^{sig}(\mu\vec{\theta})+n_{ci}^{bkg}(\vec{\theta})\big)\prod_kf_k(\theta'_k|\theta_k)
 \label{eq:likelihood}
 \end{equation}
-In Equation~\ref{eq:likelihood}, $\mu$ and $\vec{\theta}$ represent the signal strength and the set of nuisance parameters.  The values of these parameters that maximize $L(\mu,\vec{\theta})$, or equivalently, minimize -$\ln L(\mu,\vec{\theta})$ are called maximum likelihood estimates (MLEs) and denoted as $\hat{\mu}$ and $\hat{\vec{\theta}}$.  There is also a conditional maximum likelihood estimate, $\hat{\hat{\vec{\theta}}}$, which is the value of $\vec{\theta}$ that maximizes $L(\mu,\vec{\theta})$ for a fixed $\mu$.  These are all used with the likelihood function $L(\mu,\vec{\theta})$ to construct the profile likelihood ratio:
+In Equation~\ref{eq:likelihood}, $\mu$ and $\vec{\theta}$ represent the signal strength and the set of nuisance parameters.  The values of these parameters that maximize $L(\mu,\vec{\theta})$, or equivalently, minimize -$\ln L(\mu,\vec{\theta})$ are called maximum likelihood estimates (MLEs) and are denoted as $\hat{\mu}$ and $\hat{\vec{\theta}}$.  There is also a conditional maximum likelihood estimate, $\hat{\hat{\vec{\theta}}}$, which is the value of $\vec{\theta}$ that maximizes $L(\mu,\vec{\theta})$ for a fixed $\mu$.  These are all used with the likelihood function $L(\mu,\vec{\theta})$ to construct the profile likelihood ratio:
 \begin{equation}
 \lambda(\mu)=\bigg(\frac{L\big(\mu,\hat{\hat{\vec{\theta}}}(\mu)\big)}{L(\hat{\mu},\hat{\vec{\theta}})}\bigg)
 %t=-2\ln\lambda(\mu)=-2\ln\bigg(\frac{L\big(\mu,\hat{\hat{\vec{\theta}}}(\mu)\big)}{L(\hat{\mu},\hat{\vec{\theta}})}\bigg)
@@ -48,13 +46,13 @@ When setting limits, the test statistic $\tilde{q}_\mu$ is meant to distinguish 
    \label{eq:lim}
 \end{equation}
 
-Through the test statistic, the data is mapped to a single real-valued number that represents the outcome of the experiment.  If the experiment was performed many times, the test profile likelihood ratio function would output a different value each time, making a distribution of real-valued discriminating variables.  In practice, Monte Carlo simulation \textcolor{red}{\textit{get the right language here, talk about throwing the toys and such}} is used to generate numerous pseudo experiments, and while the test statistic $\tilde{q}$ is a function of $\mu$, the distribution of $\tilde{q}$ becomes explicitly a function of the nuisance parameters $\vec{\theta}$, denoted as $f(\tilde{q}|\mu,\vec{\theta})$.  The p-value for any given hypothesis represents the probability to observe an equal or more extreme outcome given that hypothesis as the integral of the test statistic distribution from $\tilde{q}_{\mu,obs}$ to $\infty$.  
+Through the test statistic, the data are mapped to a single real-valued number that represents the outcome of the experiment.  If the experiment was performed many times, the test profile likelihood ratio function would output a different value each time, making a distribution of real-valued discriminating variables.  In practice, Monte Carlo simulation is used to generate numerous pseudo experiments, and while the test statistic $\tilde{q}$ is a function of $\mu$, the distribution of $\tilde{q}$ becomes explicitly a function of the nuisance parameters $\vec{\theta}$, denoted as $f(\tilde{q}|\mu,\vec{\theta})$.  The p-value for any given hypothesis represents the probability to observe an equal or more extreme outcome given that hypothesis as the integral of the test statistic distribution from $\tilde{q}_{\mu,obs}$ to $\infty$.  
 \begin{equation}
 p_{\mu,\vec{\theta}}=\int_{\tilde{q}_{\mu,obs}}^\infty f(\tilde{q}_\mu|\mu,\vec{\theta}) d\tilde{q}_\mu
 \label{eq:p0}
 \end{equation}
 
-Conventionally in high energy particle physics experiments, a standard one-sided frequentist confidence interval defines an upper limit on the parameter of interest at $95\%$ confidence level.  The p-value can be used to measure how well the data agrees with a signal hypothesis of signal strength $\mu$, given in Equation~\ref{eq:pmu}, or it can be used to measure how consistent the data is with the background only hypothesis, as in Equation~\ref{eq:pb}.
+Conventionally in high energy particle physics experiments, a standard one-sided frequentist confidence interval defines an upper limit on the parameter of interest at $95\%$ confidence level.  The p-value can be used to measure how well the data agrees with a signal hypothesis of signal strength $\mu$, given in Equation~\ref{eq:pmu}, or it can be used to measure how consistent the data are with the background only hypothesis, as in Equation~\ref{eq:pb}.
 \begin{equation}
 p_\mu=\int_{\tilde{q}_{\mu,obs}}^\infty f(\tilde{q}_\mu|\mu,\hat{\hat{\vec{\theta}}}(\mu,obs)) d\tilde{q}_\mu
 \label{eq:pmu}
@@ -66,16 +64,43 @@ p_b=1-\int_{\tilde{q}_{\mu,obs}}^\infty f(\tilde{q}_\mu|0,\hat{\hat{\vec{\theta}
 The $CL_s$ upper limit on $\mu$ comes from solving as a function of $\mu$ for $p'_\mu=0.05$, where $p'_\mu$ is the ratio of p-values in Equation~\ref{eq:pp}.
 \begin{equation}
 p_\mu ' = \frac{p_\mu}{1-p_b}
+\label{eq:pp}
 \end{equation}
 
-Confidence intervals will come up again in Chapter~\ref{ch:results} when the actual model interpretations are discussed.
+%Confidence intervals will come up again in Chapter~\ref{ch:results} when the actual model interpretations are discussed.
 
 %\textcolor{red}{things are okay up to here..}. This likelihood maxima are found by the HISTFITTER package, %M. Baak et al., HistFitter software framework for statistical data analysis, Eur. Phys. J. C 75 (2015) 153, arXiv: 1410.1280 [hep-ex].  
 %which constrains the values and uncertainties on $\mu_{top}$ and $\mu_{\tau\tau}$, the variables used to extrapolate the background prediction into the validation regions.   The concept of signal, control, and validation regions are woven into the structure of HistFitter and are used to constrain, extrapolate, and test data model predictions with statistically rigorous built-in methods.  HistFitter is capable of working with multiple data models at once, keeping track of all input histograms, both before and after renormalization.  This allows for straightforward bookkeeping, control, and testing of large collections of signal hypotheses.  HistFitter also includes methods to \textcolor{blue}{ determine the statistical significance  of signal hypotheses, estimate the quality of likelihood fits, and produce high-quality tables and plots for publications}.  HistFitter is written with a Python configuration wrapper around  CPU intensive C++ algorithms.
 
-\section{Fit and Nuisance Parameter Pull}
+\section{Fit Stategies}
+\label{sec:statanal:fit}
+This analysis relies on three kinds of fit strategies: background-only, model-dependent, and model-independent.
 
-The relative changes in the nuisance parameters and the fit are often referred to as the 'pull'.  An example of the fit and nuisance parameter pulls are shown in Figure~\ref{}..
-\input{/Users/sheenaschier/Documents/LaFiles/figures/thesis/results/fitParams.tex}
-       % \includegraphics[width=0.9\textwidth]{/Users/sheenaschier/Documents/LaFiles/figures/thesis/results/fitParams_bkg_CRonly.pdf}
+A background-only fit makes no assumptions about any of the signal models, uses background samples exclusively, and assumes there to be no signal contamination in the CRs.  The fit is only done in the CRs and the dominant backgrounds sources are normalized to fit the observed data yields.  The background-only fit assumes only background processes are present and the background parameters of the Poisson distribution functions should be the same through all the CRs, SRs, and VRs.  For these reasons, this fit is used to normalize the predicted backgrounds in the SRs and VRs.
+
+The model dependent fits are performed in the CRs and the SRs simultaneously.  It is common to fit multiple exclusive SR bins simultaneously assuming the same signal model.  For each SR simultaneously fit with the CRs, the background samples and a signal sample are assumed.  This provides the model dependence in the SRs and accounts for any signal contamination in the CRs.  In the absence of any significant excess in the SRs, this fit strategy is used to set model-dependent exclusion limits on the assumed signal models.
+
+The model independent fits are meant stay general to interpretations so the observations can be used by others who want to check its implied exclusion on other models.  The fits are performed in the same way as the model-dependent strategy, but with a single-binned inclusive SR fit simultaneously with the CRs.  Also, only background is assumed in the CRs while both the backgrounds and signal are allowed in the SR. 
+
+
+\section{Nuisance Parameter Pulls}
+\label{sec:statanal:pull}
+To asses the behavior of the nuisance parameters in a background only fit, relative changes, or pulls, in the nuisance parameters are studied.  Any observed upward or downward fluctuations in data above background prediction is inadequately explained by a signal in the exclusion shape fit, and many of the background systematics are pulled and/or constrained to accommodate. An example of the fit and nuisance parameter pulls for the background only fit in the CR, simultaneously in the CR and inclusive SR-$m_{\ell\ell}$, and simultaneously in the CR and inclusive SR-$\mathrm{m_{T2}^{100}}$ are shown in Figure~\ref{fig:fit_param_bkg_only}.  The simultaneous fits with the SRs include the shape fits in $m_{\ell\ell}$ and $\mathrm{m_{T2}^{100}}$, which pulls on the nuisance parameters adjust to the fit.  \input{/Users/sheenaschier/Documents/LaFiles/figures/thesis/results/fitParams.tex}
+
+Ranked pull plots how how the uncertainties shown in the last chapter impact signal strength, and can be used to understand what the largest uncertainties are.  Instead of looking at the relative change in nuisance parameters from pre-fit to post-fit, we look at the relative impact on $\mu_{signal}$, the expected signal strength.  This tell us which uncertainties are actually changing how our confidence in our statement on how much signal there might be in data.  Figure~\ref{fig:thy:pull} shows ranked pull plots for the most inclusive Higgsino and slepton signal regions.   MC statistics, fake factor systematics, jet resolution, diboson theory uncertainties are the largest. 
+ \begin{figure}
+  \centering
+    \begin{subfigure}[b]{0.49\textwidth}
+        \includegraphics[width=\textwidth]{/Users/sheenaschier/Documents/LaFiles/figures/thesis/results/syst_rank_disc_SRSF_iMLLg.pdf}
+    \caption{CRs + SR$\ell\ell$-$m_{\ell\ell}$ $[1,60]$}
+    \end{subfigure}
+    \begin{subfigure}[b]{0.49\textwidth}
+        \includegraphics[width=\textwidth]{/Users/sheenaschier/Documents/LaFiles/figures/thesis/results/syst_rank_disc_SRSF_iMT2f.pdf}
+    \caption{CRs + SR$\ell\ell$-$m^{100}_{T2}$ $[100, \infty]$}
+    \end{subfigure}
+\caption{Ranking of systematics impact on $\mu_{signal}$ in the most inclusive Higgsino (left) and slepton (right) signal regions}
+\label{fig:thy:pull}
+ \end{figure}
+
+
 
