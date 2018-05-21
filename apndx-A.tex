@@ -1,77 +1,920 @@
 \chapter{Appendix A}
-Auxiliary fake factor materials
+\label{ch:apndx:a}
+Signal acceptance, efficiency, efficiency within acceptance, and signal leakage plots are all shown in this appendix.
 
-\section{Fake lepton composition study}
+\section{Acceptance}
+Signal acceptance $\alpha$ is defined as the ratio of truth events that pass all signal region cuts over the total number of truth events in the TRUTH3 signal sample.  Both the numerator and denominator events are weighted by the event weight and the numerator events are also weighted by the $Z\rightarrow ll$ branching ratio and filter efficiency, which is mostly driven by the $\met > 50~\GeV$ requirement.  Signal acceptance is described in equation \ref{eq:acceptance}.\\
 
-\begin{figure}[htb]
+
+\begin{itemize}
+\item Slepton \& Higgsino acceptances include branching fraction times filter efficiency $\text{BF} \times \epsilon_\text{filt}$ scale factor from SUSYTools.
+\item Slepton acceptances have stau veto applied to the denominator using a global 1.5 scale factor.
+\item Ran over p3135 TRUTH3 derivations of Higgsino and slepton samples.
+\item The $z$-axis scale is fixed between $[0, 25] \times 10^{-3}$ for sleptons and $[0, 11]\times 10^{-4}$ for Higgsino grids.
+\end{itemize}
+
+
+  \begin{equation}
+  \alpha = \frac{N_{truth,selected}\times{BR_{Z\rightarrow ll}}\times{\epsilon_{filter}}}{N_{truth,total}}
+ \label{eq:acceptance}
+  \end{equation}
+\begin{figure}
         \centering
-        \includegraphics[width=.4\textwidth]{/Users/sheenaschier/Documents/LaFiles/figures/thesis/fakes/fakeLeptonComposition/725_cds_noIso_el_SR2_lep2Pt.pdf}
-        \includegraphics[width=.4\textwidth]{/Users/sheenaschier/Documents/LaFiles/figures/thesis/fakes/fakeLeptonComposition/725_cdsComments_el_QCR2_lep2Pt.pdf}
-        \includegraphics[width=.4\textwidth]{/Users/sheenaschier/Documents/LaFiles/figures/thesis/fakes/fakeLeptonComposition/725_cds_ss_el_SR2_lep2Pt.pdf}
-                \includegraphics[width=.4\textwidth]{/Users/sheenaschier/Documents/LaFiles/figures/thesis/fakes/fakeLeptonComposition/725_cds_ss_wIso_el_QCR2_lep2Pt.pdf}
-        \caption{Fake lepton composition in opposite sign signal and control region as a function of leading and subleading lepton $p_{T}$, with and without prompt (``Isolated'' plus ``lep$\to$gamma$\to$lep'') leptons, for opposite sign electron pairs in the signal region.}
-        \label{fig:el}
+    \begin{subfigure}[b]{0.49\textwidth}
+        \includegraphics[width=\textwidth]{/Users/sheenaschier/Documents/LaFiles/figures/thesis/acc_eff/acceptance/Slep_SRSF_iMT2a}
+    \caption{$SR\ell\ell-m^{100}_{T2}[100,102]$}
+    \end{subfigure}
+    \begin{subfigure}[b]{0.49\textwidth}
+        \includegraphics[width=\textwidth]{/Users/sheenaschier/Documents/LaFiles/figures/thesis/acc_eff/acceptance/Slep_SRSF_iMT2b}
+    \caption{$SR\ell\ell-m^{100}_{T2}[100,105]$}
+    \end{subfigure}
+    \begin{subfigure}[b]{0.49\textwidth}
+        \includegraphics[width=\textwidth]{/Users/sheenaschier/Documents/LaFiles/figures/thesis/acc_eff/acceptance/Slep_SRSF_iMT2c}
+    \caption{$SR\ell\ell-m^{100}_{T2}[100,110]$}
+    \end{subfigure}
+    \begin{subfigure}[b]{0.49\textwidth}
+        \includegraphics[width=\textwidth]{/Users/sheenaschier/Documents/LaFiles/figures/thesis/acc_eff/acceptance/Slep_SRSF_iMT2d}
+    \caption{$SR\ell\ell-m^{100}_{T2}[100,120]$}
+    \end{subfigure}
+    \begin{subfigure}[b]{0.49\textwidth}
+        \includegraphics[width=\textwidth]{/Users/sheenaschier/Documents/LaFiles/figures/thesis/acc_eff/acceptance/Slep_SRSF_iMT2e}
+    \caption{$SR\ell\ell-m^{100}_{T2}[100,130]$}
+    \end{subfigure}
+    \begin{subfigure}[b]{0.49\textwidth}
+        \includegraphics[width=\textwidth]{/Users/sheenaschier/Documents/LaFiles/figures/thesis/acc_eff/acceptance/Slep_SRSF_iMT2f}
+    \caption{$SR\ell\ell-m^{100}_{T2}[100,\infty]$}
+    \end{subfigure}
+    \caption{\label{fig:slepton_truth_acceptance}\textbf{Slepton}.}
 \end{figure}
 
-\begin{figure}[htb]
+\begin{figure}
         \centering
-        \includegraphics[width=.45\textwidth]{/Users/sheenaschier/Documents/LaFiles/figures/thesis/fakes/fakeLeptonComposition/725_cdsComments_el_SR1_lep1Pt.pdf}
-        \includegraphics[width=.45\textwidth]{/Users/sheenaschier/Documents/LaFiles/figures/thesis/fakes/fakeLeptonComposition/725_cds_noIso_el_SR1_lep1Pt.pdf}
-        \includegraphics[width=.45\textwidth]{/Users/sheenaschier/Documents/LaFiles/figures/thesis/fakes/fakeLeptonComposition/725_cdsComments_el_QCR1_lep1Pt.pdf}
-          \includegraphics[width=.45\textwidth]{/Users/sheenaschier/Documents/LaFiles/figures/thesis/fakes/fakeLeptonComposition/725_cds_noIso_el_QCR1_lep1Pt.pdf}
-        \caption{Fake lepton composition as a function of leading and subleading lepton $p_{T}$, with and without prompt (``Isolated'' plus ``lep$\to$gamma$\to$lep'') leptons, for opposite sign electron pairs in the signal region.}
-        \label{fig:elSR}
+    \begin{subfigure}[b]{0.49\textwidth}
+        \includegraphics[width=\textwidth]{/Users/sheenaschier/Documents/LaFiles/figures/thesis/acc_eff/acceptance/N2N1_SRSF_iMLLa}
+    \caption{$SR\ell\ell-m_{\ell\ell} [1, 3]$}
+    \end{subfigure}
+    \begin{subfigure}[b]{0.49\textwidth}
+        \includegraphics[width=\textwidth]{/Users/sheenaschier/Documents/LaFiles/figures/thesis/acc_eff/acceptance/N2N1_SRSF_iMLLb}
+    \caption{$SR\ell\ell-m_{\ell\ell} [1, 5]$}
+    \end{subfigure}
+    \begin{subfigure}[b]{0.49\textwidth}
+        \includegraphics[width=\textwidth]{/Users/sheenaschier/Documents/LaFiles/figures/thesis/acc_eff/acceptance/N2N1_SRSF_iMLLc}
+    \caption{$SR\ell\ell-m_{\ell\ell} [1, 10]$}
+    \end{subfigure}
+    \begin{subfigure}[b]{0.49\textwidth}
+        \includegraphics[width=\textwidth]{/Users/sheenaschier/Documents/LaFiles/figures/thesis/acc_eff/acceptance/N2N1_SRSF_iMLLd}
+    \caption{$SR\ell\ell-m_{\ell\ell} [1, 20]$}
+    \end{subfigure}
+    \begin{subfigure}[b]{0.49\textwidth}
+        \includegraphics[width=\textwidth]{/Users/sheenaschier/Documents/LaFiles/figures/thesis/acc_eff/acceptance/N2N1_SRSF_iMLLe}
+    \caption{$SR\ell\ell-m_{\ell\ell} [1, 30]$}
+    \end{subfigure}
+    \begin{subfigure}[b]{0.49\textwidth}
+        \includegraphics[width=\textwidth]{/Users/sheenaschier/Documents/LaFiles/figures/thesis/acc_eff/acceptance/N2N1_SRSF_iMLLf}
+    \caption{$SR\ell\ell-m_{\ell\ell} [1, 40]$}
+    \end{subfigure}
+    \begin{subfigure}[b]{0.49\textwidth}
+        \includegraphics[width=\textwidth]{/Users/sheenaschier/Documents/LaFiles/figures/thesis/acc_eff/acceptance/N2N1_SRSF_iMLLg}
+    \caption{$SR\ell\ell-m_{\ell\ell} [1, 60]$}
+    \end{subfigure}
+    \caption{\textbf{N2N1}.}
 \end{figure}
 
-  
-\begin{figure}[htb]
+\begin{figure}
         \centering
-        \includegraphics[width=.45\textwidth]{/Users/sheenaschier/Documents/LaFiles/figures/thesis/fakes/fakeLeptonComposition/725_cds_ss_wIso_el_SR1_lep1Pt.pdf}
-        \includegraphics[width=.45\textwidth]{/Users/sheenaschier/Documents/LaFiles/figures/thesis/fakes/fakeLeptonComposition/725_cds_ss_el_SR1_lep1Pt.pdf}
-                \includegraphics[width=.45\textwidth]{/Users/sheenaschier/Documents/LaFiles/figures/thesis/fakes/fakeLeptonComposition/725_cds_ss_wIso_el_QCR1_lep1Pt.pdf}
-                       \includegraphics[width=.45\textwidth]{/Users/sheenaschier/Documents/LaFiles/figures/thesis/fakes/fakeLeptonComposition/725_cds_ss_el_QCR1_lep1Pt.pdf}
-        \caption{Fake lepton composition as a function of leading and subleading lepton $p_{T}$, with and without prompt (``Isolated'' plus ``lep$\to$gamma$\to$lep'') leptons, for same sign electron pairs in the signal region.}
-        \label{fig:elSSSR}
+    \begin{subfigure}[b]{0.49\textwidth}
+        \includegraphics[width=\textwidth]{/Users/sheenaschier/Documents/LaFiles/figures/thesis/acc_eff/acceptance/N2C1p_SRSF_iMLLa}
+    \caption{$SR\ell\ell-m_{\ell\ell} [1, 3]$}
+    \end{subfigure}
+    \begin{subfigure}[b]{0.49\textwidth}
+        \includegraphics[width=\textwidth]{/Users/sheenaschier/Documents/LaFiles/figures/thesis/acc_eff/acceptance/N2C1p_SRSF_iMLLb}
+    \caption{$SR\ell\ell-m_{\ell\ell} [1, 5]$}
+    \end{subfigure}
+    \begin{subfigure}[b]{0.49\textwidth}
+        \includegraphics[width=\textwidth]{/Users/sheenaschier/Documents/LaFiles/figures/thesis/acc_eff/acceptance/N2C1p_SRSF_iMLLc}
+    \caption{$SR\ell\ell-m_{\ell\ell} [1, 10]$}
+    \end{subfigure}
+    \begin{subfigure}[b]{0.49\textwidth}
+        \includegraphics[width=\textwidth]{/Users/sheenaschier/Documents/LaFiles/figures/thesis/acc_eff/acceptance/N2C1p_SRSF_iMLLd}
+    \caption{$SR\ell\ell-m_{\ell\ell} [1, 20]$}
+    \end{subfigure}
+    \begin{subfigure}[b]{0.49\textwidth}
+        \includegraphics[width=\textwidth]{/Users/sheenaschier/Documents/LaFiles/figures/thesis/acc_eff/acceptance/N2C1p_SRSF_iMLLe}
+    \caption{$SR\ell\ell-m_{\ell\ell} [1, 30]$}
+    \end{subfigure}
+    \begin{subfigure}[b]{0.49\textwidth}
+        \includegraphics[width=\textwidth]{/Users/sheenaschier/Documents/LaFiles/figures/thesis/acc_eff/acceptance/N2C1p_SRSF_iMLLf}
+    \caption{$SR\ell\ell-m_{\ell\ell} [1, 40]$}
+    \end{subfigure}
+    \begin{subfigure}[b]{0.49\textwidth}
+        \includegraphics[width=\textwidth]{/Users/sheenaschier/Documents/LaFiles/figures/thesis/acc_eff/acceptance/N2C1p_SRSF_iMLLg}
+    \caption{$SR\ell\ell-m_{\ell\ell} [1, 60]$}
+    \end{subfigure}
+    \caption{\textbf{N2C1p}.}
+\end{figure}
+
+\begin{figure}
+        \centering
+    \begin{subfigure}[b]{0.49\textwidth}
+        \includegraphics[width=\textwidth]{/Users/sheenaschier/Documents/LaFiles/figures/thesis/acc_eff/acceptance/N2C1m_SRSF_iMLLa}
+    \caption{$SR\ell\ell-m_{\ell\ell} [1, 3]$}
+    \end{subfigure}
+    \begin{subfigure}[b]{0.49\textwidth}
+        \includegraphics[width=\textwidth]{/Users/sheenaschier/Documents/LaFiles/figures/thesis/acc_eff/acceptance/N2C1m_SRSF_iMLLb}
+    \caption{$SR\ell\ell-m_{\ell\ell} [1, 5]$}
+    \end{subfigure}
+    \begin{subfigure}[b]{0.49\textwidth}
+        \includegraphics[width=\textwidth]{/Users/sheenaschier/Documents/LaFiles/figures/thesis/acc_eff/acceptance/N2C1m_SRSF_iMLLc}
+    \caption{$SR\ell\ell-m_{\ell\ell} [1, 10]$}
+    \end{subfigure}
+    \begin{subfigure}[b]{0.49\textwidth}
+        \includegraphics[width=\textwidth]{/Users/sheenaschier/Documents/LaFiles/figures/thesis/acc_eff/acceptance/N2C1m_SRSF_iMLLd}
+    \caption{$SR\ell\ell-m_{\ell\ell} [1, 20]$}
+    \end{subfigure}
+    \begin{subfigure}[b]{0.49\textwidth}
+        \includegraphics[width=\textwidth]{/Users/sheenaschier/Documents/LaFiles/figures/thesis/acc_eff/acceptance/N2C1m_SRSF_iMLLe}
+    \caption{$SR\ell\ell-m_{\ell\ell} [1, 30]$}
+    \end{subfigure}
+    \begin{subfigure}[b]{0.49\textwidth}
+        \includegraphics[width=\textwidth]{/Users/sheenaschier/Documents/LaFiles/figures/thesis/acc_eff/acceptance/N2C1m_SRSF_iMLLf}
+    \caption{$SR\ell\ell-m_{\ell\ell} [1, 40]$}
+    \end{subfigure}
+    \begin{subfigure}[b]{0.49\textwidth}
+        \includegraphics[width=\textwidth]{/Users/sheenaschier/Documents/LaFiles/figures/thesis/acc_eff/acceptance/N2C1m_SRSF_iMLLg}
+    \caption{$SR\ell\ell-m_{\ell\ell} [1, 60]$}
+    \end{subfigure}
+    \caption{\textbf{N2C1m}.}
 \end{figure}
 
 
-
-
-\begin{figure}[htb]
+\begin{figure}
         \centering
-        \includegraphics[width=.45\textwidth]{/Users/sheenaschier/Documents/LaFiles/figures/thesis/fakes/fakeLeptonComposition/626_cdsComments_mu_SR1_lep1Pt.pdf}
-        \includegraphics[width=.45\textwidth]{/Users/sheenaschier/Documents/LaFiles/figures/thesis/fakes/fakeLeptonComposition/626_cdsComments_mu_SR2_lep2Pt.pdf}
-        \includegraphics[width=.45\textwidth]{/Users/sheenaschier/Documents/LaFiles/figures/thesis/fakes/fakeLeptonComposition/626_cds_noIso_mu_SR1_lep1Pt.pdf}
-        \includegraphics[width=.45\textwidth]{/Users/sheenaschier/Documents/LaFiles/figures/thesis/fakes/fakeLeptonComposition/626_cds_noIso_mu_SR2_lep2Pt.pdf}
-        \caption{Fake lepton composition as a function of leading and subleading lepton $p_{T}$, with and without prompt (``Isolated'' plus ``lep$\to$gamma$\to$lep'') leptons, for opposite sign muon pairs in the signal region.}
-        \label{fig:muSR}
+    \begin{subfigure}[b]{0.49\textwidth}
+        \includegraphics[width=\textwidth]{/Users/sheenaschier/Documents/LaFiles/figures/thesis/acc_eff/acceptance/C1C1_SRSF_iMLLa}
+    \caption{$SR\ell\ell-m_{\ell\ell} [1, 3]$}
+    \end{subfigure}
+    \begin{subfigure}[b]{0.49\textwidth}
+        \includegraphics[width=\textwidth]{/Users/sheenaschier/Documents/LaFiles/figures/thesis/acc_eff/acceptance/C1C1_SRSF_iMLLb}
+    \caption{$SR\ell\ell-m_{\ell\ell} [1, 5]$}
+    \end{subfigure}
+    \begin{subfigure}[b]{0.49\textwidth}
+        \includegraphics[width=\textwidth]{/Users/sheenaschier/Documents/LaFiles/figures/thesis/acc_eff/acceptance/C1C1_SRSF_iMLLc}
+    \caption{$SR\ell\ell-m_{\ell\ell} [1, 10]$}
+    \end{subfigure}
+    \begin{subfigure}[b]{0.49\textwidth}
+        \includegraphics[width=\textwidth]{/Users/sheenaschier/Documents/LaFiles/figures/thesis/acc_eff/acceptance/C1C1_SRSF_iMLLd}
+    \caption{$SR\ell\ell-m_{\ell\ell} [1, 20]$}
+    \end{subfigure}
+    \begin{subfigure}[b]{0.49\textwidth}
+        \includegraphics[width=\textwidth]{/Users/sheenaschier/Documents/LaFiles/figures/thesis/acc_eff/acceptance/C1C1_SRSF_iMLLe}
+    \caption{$SR\ell\ell-m_{\ell\ell} [1, 30]$}
+    \end{subfigure}
+    \begin{subfigure}[b]{0.49\textwidth}
+        \includegraphics[width=\textwidth]{/Users/sheenaschier/Documents/LaFiles/figures/thesis/acc_eff/acceptance/C1C1_SRSF_iMLLf}
+    \caption{$SR\ell\ell-m_{\ell\ell} [1, 40]$}
+    \end{subfigure}
+    \begin{subfigure}[b]{0.49\textwidth}
+        \includegraphics[width=\textwidth]{/Users/sheenaschier/Documents/LaFiles/figures/thesis/acc_eff/acceptance/C1C1_SRSF_iMLLg}
+    \caption{$SR\ell\ell-m_{\ell\ell} [1, 60]$}
+    \end{subfigure}
+    \caption{\label{fig:c1c1_truth_acceptance}\textbf{C1C1}.}
 \end{figure}
 
-\begin{figure}[htb]
-        \centering
-        \includegraphics[width=.45\textwidth]{/Users/sheenaschier/Documents/LaFiles/figures/thesis/fakes/fakeLeptonComposition/626_cdsComments_mu_QCR1_lep1Pt.pdf}
-        \includegraphics[width=.45\textwidth]{/Users/sheenaschier/Documents/LaFiles/figures/thesis/fakes/fakeLeptonComposition/626_cdsComments_mu_QCR2_lep2Pt.pdf}
-        \includegraphics[width=.45\textwidth]{/Users/sheenaschier/Documents/LaFiles/figures/thesis/fakes/fakeLeptonComposition/626_cds_noIso_mu_QCR1_lep1Pt.pdf}
-        \includegraphics[width=.45\textwidth]{/Users/sheenaschier/Documents/LaFiles/figures/thesis/fakes/fakeLeptonComposition/626_cds_noIso_mu_QCR2_lep2Pt.pdf}
-        \caption{Fake lepton composition as a function of leading and subleading lepton $p_{T}$, with and without prompt (``Isolated'' plus ``lep$\to$gamma$\to$lep'') leptons, for opposite sign muon pairs in the fake lepton control region.}
-        \label{fig:muCR}
-\end{figure}
-\begin{figure}[htb]
-        \centering
-        \includegraphics[width=.45\textwidth]{/Users/sheenaschier/Documents/LaFiles/figures/thesis/fakes/fakeLeptonComposition/626_cds_ss_wIso_mu_SR1_lep1Pt.pdf}
-        \includegraphics[width=.45\textwidth]{/Users/sheenaschier/Documents/LaFiles/figures/thesis/fakes/fakeLeptonComposition/626_cds_ss_wIso_mu_SR2_lep2Pt.pdf}
-        \includegraphics[width=.45\textwidth]{/Users/sheenaschier/Documents/LaFiles/figures/thesis/fakes/fakeLeptonComposition/626_cds_ss_mu_SR1_lep1Pt.pdf}
-        \includegraphics[width=.45\textwidth]{/Users/sheenaschier/Documents/LaFiles/figures/thesis/fakes/fakeLeptonComposition/626_cds_ss_mu_SR2_lep2Pt.pdf}
-        \caption{Fake lepton composition as a function of leading and subleading lepton $p_{T}$, with and without prompt (``Isolated'' plus ``lep$\to$gamma$\to$lep'') leptons, for same sign muon pairs in the signal region.}
-        \label{fig:muSSSR}
-\end{figure}
-\begin{figure}[htb]
-        \centering
-        \includegraphics[width=.45\textwidth]{/Users/sheenaschier/Documents/LaFiles/figures/thesis/fakes/fakeLeptonComposition/626_cds_ss_wIso_mu_QCR1_lep1Pt.pdf}
-        \includegraphics[width=.45\textwidth]{/Users/sheenaschier/Documents/LaFiles/figures/thesis/fakes/fakeLeptonComposition/626_cds_ss_wIso_mu_QCR2_lep2Pt.pdf}
-        \includegraphics[width=.45\textwidth]{/Users/sheenaschier/Documents/LaFiles/figures/thesis/fakes/fakeLeptonComposition/626_cds_ss_mu_QCR1_lep1Pt.pdf}
-        \includegraphics[width=.45\textwidth]{/Users/sheenaschier/Documents/LaFiles/figures/thesis/fakes/fakeLeptonComposition/626_cds_ss_mu_QCR2_lep2Pt.pdf}
-        \caption{Fake lepton composition as a function of leading and subleading lepton $p_{T}$, with and without prompt (``Isolated'' plus ``lep$\to$gamma$\to$lep'') leptons, for same sign muon pairs in the fake lepton control region.}
-        \label{fig:muSSCR}
+\FloatBarrier
 
+\subsection{Efficiency}
+
+\begin{itemize}
+\item Slepton \& Higgsino efficiencies are derived using reconstructed events passing signal region cuts as the numerator and truth events passing signal region cuts as denominator.
+\item Slepton efficiencies have stau veto applied to the denominator using a global 1.5 scale factor.
+\item Ran over p3135 TRUTH3 derivations of Higgsino and slepton samples for truth events passing signal region cuts.
+\item Ran over p2952 SUSY16 derivations of Higgsino and slepton samples for reconstructed events passing signal region cuts.
+\end{itemize}
+
+Signal efficiency, $\epsilon$, is defined as the ratio of reconstructed events that pass all signal region cuts to the total number of truth events that pass all signal region cuts.  Signal efficiency is described in equation \ref{eq:efficiency}.\\
+\begin{equation}
+\epsilon = \frac{N_{reco,selected}}{N_{truth,selected}}
+\label{eq:efficiency}
+\end{equation}
+\FloatBarrier
+
+\begin{figure}
+        \centering
+    \begin{subfigure}[b]{0.44\textwidth}
+        \includegraphics[width=\textwidth]{/Users/sheenaschier/Documents/LaFiles/figures/thesis/acc_eff/efficiency/eff_iMT2a_slepton}
+    \caption{$SR\ell\ell-m^{100}_{T2}[100,102]$}
+    \end{subfigure}
+    \begin{subfigure}[b]{0.44\textwidth}
+        \includegraphics[width=\textwidth]{/Users/sheenaschier/Documents/LaFiles/figures/thesis/acc_eff/efficiency/eff_iMT2b_slepton}
+    \caption{$SR\ell\ell-m^{100}_{T2}[100,105]$}
+    \end{subfigure}
+    \begin{subfigure}[b]{0.44\textwidth}
+        \includegraphics[width=\textwidth]{/Users/sheenaschier/Documents/LaFiles/figures/thesis/acc_eff/efficiency/eff_iMT2c_slepton}
+    \caption{$SR\ell\ell-m^{100}_{T2}[100,110]$}
+    \end{subfigure}
+    \begin{subfigure}[b]{0.44\textwidth}
+        \includegraphics[width=\textwidth]{/Users/sheenaschier/Documents/LaFiles/figures/thesis/acc_eff/efficiency/eff_iMT2d_slepton}
+    \caption{$SR\ell\ell-m^{100}_{T2}[100,120]$}
+    \end{subfigure}
+    \begin{subfigure}[b]{0.44\textwidth}
+        \includegraphics[width=\textwidth]{/Users/sheenaschier/Documents/LaFiles/figures/thesis/acc_eff/efficiency/eff_iMT2e_slepton}
+    \caption{$SR\ell\ell-m^{100}_{T2}[100,130]$}
+    \end{subfigure}
+    \begin{subfigure}[b]{0.44\textwidth}
+        \includegraphics[width=\textwidth]{/Users/sheenaschier/Documents/LaFiles/figures/thesis/acc_eff/efficiency/eff_iMT2f_slepton}
+    \caption{$SR\ell\ell-m^{100}_{T2}[100,\infty]$}
+    \end{subfigure}
+    \caption{\label{fig:slepton_efficiency}\textbf{Slepton Efficiency}.}
+\end{figure}
+
+\begin{figure}
+        \centering
+    \begin{subfigure}[b]{0.44\textwidth}
+        \includegraphics[width=\textwidth]{/Users/sheenaschier/Documents/LaFiles/figures/thesis/acc_eff/efficiency/eff_iMLLa_N2N1}
+    \caption{$SR\ell\ell-m_{\ell\ell} [1, 3]$}
+    \end{subfigure}
+    \begin{subfigure}[b]{0.44\textwidth}
+        \includegraphics[width=\textwidth]{/Users/sheenaschier/Documents/LaFiles/figures/thesis/acc_eff/efficiency/eff_iMLLb_N2N1}
+    \caption{$SR\ell\ell-m_{\ell\ell} [1, 5]$}
+    \end{subfigure}
+    \begin{subfigure}[b]{0.44\textwidth}
+        \includegraphics[width=\textwidth]{/Users/sheenaschier/Documents/LaFiles/figures/thesis/acc_eff/efficiency/eff_iMLLc_N2N1}
+    \caption{$SR\ell\ell-m_{\ell\ell} [1, 10]$}
+    \end{subfigure}
+    \begin{subfigure}[b]{0.44\textwidth}
+        \includegraphics[width=\textwidth]{/Users/sheenaschier/Documents/LaFiles/figures/thesis/acc_eff/efficiency/eff_iMLLd_N2N1}
+    \caption{$SR\ell\ell-m_{\ell\ell} [1, 20]$}
+    \end{subfigure}
+    \begin{subfigure}[b]{0.44\textwidth}
+        \includegraphics[width=\textwidth]{/Users/sheenaschier/Documents/LaFiles/figures/thesis/acc_eff/efficiency/eff_iMLLe_N2N1}
+    \caption{$SR\ell\ell-m_{\ell\ell} [1, 30]$}
+    \end{subfigure}
+    \begin{subfigure}[b]{0.44\textwidth}
+        \includegraphics[width=\textwidth]{/Users/sheenaschier/Documents/LaFiles/figures/thesis/acc_eff/efficiency/eff_iMLLf_N2N1}
+    \caption{$SR\ell\ell-m_{\ell\ell} [1, 40]$}
+    \end{subfigure}
+    \begin{subfigure}[b]{0.44\textwidth}
+        \includegraphics[width=\textwidth]{/Users/sheenaschier/Documents/LaFiles/figures/thesis/acc_eff/efficiency/eff_iMLLg_N2N1}
+    \caption{$SR\ell\ell-m_{\ell\ell} [1, 60]$}
+    \end{subfigure}
+    \caption{\textbf{N2N1 Efficiency}.}
+\end{figure}
+
+\begin{figure}
+        \centering
+    \begin{subfigure}[b]{0.44\textwidth}
+        \includegraphics[width=\textwidth]{/Users/sheenaschier/Documents/LaFiles/figures/thesis/acc_eff/efficiency/eff_iMLLa_N2C1p}
+    \caption{$SR\ell\ell-m_{\ell\ell} [1, 3]$}
+    \end{subfigure}
+    \begin{subfigure}[b]{0.44\textwidth}
+        \includegraphics[width=\textwidth]{/Users/sheenaschier/Documents/LaFiles/figures/thesis/acc_eff/efficiency/eff_iMLLb_N2C1p}
+    \caption{$SR\ell\ell-m_{\ell\ell} [1, 5]$}
+    \end{subfigure}
+    \begin{subfigure}[b]{0.44\textwidth}
+        \includegraphics[width=\textwidth]{/Users/sheenaschier/Documents/LaFiles/figures/thesis/acc_eff/efficiency/eff_iMLLc_N2C1p}
+    \caption{$SR\ell\ell-m_{\ell\ell} [1, 10]$}
+    \end{subfigure}
+    \begin{subfigure}[b]{0.44\textwidth}
+        \includegraphics[width=\textwidth]{/Users/sheenaschier/Documents/LaFiles/figures/thesis/acc_eff/efficiency/eff_iMLLd_N2C1p}
+    \caption{$SR\ell\ell-m_{\ell\ell} [1, 20]$}
+    \end{subfigure}
+    \begin{subfigure}[b]{0.44\textwidth}
+        \includegraphics[width=\textwidth]{/Users/sheenaschier/Documents/LaFiles/figures/thesis/acc_eff/efficiency/eff_iMLLe_N2C1p}
+    \caption{$SR\ell\ell-m_{\ell\ell} [1, 30]$}
+    \end{subfigure}
+    \begin{subfigure}[b]{0.44\textwidth}
+        \includegraphics[width=\textwidth]{/Users/sheenaschier/Documents/LaFiles/figures/thesis/acc_eff/efficiency/eff_iMLLf_N2C1p}
+    \caption{$SR\ell\ell-m_{\ell\ell} [1, 40]$}
+    \end{subfigure}
+    \begin{subfigure}[b]{0.44\textwidth}
+        \includegraphics[width=\textwidth]{/Users/sheenaschier/Documents/LaFiles/figures/thesis/acc_eff/efficiency/eff_iMLLg_N2C1p}
+    \caption{$SR\ell\ell-m_{\ell\ell} [1, 60]$}
+    \end{subfigure}
+    \caption{\textbf{N2C1p Efficiency}.}
+\end{figure}
+
+\begin{figure}
+        \centering
+    \begin{subfigure}[b]{0.44\textwidth}
+        \includegraphics[width=\textwidth]{/Users/sheenaschier/Documents/LaFiles/figures/thesis/acc_eff/efficiency/eff_iMLLa_N2C1m}
+    \caption{$SR\ell\ell-m_{\ell\ell} [1, 3]$}
+    \end{subfigure}
+    \begin{subfigure}[b]{0.44\textwidth}
+        \includegraphics[width=\textwidth]{/Users/sheenaschier/Documents/LaFiles/figures/thesis/acc_eff/efficiency/eff_iMLLb_N2C1m}
+    \caption{$SR\ell\ell-m_{\ell\ell} [1, 5]$}
+    \end{subfigure}
+    \begin{subfigure}[b]{0.44\textwidth}
+        \includegraphics[width=\textwidth]{/Users/sheenaschier/Documents/LaFiles/figures/thesis/acc_eff/efficiency/eff_iMLLc_N2C1m}
+    \caption{$SR\ell\ell-m_{\ell\ell} [1, 10]$}
+    \end{subfigure}
+    \begin{subfigure}[b]{0.44\textwidth}
+        \includegraphics[width=\textwidth]{/Users/sheenaschier/Documents/LaFiles/figures/thesis/acc_eff/efficiency/eff_iMLLd_N2C1m}
+    \caption{$SR\ell\ell-m_{\ell\ell} [1, 20]$}
+    \end{subfigure}
+    \begin{subfigure}[b]{0.44\textwidth}
+        \includegraphics[width=\textwidth]{/Users/sheenaschier/Documents/LaFiles/figures/thesis/acc_eff/efficiency/eff_iMLLe_N2C1m}
+    \caption{$SR\ell\ell-m_{\ell\ell} [1, 30]$}
+    \end{subfigure}
+    \begin{subfigure}[b]{0.44\textwidth}
+        \includegraphics[width=\textwidth]{/Users/sheenaschier/Documents/LaFiles/figures/thesis/acc_eff/efficiency/eff_iMLLf_N2C1m}
+    \caption{$SR\ell\ell-m_{\ell\ell} [1, 40]$}
+    \end{subfigure}
+    \begin{subfigure}[b]{0.44\textwidth}
+        \includegraphics[width=\textwidth]{/Users/sheenaschier/Documents/LaFiles/figures/thesis/acc_eff/efficiency/eff_iMLLg_N2C1m}
+    \caption{$SR\ell\ell-m_{\ell\ell} [1, 60]$}
+    \end{subfigure}
+    \caption{\textbf{N2C1m Efficiency}.}
+\end{figure}
+
+
+\begin{figure}
+        \centering
+    \begin{subfigure}[b]{0.44\textwidth}
+        \includegraphics[width=\textwidth]{/Users/sheenaschier/Documents/LaFiles/figures/thesis/acc_eff/efficiency/eff_iMLLa_C1C1}
+    \caption{$SR\ell\ell-m_{\ell\ell} [1, 3]$}
+    \end{subfigure}
+    \begin{subfigure}[b]{0.44\textwidth}
+        \includegraphics[width=\textwidth]{/Users/sheenaschier/Documents/LaFiles/figures/thesis/acc_eff/efficiency/eff_iMLLb_C1C1}
+    \caption{$SR\ell\ell-m_{\ell\ell} [1, 5]$}
+    \end{subfigure}
+    \begin{subfigure}[b]{0.44\textwidth}
+        \includegraphics[width=\textwidth]{/Users/sheenaschier/Documents/LaFiles/figures/thesis/acc_eff/efficiency/eff_iMLLc_C1C1}
+    \caption{$SR\ell\ell-m_{\ell\ell} [1, 10]$}
+    \end{subfigure}
+    \begin{subfigure}[b]{0.44\textwidth}
+        \includegraphics[width=\textwidth]{/Users/sheenaschier/Documents/LaFiles/figures/thesis/acc_eff/efficiency/eff_iMLLd_C1C1}
+    \caption{$SR\ell\ell-m_{\ell\ell} [1, 20]$}
+    \end{subfigure}
+    \begin{subfigure}[b]{0.44\textwidth}
+        \includegraphics[width=\textwidth]{/Users/sheenaschier/Documents/LaFiles/figures/thesis/acc_eff/efficiency/eff_iMLLe_C1C1}
+    \caption{$SR\ell\ell-m_{\ell\ell} [1, 30]$}
+    \end{subfigure}
+    \begin{subfigure}[b]{0.44\textwidth}
+        \includegraphics[width=\textwidth]{/Users/sheenaschier/Documents/LaFiles/figures/thesis/acc_eff/efficiency/eff_iMLLf_C1C1}
+    \caption{$SR\ell\ell-m_{\ell\ell} [1, 40]$}
+    \end{subfigure}
+    \begin{subfigure}[b]{0.44\textwidth}
+        \includegraphics[width=\textwidth]{/Users/sheenaschier/Documents/LaFiles/figures/thesis/acc_eff/efficiency/eff_iMLLg_C1C1}
+    \caption{$SR\ell\ell-m_{\ell\ell} [1, 60]$}
+    \end{subfigure}
+    \caption{\label{fig:c1c1_efficiency}\textbf{C1C1 Efficiency}.}
+\end{figure}
+
+\FloatBarrier
+\subsection{Efficiency within Acceptance}
+
+Figures~\ref{fig:slepton_efficiency_in_acceptance} to \ref{fig:c1c1_efficiency_in_acceptance} shows
+the efficiencies for the Higgsino signals split by process and slepton signal.
+
+\begin{itemize}
+\item Slepton \& Higgsino efficiencies within acceptance are derived using truth events passing signal region cuts as the  denominator and reconstructed events passing signal region cuts that are matched to denominator events for the numerator.
+\item Slepton efficiencies have stau veto applied to the denominator using a global 1.5 scale factor.
+\item Ran over p3135 TRUTH3 derivations of Higgsino and slepton samples for truth events passing signal region cuts.
+\item Ran over p2952 SUSY16 derivations of Higgsino and slepton samples for reconstructed events passing signal region cuts.
+\end{itemize}
+
+Efficiency within acceptance, denoted $\epsilon_{\alpha}$, is defined as the ratio of reconstructed events that pass all signal region cuts to the total number of truth events that pass all signal region cuts, but in this case, each reconstructed event in the numerator must match a truth event in the denominator. Efficiency within acceptance is described in equation \ref{eq:eff_win_acc}.\\
+\begin{equation}
+\epsilon_{\alpha} = \frac{N_{reco,selected,matched}}{N_{truth,selected}}
+\label{eq:eff_win_acc}
+\end{equation}
+\FloatBarrier
+
+\begin{figure}
+        \centering
+    \begin{subfigure}[b]{0.44\textwidth}
+        \includegraphics[width=\textwidth]{/Users/sheenaschier/Documents/LaFiles/figures/thesis/acc_eff/efficiency/eff_win_acc_iMT2a_slepton}
+    \caption{$SR\ell\ell-m^{100}_{T2}[100,102]$}
+    \end{subfigure}
+    \begin{subfigure}[b]{0.44\textwidth}
+        \includegraphics[width=\textwidth]{/Users/sheenaschier/Documents/LaFiles/figures/thesis/acc_eff/efficiency/eff_win_acc_iMT2b_slepton}
+    \caption{$SR\ell\ell-m^{100}_{T2}[100,105]$}
+    \end{subfigure}
+    \begin{subfigure}[b]{0.44\textwidth}
+        \includegraphics[width=\textwidth]{/Users/sheenaschier/Documents/LaFiles/figures/thesis/acc_eff/efficiency/eff_win_acc_iMT2c_slepton}
+    \caption{$SR\ell\ell-m^{100}_{T2}[100,110]$}
+    \end{subfigure}
+    \begin{subfigure}[b]{0.44\textwidth}
+        \includegraphics[width=\textwidth]{/Users/sheenaschier/Documents/LaFiles/figures/thesis/acc_eff/efficiency/eff_win_acc_iMT2d_slepton}
+    \caption{$SR\ell\ell-m^{100}_{T2}[100,120]$}
+    \end{subfigure}
+    \begin{subfigure}[b]{0.44\textwidth}
+        \includegraphics[width=\textwidth]{/Users/sheenaschier/Documents/LaFiles/figures/thesis/acc_eff/efficiency/eff_win_acc_iMT2e_slepton}
+    \caption{$SR\ell\ell-m^{100}_{T2}[100,130]$}
+    \end{subfigure}
+    \begin{subfigure}[b]{0.44\textwidth}
+        \includegraphics[width=\textwidth]{/Users/sheenaschier/Documents/LaFiles/figures/thesis/acc_eff/efficiency/eff_win_acc_iMT2f_slepton}
+    \caption{$SR\ell\ell-m^{100}_{T2}[100,\infty]$}
+    \end{subfigure}
+    \caption{\label{fig:slepton_efficiency_in_acceptance}\textbf{Slepton Efficiency within acceptance}.}
+\end{figure}
+
+\begin{figure}
+        \centering
+    \begin{subfigure}[b]{0.44\textwidth}
+        \includegraphics[width=\textwidth]{/Users/sheenaschier/Documents/LaFiles/figures/thesis/acc_eff/efficiency/eff_win_acc_iMLLa_N2N1}
+    \caption{$SR\ell\ell-m_{\ell\ell} [1, 3]$}
+    \end{subfigure}
+    \begin{subfigure}[b]{0.44\textwidth}
+        \includegraphics[width=\textwidth]{/Users/sheenaschier/Documents/LaFiles/figures/thesis/acc_eff/efficiency/eff_win_acc_iMLLb_N2N1}
+    \caption{$SR\ell\ell-m_{\ell\ell} [1, 5]$}
+    \end{subfigure}
+    \begin{subfigure}[b]{0.44\textwidth}
+        \includegraphics[width=\textwidth]{/Users/sheenaschier/Documents/LaFiles/figures/thesis/acc_eff/efficiency/eff_win_acc_iMLLc_N2N1}
+    \caption{$SR\ell\ell-m_{\ell\ell} [1, 10]$}
+    \end{subfigure}
+    \begin{subfigure}[b]{0.44\textwidth}
+        \includegraphics[width=\textwidth]{/Users/sheenaschier/Documents/LaFiles/figures/thesis/acc_eff/efficiency/eff_win_acc_iMLLd_N2N1}
+    \caption{$SR\ell\ell-m_{\ell\ell} [1, 20]$}
+    \end{subfigure}
+    \begin{subfigure}[b]{0.44\textwidth}
+        \includegraphics[width=\textwidth]{/Users/sheenaschier/Documents/LaFiles/figures/thesis/acc_eff/efficiency/eff_win_acc_iMLLe_N2N1}
+    \caption{$SR\ell\ell-m_{\ell\ell} [1, 30]$}
+    \end{subfigure}
+    \begin{subfigure}[b]{0.44\textwidth}
+        \includegraphics[width=\textwidth]{/Users/sheenaschier/Documents/LaFiles/figures/thesis/acc_eff/efficiency/eff_win_acc_iMLLf_N2N1}
+    \caption{$SR\ell\ell-m_{\ell\ell} [1, 40]$}
+    \end{subfigure}
+    \begin{subfigure}[b]{0.44\textwidth}
+        \includegraphics[width=\textwidth]{/Users/sheenaschier/Documents/LaFiles/figures/thesis/acc_eff/efficiency/eff_win_acc_iMLLg_N2N1}
+    \caption{$SR\ell\ell-m_{\ell\ell} [1, 60]$}
+    \end{subfigure}
+    \caption{\textbf{N2N1 Efficiency within acceptance}.}
+\end{figure}
+
+\begin{figure}
+        \centering
+    \begin{subfigure}[b]{0.44\textwidth}
+        \includegraphics[width=\textwidth]{/Users/sheenaschier/Documents/LaFiles/figures/thesis/acc_eff/efficiency/eff_win_acc_iMLLa_N2C1p}
+    \caption{$SR\ell\ell-m_{\ell\ell} [1, 3]$}
+    \end{subfigure}
+    \begin{subfigure}[b]{0.44\textwidth}
+        \includegraphics[width=\textwidth]{/Users/sheenaschier/Documents/LaFiles/figures/thesis/acc_eff/efficiency/eff_win_acc_iMLLb_N2C1p}
+    \caption{$SR\ell\ell-m_{\ell\ell} [1, 5]$}
+    \end{subfigure}
+    \begin{subfigure}[b]{0.44\textwidth}
+        \includegraphics[width=\textwidth]{/Users/sheenaschier/Documents/LaFiles/figures/thesis/acc_eff/efficiency/eff_win_acc_iMLLc_N2C1p}
+    \caption{$SR\ell\ell-m_{\ell\ell} [1, 10]$}
+    \end{subfigure}
+    \begin{subfigure}[b]{0.44\textwidth}
+        \includegraphics[width=\textwidth]{/Users/sheenaschier/Documents/LaFiles/figures/thesis/acc_eff/efficiency/eff_win_acc_iMLLd_N2C1p}
+    \caption{$SR\ell\ell-m_{\ell\ell} [1, 20]$}
+    \end{subfigure}
+    \begin{subfigure}[b]{0.44\textwidth}
+        \includegraphics[width=\textwidth]{/Users/sheenaschier/Documents/LaFiles/figures/thesis/acc_eff/efficiency/eff_win_acc_iMLLe_N2C1p}
+    \caption{$SR\ell\ell-m_{\ell\ell} [1, 30]$}
+    \end{subfigure}
+    \begin{subfigure}[b]{0.44\textwidth}
+        \includegraphics[width=\textwidth]{/Users/sheenaschier/Documents/LaFiles/figures/thesis/acc_eff/efficiency/eff_win_acc_iMLLf_N2C1p}
+    \caption{$SR\ell\ell-m_{\ell\ell} [1, 40]$}
+    \end{subfigure}
+    \begin{subfigure}[b]{0.44\textwidth}
+        \includegraphics[width=\textwidth]{/Users/sheenaschier/Documents/LaFiles/figures/thesis/acc_eff/efficiency/eff_win_acc_iMLLg_N2C1p}
+    \caption{$SR\ell\ell-m_{\ell\ell} [1, 60]$}
+    \end{subfigure}
+    \caption{\textbf{N2C1p Efficiency within acceptance}.}
+\end{figure}
+
+\begin{figure}
+        \centering
+    \begin{subfigure}[b]{0.44\textwidth}
+        \includegraphics[width=\textwidth]{/Users/sheenaschier/Documents/LaFiles/figures/thesis/acc_eff/efficiency/eff_win_acc_iMLLa_N2C1m}
+    \caption{$SR\ell\ell-m_{\ell\ell} [1, 3]$}
+    \end{subfigure}
+    \begin{subfigure}[b]{0.44\textwidth}
+        \includegraphics[width=\textwidth]{/Users/sheenaschier/Documents/LaFiles/figures/thesis/acc_eff/efficiency/eff_win_acc_iMLLb_N2C1m}
+    \caption{$SR\ell\ell-m_{\ell\ell} [1, 5]$}
+    \end{subfigure}
+    \begin{subfigure}[b]{0.44\textwidth}
+        \includegraphics[width=\textwidth]{/Users/sheenaschier/Documents/LaFiles/figures/thesis/acc_eff/efficiency/eff_win_acc_iMLLc_N2C1m}
+    \caption{$SR\ell\ell-m_{\ell\ell} [1, 10]$}
+    \end{subfigure}
+    \begin{subfigure}[b]{0.44\textwidth}
+        \includegraphics[width=\textwidth]{/Users/sheenaschier/Documents/LaFiles/figures/thesis/acc_eff/efficiency/eff_win_acc_iMLLd_N2C1m}
+    \caption{$SR\ell\ell-m_{\ell\ell} [1, 20]$}
+    \end{subfigure}
+    \begin{subfigure}[b]{0.44\textwidth}
+        \includegraphics[width=\textwidth]{/Users/sheenaschier/Documents/LaFiles/figures/thesis/acc_eff/efficiency/eff_win_acc_iMLLe_N2C1m}
+    \caption{$SR\ell\ell-m_{\ell\ell} [1, 30]$}
+    \end{subfigure}
+    \begin{subfigure}[b]{0.44\textwidth}
+        \includegraphics[width=\textwidth]{/Users/sheenaschier/Documents/LaFiles/figures/thesis/acc_eff/efficiency/eff_win_acc_iMLLf_N2C1m}
+    \caption{$SR\ell\ell-m_{\ell\ell} [1, 40]$}
+    \end{subfigure}
+    \begin{subfigure}[b]{0.44\textwidth}
+        \includegraphics[width=\textwidth]{/Users/sheenaschier/Documents/LaFiles/figures/thesis/acc_eff/efficiency/eff_win_acc_iMLLg_N2C1m}
+    \caption{$SR\ell\ell-m_{\ell\ell} [1, 60]$}
+    \end{subfigure}
+    \caption{\textbf{N2C1m Efficiency within acceptance}.}
+\end{figure}
+
+
+\begin{figure}
+        \centering
+    \begin{subfigure}[b]{0.44\textwidth}
+        \includegraphics[width=\textwidth]{/Users/sheenaschier/Documents/LaFiles/figures/thesis/acc_eff/efficiency/eff_win_acc_iMLLa_C1C1}
+    \caption{$SR\ell\ell-m_{\ell\ell} [1, 3]$}
+    \end{subfigure}
+    \begin{subfigure}[b]{0.44\textwidth}
+        \includegraphics[width=\textwidth]{/Users/sheenaschier/Documents/LaFiles/figures/thesis/acc_eff/efficiency/eff_win_acc_iMLLb_C1C1}
+    \caption{$SR\ell\ell-m_{\ell\ell} [1, 5]$}
+    \end{subfigure}
+    \begin{subfigure}[b]{0.44\textwidth}
+        \includegraphics[width=\textwidth]{/Users/sheenaschier/Documents/LaFiles/figures/thesis/acc_eff/efficiency/eff_win_acc_iMLLc_C1C1}
+    \caption{$SR\ell\ell-m_{\ell\ell} [1, 10]$}
+    \end{subfigure}
+    \begin{subfigure}[b]{0.44\textwidth}
+        \includegraphics[width=\textwidth]{/Users/sheenaschier/Documents/LaFiles/figures/thesis/acc_eff/efficiency/eff_win_acc_iMLLd_C1C1}
+    \caption{$SR\ell\ell-m_{\ell\ell} [1, 20]$}
+    \end{subfigure}
+    \begin{subfigure}[b]{0.44\textwidth}
+        \includegraphics[width=\textwidth]{/Users/sheenaschier/Documents/LaFiles/figures/thesis/acc_eff/efficiency/eff_win_acc_iMLLe_C1C1}
+    \caption{$SR\ell\ell-m_{\ell\ell} [1, 30]$}
+    \end{subfigure}
+    \begin{subfigure}[b]{0.44\textwidth}
+        \includegraphics[width=\textwidth]{/Users/sheenaschier/Documents/LaFiles/figures/thesis/acc_eff/efficiency/eff_win_acc_iMLLf_C1C1}
+    \caption{$SR\ell\ell-m_{\ell\ell} [1, 40]$}
+    \end{subfigure}
+    \begin{subfigure}[b]{0.44\textwidth}
+        \includegraphics[width=\textwidth]{/Users/sheenaschier/Documents/LaFiles/figures/thesis/acc_eff/efficiency/eff_win_acc_iMLLg_C1C1}
+    \caption{$SR\ell\ell-m_{\ell\ell} [1, 60]$}
+    \end{subfigure}
+    \caption{\label{fig:c1c1_efficiency_in_acceptance}\textbf{C1C1 Efficiency with acceptance}.}
+\end{figure}
+
+\FloatBarrier
+\subsection{Signal Leakage}
+
+Figures~\ref{fig:slepton_leakage} to \ref{fig:c1c1_leakage} shows
+the leakage for the Higgsino signals split by process and slepton signal.
+
+\begin{itemize}
+\item Slepton \& Higgsino signal leakages are derived using truth events passing signal region cuts as the denominator and reconstructed events passing signal region cuts that do not match denominator events as the numerator.
+\item Slepton efficiencies have stau veto applied to the denominator using a global 1.5 scale factor.
+\item Ran over p3135 TRUTH3 derivations of Higgsino and slepton samples for truth events passing signal region cuts.
+\item Ran over p2952 SUSY16 derivations of Higgsino and slepton samples for reconstructed events passing signal region cuts.
+\end{itemize}
+
+
+Signal leakage, $\lambda$, is defined as the ratio of reconstructed events in the signal region that are not matched to a truth event in the signal region divided by the total number of truth events in the signal region. Signal leakage is described in equation \ref{eq:leakage}.  Studies of the migrating truth quantities during recontruction reveal the \met{} and $M_\tau\tau$ and the two variables responsible for the majority of the leakage events.\\
+\begin{equation}
+\lambda = \frac{N_{reco,selected,unmatched}}{N_{truth,selected}}
+\label{eq:leakage}
+\end{equation}
+%\begin{equation}
+%\lambda_2 = \frac{N_{reco,sel,unmatched}}{N_{reco,sel}}
+%\end{equation}
+\FloatBarrier
+
+\begin{figure}
+        \centering
+    \begin{subfigure}[b]{0.44\textwidth}
+        \includegraphics[width=\textwidth]{/Users/sheenaschier/Documents/LaFiles/figures/thesis/acc_eff/efficiency/leakage_win_acc_iMT2a_slepton}
+    \caption{$SR\ell\ell-m^{100}_{T2}[100,102]$}
+    \end{subfigure}
+    \begin{subfigure}[b]{0.44\textwidth}
+        \includegraphics[width=\textwidth]{/Users/sheenaschier/Documents/LaFiles/figures/thesis/acc_eff/efficiency/leakage_win_acc_iMT2b_slepton}
+    \caption{$SR\ell\ell-m^{100}_{T2}[100,105]$}
+    \end{subfigure}
+    \begin{subfigure}[b]{0.44\textwidth}
+        \includegraphics[width=\textwidth]{/Users/sheenaschier/Documents/LaFiles/figures/thesis/acc_eff/efficiency/leakage_win_acc_iMT2c_slepton}
+    \caption{$SR\ell\ell-m^{100}_{T2}[100,110]$}
+    \end{subfigure}
+    \begin{subfigure}[b]{0.44\textwidth}
+        \includegraphics[width=\textwidth]{/Users/sheenaschier/Documents/LaFiles/figures/thesis/acc_eff/efficiency/leakage_win_acc_iMT2d_slepton}
+    \caption{$SR\ell\ell-m^{100}_{T2}[100,120]$}
+    \end{subfigure}
+    \begin{subfigure}[b]{0.44\textwidth}
+        \includegraphics[width=\textwidth]{/Users/sheenaschier/Documents/LaFiles/figures/thesis/acc_eff/efficiency/leakage_win_acc_iMT2e_slepton}
+    \caption{$SR\ell\ell-m^{100}_{T2}[100,130]$}
+    \end{subfigure}
+    \begin{subfigure}[b]{0.44\textwidth}
+        \includegraphics[width=\textwidth]{/Users/sheenaschier/Documents/LaFiles/figures/thesis/acc_eff/efficiency/leakage_win_acc_iMT2f_slepton}
+    \caption{$SR\ell\ell-m^{100}_{T2}[100,\infty]$}
+    \end{subfigure}
+    \caption{\label{fig:slepton_leakage}\textbf{Slepton Signal Leakage}.}
+\end{figure}
+
+\begin{figure}
+        \centering
+    \begin{subfigure}[b]{0.44\textwidth}
+        \includegraphics[width=\textwidth]{/Users/sheenaschier/Documents/LaFiles/figures/thesis/acc_eff/efficiency/leakage_win_acc_iMLLa_N2N1}
+    \caption{$SR\ell\ell-m_{\ell\ell} [1, 3]$}
+    \end{subfigure}
+    \begin{subfigure}[b]{0.44\textwidth}
+        \includegraphics[width=\textwidth]{/Users/sheenaschier/Documents/LaFiles/figures/thesis/acc_eff/efficiency/leakage_win_acc_iMLLb_N2N1}
+    \caption{$SR\ell\ell-m_{\ell\ell} [1, 5]$}
+    \end{subfigure}
+    \begin{subfigure}[b]{0.44\textwidth}
+        \includegraphics[width=\textwidth]{/Users/sheenaschier/Documents/LaFiles/figures/thesis/acc_eff/efficiency/leakage_win_acc_iMLLc_N2N1}
+    \caption{$SR\ell\ell-m_{\ell\ell} [1, 10]$}
+    \end{subfigure}
+    \begin{subfigure}[b]{0.44\textwidth}
+        \includegraphics[width=\textwidth]{/Users/sheenaschier/Documents/LaFiles/figures/thesis/acc_eff/efficiency/leakage_win_acc_iMLLd_N2N1}
+    \caption{$SR\ell\ell-m_{\ell\ell} [1, 20]$}
+    \end{subfigure}
+    \begin{subfigure}[b]{0.44\textwidth}
+        \includegraphics[width=\textwidth]{/Users/sheenaschier/Documents/LaFiles/figures/thesis/acc_eff/efficiency/leakage_win_acc_iMLLe_N2N1}
+    \caption{$SR\ell\ell-m_{\ell\ell} [1, 30]$}
+    \end{subfigure}
+    \begin{subfigure}[b]{0.44\textwidth}
+        \includegraphics[width=\textwidth]{/Users/sheenaschier/Documents/LaFiles/figures/thesis/acc_eff/efficiency/leakage_win_acc_iMLLf_N2N1}
+    \caption{$SR\ell\ell-m_{\ell\ell} [1, 40]$}
+    \end{subfigure}
+    \begin{subfigure}[b]{0.44\textwidth}
+        \includegraphics[width=\textwidth]{/Users/sheenaschier/Documents/LaFiles/figures/thesis/acc_eff/efficiency/leakage_win_acc_iMLLg_N2N1}
+    \caption{$SR\ell\ell-m_{\ell\ell} [1, 60]$}
+    \end{subfigure}
+    \caption{\textbf{N2N1 Signal Leakage}.}
+\end{figure}
+
+\begin{figure}
+        \centering
+    \begin{subfigure}[b]{0.44\textwidth}
+        \includegraphics[width=\textwidth]{/Users/sheenaschier/Documents/LaFiles/figures/thesis/acc_eff/efficiency/leakage_win_acc_iMLLa_N2C1p}
+    \caption{$SR\ell\ell-m_{\ell\ell} [1, 3]$}
+    \end{subfigure}
+    \begin{subfigure}[b]{0.44\textwidth}
+        \includegraphics[width=\textwidth]{/Users/sheenaschier/Documents/LaFiles/figures/thesis/acc_eff/efficiency/leakage_win_acc_iMLLb_N2C1p}
+    \caption{$SR\ell\ell-m_{\ell\ell} [1, 5]$}
+    \end{subfigure}
+    \begin{subfigure}[b]{0.44\textwidth}
+        \includegraphics[width=\textwidth]{/Users/sheenaschier/Documents/LaFiles/figures/thesis/acc_eff/efficiency/leakage_win_acc_iMLLc_N2C1p}
+    \caption{$SR\ell\ell-m_{\ell\ell} [1, 10]$}
+    \end{subfigure}
+    \begin{subfigure}[b]{0.44\textwidth}
+        \includegraphics[width=\textwidth]{/Users/sheenaschier/Documents/LaFiles/figures/thesis/acc_eff/efficiency/leakage_win_acc_iMLLd_N2C1p}
+    \caption{$SR\ell\ell-m_{\ell\ell} [1, 20]$}
+    \end{subfigure}
+    \begin{subfigure}[b]{0.44\textwidth}
+        \includegraphics[width=\textwidth]{/Users/sheenaschier/Documents/LaFiles/figures/thesis/acc_eff/efficiency/leakage_win_acc_iMLLe_N2C1p}
+    \caption{$SR\ell\ell-m_{\ell\ell} [1, 30]$}
+    \end{subfigure}
+    \begin{subfigure}[b]{0.44\textwidth}
+        \includegraphics[width=\textwidth]{/Users/sheenaschier/Documents/LaFiles/figures/thesis/acc_eff/efficiency/leakage_win_acc_iMLLf_N2C1p}
+    \caption{$SR\ell\ell-m_{\ell\ell} [1, 40]$}
+    \end{subfigure}
+    \begin{subfigure}[b]{0.44\textwidth}
+        \includegraphics[width=\textwidth]{/Users/sheenaschier/Documents/LaFiles/figures/thesis/acc_eff/efficiency/leakage_win_acc_iMLLg_N2C1p}
+    \caption{$SR\ell\ell-m_{\ell\ell} [1, 60]$}
+    \end{subfigure}
+    \caption{\textbf{N2C1p Signal Leakage}.}
+\end{figure}
+
+\begin{figure}
+        \centering
+    \begin{subfigure}[b]{0.44\textwidth}
+        \includegraphics[width=\textwidth]{/Users/sheenaschier/Documents/LaFiles/figures/thesis/acc_eff/efficiency/leakage_win_acc_iMLLa_N2C1m}
+    \caption{$SR\ell\ell-m_{\ell\ell} [1, 3]$}
+    \end{subfigure}
+    \begin{subfigure}[b]{0.44\textwidth}
+        \includegraphics[width=\textwidth]{/Users/sheenaschier/Documents/LaFiles/figures/thesis/acc_eff/efficiency/leakage_win_acc_iMLLb_N2C1m}
+    \caption{$SR\ell\ell-m_{\ell\ell} [1, 5]$}
+    \end{subfigure}
+    \begin{subfigure}[b]{0.44\textwidth}
+        \includegraphics[width=\textwidth]{/Users/sheenaschier/Documents/LaFiles/figures/thesis/acc_eff/efficiency/leakage_win_acc_iMLLc_N2C1m}
+    \caption{$SR\ell\ell-m_{\ell\ell} [1, 10]$}
+    \end{subfigure}
+    \begin{subfigure}[b]{0.44\textwidth}
+        \includegraphics[width=\textwidth]{/Users/sheenaschier/Documents/LaFiles/figures/thesis/acc_eff/efficiency/leakage_win_acc_iMLLd_N2C1m}
+    \caption{$SR\ell\ell-m_{\ell\ell} [1, 20]$}
+    \end{subfigure}
+    \begin{subfigure}[b]{0.44\textwidth}
+        \includegraphics[width=\textwidth]{/Users/sheenaschier/Documents/LaFiles/figures/thesis/acc_eff/efficiency/leakage_win_acc_iMLLe_N2C1m}
+    \caption{$SR\ell\ell-m_{\ell\ell} [1, 30]$}
+    \end{subfigure}
+    \begin{subfigure}[b]{0.44\textwidth}
+        \includegraphics[width=\textwidth]{/Users/sheenaschier/Documents/LaFiles/figures/thesis/acc_eff/efficiency/leakage_win_acc_iMLLf_N2C1m}
+    \caption{$SR\ell\ell-m_{\ell\ell} [1, 40]$}
+    \end{subfigure}
+    \begin{subfigure}[b]{0.44\textwidth}
+        \includegraphics[width=\textwidth]{/Users/sheenaschier/Documents/LaFiles/figures/thesis/acc_eff/efficiency/leakage_win_acc_iMLLg_N2C1m}
+    \caption{$SR\ell\ell-m_{\ell\ell} [1, 60]$}
+    \end{subfigure}
+    \caption{\textbf{N2C1m Signal Leakage}.}
+\end{figure}
+
+
+\begin{figure}
+        \centering
+    \begin{subfigure}[b]{0.44\textwidth}
+        \includegraphics[width=\textwidth]{/Users/sheenaschier/Documents/LaFiles/figures/thesis/acc_eff/efficiency/leakage_win_acc_iMLLa_C1C1}
+    \caption{$SR\ell\ell-m_{\ell\ell} [1, 3]$}
+    \end{subfigure}
+    \begin{subfigure}[b]{0.44\textwidth}
+        \includegraphics[width=\textwidth]{/Users/sheenaschier/Documents/LaFiles/figures/thesis/acc_eff/efficiency/leakage_win_acc_iMLLb_C1C1}
+    \caption{$SR\ell\ell-m_{\ell\ell} [1, 5]$}
+    \end{subfigure}
+    \begin{subfigure}[b]{0.44\textwidth}
+        \includegraphics[width=\textwidth]{/Users/sheenaschier/Documents/LaFiles/figures/thesis/acc_eff/efficiency/leakage_win_acc_iMLLc_C1C1}
+    \caption{$SR\ell\ell-m_{\ell\ell} [1, 10]$}
+    \end{subfigure}
+    \begin{subfigure}[b]{0.44\textwidth}
+        \includegraphics[width=\textwidth]{/Users/sheenaschier/Documents/LaFiles/figures/thesis/acc_eff/efficiency/leakage_win_acc_iMLLd_C1C1}
+    \caption{$SR\ell\ell-m_{\ell\ell} [1, 20]$}
+    \end{subfigure}
+    \begin{subfigure}[b]{0.44\textwidth}
+        \includegraphics[width=\textwidth]{/Users/sheenaschier/Documents/LaFiles/figures/thesis/acc_eff/efficiency/leakage_win_acc_iMLLe_C1C1}
+    \caption{$SR\ell\ell-m_{\ell\ell} [1, 30]$}
+    \end{subfigure}
+    \begin{subfigure}[b]{0.44\textwidth}
+        \includegraphics[width=\textwidth]{/Users/sheenaschier/Documents/LaFiles/figures/thesis/acc_eff/efficiency/leakage_win_acc_iMLLf_C1C1}
+    \caption{$SR\ell\ell-m_{\ell\ell} [1, 40]$}
+    \end{subfigure}
+    \begin{subfigure}[b]{0.44\textwidth}
+        \includegraphics[width=\textwidth]{/Users/sheenaschier/Documents/LaFiles/figures/thesis/acc_eff/efficiency/leakage_win_acc_iMLLg_C1C1}
+    \caption{$SR\ell\ell-m_{\ell\ell} [1, 60]$}
+    \end{subfigure}
+    \caption{\label{fig:c1c1_leakage}\textbf{C1C1 Signal Leakage}.}
+\end{figure}
+
+\FloatBarrier
+\subsection{Acceptance*Efficiency}
+
+%Figures~\ref{fig:slepton_efficiency_in_acceptance} to \ref{fig:c1c1_efficiency_in_acceptance} shows
+Figures~\ref{fig:c1c1_efficiency_in_acceptance} shows
+the acceptance*efficiencies for the Higgsino signals split by process and slepton signal.
+
+\begin{itemize}
+\item Slepton \& Higgsino acceptance times efficiencies are derived using truth events passing signal region cuts as the denominator and reconstructed events passing signal region cuts that are matched to denominator events for the numerator.
+\item Slepton efficiencies have stau veto applied to the denominator using a global 1.5 scale factor.
+\item Ran over p3135 TRUTH3 derivations of Higgsino and slepton samples for truth events passing signal region cuts.
+\item Ran over p2952 SUSY16 derivations of Higgsino and slepton samples for reconstructed events passing signal region cuts.
+\end{itemize}
+
+Acceptance times efficiency is defined as the ratio of reconstructed events that pass all signal region cuts over the total number of truth events in the TRUTH3 signal sample, but in this case, the denominator events are weighted by the event weight and the numerator events are weighted by the event weight, the detector weights, the filter efficiency, and the $Z\rightarrow ll$ branching ratio.  Acceptance multiplied by efficiency is described in equation \ref{eq:effacc}.\\
+\begin{equation}
+    \alpha\times{\epsilon} = \frac{\Sigma \textit{w}_{reco,sel}\times{BR_{Z\rightarrow ll}}\times{\epsilon_{filter}}}{\Sigma \textit{evt\_w}_{truth, tot}}
+\label{eq:effacc}
+\end{equation}
+%\begin{equation}
+%    w_{gen} = \frac{\sigma \times{BR_{Z\rightarrow ll}}\times{\epsilon_{filter}}}{\Sigma \textit{evt\_w}_{truth, tot}}
+%\label{eq:effacc}
+%\end{equation}
+%\begin{equation}
+%    \alpha\times{\epsilon} = \frac{N_{reco,sel}\times{w_{det}}\times{w_{evt}}\times{w_{gen}}}{{\sigma}}
+%\label{eq:effacc}
+%\end{equation}
+\FloatBarrier
+
+\begin{figure}
+        \centering
+    \begin{subfigure}[b]{0.44\textwidth}
+        \includegraphics[width=\textwidth]{/Users/sheenaschier/Documents/LaFiles/figures/thesis/acc_eff/efficiency/effacc_iMT2a_slepton}
+    \caption{$SR\ell\ell-m^{100}_{T2}[100,102]$}
+    \end{subfigure}
+    \begin{subfigure}[b]{0.44\textwidth}
+        \includegraphics[width=\textwidth]{/Users/sheenaschier/Documents/LaFiles/figures/thesis/acc_eff/efficiency/effacc_iMT2b_slepton}
+    \caption{$SR\ell\ell-m^{100}_{T2}[100,105]$}
+    \end{subfigure}
+    \begin{subfigure}[b]{0.44\textwidth}
+        \includegraphics[width=\textwidth]{/Users/sheenaschier/Documents/LaFiles/figures/thesis/acc_eff/efficiency/effacc_iMT2c_slepton}
+    \caption{$SR\ell\ell-m^{100}_{T2}[100,110]$}
+    \end{subfigure}
+    \begin{subfigure}[b]{0.44\textwidth}
+        \includegraphics[width=\textwidth]{/Users/sheenaschier/Documents/LaFiles/figures/thesis/acc_eff/efficiency/effacc_iMT2d_slepton}
+    \caption{$SR\ell\ell-m^{100}_{T2}[100,120]$}
+    \end{subfigure}
+    \begin{subfigure}[b]{0.44\textwidth}
+        \includegraphics[width=\textwidth]{/Users/sheenaschier/Documents/LaFiles/figures/thesis/acc_eff/efficiency/effacc_iMT2e_slepton}
+    \caption{$SR\ell\ell-m^{100}_{T2}[100,130]$}
+    \end{subfigure}
+    \begin{subfigure}[b]{0.44\textwidth}
+        \includegraphics[width=\textwidth]{/Users/sheenaschier/Documents/LaFiles/figures/thesis/acc_eff/efficiency/effacc_iMT2f_slepton}
+    \caption{$SR\ell\ell-m^{100}_{T2}[100,\infty]$}
+    \end{subfigure}
+    \caption{\label{fig:slepton_efficiency_in_acceptance}\textbf{Slepton Acceptance*Efficiency}.}
+\end{figure}
+
+\begin{figure}
+        \centering
+    \begin{subfigure}[b]{0.44\textwidth}
+        \includegraphics[width=\textwidth]{/Users/sheenaschier/Documents/LaFiles/figures/thesis/acc_eff/efficiency/effacc_iMLLa_N2N1}
+    \caption{$SR\ell\ell-m_{\ell\ell} [1, 3]$}
+    \end{subfigure}
+    \begin{subfigure}[b]{0.44\textwidth}
+        \includegraphics[width=\textwidth]{/Users/sheenaschier/Documents/LaFiles/figures/thesis/acc_eff/efficiency/effacc_iMLLb_N2N1}
+    \caption{$SR\ell\ell-m_{\ell\ell} [1, 5]$}
+    \end{subfigure}
+    \begin{subfigure}[b]{0.44\textwidth}
+        \includegraphics[width=\textwidth]{/Users/sheenaschier/Documents/LaFiles/figures/thesis/acc_eff/efficiency/effacc_iMLLc_N2N1}
+    \caption{$SR\ell\ell-m_{\ell\ell} [1, 10]$}
+    \end{subfigure}
+    \begin{subfigure}[b]{0.44\textwidth}
+        \includegraphics[width=\textwidth]{/Users/sheenaschier/Documents/LaFiles/figures/thesis/acc_eff/efficiency/effacc_iMLLd_N2N1}
+    \caption{$SR\ell\ell-m_{\ell\ell} [1, 20]$}
+    \end{subfigure}
+    \begin{subfigure}[b]{0.44\textwidth}
+        \includegraphics[width=\textwidth]{/Users/sheenaschier/Documents/LaFiles/figures/thesis/acc_eff/efficiency/effacc_iMLLe_N2N1}
+    \caption{$SR\ell\ell-m_{\ell\ell} [1, 30]$}
+    \end{subfigure}
+    \begin{subfigure}[b]{0.44\textwidth}
+        \includegraphics[width=\textwidth]{/Users/sheenaschier/Documents/LaFiles/figures/thesis/acc_eff/efficiency/effacc_iMLLf_N2N1}
+    \caption{$SR\ell\ell-m_{\ell\ell} [1, 40]$}
+    \end{subfigure}
+    \begin{subfigure}[b]{0.44\textwidth}
+        \includegraphics[width=\textwidth]{/Users/sheenaschier/Documents/LaFiles/figures/thesis/acc_eff/efficiency/effacc_iMLLg_N2N1}
+    \caption{$SR\ell\ell-m_{\ell\ell} [1, 60]$}
+    \end{subfigure}
+    \caption{\textbf{N2N1 Acceptance*Efficiency}.}
+\end{figure}
+
+\begin{figure}
+        \centering
+    \begin{subfigure}[b]{0.44\textwidth}
+        \includegraphics[width=\textwidth]{/Users/sheenaschier/Documents/LaFiles/figures/thesis/acc_eff/efficiency/effacc_iMLLa_N2C1p}
+    \caption{$SR\ell\ell-m_{\ell\ell} [1, 3]$}
+    \end{subfigure}
+    \begin{subfigure}[b]{0.44\textwidth}
+        \includegraphics[width=\textwidth]{/Users/sheenaschier/Documents/LaFiles/figures/thesis/acc_eff/efficiency/effacc_iMLLb_N2C1p}
+    \caption{$SR\ell\ell-m_{\ell\ell} [1, 5]$}
+    \end{subfigure}
+    \begin{subfigure}[b]{0.44\textwidth}
+        \includegraphics[width=\textwidth]{/Users/sheenaschier/Documents/LaFiles/figures/thesis/acc_eff/efficiency/effacc_iMLLc_N2C1p}
+    \caption{$SR\ell\ell-m_{\ell\ell} [1, 10]$}
+    \end{subfigure}
+    \begin{subfigure}[b]{0.44\textwidth}
+        \includegraphics[width=\textwidth]{/Users/sheenaschier/Documents/LaFiles/figures/thesis/acc_eff/efficiency/effacc_iMLLd_N2C1p}
+    \caption{$SR\ell\ell-m_{\ell\ell} [1, 20]$}
+    \end{subfigure}
+    \begin{subfigure}[b]{0.44\textwidth}
+        \includegraphics[width=\textwidth]{/Users/sheenaschier/Documents/LaFiles/figures/thesis/acc_eff/efficiency/effacc_iMLLe_N2C1p}
+    \caption{$SR\ell\ell-m_{\ell\ell} [1, 30]$}
+    \end{subfigure}
+    \begin{subfigure}[b]{0.44\textwidth}
+        \includegraphics[width=\textwidth]{/Users/sheenaschier/Documents/LaFiles/figures/thesis/acc_eff/efficiency/effacc_iMLLf_N2C1p}
+    \caption{$SR\ell\ell-m_{\ell\ell} [1, 40]$}
+    \end{subfigure}
+    \begin{subfigure}[b]{0.44\textwidth}
+        \includegraphics[width=\textwidth]{/Users/sheenaschier/Documents/LaFiles/figures/thesis/acc_eff/efficiency/effacc_iMLLg_N2C1p}
+    \caption{$SR\ell\ell-m_{\ell\ell} [1, 60]$}
+    \end{subfigure}
+    \caption{\textbf{N2C1p Acceptance*Efficiency}.}
+\end{figure}
+
+\begin{figure}
+        \centering
+    \begin{subfigure}[b]{0.44\textwidth}
+        \includegraphics[width=\textwidth]{/Users/sheenaschier/Documents/LaFiles/figures/thesis/acc_eff/efficiency/effacc_iMLLa_N2C1m}
+    \caption{$SR\ell\ell-m_{\ell\ell} [1, 3]$}
+    \end{subfigure}
+    \begin{subfigure}[b]{0.44\textwidth}
+        \includegraphics[width=\textwidth]{/Users/sheenaschier/Documents/LaFiles/figures/thesis/acc_eff/efficiency/effacc_iMLLb_N2C1m}
+    \caption{$SR\ell\ell-m_{\ell\ell} [1, 5]$}
+    \end{subfigure}
+    \begin{subfigure}[b]{0.44\textwidth}
+        \includegraphics[width=\textwidth]{/Users/sheenaschier/Documents/LaFiles/figures/thesis/acc_eff/efficiency/effacc_iMLLc_N2C1m}
+    \caption{$SR\ell\ell-m_{\ell\ell} [1, 10]$}
+    \end{subfigure}
+    \begin{subfigure}[b]{0.44\textwidth}
+        \includegraphics[width=\textwidth]{/Users/sheenaschier/Documents/LaFiles/figures/thesis/acc_eff/efficiency/effacc_iMLLd_N2C1m}
+    \caption{$SR\ell\ell-m_{\ell\ell} [1, 20]$}
+    \end{subfigure}
+    \begin{subfigure}[b]{0.44\textwidth}
+        \includegraphics[width=\textwidth]{/Users/sheenaschier/Documents/LaFiles/figures/thesis/acc_eff/efficiency/effacc_iMLLe_N2C1m}
+    \caption{$SR\ell\ell-m_{\ell\ell} [1, 30]$}
+    \end{subfigure}
+    \begin{subfigure}[b]{0.44\textwidth}
+        \includegraphics[width=\textwidth]{/Users/sheenaschier/Documents/LaFiles/figures/thesis/acc_eff/efficiency/effacc_iMLLf_N2C1m}
+    \caption{$SR\ell\ell-m_{\ell\ell} [1, 40]$}
+    \end{subfigure}
+    \begin{subfigure}[b]{0.44\textwidth}
+        \includegraphics[width=\textwidth]{/Users/sheenaschier/Documents/LaFiles/figures/thesis/acc_eff/efficiency/effacc_iMLLg_N2C1m}
+    \caption{$SR\ell\ell-m_{\ell\ell} [1, 60]$}
+    \end{subfigure}
+    \caption{\textbf{N2C1m Acceptance*Efficiency}.}
+\end{figure}
+
+
+\begin{figure}
+        \centering
+    \begin{subfigure}[b]{0.44\textwidth}
+        \includegraphics[width=\textwidth]{/Users/sheenaschier/Documents/LaFiles/figures/thesis/acc_eff/efficiency/effacc_iMLLa_C1C1}
+    \caption{$SR\ell\ell-m_{\ell\ell} [1, 3]$}
+    \end{subfigure}
+    \begin{subfigure}[b]{0.44\textwidth}
+        \includegraphics[width=\textwidth]{/Users/sheenaschier/Documents/LaFiles/figures/thesis/acc_eff/efficiency/effacc_iMLLb_C1C1}
+    \caption{$SR\ell\ell-m_{\ell\ell} [1, 5]$}
+    \end{subfigure}
+    \begin{subfigure}[b]{0.44\textwidth}
+        \includegraphics[width=\textwidth]{/Users/sheenaschier/Documents/LaFiles/figures/thesis/acc_eff/efficiency/effacc_iMLLc_C1C1}
+    \caption{$SR\ell\ell-m_{\ell\ell} [1, 10]$}
+    \end{subfigure}
+    \begin{subfigure}[b]{0.44\textwidth}
+        \includegraphics[width=\textwidth]{/Users/sheenaschier/Documents/LaFiles/figures/thesis/acc_eff/efficiency/effacc_iMLLd_C1C1}
+    \caption{$SR\ell\ell-m_{\ell\ell} [1, 20]$}
+    \end{subfigure}
+    \begin{subfigure}[b]{0.44\textwidth}
+        \includegraphics[width=\textwidth]{/Users/sheenaschier/Documents/LaFiles/figures/thesis/acc_eff/efficiency/effacc_iMLLe_C1C1}
+    \caption{$SR\ell\ell-m_{\ell\ell} [1, 30]$}
+    \end{subfigure}
+    \begin{subfigure}[b]{0.44\textwidth}
+        \includegraphics[width=\textwidth]{/Users/sheenaschier/Documents/LaFiles/figures/thesis/acc_eff/efficiency/effacc_iMLLf_C1C1}
+    \caption{$SR\ell\ell-m_{\ell\ell} [1, 40]$}
+    \end{subfigure}
+    \begin{subfigure}[b]{0.44\textwidth}
+        \includegraphics[width=\textwidth]{/Users/sheenaschier/Documents/LaFiles/figures/thesis/acc_eff/efficiency/effacc_iMLLg_C1C1}
+    \caption{$SR\ell\ell-m_{\ell\ell} [1, 60]$}
+    \end{subfigure}
+    \caption{\label{fig:c1c1_efficiency_in_acceptance}\textbf{C1C1 Acceptance*Efficiency}.}
 \end{figure}

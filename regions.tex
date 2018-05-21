@@ -35,7 +35,7 @@ m_\mathrm{T}^{\ell_1} = \sqrt{2\pt^{\ell_1}E^{miss}_T(1-\cos\Delta\phi(\ell_1,\p
   \caption{Schematic illustrating the fully leptonic $(Z\to\tau\tau)$ + jets system motivating the construction of $m_{\tau\tau}$. }
   \label{fig:ditau_schematic}
   \end{figure}
-The di-tau invariant mass ($m_{\tau\tau}$), expressed in Equations~\ref{eq:mtt} -~\ref{eq:mtt2}, is used by this analysis to veto the $Z\rightarrow\tau\tau$ background. 
+The di-tau invariant mass ($m_{\tau\tau}$), expressed in Equations~\ref{eq:mtt} -~\ref{eq:mtt2}, is used by this analysis to veto the $Z\rightarrow\tau\tau$ background.  This analysis follows the procedure of approximating $m_{\tau\tau}$ in References~\cite{Han:2014kaa, Baer:2014kya}. 
  \begin{equation}
  \label{eq:mtt}
  m^2_{\tau\tau}\left(p_{\ell_1}, p_{\ell_2}, \mathbf{p}_\mathrm{T}^\mathrm{miss}\right) \equiv 2p_{\ell_1}\cdot p_{\ell_2}(1+\xi_1)(1+\xi_2)
@@ -226,7 +226,7 @@ Figure~\ref{fig:METoverHTmt2} shows the $\met/H_{T}^{lep}$ distribution for slep
  \label{fig:METoverHTmt2}
  \end{figure}
  \fi
-Much like dilepton invariant mass discriminant for electroweakino signals, slepton events are subject to a kinematic endpoint defined by the 'stransverse' mass $m^{m_\chi}_{T2}$, which is a function of the measures momentum of the leading two leptons $p_{\ell_1}$, $p_{\ell_2}$, the measured \pt, and the hypothesized invisible particle mass $m_\chi$.    For the pair of semi-invisible particles in the slepton signal $m^{m_\chi}_{T2}$ is always less than the parent slepton mass $m_{\tilde\ell}$ when the hypothesized $m_\chi$ mass is set to the neutralino mass in the underlying process.  This defines the lower kinematic endpoint in $m^{m_\chi}_{T2}$ for slepton signals.  Requiring $m^{m_\chi}_{T2} < m_{\tilde\ell}$, various mass scenarios can be probed in the slepton-neutrino mass plane.  Standard Model backgrounds do not display this kind of feature since the invisible particles are massless neutrinos, therefor there is not such enhancement in background when making this requirement.  In fact, in the compressed region of the slepton-neutrino mass  plane, events populate an even narrower region in $m_{T2}$, giving this variable more discriminating power.  Inclusive and exclusive slepton SRs are binned $m^{m_\chi}_{T2}$.  The inclusive SRs are defined by a maximum $m_{T2}$, below which all events are selected.  The exclusive SRs are orthogonal in $m_{T2}$ selection and are define by a min and max bin value.
+Much like dilepton invariant mass discriminant for electroweakino signals, slepton events are subject to a kinematic endpoint defined by the 'stransverse' mass $m^{m_\chi}_{T2}$, which is a function of the measures momentum of the leading two leptons $p_{\ell_1}$, $p_{\ell_2}$, the measured \pt, and the hypothesized invisible particle mass $m_\chi$.  For the pair of semi-invisible particles in the slepton signal, $m^{m_\chi}_{T2}$ is always less than the parent slepton mass $m_{\tilde\ell}$ when the hypothesized $m_\chi$ mass is set to the neutralino mass in the underlying process, but this adds a level of complexity to the signal regions that does gain much signal sensitivity.  There is negligible change in signal acceptance, so $m_\chi$ is set to $100\GeV$  This defines the lower kinematic endpoint in $m^{100}_{T2}$ for slepton signals.  Requiring $m^{100}_{T2} < m_{\tilde\ell}$, various mass scenarios can be probed in the slepton-neutrino mass plane.  Standard Model backgrounds do not display this kind of feature since the invisible particles are massless neutrinos, therefor there is not such enhancement in background when making this requirement.  In fact, in the compressed region of the slepton-neutrino mass plane, events populate an even narrower region in $m^{100}_{T2}$, giving this variable more discriminating power.  Inclusive and exclusive slepton SRs are binned $m^{100}_{T2}$.  The inclusive SRs are defined by a maximum $m^{100}_{T2}$, below which all events are selected.  The exclusive SRs are orthogonal in $m^{100}_{T2}$ selection and are define by a min and max bin value.
 
 \begin{table}[]
  \tiny
@@ -251,13 +251,39 @@ Exclusive&&&&&&\\
 $SRee-m^{100}_{T2}$, $SR\mu\mu-m^{100}_{T2}$  & $[100,102]$ & $[102,105]$ & $[105,110]$ & $[110, 120]$ & $[120, 130]$ & $[130, \infty]$ \\
 \hline
 Inclusive&&&&&&\\  
-$SR\ell\ell-m^{100}_{T2}$ & $[100, 102$      & $[100,105$      & $[100,110$      & $[100,120$       & $[100,130$      &  $[100, \infty]$  \\
+$SR\ell\ell-m^{100}_{T2}$ & $[100, 102]$      & $[100,105]$      & $[100,110]$      & $[100,120]$       & $[100,130]$      &  $[100, \infty]$  \\
 \hline
 \end{tabular}
 }
 \caption{Slepton specific signal region cuts}
 \label{tab:SRMLLMT2}
 \end{table}
+
+\subsection{SR Acceptance and Efficiency}
+With the signal regions fully defined, sample acceptance and efficiency plots are shown in Figure~\ref{fig:EWacceff} for the most inclusive Higgsino and slepton signal regions.  Signal acceptance $\alpha$ is defined as the ratio of truth events that pass all signal region cuts over the total number of truth events:
+  \begin{equation}
+  \alpha = \frac{N_{truth,selected}\times{BR_{Z\rightarrow ll}}\times{\epsilon_{filter}}}{N_{truth,total}}
+ \label{eq:acceptance}
+  \end{equation}
+This quantity measures the impact of signal region cuts on signal yields and does not take into account detector effects.  Signal efficiency $\epsilon$ is defined as the ratio of reconstructed events that pass all signal region cuts to the total number of truth events that pass all signal region cuts:
+ 
+\begin{equation}
+\epsilon = \frac{N_{reco,selected}}{N_{truth,selected}}
+\label{eq:efficiency}
+\end{equation}
+This quantity measure the impact of detector inefficiencies on signal.  Other interesting versions of these plots are efficiency within acceptance and signal leakage.  Appendix~\ref{ch:apndx:a} includes acceptance, efficiency, efficiency within acceptance, and signal leakage for each inclusive Higgsino and slepton signal region.
+ \begin{figure}%[h!]
+  \begin{center}
+  \includegraphics[width=0.49\textwidth]{/Users/sheenaschier/Documents/LaFiles/figures/thesis/signal_regions/figaux_03g}
+  \includegraphics[width=0.49\textwidth]{/Users/sheenaschier/Documents/LaFiles/figures/thesis/signal_regions/figaux_08g} 
+   \includegraphics[width=0.49\textwidth]{/Users/sheenaschier/Documents/LaFiles/figures/thesis/signal_regions/figaux_05f}
+      \includegraphics[width=0.49\textwidth]{/Users/sheenaschier/Documents/LaFiles/figures/thesis/signal_regions/figaux_10f}
+   \end{center}
+ \caption{Signal acceptance (left) and efficiency(right) for electroweakino $\tilde\chi_2^0$, $\tilde\chi_1^0$ production in the most inclusive Higgsino signal region SR-$m_{\ell\ell}~[1, 60]$ (top) and for slepton pair production in the most inclusive slepton signal region SR-$m^{100}_{T2}~[100, \infty]$ (bottom)}
+ \label{fig:EWacceff}
+ \end{figure}
+ 
+ 
 
 \iffalse
 \section{Conclusion}
